@@ -29,9 +29,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400..700;1,400..700&family=Inter:wght@400..900&family=Istok+Web:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400..700;1,400..700&family=Inter:wght@400..900&family=Istok+Web:wght@400;700&display=swap" rel="stylesheet"></noscript>
 
-  {{-- CSS lokal: cepat & kritis --}}
-  <link rel="stylesheet" href="{{ asset('css/wireframe.css') }}?v={{ $assetVersion }}">
-  <link rel="stylesheet" href="{{ asset('css/satoshi.css') }}?v={{ $assetVersion }}">
+  {{-- CSS lokal: minified untuk performa maksimal --}}
+  <link rel="stylesheet" href="{{ asset('css/wireframe.min.css') }}?v={{ $assetVersion }}">
+  <link rel="stylesheet" href="{{ asset('css/satoshi.min.css') }}?v={{ $assetVersion }}">
 
   <!-- Primary & Heading Font: SF Pro Display -->
   <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet" media="print" onload="this.media='all'">

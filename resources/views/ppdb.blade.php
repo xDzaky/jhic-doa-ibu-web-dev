@@ -4,7 +4,7 @@
 @section('meta_description', 'Daftar PPDB 2026 SMKN 1 Probolinggo online. Persyaratan, jadwal seleksi, daya tampung 5 konsentrasi keahlian: RPL, Bisnis Digital, Akuntansi, Layanan Perkantoran, Logistik. Sekolah Pusat Keunggulan akreditasi A.')
 
 @push('styles')
-  <link rel="stylesheet" href="{{ asset('css/ppdb.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/ppdb.min.css') }}">
   <style>
     .ppdb-action-section {
       background: #FFFFFF;

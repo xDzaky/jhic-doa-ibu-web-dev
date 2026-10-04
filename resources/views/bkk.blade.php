@@ -4,7 +4,7 @@
 @section('meta_description', 'Bursa Kerja Khusus (BKK) dan Portal PKL SMKN 1 Probolinggo. Lowongan kerja mitra industri, informasi magang, dan peluang karir bagi lulusan SMK. 99% lulusan terserap industri.')
 
 @push('styles')
-  <link rel="stylesheet" href="{{ asset('css/bkk.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/bkk.min.css') }}">
 @endpush
 
 @section('content')

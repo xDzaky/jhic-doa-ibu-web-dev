@@ -23,12 +23,12 @@
   --bg-white: #FFFFFF;
   --text-main: #0F172A;
   --text-muted: #475569;
-  --text-faint: #94A3B8;
+  --text-faint: #64748B;
   
   --border: #E2E8F0;
   --border-strong: #CBD5E1;
   --box-wf: #F1F5F9;
-  --box-wf-border: #94A3B8;
+  --box-wf-border: #64748B;
 
   /* Typography Pairing: SF Pro Display (Utama / Judul) & Satoshi (Penjelasan / Body) */
   --font-heading: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -506,7 +506,7 @@ p, .desc, .lead, .job-desc, .text-muted, .req-item {
 /* Footer */
 .footer {
   background-color: var(--navy-dark);
-  color: #94A3B8;
+  color: #64748B;
   padding: 56px 0 0;
 }
 
@@ -535,7 +535,7 @@ p, .desc, .lead, .job-desc, .text-muted, .req-item {
 }
 
 .footer-link {
-  color: #94A3B8;
+  color: #64748B;
   text-decoration: none;
   font-size: 0.8125rem;
 }
@@ -719,7 +719,7 @@ p, .desc, .lead, .job-desc, .text-muted, .req-item {
     justify-content: center;
     gap: 3px;
     text-decoration: none;
-    color: #94A3B8;
+    color: #64748B;
     flex: 1;
     height: 100%;
     background: none;
