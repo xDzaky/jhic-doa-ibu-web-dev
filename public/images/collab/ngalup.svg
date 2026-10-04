@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 40" fill="none">
+  <!-- 6 dots circular cluster -->
+  <circle cx="8" cy="19" r="3.2" fill="#1D4ED8"/>
+  <circle cx="14" cy="11" r="3.2" fill="#1D4ED8"/>
+  <circle cx="22" cy="11" r="3.2" fill="#1D4ED8"/>
+  <circle cx="26" cy="19" r="3.2" fill="#1D4ED8"/>
+  <circle cx="22" cy="27" r="3.2" fill="#1D4ED8"/>
+  <circle cx="14" cy="27" r="3.2" fill="#1D4ED8"/>
+  <!-- Text -->
+  <text x="35" y="24" fill="#1D4ED8" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="12" letter-spacing="0.06em">NGALUP.CO</text>
+</svg>

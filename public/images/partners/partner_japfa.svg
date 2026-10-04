@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 45" fill="none">
+  <!-- JAPFA stylized jumping figure -->
+  <circle cx="16" cy="12" r="3.5" fill="#EA580C"/>
+  <path d="M12 24 C10 18, 16 16, 20 20 C24 24, 28 20, 26 15" stroke="#EA580C" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M16 22 C14 28, 11 34, 8 36" stroke="#EA580C" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M19 22 C22 28, 25 34, 28 36" stroke="#EA580C" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="34" y="29" fill="#1E293B" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="18" letter-spacing="0.08em">JAPFA</text>
+</svg>

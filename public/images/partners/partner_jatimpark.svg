@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 45" fill="none">
+  <!-- Jawa Timur Park 1 -->
+  <rect x="8" y="6" width="32" height="32" rx="4" fill="#FACC15"/>
+  <path d="M12 14 Q24 8 36 14 Q32 30 24 34 Q16 30 12 14 Z" fill="#16A34A"/>
+  <text x="24" y="27" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="14" text-anchor="middle">1</text>
+  <text x="46" y="20" fill="#15803D" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="8">JAWA TIMUR</text>
+  <text x="46" y="30" fill="#E11D48" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="9">PARK 1</text>
+</svg>
