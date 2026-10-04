@@ -355,7 +355,7 @@
                 <th scope="row">
                   <span class="kuota-code" style="display: inline-flex; align-items: center; gap: 6px;">
                     @if($logoPath)
-                      <img src="{{ asset($logoPath) }}" alt="{{ $m->code }}" style="width: 18px; height: 18px; object-fit: contain;">
+                      <img src="{{ asset($logoPath) }}" alt="{{ $m- width="400" height="300">code }}" style="width: 18px; height: 18px; object-fit: contain;">
                     @endif
                     {{ $m->code }}
                   </span>
@@ -370,7 +370,7 @@
             <tr>
               <th scope="row">
                 <span class="kuota-code" style="display: inline-flex; align-items: center; gap: 6px;">
-                  <img src="{{ asset('images/jurusan/logo_rpl.webp') }}" alt="RPL" style="width: 18px; height: 18px; object-fit: contain;"> RPL
+                  <img src="{{ asset('images/jurusan/logo_rpl.webp') }}" alt="RPL" style="width: 18px; height: 18px; object-fit: contain;" width="400" height="300"> RPL
                 </span>
                 <span class="kuota-name">Rekayasa Perangkat Lunak</span>
                 <span class="kuota-bar" aria-hidden="true"><i style="width: 25%"></i></span>
@@ -381,7 +381,7 @@
             <tr>
               <th scope="row">
                 <span class="kuota-code" style="display: inline-flex; align-items: center; gap: 6px;">
-                  <img src="{{ asset('images/logo_alfamart_class.webp') }}" alt="BD" style="height: 14px; width: auto; object-fit: contain;"> BD
+                  <img src="{{ asset('images/logo_alfamart_class.webp') }}" alt="BD" style="height: 14px; width: auto; object-fit: contain;" width="400" height="300"> BD
                 </span>
                 <span class="kuota-name">Bisnis Digital</span>
                 <span class="kuota-bar" aria-hidden="true"><i style="width: 25%"></i></span>
@@ -392,7 +392,7 @@
             <tr>
               <th scope="row">
                 <span class="kuota-code" style="display: inline-flex; align-items: center; gap: 6px;">
-                  <img src="{{ asset('images/jurusan/logo_mplb.webp') }}" alt="MPLB" style="width: 18px; height: 18px; object-fit: contain;"> MPLB
+                  <img src="{{ asset('images/jurusan/logo_mplb.webp') }}" alt="MPLB" style="width: 18px; height: 18px; object-fit: contain;" width="400" height="300"> MPLB
                 </span>
                 <span class="kuota-name">Manajemen Perkantoran &amp; Layanan Bisnis</span>
                 <span class="kuota-bar" aria-hidden="true"><i style="width: 17%"></i></span>
@@ -403,7 +403,7 @@
             <tr>
               <th scope="row">
                 <span class="kuota-code" style="display: inline-flex; align-items: center; gap: 6px;">
-                  <img src="{{ asset('images/jurusan/logo_akl.webp') }}" alt="AKL" style="width: 18px; height: 18px; object-fit: contain;"> AKL
+                  <img src="{{ asset('images/jurusan/logo_akl.webp') }}" alt="AKL" style="width: 18px; height: 18px; object-fit: contain;" width="400" height="300"> AKL
                 </span>
                 <span class="kuota-name">Akuntansi &amp; Keuangan Lembaga</span>
                 <span class="kuota-bar" aria-hidden="true"><i style="width: 17%"></i></span>
@@ -414,7 +414,7 @@
             <tr>
               <th scope="row">
                 <span class="kuota-code" style="display: inline-flex; align-items: center; gap: 6px;">
-                  <img src="{{ asset('images/jurusan/logo_lpb.webp') }}" alt="LPB" style="width: 18px; height: 18px; object-fit: contain;"> LPB
+                  <img src="{{ asset('images/jurusan/logo_lpb.webp') }}" alt="LPB" style="width: 18px; height: 18px; object-fit: contain;" width="400" height="300"> LPB
                 </span>
                 <span class="kuota-name">Layanan Perbankan</span>
                 <span class="kuota-bar" aria-hidden="true"><i style="width: 17%"></i></span>

@@ -13,7 +13,7 @@
     <div class="container bkk-hero-grid">
       <div>
         <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
-          <img src="{{ asset('images/logo_bkk_resmi.webp') }}" alt="Logo Resmi BKK SMKN 1 Probolinggo" style="height: 52px; width: auto; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.06));">
+          <img src="{{ asset('images/logo_bkk_resmi.webp') }}" alt="Logo Resmi BKK SMKN 1 Probolinggo" style="height: 52px; width: auto; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.06));" width="400" height="300">
           <div>
             <span style="display: inline-block; font-family: var(--font-heading); background: #EEF2F6; color: var(--navy-header); font-size: 0.75rem; font-weight: 800; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.05em; border: 1px solid #CBD5E1;">
               Portal Resmi BKK &amp; Praktik Kerja Lapangan
