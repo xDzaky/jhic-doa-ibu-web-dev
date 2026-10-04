@@ -1,2 +1,12 @@
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /admin/
+Disallow: /seller/
+Disallow: /teacher/
+Disallow: /login
+Disallow: /logout
+Disallow: /smexamall/cart
+Disallow: /smexamall/checkout
+Disallow: /portal/
+
+Sitemap: https://smexapro.my.id/sitemap.xml

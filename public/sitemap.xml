@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Beranda / Homepage -->
+  <url>
+    <loc>https://smexapro.my.id/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://smexapro.my.id/images/school_gate.webp</image:loc>
+      <image:caption>Gerbang SMK Negeri 1 Probolinggo - Pusat Keunggulan</image:caption>
+    </image:image>
+  </url>
+
+  <!-- PPDB 2026 -->
+  <url>
+    <loc>https://smexapro.my.id/ppdb</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- SMEXAMALL Marketplace -->
+  <url>
+    <loc>https://smexapro.my.id/smexamall</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- BKK & PKL -->
+  <url>
+    <loc>https://smexapro.my.id/bkk</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
