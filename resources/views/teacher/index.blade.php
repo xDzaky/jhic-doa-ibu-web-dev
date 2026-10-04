@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Panel Guru Pembina TEFA & Asesmen PKWU - SMKN 1 Probolinggo')
+@section('meta_description', 'Panel Guru Pembina TEFA SMEXAMALL — Approval produk siswa, quality control, asesmen PKWU, dan monitoring Teaching Factory BLUD SMKN 1 Probolinggo.')
 
 @push('styles')
 <style>

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Portal Layanan Siswa & Calon Siswa - SMKN 1 Probolinggo')
+@section('meta_description', 'Portal Layanan Siswa SMKN 1 Probolinggo — Cek status PPDB, riwayat transaksi SMEXAMALL, informasi akademik, dan layanan siswa terpadu.')
 
 @push('styles')
 <style>

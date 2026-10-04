@@ -62,6 +62,9 @@
   }
   </script>
 
+  {{-- Preload LCP Hero Image (school_gate.webp = LCP element on homepage) --}}
+  <link rel="preload" as="image" href="{{ asset('images/school_gate.webp') }}" type="image/webp" fetchpriority="high">
+
   @stack('head')
   @stack('styles')
 </head>

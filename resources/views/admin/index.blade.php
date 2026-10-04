@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Pusat Kendali Administrasi & BLUD - SMKN 1 Probolinggo')
+@section('meta_description', 'Dashboard Super Admin SMKN 1 Probolinggo — Manajemen PPDB, verifikasi data siswa, laporan keuangan BLUD, dan pengawasan sistem informasi sekolah.')
 
 @push('styles')
 <style>

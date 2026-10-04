@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Seller Centre Siswa - SMEXAMALL SMKN 1 Probolinggo')
+@section('meta_description', 'Seller Centre SMEXAMALL — Dashboard siswa seller untuk kelola produk F&B, pantau stok, dan kelola pesanan di marketplace Teaching Factory SMKN 1 Probolinggo.')
 
 @push('styles')
 <style>
