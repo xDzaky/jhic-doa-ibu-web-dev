@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'SMEXAMALL - Marketplace Siswa & Teaching Factory BLUD SMKN 1 Probolinggo')
+@section('meta_description', 'SMEXAMALL — Marketplace produk karya siswa SMKN 1 Probolinggo. Makanan, minuman, snack, kue artisan buatan siswa Teaching Factory BLUD. Beli produk berkualitas langsung dari pelajar SMK.')
 
 @push('styles')
 <style>
@@ -324,7 +325,7 @@
                 <span class="smx-card-v2-badge {{ $p->category_badge_class }}">
                   {{ $p->category_badge_label }}
                 </span>
-                <img src="{{ asset($p->image_url) }}" alt="{{ $p->name }}" class="smx-card-v2-img" loading="lazy">
+                <img src="{{ asset($p->image_url) }}" alt="{{ $p->name }}" class="smx-card-v2-img" loading="lazy" width="500" height="500">
               </div>
               <h4 class="smx-card-v2-title">
                 {{ $p->name }}

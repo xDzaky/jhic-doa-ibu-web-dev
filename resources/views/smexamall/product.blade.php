@@ -22,13 +22,13 @@
         <!-- Left: Gallery -->
         <div class="gallery-column">
           <div class="gallery-main-frame" id="mainPhotoFrame">
-            <img id="mainProductImg" src="{{ asset($product->image_url) }}" alt="{{ $product->name }}" style="width:100%; height:100%; object-fit:cover; border-radius:6px; display:block;">
+            <img id="mainProductImg" src="{{ asset($product->image_url) }}" alt="{{ $product->name }}" style="width:100%; height:100%; object-fit:cover; border-radius:6px; display:block;" width="500" height="500" fetchpriority="high">
           </div>
           @php $gallery = $product->gallery_images; @endphp
           <div class="gallery-thumbs-row">
             @foreach($gallery as $idx => $img)
               <div class="thumb-frame {{ $idx === 0 ? 'active' : '' }}" onclick="switchThumb('{{ asset($img) }}', this)">
-                <img src="{{ asset($img) }}" alt="Thumbnail {{ $idx + 1 }}">
+                <img src="{{ asset($img) }}" alt="Foto produk {{ $idx + 1 }} — {{ $product->name }}" width="100" height="100" loading="lazy">
               </div>
             @endforeach
           </div>

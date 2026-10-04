@@ -7,6 +7,7 @@
   <title>@yield('title', 'Website Resmi SMKN 1 Probolinggo - Sekolah Pusat Keunggulan & BLUD')</title>
   <meta name="description" content="@yield('meta_description', 'Portal Resmi SMK Negeri 1 Probolinggo - Pusat Keunggulan & BLUD. Informasi PPDB 2026, Marketplace Siswa SMEXAMALL, dan Bursa Kerja Khusus (BKK).')">
   <link rel="canonical" href="{{ url()->current() }}">
+  <meta name="robots" content="index, follow">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
@@ -36,19 +37,45 @@
   <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet"></noscript>
   
-  {{-- Preload LCP Hero Image untuk Sub-Second LCP Score --}}
-  <link rel="preload" as="image" href="{{ asset('images/school_gate.webp') }}" type="image/webp" fetchpriority="high">
-  
+  {{-- JSON-LD Structured Data (Boost SEO score ke 100) --}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "SMK Negeri 1 Probolinggo",
+    "alternateName": "SMKN 1 Probolinggo",
+    "url": "https://smexapro.my.id",
+    "logo": "https://smexapro.my.id/images/logo_smkn1.webp",
+    "image": "https://smexapro.my.id/images/school_gate.webp",
+    "description": "Sekolah Menengah Kejuruan Negeri 1 Probolinggo — Pusat Keunggulan, 5 konsentrasi keahlian modern, Teaching Factory SMEXAMALL, kemitraan industri nasional.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Jl. Mastrip No. 357, Kanigaran",
+      "addressLocality": "Kota Probolinggo",
+      "addressRegion": "Jawa Timur",
+      "postalCode": "67219",
+      "addressCountry": "ID"
+    },
+    "telephone": "+62335421121",
+    "email": "info@smkn1probolinggo.sch.id",
+    "sameAs": ["https://www.instagram.com/smkn1probolinggo","https://www.facebook.com/smkn1official"]
+  }
+  </script>
+
   @stack('head')
   @stack('styles')
 </head>
 <body>
 
+  {{-- Skip to main content (Accessibility — required for 100 score) --}}
+  <a href="#main-content" class="skip-nav-link">Lewati ke konten utama</a>
+
   <!-- MAIN NAVBAR (Flat Deep Navy) -->
   <header class="navbar">
     <div class="container nav-wrapper">
       <a href="{{ route('home') }}" class="nav-brand">
-        <img src="{{ asset('images/logo_smkn1.webp') }}" alt="Logo SMKN 1 Probolinggo" class="school-logo-img">
+        <img src="{{ asset('images/logo_smkn1.webp') }}" alt="Logo SMKN 1 Probolinggo" class="school-logo-img" width="36" height="36" fetchpriority="high">
+
         <div class="brand-text">
           <span class="school-main">SMK NEGERI 1</span>
           <span class="school-sub">PROBOLINGGO</span>
@@ -118,7 +145,7 @@
   <aside class="mobile-drawer" id="mobileDrawer" aria-label="Menu Navigasi Mobile">
     <div class="mobile-drawer-header">
       <div class="drawer-brand">
-        <img src="{{ asset('images/logo_smkn1.webp') }}" alt="Logo SMKN 1 Probolinggo" class="school-logo-img">
+        <img src="{{ asset('images/logo_smkn1.webp') }}" alt="Logo SMKN 1 Probolinggo" class="school-logo-img" width="36" height="36" loading="lazy">
         <div class="brand-text">
           <span class="school-main">SMK NEGERI 1</span>
           <span class="school-sub">PROBOLINGGO</span>
@@ -267,19 +294,19 @@
         </div>
         <div class="footer-collab-logos" aria-label="Mitra Kolaborasi Inisiatif Digital">
           <div class="footer-collab-logo-item" title="JHIC 2.0">
-            <img src="{{ asset('images/collab/logo_jhic.webp') }}" alt="JHIC 2.0 Logo" loading="lazy">
+            <img src="{{ asset('images/collab/logo_jhic.webp') }}" alt="JHIC 2.0 Logo" loading="lazy" width="80" height="32">
           </div>
           <div class="footer-collab-logo-item" title="Jagoan Hosting">
-            <img src="{{ asset('images/collab/logo_jagoanhosting.webp') }}" alt="Jagoan Hosting Logo" loading="lazy">
+            <img src="{{ asset('images/collab/logo_jagoanhosting.webp') }}" alt="Jagoan Hosting Logo" loading="lazy" width="80" height="32">
           </div>
           <div class="footer-collab-logo-item" title="Kementerian Komunikasi dan Digital (Komdigi)">
-            <img src="{{ asset('images/collab/logo_komdigi.webp') }}" alt="Komdigi Logo" loading="lazy">
+            <img src="{{ asset('images/collab/logo_komdigi.webp') }}" alt="Komdigi Logo" loading="lazy" width="80" height="32">
           </div>
           <div class="footer-collab-logo-item" title="Garuda Spark">
-            <img src="{{ asset('images/collab/logo_garudaspark.webp') }}" alt="Garuda Spark Logo" loading="lazy">
+            <img src="{{ asset('images/collab/logo_garudaspark.webp') }}" alt="Garuda Spark Logo" loading="lazy" width="80" height="32">
           </div>
           <div class="footer-collab-logo-item" title="Ngalup.co">
-            <img src="{{ asset('images/collab/logo_ngalupco.webp') }}" alt="Ngalup.co Logo" loading="lazy">
+            <img src="{{ asset('images/collab/logo_ngalupco.webp') }}" alt="Ngalup.co Logo" loading="lazy" width="80" height="32">
           </div>
         </div>
       </div>
@@ -316,7 +343,7 @@
     </div>
 
     <button class="chatbot-launcher" id="chatbotLauncher" aria-label="Tanya Asisten Pintar SMEXA">
-      <img src="{{ asset('images/pesan-icon.webp') }}" id="chatLauncherIcon" alt="Asisten Pintar SMEXA" class="chat-launcher-img">
+      <img src="{{ asset('images/pesan-icon.webp') }}" id="chatLauncherIcon" alt="Buka Asisten Pintar SMEXA" class="chat-launcher-img" width="52" height="52">
     </button>
   </div>
 
