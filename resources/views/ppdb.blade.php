@@ -355,7 +355,7 @@
                 <th scope="row">
                   <span class="kuota-code" style="display: inline-flex; align-items: center; gap: 6px;">
                     @if($logoPath)
-                      <img src="{{ asset($logoPath) }}" alt="{{ $m- width="400" height="300">code }}" style="width: 18px; height: 18px; object-fit: contain;">
+                      <img src="{{ asset($logoPath) }}" alt="{{ $m->code }}" width="18" height="18" style="width: 18px; height: 18px; object-fit: contain;" loading="lazy">
                     @endif
                     {{ $m->code }}
                   </span>
