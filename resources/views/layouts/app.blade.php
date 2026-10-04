@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  @php $assetVersion = config('app.asset_version', '20261005_v15'); @endphp
+  @php $assetVersion = config('app.asset_version', '20261005_v20'); @endphp
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>@yield('title', 'Website Resmi SMKN 1 Probolinggo - Sekolah Pusat Keunggulan & BLUD')</title>
