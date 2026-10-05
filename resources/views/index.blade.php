@@ -4,7 +4,8 @@
 
 @section('content')
   <!-- 1. Hero Section (Modern Campus Panorama) -->
-  <section class="hero-section hero-bg-panorama" style="background-image:url('{{ asset('images/hero_bg.webp') }}?v={{ filemtime(public_path('images/hero_bg.webp')) }}')">
+  <section class="hero-section hero-bg-panorama">
+    <img src="{{ asset('images/hero_bg.webp') }}" alt="Pendidikan Vokasi SMKN 1 Probolinggo" class="hero-bg-panorama-img" width="1200" height="675" fetchpriority="high" loading="eager" decoding="async">
     <div class="container hero-container">
       <div class="hero-content-col">
         <h1 class="hero-display-title">
@@ -115,17 +116,17 @@
             <img src="{{ asset('images/logo_smkn1.webp') }}" alt="Logo SMKN 1 Probolinggo" width="32" height="32">
             <span>Jurusan SMKN 1 Probolinggo</span>
           </div>
-          <h3 class="jf-heading">Rekayasa<br><span style="color:#22c55e">Perangkat</span> Lunak</h3>
+          <h3 class="jf-heading">Rekayasa<br><span style="color:#15803d">Perangkat</span> Lunak</h3>
           <p class="jf-desc">Jurusan yang fokus pada pengembangan perangkat lunak, mulai dari desain, pemrograman, pengujian, hingga pemeliharaan aplikasi. Siswa dibekali ilmu menyeluruh tentang software engineering.</p>
           <div class="jf-features-block">
             <img src="{{ asset('images/jurusan/thumb_rpl.webp') }}" alt="Thumbnail RPL" class="jf-thumb" loading="lazy" width="80" height="80">
-            <ul class="jf-features" style="--check:#22c55e">
+            <ul class="jf-features" style="--check:#15803d">
               <li>Belajar coding &amp; UI/UX design</li>
               <li>Proyek nyata &amp; magang industri</li>
               <li>Lulus siap kerja, wirausaha, atau kuliah</li>
             </ul>
           </div>
-          <a href="{{ route('ppdb') }}" class="jf-btn" style="background:#22c55e">Info Selengkapnya</a>
+          <a href="{{ route('ppdb') }}" class="jf-btn" style="background:#15803d">Info Selengkapnya</a>
         </div>
       </div>
 
@@ -139,17 +140,17 @@
             <img src="{{ asset('images/logo_smkn1.webp') }}" alt="Logo SMKN 1 Probolinggo" width="32" height="32">
             <span>Jurusan SMKN 1 Probolinggo</span>
           </div>
-          <h3 class="jf-heading">Bisnis <span style="color:#2563eb">Digital</span></h3>
+          <h3 class="jf-heading">Bisnis <span style="color:#1d4ed8">Digital</span></h3>
           <p class="jf-desc">Jurusan Bisnis Digital membekali siswa dengan keterampilan berbisnis menggunakan teknologi dan internet. Siswa belajar cara memasarkan produk secara online, membuat konten digital, dan menjalankan toko online.</p>
           <div class="jf-features-block">
             <img src="{{ asset('images/jurusan/thumb_bd.webp') }}" alt="Thumbnail BD" class="jf-thumb" loading="lazy" width="80" height="80">
-            <ul class="jf-features" style="--check:#2563eb">
+            <ul class="jf-features" style="--check:#1d4ed8">
               <li>Digital marketing &amp; media sosial</li>
               <li>Desain konten &amp; e-commerce</li>
-              <li>Desain konten &amp; e-commerce</li>
+              <li>Kewirausahaan digital &amp; marketplace</li>
             </ul>
           </div>
-          <a href="{{ route('ppdb') }}" class="jf-btn" style="background:#2563eb">Info Selengkapnya</a>
+          <a href="{{ route('ppdb') }}" class="jf-btn" style="background:#1d4ed8">Info Selengkapnya</a>
         </div>
       </div>
 
@@ -163,17 +164,17 @@
             <img src="{{ asset('images/logo_smkn1.webp') }}" alt="Logo SMKN 1 Probolinggo" width="32" height="32">
             <span>Jurusan SMKN 1 Probolinggo</span>
           </div>
-          <h3 class="jf-heading">Manajemen<br><span style="color:#ec4899">Perkantoran</span></h3>
+          <h3 class="jf-heading">Manajemen<br><span style="color:#be185d">Perkantoran</span></h3>
           <p class="jf-desc">Jurusan Manajemen Perkantoran bertujuan untuk mencetak tenaga administrasi yang profesional, terampil, dan siap kerja di berbagai bidang, baik di kantor pemerintahan, swasta, maupun dunia usaha.</p>
           <div class="jf-features-block">
             <img src="{{ asset('images/jurusan/thumb_mp.webp') }}" alt="Thumbnail MP" class="jf-thumb" loading="lazy" width="80" height="80">
-            <ul class="jf-features" style="--check:#ec4899">
+            <ul class="jf-features" style="--check:#be185d">
               <li>Tata kelola surat &amp; dokumen</li>
               <li>Layanan publik &amp; komunikasi kantor</li>
               <li>Administrasi digital &amp; teknologi perkantoran</li>
             </ul>
           </div>
-          <a href="{{ route('ppdb') }}" class="jf-btn" style="background:#ec4899">Info Selengkapnya</a>
+          <a href="{{ route('ppdb') }}" class="jf-btn" style="background:#be185d">Info Selengkapnya</a>
         </div>
       </div>
 
@@ -187,17 +188,17 @@
             <img src="{{ asset('images/logo_smkn1.webp') }}" alt="Logo SMKN 1 Probolinggo" width="32" height="32">
             <span>Jurusan SMKN 1 Probolinggo</span>
           </div>
-          <h3 class="jf-heading">Layanan<br><span style="color:#eab308">Perbankan</span></h3>
+          <h3 class="jf-heading">Layanan<br><span style="color:#a16207">Perbankan</span></h3>
           <p class="jf-desc">Jurusan ini membekali siswa dengan pengetahuan dan keterampilan di bidang perbankan, mulai dari pelayanan nasabah, transaksi keuangan, hingga teknologi perbankan digital.</p>
           <div class="jf-features-block">
             <img src="{{ asset('images/jurusan/thumb_lp.webp') }}" alt="Thumbnail LP" class="jf-thumb" loading="lazy" width="80" height="80">
-            <ul class="jf-features" style="--check:#eab308">
+            <ul class="jf-features" style="--check:#a16207">
               <li>Pelayanan teller &amp; customer service</li>
               <li>Administrasi keuangan &amp; tabungan</li>
               <li>Simulasi transaksi perbankan digital</li>
             </ul>
           </div>
-          <a href="{{ route('ppdb') }}" class="jf-btn" style="background:#eab308">Info Selengkapnya</a>
+          <a href="{{ route('ppdb') }}" class="jf-btn" style="background:#a16207">Info Selengkapnya</a>
         </div>
       </div>
 
@@ -211,17 +212,17 @@
             <img src="{{ asset('images/logo_smkn1.webp') }}" alt="Logo SMKN 1 Probolinggo" width="32" height="32">
             <span>Jurusan SMKN 1 Probolinggo</span>
           </div>
-          <h3 class="jf-heading"><span style="color:#ef4444">Akuntansi</span></h3>
+          <h3 class="jf-heading"><span style="color:#b91c1c">Akuntansi</span></h3>
           <p class="jf-desc">Jurusan Akuntansi mempersiapkan siswa untuk menjadi tenaga profesional di bidang akuntansi dan keuangan, dengan keterampilan yang siap langsung diterapkan di dunia kerja maupun pendidikan lanjutan</p>
           <div class="jf-features-block">
             <img src="{{ asset('images/jurusan/thumb_ak.webp') }}" alt="Thumbnail AK" class="jf-thumb" loading="lazy" width="80" height="80">
-            <ul class="jf-features" style="--check:#ef4444">
+            <ul class="jf-features" style="--check:#b91c1c">
               <li>Pembukuan &amp; jurnal transaksi</li>
               <li>Laporan keuangan &amp; perpajakan</li>
               <li>Aplikasi akuntansi digital (MYOB, Excel, dll)</li>
             </ul>
           </div>
-          <a href="{{ route('ppdb') }}" class="jf-btn" style="background:#ef4444">Info Selengkapnya</a>
+          <a href="{{ route('ppdb') }}" class="jf-btn" style="background:#b91c1c">Info Selengkapnya</a>
         </div>
       </div>
 

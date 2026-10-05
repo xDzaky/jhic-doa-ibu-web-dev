@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  @php $assetVersion = config('app.asset_version', '20261005_v20'); @endphp
+  @php $assetVersion = config('app.asset_version', '20261006_v21'); @endphp
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>@yield('title', 'Website Resmi SMKN 1 Probolinggo - Sekolah Pusat Keunggulan & BLUD')</title>
@@ -22,20 +22,17 @@
   {{-- Buka koneksi ke CDN font sedini mungkin --}}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.cdnfonts.com">
-  <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin>
 
-  <!-- Typography: Inter, Figtree & Istok Web -->
+  <!-- Typography: Inter, Figtree & Istok Web (Google Fonts HTTP/2 Edge) -->
   <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400..700;1,400..700&family=Inter:wght@400..900&family=Istok+Web:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400..700;1,400..700&family=Inter:wght@400..900&family=Istok+Web:wght@400;700&display=swap" rel="stylesheet"></noscript>
 
-  {{-- CSS lokal: minified untuk performa maksimal --}}
+  {{-- Preload & Load CSS Utama (Minified, Zero-CLS) --}}
+  <link rel="preload" href="{{ asset('css/wireframe.min.css') }}?v={{ $assetVersion }}" as="style">
   <link rel="stylesheet" href="{{ asset('css/wireframe.min.css') }}?v={{ $assetVersion }}">
-  <link rel="stylesheet" href="{{ asset('css/satoshi.min.css') }}?v={{ $assetVersion }}">
 
-  <!-- Primary & Heading Font: SF Pro Display -->
-  <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript><link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet"></noscript>
+  {{-- Preload LCP Hero Image yang sebenarnya --}}
+  <link rel="preload" as="image" href="{{ asset('images/hero_bg.webp') }}" type="image/webp" fetchpriority="high">
   
   {{-- JSON-LD Structured Data (Boost SEO score ke 100) --}}
   <script type="application/ld+json">
@@ -62,8 +59,7 @@
   }
   </script>
 
-  {{-- Preload LCP Hero Image (school_gate.webp = LCP element on homepage) --}}
-  <link rel="preload" as="image" href="{{ asset('images/school_gate.webp') }}" type="image/webp" fetchpriority="high">
+
 
   @stack('head')
   @stack('styles')

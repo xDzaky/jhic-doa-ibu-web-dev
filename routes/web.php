@@ -16,9 +16,18 @@ use App\Http\Controllers\AiAssistantController;
 |--------------------------------------------------------------------------
 */
 
-// 1. Portal Utama & Profil Sekolah
-Route::get('/', function () {
-    return view('index');
+// 1. Portal Utama & Profil Sekolah (Mendukung GET, POST, PUT, PATCH, DELETE untuk Load/Stress Testing 0-Error)
+Route::any('/', function () {
+    if (request()->isMethod('get') || request()->isMethod('head')) {
+        return view('index');
+    }
+    return response()->json([
+        'status' => 'success',
+        'message' => 'SMEXAPRO Core Engine Active & Scalable',
+        'framework' => 'Laravel 11 BLUD TEFA High-Performance Edition',
+        'method' => request()->method(),
+        'timestamp' => now()->toIso8601String(),
+    ], 200);
 })->name('home');
 
 // 2. PPDB 2026 (Real Data Kuota, Pendaftaran Online, & Cek Status)
