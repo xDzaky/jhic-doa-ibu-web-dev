@@ -363,23 +363,23 @@
         @csrf
         <div class="ppdb-form-grid">
           <div class="ppdb-input-group">
-            <label>Nama Lengkap Siswa</label>
-            <input type="text" name="name" class="ppdb-input" placeholder="Contoh: Muhammad Rizky Pratama" required value="{{ old('name') }}">
+            <label for="ppdb_name">Nama Lengkap Siswa</label>
+            <input type="text" id="ppdb_name" name="name" class="ppdb-input" placeholder="Contoh: Muhammad Rizky Pratama" required value="{{ old('name') }}">
           </div>
 
           <div class="ppdb-input-group">
-            <label>Nomor Induk Siswa Nasional (NISN)</label>
-            <input type="text" name="nisn" class="ppdb-input" placeholder="Contoh: 0089234121 (10 Digit)" required value="{{ old('nisn') }}">
+            <label for="ppdb_nisn">Nomor Induk Siswa Nasional (NISN)</label>
+            <input type="text" id="ppdb_nisn" name="nisn" class="ppdb-input" placeholder="Contoh: 0089234121 (10 Digit)" required value="{{ old('nisn') }}">
           </div>
 
           <div class="ppdb-input-group">
-            <label>Asal Sekolah (SMP / MTs)</label>
-            <input type="text" name="school_origin" class="ppdb-input" placeholder="Contoh: SMP Negeri 1 Probolinggo" required value="{{ old('school_origin') }}">
+            <label for="ppdb_school_origin">Asal Sekolah (SMP / MTs)</label>
+            <input type="text" id="ppdb_school_origin" name="school_origin" class="ppdb-input" placeholder="Contoh: SMP Negeri 1 Probolinggo" required value="{{ old('school_origin') }}">
           </div>
 
           <div class="ppdb-input-group">
-            <label>Pilihan Program Keahlian (Konsentrasi)</label>
-            <select name="major_choice" class="ppdb-input" required>
+            <label for="ppdb_major_choice">Pilihan Program Keahlian (Konsentrasi)</label>
+            <select id="ppdb_major_choice" name="major_choice" class="ppdb-input" required>
               <option value="">-- Pilih Program Keahlian --</option>
               @if(isset($majors) && $majors->count() > 0)
                 @foreach($majors as $m)
@@ -398,13 +398,13 @@
           </div>
 
           <div class="ppdb-input-group">
-            <label>Nilai Rata-rata Rapor (Sem 1 - 5)</label>
-            <input type="number" step="0.1" min="0" max="100" name="avg_score" class="ppdb-input" placeholder="Contoh: 89.4" required value="{{ old('avg_score') }}">
+            <label for="ppdb_avg_score">Nilai Rata-rata Rapor (Sem 1 - 5)</label>
+            <input type="number" id="ppdb_avg_score" step="0.1" min="0" max="100" name="avg_score" class="ppdb-input" placeholder="Contoh: 89.4" required value="{{ old('avg_score') }}">
           </div>
 
           <div class="ppdb-input-group">
-            <label>Jalur Pendaftaran</label>
-            <select name="selection_path" class="ppdb-input">
+            <label for="ppdb_selection_path">Jalur Pendaftaran</label>
+            <select id="ppdb_selection_path" name="selection_path" class="ppdb-input">
               <option value="Prestasi Nilai Rapor (Umum)">Prestasi Nilai Rapor (Umum - Kuota 75%)</option>
               <option value="Jalur Afirmasi (KIP/PKH)">Jalur Afirmasi (KIP/PKH - Kuota 15%)</option>
               <option value="Prestasi Hasil Lomba">Prestasi Hasil Lomba (Kuota 5%)</option>
@@ -413,13 +413,13 @@
           </div>
 
           <div class="ppdb-input-group">
-            <label>Nomor WhatsApp Aktif</label>
-            <input type="text" name="phone" class="ppdb-input" placeholder="Contoh: 081234567890" value="{{ old('phone') }}">
+            <label for="ppdb_phone">Nomor WhatsApp Aktif</label>
+            <input type="text" id="ppdb_phone" name="phone" class="ppdb-input" placeholder="Contoh: 081234567890" value="{{ old('phone') }}">
           </div>
 
           <div class="ppdb-input-group">
-            <label>Alamat Email Calon Siswa</label>
-            <input type="email" name="email" class="ppdb-input" placeholder="Contoh: nama@gmail.com" value="{{ old('email') }}">
+            <label for="ppdb_email">Alamat Email Calon Siswa</label>
+            <input type="email" id="ppdb_email" name="email" class="ppdb-input" placeholder="Contoh: nama@gmail.com" value="{{ old('email') }}">
           </div>
         </div>
 
@@ -443,7 +443,7 @@
       </p>
 
       <div style="display: flex; gap: 10px; max-width: 600px; flex-wrap: wrap;">
-        <input type="text" id="checkInput" class="ppdb-input" style="flex: 1; min-width: 240px; background: #FFFFFF; color: #0F172A;" placeholder="Nomor Registrasi atau NISN...">
+        <input type="text" id="checkInput" class="ppdb-input" style="flex: 1; min-width: 240px; background: #FFFFFF; color: #0F172A;" placeholder="Nomor Registrasi atau NISN..." aria-label="Nomor Registrasi atau NISN">
         <button type="button" class="btn btn-orange" onclick="checkPpdbStatus()">Periksa Status</button>
       </div>
 
@@ -660,108 +660,118 @@
       });
   }
 
-  // Interactive HD Poster Showcase Switcher
-  document.addEventListener('DOMContentLoaded', function() {
-    const showcase = document.getElementById('ppdbPosterShowcase');
-    if (!showcase) return;
+  // Interactive HD Poster Showcase Switcher (Deferred to Idle)
+  (function() {
+    function initPosterShowcase() {
+      const showcase = document.getElementById('ppdbPosterShowcase');
+      if (!showcase) return;
 
-    const slides = showcase.querySelectorAll('.poster-slide');
-    const dots = showcase.querySelectorAll('.poster-dot');
-    const thumbCards = showcase.querySelectorAll('.poster-thumb-card');
-    const prevBtn = document.getElementById('posterPrevBtn');
-    const nextBtn = document.getElementById('posterNextBtn');
-    let currentIndex = 0;
-    let autoPlayTimer = null;
+      const slides = showcase.querySelectorAll('.poster-slide');
+      const dots = showcase.querySelectorAll('.poster-dot');
+      const thumbCards = showcase.querySelectorAll('.poster-thumb-card');
+      const prevBtn = document.getElementById('posterPrevBtn');
+      const nextBtn = document.getElementById('posterNextBtn');
+      let currentIndex = 0;
+      let autoPlayTimer = null;
 
-    function goToSlide(index) {
-      if (index < 0) index = slides.length - 1;
-      if (index >= slides.length) index = 0;
-      currentIndex = index;
+      function goToSlide(index) {
+        if (index < 0) index = slides.length - 1;
+        if (index >= slides.length) index = 0;
+        currentIndex = index;
 
-      slides.forEach((slide, idx) => {
-        slide.classList.toggle('active', idx === currentIndex);
-      });
+        slides.forEach((slide, idx) => {
+          slide.classList.toggle('active', idx === currentIndex);
+        });
+
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === currentIndex);
+        });
+
+        thumbCards.forEach((thumb, idx) => {
+          thumb.classList.toggle('active', idx === currentIndex);
+          thumb.setAttribute('aria-selected', idx === currentIndex ? 'true' : 'false');
+        });
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          goToSlide(currentIndex - 1);
+          resetAutoPlay();
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          goToSlide(currentIndex + 1);
+          resetAutoPlay();
+        });
+      }
 
       dots.forEach((dot, idx) => {
-        dot.classList.toggle('active', idx === currentIndex);
+        dot.addEventListener('click', function(e) {
+          e.preventDefault();
+          goToSlide(idx);
+          resetAutoPlay();
+        });
       });
 
       thumbCards.forEach((thumb, idx) => {
-        thumb.classList.toggle('active', idx === currentIndex);
-        thumb.setAttribute('aria-selected', idx === currentIndex ? 'true' : 'false');
+        thumb.addEventListener('click', function(e) {
+          e.preventDefault();
+          goToSlide(idx);
+          resetAutoPlay();
+        });
       });
-    }
 
-    if (prevBtn) {
-      prevBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        goToSlide(currentIndex - 1);
-        resetAutoPlay();
-      });
-    }
-
-    if (nextBtn) {
-      nextBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        goToSlide(currentIndex + 1);
-        resetAutoPlay();
-      });
-    }
-
-    dots.forEach((dot, idx) => {
-      dot.addEventListener('click', function(e) {
-        e.preventDefault();
-        goToSlide(idx);
-        resetAutoPlay();
-      });
-    });
-
-    thumbCards.forEach((thumb, idx) => {
-      thumb.addEventListener('click', function(e) {
-        e.preventDefault();
-        goToSlide(idx);
-        resetAutoPlay();
-      });
-    });
-
-    function startAutoPlay() {
-      if (autoPlayTimer) clearInterval(autoPlayTimer);
-      autoPlayTimer = setInterval(function() {
-        goToSlide(currentIndex + 1);
-      }, 5500);
-    }
-
-    function resetAutoPlay() {
-      clearInterval(autoPlayTimer);
-      startAutoPlay();
-    }
-
-    showcase.addEventListener('mouseenter', function() {
-      clearInterval(autoPlayTimer);
-    });
-
-    showcase.addEventListener('mouseleave', function() {
-      startAutoPlay();
-    });
-
-    // Touch swipe support for mobile
-    let touchStartX = 0;
-    showcase.addEventListener('touchstart', function(e) {
-      touchStartX = e.changedTouches[0].screenX;
-    }, { passive: true });
-
-    showcase.addEventListener('touchend', function(e) {
-      const touchEndX = e.changedTouches[0].screenX;
-      if (touchStartX - touchEndX > 45) {
-        goToSlide(currentIndex + 1);
-        resetAutoPlay();
-      } else if (touchEndX - touchStartX > 45) {
-        goToSlide(currentIndex - 1);
-        resetAutoPlay();
+      function startAutoPlay() {
+        if (autoPlayTimer) clearInterval(autoPlayTimer);
+        autoPlayTimer = setInterval(function() {
+          goToSlide(currentIndex + 1);
+        }, 6000);
       }
-    }, { passive: true });
 
-    startAutoPlay();
-  });
+      function resetAutoPlay() {
+        clearInterval(autoPlayTimer);
+        startAutoPlay();
+      }
+
+      showcase.addEventListener('mouseenter', function() {
+        clearInterval(autoPlayTimer);
+      }, { passive: true });
+
+      showcase.addEventListener('mouseleave', function() {
+        startAutoPlay();
+      }, { passive: true });
+
+      // Touch swipe support for mobile
+      let touchStartX = 0;
+      showcase.addEventListener('touchstart', function(e) {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      showcase.addEventListener('touchend', function(e) {
+        const touchEndX = e.changedTouches[0].screenX;
+        if (touchStartX - touchEndX > 45) {
+          goToSlide(currentIndex + 1);
+          resetAutoPlay();
+        } else if (touchEndX - touchStartX > 45) {
+          goToSlide(currentIndex - 1);
+          resetAutoPlay();
+        }
+      }, { passive: true });
+
+      startAutoPlay();
+    }
+
+    if ('requestIdleCallback' in window) {
+      window.requestIdleCallback(initPosterShowcase, { timeout: 2000 });
+    } else {
+      window.addEventListener('load', function() {
+        setTimeout(initPosterShowcase, 150);
+      });
+    }
+  })();
 </script>
 @endpush

@@ -1029,19 +1029,30 @@ p, .desc, .lead, .schedule-step, .text-muted, .step-desc {
 }
 
 .poster-dot {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.poster-dot::before {
+  content: '';
+  display: block;
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.4);
-  border: none;
-  cursor: pointer;
   transition: all 0.25s ease;
-  padding: 0;
 }
 
-.poster-dot.active {
+.poster-dot.active::before {
   background: #FFFFFF;
-  width: 22px;
+  width: 18px;
   border-radius: 999px;
 }
 
