@@ -137,12 +137,6 @@
         <div class="ppdb-poster-showcase" id="ppdbPosterShowcase">
           <!-- Main Display Frame with aspect-ratio 1170/1463 to guarantee CLS=0 -->
           <div class="poster-display-frame">
-            <!-- Badge Information -->
-            <div class="poster-eyebrow-badge">
-              <span class="badge-dot-live"></span>
-              <span id="posterActiveLabel">Poster Resmi PPDB 2026</span>
-            </div>
-
             <!-- Slides Wrapper -->
             <div class="poster-slides-wrapper" id="posterSlidesWrapper">
               <!-- Slide 1: SPMB Poster 2 (Default Active) -->
@@ -195,30 +189,30 @@
             </button>
 
             <!-- Indicator Dots -->
-            <div class="poster-dots" id="posterDots" role="tablist" aria-label="Indikator Poster">
-              <button type="button" class="poster-dot active" data-slide="0" aria-label="Lihat Poster PPDB 2026"></button>
-              <button type="button" class="poster-dot" data-slide="1" aria-label="Lihat Jadwal Seleksi"></button>
-              <button type="button" class="poster-dot" data-slide="2" aria-label="Lihat Info MPLS"></button>
+            <div class="poster-dots" id="posterDots" aria-label="Indikator Poster">
+              <button type="button" class="poster-dot active" data-slide="0" aria-label="Lihat Slide 1 Poster PPDB"></button>
+              <button type="button" class="poster-dot" data-slide="1" aria-label="Lihat Slide 2 Jadwal Seleksi"></button>
+              <button type="button" class="poster-dot" data-slide="2" aria-label="Lihat Slide 3 Info MPLS"></button>
             </div>
           </div>
 
           <!-- Interactive 3-Thumb Selector Strip -->
-          <div class="poster-thumb-strip" role="tablist" aria-label="Pilih Foto Poster">
-            <button type="button" class="poster-thumb-card active" data-target="0" role="tab" aria-selected="true" aria-label="Tampilkan Poster PPDB">
+          <div class="poster-thumb-strip">
+            <button type="button" class="poster-thumb-card active" data-target="0">
               <img src="{{ asset('images/ppdb/thumbs/spmb-poster-2.webp') }}" alt="Mini Poster PPDB" width="32" height="40" loading="lazy">
               <div class="thumb-meta">
                 <span class="thumb-title">Poster PPDB</span>
                 <span class="thumb-sub">Alur &amp; Kuota</span>
               </div>
             </button>
-            <button type="button" class="poster-thumb-card" data-target="1" role="tab" aria-selected="false" aria-label="Tampilkan Jadwal Seleksi">
+            <button type="button" class="poster-thumb-card" data-target="1">
               <img src="{{ asset('images/ppdb/thumbs/jadwal-spmb.webp') }}" alt="Mini Jadwal" width="32" height="40" loading="lazy">
               <div class="thumb-meta">
                 <span class="thumb-title">Jadwal Seleksi</span>
                 <span class="thumb-sub">Tahapan Resmi</span>
               </div>
             </button>
-            <button type="button" class="poster-thumb-card" data-target="2" role="tab" aria-selected="false" aria-label="Tampilkan Info MPLS">
+            <button type="button" class="poster-thumb-card" data-target="2">
               <img src="{{ asset('images/ppdb/thumbs/mpls-poster.webp') }}" alt="Mini MPLS" width="32" height="40" loading="lazy">
               <div class="thumb-meta">
                 <span class="thumb-title">Info MPLS</span>
@@ -239,106 +233,76 @@
         <h2 class="section-title" style="font-size: 2rem; font-weight: 800; color: var(--navy-header); margin: 8px 0 10px;">
           Jadwal Tahapan Seleksi PPDB Jatim 2026
         </h2>
-        <p style="color: #64748B; font-size: 0.9375rem; line-height: 1.6;">
+        <p style="color: #475569; font-size: 0.9375rem; line-height: 1.6;">
           Penerimaan Peserta Didik Baru (PPDB) SMK Negeri dilaksanakan secara transparan, akuntabel, dan bertahap. Pastikan mencatat seluruh tanggal penting agar tidak terlewat proses registrasi.
         </p>
       </div>
 
-      <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
-        <!-- ITEM 1: TAHAP 1 -->
-        <li>
-          <div class="timeline-middle" style="background:#082046;">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5" aria-hidden="true">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/>
-            </svg>
-          </div>
-          <div class="timeline-start mb-10 md:text-end">
-            <div class="timeline-content-card">
-              <span class="timeline-tag-pill" style="background:#EFF6FF; color:#1D4ED8; border:1px solid #BFDBFE;">TAHAP 1 &bull; PERSIAPAN &amp; VALIDASI</span>
-              <time class="timeline-time">20 Mei &ndash; 10 Juni 2026</time>
-              <div class="timeline-title">Pengambilan PIN &amp; Verifikasi Nilai Rapor</div>
-              <p class="timeline-desc">
-                Calon peserta didik baru melakukan login mandiri pada portal resmi PPDB Jatim, mengunggah kartu keluarga (KK), dan memverifikasi kesesuaian nilai rapor semester 1 s.d 5.
-              </p>
-              <div class="timeline-meta-badge">
-                <span class="timeline-meta-dot" style="background:#16A34A;"></span>
-                <span>Mandiri Online &amp; Layanan Posko SMEXA</span>
-              </div>
+      <ul class="ppdb-timeline">
+        <!-- TAHAP 1 -->
+        <li class="ppdb-timeline-item ppdb-timeline-left">
+          <div class="ppdb-timeline-icon">1</div>
+          <div class="ppdb-timeline-card">
+            <div class="ppdb-tl-tag">TAHAP 1 &bull; PERSIAPAN &amp; VALIDASI</div>
+            <time class="ppdb-tl-date">20 Mei &ndash; 10 Juni 2026</time>
+            <div class="ppdb-tl-title">Pengambilan PIN &amp; Verifikasi Nilai Rapor</div>
+            <p class="ppdb-tl-desc">
+              Calon peserta didik baru melakukan login mandiri pada portal resmi PPDB Jatim, mengunggah kartu keluarga (KK), dan memverifikasi kesesuaian nilai rapor semester 1 s.d 5.
+            </p>
+            <div class="ppdb-tl-meta">
+              <span class="ppdb-tl-dot"></span>
+              <span>Mandiri Online &amp; Layanan Posko SMEXA</span>
             </div>
           </div>
-          <hr />
         </li>
 
-        <!-- ITEM 2: TAHAP 2 -->
-        <li>
-          <hr />
-          <div class="timeline-middle" style="background:#EA580C;">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5" aria-hidden="true">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/>
-            </svg>
-          </div>
-          <div class="timeline-end md:mb-10">
-            <div class="timeline-content-card">
-              <span class="timeline-tag-pill" style="background:#FFF7ED; color:#EA580C; border:1px solid #FED7AA;">TAHAP 2 &bull; JALUR KHUSUS</span>
-              <time class="timeline-time" style="color:#EA580C;">15 &ndash; 16 Juni 2026</time>
-              <div class="timeline-title">Pendaftaran Jalur Afirmasi &amp; Prestasi Lomba</div>
-              <p class="timeline-desc">
-                Pendaftaran khusus jalur afirmasi keluarga pra-sejahtera (kuota 15%), perpindahan tugas orang tua (5%), serta prestasi hasil kejuaraan akademik, olahraga, sains &amp; seni (5%).
-              </p>
-              <div class="timeline-meta-badge">
-                <span class="timeline-meta-dot" style="background:#2563EB;"></span>
-                <span>Pengumuman Hasil: 17 Juni 2026 (Pukul 08.00 WIB)</span>
-              </div>
+        <!-- TAHAP 2 -->
+        <li class="ppdb-timeline-item ppdb-timeline-right">
+          <div class="ppdb-timeline-icon">2</div>
+          <div class="ppdb-timeline-card">
+            <div class="ppdb-tl-tag">TAHAP 2 &bull; JALUR KHUSUS</div>
+            <time class="ppdb-tl-date">15 &ndash; 16 Juni 2026</time>
+            <div class="ppdb-tl-title">Pendaftaran Jalur Afirmasi &amp; Prestasi Lomba</div>
+            <p class="ppdb-tl-desc">
+              Pendaftaran khusus jalur afirmasi keluarga pra-sejahtera (kuota 15%), perpindahan tugas orang tua (5%), serta prestasi hasil kejuaraan akademik, olahraga, sains &amp; seni (5%).
+            </p>
+            <div class="ppdb-tl-meta">
+              <span class="ppdb-tl-dot"></span>
+              <span>Pengumuman Hasil: 17 Juni 2026 (Pukul 08.00 WIB)</span>
             </div>
           </div>
-          <hr />
         </li>
 
-        <!-- ITEM 3: TAHAP 3 -->
-        <li>
-          <hr />
-          <div class="timeline-middle" style="background:#0284C7;">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5" aria-hidden="true">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/>
-            </svg>
-          </div>
-          <div class="timeline-start mb-10 md:text-end">
-            <div class="timeline-content-card">
-              <span class="timeline-tag-pill" style="background:#F0F9FF; color:#0284C7; border:1px solid #BAE6FD;">TAHAP 3 &bull; JALUR UTAMA (KUOTA 65%)</span>
-              <time class="timeline-time" style="color:#0284C7;">22 &ndash; 23 Juni 2026</time>
-              <div class="timeline-title">Pendaftaran Jalur Prestasi Nilai Akademik (Umum)</div>
-              <p class="timeline-desc">
-                Seleksi berbasis bobot nilai rapor 70% dan nilai akreditasi SMP/MTs 30% untuk 5 konsentrasi keahlian: RPL, Bisnis Digital, Akuntansi, Manajemen Perkantoran, dan Layanan Perbankan.
-              </p>
-              <div class="timeline-meta-badge">
-                <span class="timeline-meta-dot" style="background:#16A34A;"></span>
-                <span>Pengumuman Kelulusan: 24 Juni 2026</span>
-              </div>
+        <!-- TAHAP 3 -->
+        <li class="ppdb-timeline-item ppdb-timeline-left">
+          <div class="ppdb-timeline-icon">3</div>
+          <div class="ppdb-timeline-card">
+            <div class="ppdb-tl-tag">TAHAP 3 &bull; JALUR UTAMA &mdash; KUOTA 65%</div>
+            <time class="ppdb-tl-date">22 &ndash; 23 Juni 2026</time>
+            <div class="ppdb-tl-title">Pendaftaran Jalur Prestasi Nilai Akademik (Umum)</div>
+            <p class="ppdb-tl-desc">
+              Seleksi berbasis bobot nilai rapor 70% dan nilai akreditasi SMP/MTs 30% untuk 5 konsentrasi keahlian: RPL, Bisnis Digital, Akuntansi, Manajemen Perkantoran, dan Layanan Perbankan.
+            </p>
+            <div class="ppdb-tl-meta">
+              <span class="ppdb-tl-dot"></span>
+              <span>Pengumuman Kelulusan: 24 Juni 2026</span>
             </div>
           </div>
-          <hr />
         </li>
 
-        <!-- ITEM 4: TAHAP 4 -->
-        <li>
-          <hr />
-          <div class="timeline-middle" style="background:#15803D;">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5" aria-hidden="true">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/>
-            </svg>
-          </div>
-          <div class="timeline-end md:mb-10">
-            <div class="timeline-content-card">
-              <span class="timeline-tag-pill" style="background:#F0FDF4; color:#15803D; border:1px solid #BBF7D0;">TAHAP 4 &bull; TAHAP AKHIR</span>
-              <time class="timeline-time" style="color:#15803D;">01 &ndash; 02 Juli 2026</time>
-              <div class="timeline-title">Daftar Ulang &amp; Verifikasi Berkas Fisik</div>
-              <p class="timeline-desc">
-                Siswa yang dinyatakan diterima hadir langsung di Kampus SMKN 1 Probolinggo untuk penyerahan berkas fisik asli, tes kesehatan kejuruan, dan pengukuran seragam praktek/sekolah.
-              </p>
-              <div class="timeline-meta-badge">
-                <span class="timeline-meta-dot" style="background:#DC2626;"></span>
-                <span>Kampus SMKN 1 Probolinggo &bull; Jl. Mastrip No. 357</span>
-              </div>
+        <!-- TAHAP 4 -->
+        <li class="ppdb-timeline-item ppdb-timeline-right">
+          <div class="ppdb-timeline-icon">4</div>
+          <div class="ppdb-timeline-card">
+            <div class="ppdb-tl-tag">TAHAP 4 &bull; TAHAP AKHIR</div>
+            <time class="ppdb-tl-date">01 &ndash; 02 Juli 2026</time>
+            <div class="ppdb-tl-title">Daftar Ulang &amp; Verifikasi Berkas Fisik</div>
+            <p class="ppdb-tl-desc">
+              Siswa yang dinyatakan diterima hadir langsung di Kampus SMKN 1 Probolinggo untuk penyerahan berkas fisik asli, tes kesehatan kejuruan, dan pengukuran seragam praktek/sekolah.
+            </p>
+            <div class="ppdb-tl-meta">
+              <span class="ppdb-tl-dot"></span>
+              <span>Kampus SMKN 1 Probolinggo &bull; Jl. Mastrip No. 357</span>
             </div>
           </div>
         </li>
@@ -704,7 +668,6 @@
     const slides = showcase.querySelectorAll('.poster-slide');
     const dots = showcase.querySelectorAll('.poster-dot');
     const thumbCards = showcase.querySelectorAll('.poster-thumb-card');
-    const labelEl = document.getElementById('posterActiveLabel');
     const prevBtn = document.getElementById('posterPrevBtn');
     const nextBtn = document.getElementById('posterNextBtn');
     let currentIndex = 0;
@@ -716,14 +679,7 @@
       currentIndex = index;
 
       slides.forEach((slide, idx) => {
-        if (idx === currentIndex) {
-          slide.classList.add('active');
-          if (labelEl) {
-            labelEl.textContent = slide.getAttribute('data-label') || 'Poster Resmi SMEXA';
-          }
-        } else {
-          slide.classList.remove('active');
-        }
+        slide.classList.toggle('active', idx === currentIndex);
       });
 
       dots.forEach((dot, idx) => {
