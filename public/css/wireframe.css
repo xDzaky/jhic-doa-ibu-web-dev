@@ -279,7 +279,7 @@
 .footer-connect-col p {
   font-size: 0.875rem;
   line-height: 1.65;
-  color: #64748B !important;
+  color: #CBD5E1 !important;
   margin-bottom: 24px;
   max-width: 340px;
 }
@@ -312,12 +312,12 @@
 }
 .footer-copyright-note {
   font-size: 0.8125rem;
-  color: #64748B !important;
+  color: #CBD5E1 !important;
   font-weight: 500;
 }
 .footer-copyright-note a {
-  color: #64748B !important;
-  text-decoration: none;
+  color: #E2E8F0 !important;
+  text-decoration: underline;
   font-weight: 600;
 }
 .footer-copyright-note a:hover {
@@ -352,7 +352,7 @@
 .footer-school-addr {
   font-size: 0.8125rem;
   line-height: 1.6;
-  color: #64748B !important;
+  color: #CBD5E1 !important;
 }
 .footer-info-divider {
   height: 1px;
@@ -437,12 +437,49 @@
   width: 100%;
   height: 100%;
   border: 0;
+  display: block;
+}
+.footer-map-facade {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 45%, #132742 0%, #08162A 100%);
+  color: #E2E8F0;
+  z-index: 2;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+  pointer-events: none;
+}
+.footer-map-facade.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+.facade-pin {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(15, 42, 74, 0.92);
+  padding: 7px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+  font-family: var(--font-heading);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+.facade-address {
+  margin: 8px 0 0 0;
+  font-size: 0.75rem;
+  color: #CBD5E1;
 }
 .footer-map-badge {
   position: absolute;
   top: 12px;
   left: 12px;
-  z-index: 2;
+  z-index: 4;
   display: inline-flex;
   align-items: center;
   gap: 6px;

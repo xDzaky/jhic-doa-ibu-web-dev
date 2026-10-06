@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  @php $assetVersion = config('app.asset_version', '20261006_v21'); @endphp
+  @php $assetVersion = config('app.asset_version', '20261006_v22'); @endphp
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>@yield('title', 'Website Resmi SMKN 1 Probolinggo - Sekolah Pusat Keunggulan & BLUD')</title>
@@ -47,10 +47,10 @@
     "description": "Sekolah Menengah Kejuruan Negeri 1 Probolinggo — Pusat Keunggulan, 5 konsentrasi keahlian modern, Teaching Factory SMEXAMALL, kemitraan industri nasional.",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Jl. Mastrip No. 357, Kanigaran",
-      "addressLocality": "Kota Probolinggo",
+      "streetAddress": "Jl. Mastrip No. 357, Kademangan, Jrebeng Wetan",
+      "addressLocality": "Kec. Kedopok, Kota Probolinggo",
       "addressRegion": "Jawa Timur",
-      "postalCode": "67219",
+      "postalCode": "67239",
       "addressCountry": "ID"
     },
     "telephone": "+62335421121",
@@ -235,21 +235,21 @@
           </div>
           <div class="footer-school-name">SMK Negeri 1 Probolinggo</div>
           <div class="footer-school-addr">
-            Jl. Mastrip No. 357, Kanigaran, Kec. Kanigaran, Kota Probolinggo, Jawa Timur 67219
+            Jl. Mastrip No.357, Kademangan, Jrebeng Wetan, Kec. Kedopok, Kota Probolinggo, Jawa Timur 67239
           </div>
 
           <div class="footer-info-divider"></div>
 
           <div class="footer-info-heading">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
             <span>Hubungi Kami</span>
           </div>
           <a href="tel:0335421121" class="footer-contact-item">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
             <span>(0335) 421121</span>
           </a>
           <a href="mailto:info@smkn1probolinggo.sch.id" class="footer-contact-item">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
             <span>info@smkn1probolinggo.sch.id</span>
           </a>
           <a href="{{ route('ppdb') }}" class="footer-ppdb-link">
@@ -261,24 +261,38 @@
         <div class="footer-map-col">
           <div class="footer-map-top">
             <div class="footer-info-heading" style="margin-bottom: 0;">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
               <span>Lokasi Google Maps</span>
             </div>
-            <a href="https://www.google.com/maps/search/?api=1&query=SMK+Negeri+1+Probolinggo" target="_blank" rel="noopener noreferrer" class="footer-maps-pill-btn">
+            <a href="https://www.google.com/maps/search/?api=1&query=SMK+Negeri+1+Probolinggo+Jl.+Mastrip+No.+357+Kedopok+Kota+Probolinggo" target="_blank" rel="noopener noreferrer" class="footer-maps-pill-btn" aria-label="Buka peta besar SMK Negeri 1 Probolinggo di tab baru">
               Buka Peta Besar
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
             </a>
           </div>
 
-          <div class="footer-map-card">
-            <a href="https://www.google.com/maps/search/?api=1&query=SMK+Negeri+1+Probolinggo" target="_blank" rel="noopener noreferrer" class="footer-map-badge">
+          <div class="footer-map-card" id="footerMapContainer">
+            <a href="https://www.google.com/maps/search/?api=1&query=SMK+Negeri+1+Probolinggo+Jl.+Mastrip+No.+357+Kedopok+Kota+Probolinggo" target="_blank" rel="noopener noreferrer" class="footer-map-badge" aria-label="Buka di aplikasi Google Maps">
               <span>Buka di Maps</span>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
             </a>
+
+            <!-- Performance-Preserving Facade -->
+            <div id="footerMapFacade" class="footer-map-facade">
+              <div class="facade-pin">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="#EF4444" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3" fill="#FFFFFF"></circle></svg>
+                <span>SMKN 1 Probolinggo</span>
+              </div>
+              <p class="facade-address">Jl. Mastrip No. 357, Kec. Kedopok</p>
+            </div>
+
+            <!-- Real Interactive Google Maps iframe (lazy activated via IntersectionObserver) -->
             <iframe 
-              src="https://maps.google.com/maps?q=SMK%20Negeri%201%20Probolinggo%20Jl.%20Mastrip%20No.%20357&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              id="footerMapIframe"
+              data-src="https://www.google.com/maps?q=-7.7817,113.2116+(SMK+Negeri+1+Probolinggo)&amp;hl=id&amp;z=16&amp;output=embed" 
               loading="lazy" 
-              title="Peta Lokasi SMK Negeri 1 Probolinggo"
+              title="Peta Lokasi SMK Negeri 1 Probolinggo - Jl. Mastrip No. 357"
+              aria-label="Peta Google Maps SMK Negeri 1 Probolinggo"
+              referrerpolicy="no-referrer-when-downgrade"
               allowfullscreen>
             </iframe>
           </div>
@@ -648,6 +662,44 @@
         });
       }
 
+      // High-performance Lazy Google Maps loader (zero impact on initial PageSpeed / Lighthouse audit)
+      const mapContainer = document.getElementById('footerMapContainer');
+      const mapIframe = document.getElementById('footerMapIframe');
+      const mapFacade = document.getElementById('footerMapFacade');
+
+      if (mapContainer && mapIframe) {
+        let isMapLoaded = false;
+        const loadGoogleMap = function() {
+          if (isMapLoaded) return;
+          isMapLoaded = true;
+          const targetSrc = mapIframe.getAttribute('data-src');
+          if (targetSrc) {
+            mapIframe.src = targetSrc;
+            mapIframe.addEventListener('load', function() {
+              if (mapFacade) {
+                mapFacade.classList.add('loaded');
+              }
+            }, { once: true });
+          }
+        };
+
+        if ('IntersectionObserver' in window) {
+          const mapObserver = new IntersectionObserver(function(entries) {
+            if (entries[0].isIntersecting) {
+              loadGoogleMap();
+              mapObserver.disconnect();
+            }
+          }, { rootMargin: '300px 0px' });
+          mapObserver.observe(mapContainer);
+        } else {
+          window.addEventListener('load', function() {
+            setTimeout(loadGoogleMap, 2500);
+          });
+        }
+
+        mapContainer.addEventListener('click', loadGoogleMap, { once: true });
+        mapContainer.addEventListener('touchstart', loadGoogleMap, { passive: true, once: true });
+      }
     });
   </script>
   @stack('scripts')

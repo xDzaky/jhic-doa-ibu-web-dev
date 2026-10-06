@@ -21,7 +21,7 @@ class AiDatasetService
                 'status' => 'Negeri - SMK Pusat Keunggulan (SMK PK) & BLUD (Badan Layanan Umum Daerah)',
                 'akreditasi' => 'A Unggul (BAN-SM)',
                 'kepala_sekolah' => 'Dwi Anggraeni, S.Pd., M.Pd.',
-                'alamat' => 'Jl. Mastrip No. 357, Kel. Kanigaran, Kec. Kanigaran, Kota Probolinggo, Jawa Timur 67219',
+                'alamat' => 'Jl. Mastrip No. 357, Kademangan, Jrebeng Wetan, Kec. Kedopok, Kota Probolinggo, Jawa Timur 67239',
                 'telepon' => '(0335) 421121 / (0335) 421537',
                 'email' => 'info@smkn1probolinggo.sch.id',
                 'website' => 'https://smkn1probolinggo.sch.id',
