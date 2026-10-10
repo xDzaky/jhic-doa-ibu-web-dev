@@ -475,7 +475,7 @@
 
   <style>
     .section-cerita-alumni {
-      background: #FFFFFF;
+      background: #FAFAFA;
       padding: 90px 0;
       position: relative;
       overflow: hidden;
@@ -509,7 +509,7 @@
     .alumni-cards-col {
       display: flex;
       align-items: center;
-      gap: 22px;
+      gap: 24px;
       flex: 1;
       justify-content: flex-end;
     }
@@ -517,20 +517,23 @@
       display: inline-block;
       text-decoration: none;
       border-radius: 16px;
+      background: #FAFAFA;
+      border: none;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
       transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
       will-change: transform;
     }
     .alumni-card-link:hover {
       transform: translateY(-6px);
-      box-shadow: 0 12px 28px rgba(58, 92, 154, 0.15);
+      box-shadow: 0 10px 24px rgba(58, 92, 154, 0.12);
     }
     .alumni-card-img {
       width: 225px;
       height: auto;
       max-width: 100%;
       border-radius: 16px;
+      border: none;
       display: block;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
     }
     @media (max-width: 1100px) {
       .alumni-heading {
