@@ -16,7 +16,7 @@
     margin: 0 auto;
     padding: 0 32px;
   }
-  /* Hero Banner - Full Width Image with Bottom Right Cart Button */
+  /* Hero Banner - Boxed Container with Bottom Right Cart Button */
   .smx-banner-wrap {
     position: relative;
     width: 100%;
@@ -75,8 +75,8 @@
     margin-left: 2px;
   }
   @media (max-width: 768px) {
-    .smx-banner-img { max-height: 200px; }
-    .smx-banner-overlay { bottom: 12px; right: 12px; }
+    .smx-banner-img { max-height: 220px; }
+    .smx-banner-overlay { bottom: 14px; right: 14px; }
     .smx-cart-btn { font-size: 0.8125rem; padding: 8px 14px; gap: 6px; }
   }
   /* Search & Filter Bar */
@@ -84,7 +84,7 @@
     background: #FFFFFF;
     border: 1px solid #E2E8F0;
     border-radius: 12px;
-    padding: 16px 20px;
+    padding: 14px 20px;
     margin-bottom: 24px;
     display: flex;
     justify-content: space-between;
@@ -93,6 +93,13 @@
     gap: 16px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.02);
   }
+  .smx-search-form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    max-width: 480px;
+  }
   .smx-search-box {
     display: flex;
     align-items: center;
@@ -100,9 +107,8 @@
     background: #F8FAFC;
     border: 1px solid #CBD5E1;
     border-radius: 8px;
-    padding: 6px 14px;
+    padding: 8px 14px;
     flex: 1;
-    max-width: 440px;
   }
   .smx-search-input {
     border: none;
@@ -111,6 +117,16 @@
     font-family: inherit;
     width: 100%;
     outline: none;
+  }
+  .smx-search-btn {
+    white-space: nowrap;
+    padding: 8px 18px;
+    height: 38px;
+  }
+  .smx-product-count-label {
+    font-size: 0.8125rem;
+    color: #64748B;
+    font-weight: 700;
   }
   .smx-cat-pills {
     display: flex;
@@ -317,15 +333,15 @@
 
     <!-- Search Bar -->
     <div class="smx-filter-bar">
-      <form action="{{ route('smexamall.index') }}" method="GET" style="display:contents;">
+      <form action="{{ route('smexamall.index') }}" method="GET" class="smx-search-form">
         <div class="smx-search-box">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
           <input type="text" name="q" class="smx-search-input" placeholder="Cari roti sisir, keripik pisang, kopi robusta, dimsum, baso aci..." value="{{ $search ?? '' }}">
         </div>
-        <button type="submit" class="btn btn-sm btn-outline-navy">Cari</button>
+        <button type="submit" class="btn btn-sm btn-outline-navy smx-search-btn">Cari</button>
       </form>
 
-      <div style="font-size:0.8125rem; color:#64748B; font-weight:700;">
+      <div class="smx-product-count-label">
         Menampilkan <strong>{{ count($products) }}</strong> Produk Teaching Factory Aktif
       </div>
     </div>
