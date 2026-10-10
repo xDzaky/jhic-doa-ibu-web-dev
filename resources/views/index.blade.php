@@ -120,7 +120,9 @@
       <!-- 1. RPL — Image Left, Text Right (Green) -->
       <div class="jf-row jf-img-left reveal-item" data-delay="0">
         <div class="jf-img-col">
-          <img src="{{ asset('images/jurusan/bg_rpl.webp') }}" alt="Rekayasa Perangkat Lunak" class="jf-img" loading="lazy" width="400" height="250">
+          <a href="{{ route('jurusan.rpl') }}" style="display: block; cursor: pointer;">
+            <img src="{{ asset('images/jurusan/hero_rpl.png') }}" alt="Rekayasa Perangkat Lunak" class="jf-img" loading="lazy" width="400" height="250" style="transition: transform 0.3s ease;">
+          </a>
         </div>
         <div class="jf-text-col">
           <div class="jf-label">
@@ -137,14 +139,16 @@
               <li>Lulus siap kerja, wirausaha, atau kuliah</li>
             </ul>
           </div>
-          <a href="{{ route('ppdb') }}" class="jf-btn" style="background:#15803d">Info Selengkapnya</a>
+          <a href="{{ route('jurusan.rpl') }}" class="jf-btn" style="background:#15803d">Info Selengkapnya</a>
         </div>
       </div>
 
       <!-- 2. Bisnis Digital — Text Left, Image Right (Blue) -->
       <div class="jf-row jf-img-right reveal-item" data-delay="80">
         <div class="jf-img-col">
-          <img src="{{ asset('images/jurusan/bg_bd.webp') }}" alt="Bisnis Digital" class="jf-img" loading="lazy" width="400" height="250">
+          <a href="{{ route('jurusan.bd') }}" style="display: block; cursor: pointer;">
+            <img src="{{ asset('images/jurusan/hero_bd.png') }}" alt="Bisnis Digital" class="jf-img" loading="lazy" width="400" height="250" style="transition: transform 0.3s ease;">
+          </a>
         </div>
         <div class="jf-text-col">
           <div class="jf-label">
@@ -161,14 +165,16 @@
               <li>Kewirausahaan digital &amp; marketplace</li>
             </ul>
           </div>
-          <a href="{{ route('ppdb') }}" class="jf-btn" style="background:#1d4ed8">Info Selengkapnya</a>
+          <a href="{{ route('jurusan.bd') }}" class="jf-btn" style="background:#1d4ed8">Info Selengkapnya</a>
         </div>
       </div>
 
       <!-- 3. Manajemen Perkantoran — Image Left, Text Right (Pink) -->
       <div class="jf-row jf-img-left reveal-item" data-delay="160">
         <div class="jf-img-col">
-          <img src="{{ asset('images/jurusan/bg_mp.webp') }}" alt="Manajemen Perkantoran" class="jf-img" loading="lazy" width="400" height="250">
+          <a href="{{ route('jurusan.mp') }}" style="display: block; cursor: pointer;">
+            <img src="{{ asset('images/jurusan/hero_mp.png') }}" alt="Manajemen Perkantoran" class="jf-img" loading="lazy" width="400" height="250" style="transition: transform 0.3s ease;">
+          </a>
         </div>
         <div class="jf-text-col">
           <div class="jf-label">
@@ -185,14 +191,16 @@
               <li>Administrasi digital &amp; teknologi perkantoran</li>
             </ul>
           </div>
-          <a href="{{ route('ppdb') }}" class="jf-btn" style="background:#be185d">Info Selengkapnya</a>
+          <a href="{{ route('jurusan.mp') }}" class="jf-btn" style="background:#be185d">Info Selengkapnya</a>
         </div>
       </div>
 
       <!-- 4. Layanan Perbankan — Text Left, Image Right (Yellow) -->
       <div class="jf-row jf-img-right reveal-item" data-delay="240">
         <div class="jf-img-col">
-          <img src="{{ asset('images/jurusan/bg_lp.webp') }}" alt="Layanan Perbankan" class="jf-img" loading="lazy" width="400" height="250">
+          <a href="{{ route('jurusan.lp') }}" style="display: block; cursor: pointer;">
+            <img src="{{ asset('images/jurusan/hero_lp.png') }}" alt="Layanan Perbankan" class="jf-img" loading="lazy" width="400" height="250" style="transition: transform 0.3s ease;">
+          </a>
         </div>
         <div class="jf-text-col">
           <div class="jf-label">
@@ -209,14 +217,16 @@
               <li>Simulasi transaksi perbankan digital</li>
             </ul>
           </div>
-          <a href="{{ route('ppdb') }}" class="jf-btn" style="background:#a16207">Info Selengkapnya</a>
+          <a href="{{ route('jurusan.lp') }}" class="jf-btn" style="background:#a16207">Info Selengkapnya</a>
         </div>
       </div>
 
       <!-- 5. Akuntansi — Image Left, Text Right (Red) -->
       <div class="jf-row jf-img-left reveal-item" data-delay="320">
         <div class="jf-img-col">
-          <img src="{{ asset('images/jurusan/bg_ak.webp') }}" alt="Akuntansi" class="jf-img" loading="lazy" width="400" height="250">
+          <a href="{{ route('jurusan.ak') }}" style="display: block; cursor: pointer;">
+            <img src="{{ asset('images/jurusan/hero_ak.png') }}" alt="Akuntansi" class="jf-img" loading="lazy" width="400" height="250" style="transition: transform 0.3s ease;">
+          </a>
         </div>
         <div class="jf-text-col">
           <div class="jf-label">
@@ -233,7 +243,7 @@
               <li>Aplikasi akuntansi digital (MYOB, Excel, dll)</li>
             </ul>
           </div>
-          <a href="{{ route('ppdb') }}" class="jf-btn" style="background:#b91c1c">Info Selengkapnya</a>
+          <a href="{{ route('jurusan.ak') }}" class="jf-btn" style="background:#b91c1c">Info Selengkapnya</a>
         </div>
       </div>
 
@@ -434,6 +444,134 @@
     </div>
   </section>
 
+  <!-- 6.5. Cerita Alumni Section (Matching Figma Design) -->
+  <section class="section-cerita-alumni" id="cerita-alumni">
+    <div class="container alumni-container">
+      <!-- Left Column: Title & Subtitle -->
+      <div class="alumni-text-col reveal-item" data-delay="0">
+        <h2 class="alumni-heading">
+          Cerita<br>Alumni
+        </h2>
+        <p class="alumni-desc">
+          Belajar di SMKN 1 Probolinggo bukan cuma soal pelajaran, tapi juga membangun karakter, menemukan passion, dan menyiapkan langkah besar setelah lulus.<br>
+          Yuk, simak cerita mereka yang pernah duduk di bangku ini dan kini berprestasi di luar sana.
+        </p>
+      </div>
+
+      <!-- Right Column: 3 Testimonial Cards using card.png -->
+      <div class="alumni-cards-col reveal-item" data-delay="100">
+        <a href="{{ route('alumni.show', 1) }}" class="alumni-card-link" aria-label="Cerita Alumni Andiena">
+          <img src="{{ asset('images/card.png') }}" alt="Testimoni Alumni Andiena - SMKN 1 Probolinggo" class="alumni-card-img" width="265" height="363" loading="lazy">
+        </a>
+        <a href="{{ route('alumni.show', 2) }}" class="alumni-card-link" aria-label="Cerita Alumni Andiena">
+          <img src="{{ asset('images/card.png') }}" alt="Testimoni Alumni Andiena - SMKN 1 Probolinggo" class="alumni-card-img" width="265" height="363" loading="lazy">
+        </a>
+        <a href="{{ route('alumni.show', 3) }}" class="alumni-card-link" aria-label="Cerita Alumni Andiena">
+          <img src="{{ asset('images/card.png') }}" alt="Testimoni Alumni Andiena - SMKN 1 Probolinggo" class="alumni-card-img" width="265" height="363" loading="lazy">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .section-cerita-alumni {
+      background: #FFFFFF;
+      padding: 90px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .alumni-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+    }
+    .alumni-text-col {
+      flex: 0 0 380px;
+      max-width: 420px;
+    }
+    .alumni-heading {
+      font-family: var(--font-heading, 'Inter', sans-serif);
+      font-size: 3.25rem;
+      font-weight: 800;
+      color: #3A5C9A;
+      line-height: 1.12;
+      margin: 0 0 24px 0;
+      letter-spacing: -0.02em;
+    }
+    .alumni-desc {
+      font-size: 0.875rem;
+      line-height: 1.65;
+      color: #64748B;
+      margin: 0;
+      font-weight: 500;
+    }
+    .alumni-cards-col {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .alumni-card-link {
+      display: inline-block;
+      text-decoration: none;
+      border-radius: 16px;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+      will-change: transform;
+    }
+    .alumni-card-link:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 28px rgba(58, 92, 154, 0.15);
+    }
+    .alumni-card-img {
+      width: 225px;
+      height: auto;
+      max-width: 100%;
+      border-radius: 16px;
+      display: block;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    }
+    @media (max-width: 1100px) {
+      .alumni-heading {
+        font-size: 2.75rem;
+      }
+      .alumni-card-img {
+        width: 190px;
+      }
+      .alumni-cards-col {
+        gap: 16px;
+      }
+    }
+    @media (max-width: 900px) {
+      .section-cerita-alumni {
+        padding: 60px 0;
+      }
+      .alumni-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 36px;
+      }
+      .alumni-text-col {
+        flex: none;
+        max-width: 100%;
+      }
+      .alumni-cards-col {
+        width: 100%;
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 14px;
+        -webkit-overflow-scrolling: touch;
+      }
+      .alumni-card-link {
+        flex-shrink: 0;
+      }
+      .alumni-card-img {
+        width: 210px;
+      }
+    }
+  </style>
+
   <!-- 7. Kerja Sama Industri Mitra DUDI (MATCHING REFERENCE IMAGE 3) -->
   <section class="partner-ref-section" id="mitra">
     <div class="container">
@@ -602,6 +740,26 @@
     </div>
   </section>
 @endsection
+
+@push('styles')
+<style>
+/* Hover effect untuk gambar jurusan yang clickable */
+.jf-img-col a:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.jf-img-col a {
+  overflow: hidden;
+  border-radius: 12px;
+  display: block;
+}
+
+.jf-img-col a img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+</style>
+@endpush
 
 @push('scripts')
 <script>
