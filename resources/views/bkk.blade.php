@@ -10,24 +10,19 @@
 @section('content')
   <!-- 1. HERO BKK & PKL -->
   <section class="bkk-hero">
-    <div class="container bkk-hero-grid">
-      <div>
-        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
-          <img src="{{ asset('images/logo_bkk_resmi.webp') }}" alt="Logo Resmi BKK SMKN 1 Probolinggo" style="height: 52px; width: auto; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.06));" width="400" height="300">
-          <div>
-            <span style="display: inline-block; font-family: var(--font-heading); background: #EEF2F6; color: var(--navy-header); font-size: 0.75rem; font-weight: 800; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.05em; border: 1px solid #CBD5E1;">
-              Portal Resmi BKK &amp; Praktik Kerja Lapangan
-            </span>
-          </div>
+    <div class="container" style="text-align: center; max-width: 900px;">
+      <div style="display: inline-flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+        <img src="{{ asset('images/logo_bkk_resmi.webp') }}" alt="Logo Resmi BKK SMKN 1 Probolinggo" style="height: 52px; width: auto; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.06));" width="400" height="300">
+        <div>
+          <span style="display: inline-block; font-family: var(--font-heading); background: #EEF2F6; color: var(--navy-header); font-size: 0.75rem; font-weight: 800; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.05em; border: 1px solid #CBD5E1;">
+            Portal Resmi BKK &amp; Praktik Kerja Lapangan
+          </span>
         </div>
-        <h1 class="bkk-hero-title">Lowongan alumni dan magang industri SMKN 1 Probolinggo</h1>
-        <p class="bkk-hero-sub">
-          Satu pintu untuk penyaluran kerja alumni (BKK) dan penempatan magang industri 6 bulan (PKL). Pilih posisi, cek kualifikasi, lalu ajukan langsung ke sekolah.
-        </p>
       </div>
-      <p class="bkk-hero-facts">
-        <strong>50+</strong> mitra industri terikat MoU, <strong>120+</strong> lowongan kerja tiap tahun,
-        <strong>95%</strong> lulusan terserap, dan <strong>100%</strong> siswa PKL tersertifikasi.
+      <h1 class="bkk-hero-title" style="font-size: 2.5rem; line-height: 1.2; margin: 0 auto 24px; max-width: 800px;">
+        Lowongan alumni dan magang industri <span style="color: #FFB800;">SMKN 1 Probolinggo</span>
+      </h1>
+      <p class="bkk-hero-sub" style="font-size: 1rem; line-height: 1.6; color: #64748B; m/home/dzaky/Pictures/screenshot_20261010_220952.png dan rekrutmen eksklusif dari ratusan partner industri terpercaya yang siap mengantarkan langkah awal karirmu.
       </p>
     </div>
   </section>

@@ -100,7 +100,6 @@
             <a href="{{ route('profil') }}" class="nav-dropdown-item">Profil Sekolah</a>
             <a href="{{ route('home') }}#sambutan" class="nav-dropdown-item">Sambutan Kepala Sekolah</a>
             <a href="{{ route('home') }}#jurusan" class="nav-dropdown-item">Program Keahlian</a>
-            <a href="{{ route('home') }}#dewan-guru" class="nav-dropdown-item">Tenaga Pendidik</a>
           </div>
         </li>
         <li><a href="{{ route('ppdb') }}" class="nav-link {{ request()->routeIs('ppdb') ? 'active' : '' }}">PPDB 2026</a></li>

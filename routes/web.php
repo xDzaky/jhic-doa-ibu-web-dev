@@ -54,6 +54,32 @@ Route::get('/berita/{id}', function ($id) {
     return view('berita.show', ['id' => $id]);
 })->name('berita.show');
 
+// 3.3. Halaman Detail Jurusan
+Route::get('/jurusan/rpl', function () {
+    return view('jurusan.rpl');
+})->name('jurusan.rpl');
+
+Route::get('/jurusan/bisnis-digital', function () {
+    return view('jurusan.bd');
+})->name('jurusan.bd');
+
+Route::get('/jurusan/manajemen-perkantoran', function () {
+    return view('jurusan.mp');
+})->name('jurusan.mp');
+
+Route::get('/jurusan/layanan-perbankan', function () {
+    return view('jurusan.lp');
+})->name('jurusan.lp');
+
+Route::get('/jurusan/akuntansi', function () {
+    return view('jurusan.ak');
+})->name('jurusan.ak');
+
+// 3.4. Halaman Kata Alumni
+Route::get('/alumni/{id}', function ($id) {
+    return view('alumni.show', ['alumni' => ['name' => 'Mohammad Rizal', 'year' => '2015']]);
+})->name('alumni.show');
+
 // 4. SMEXAMALL - E-Commerce Teaching Factory BLUD (Real Database Products)
 Route::get('/smexamall', [SmexamallController::class, 'index'])->name('smexamall.index');
 

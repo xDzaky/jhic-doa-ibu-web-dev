@@ -16,35 +16,68 @@
     margin: 0 auto;
     padding: 0 32px;
   }
-  /* Hero Banner - Clean White Identity Card */
-  .smx-hero-card {
-    background: #FFFFFF;
-    border: 1px solid #E2E8F0;
-    border-left: 5px solid #0284C7;
-    border-radius: 14px;
-    padding: 28px 32px;
-    color: var(--navy-header);
+  /* Hero Banner - Full Width Image with Bottom Right Cart Button */
+  .smx-banner-wrap {
+    position: relative;
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
     margin-bottom: 24px;
-    display: flex;
-    justify-content: space-between;
+    box-shadow: 0 4px 20px rgba(124, 60, 33, 0.08);
+    background-color: #FDFBF7;
+    border: 1px solid #F1E5D8;
+  }
+  .smx-banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 380px;
+    object-fit: cover;
+  }
+  .smx-banner-overlay {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2;
+  }
+  .smx-cart-btn {
+    display: inline-flex;
     align-items: center;
-    box-shadow: 0 2px 10px rgba(0, 37, 101, 0.03);
-    flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
+    background: linear-gradient(135deg, #EA6C0A 0%, #C05621 100%);
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 12px 22px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(192, 86, 33, 0.35);
+    transition: all 0.25s ease;
+    border: 2px solid #FFF8F0;
+    backdrop-filter: blur(4px);
   }
-  .smx-hero-title {
-    font-size: 1.65rem;
+  .smx-cart-btn:hover {
+    background: linear-gradient(135deg, #D95D02 0%, #9C3D10 100%);
+    box-shadow: 0 6px 20px rgba(124, 60, 33, 0.45);
+    transform: translateY(-2px);
+    color: #FFFDF9;
+  }
+  .smx-cart-btn svg {
+    color: #FFEAD5;
+  }
+  .smx-cart-badge {
+    background: #FFF8F0;
+    color: #7C3C21;
     font-weight: 800;
-    color: var(--navy-header);
-    margin: 0 0 8px;
-    line-height: 1.2;
+    font-size: 0.8rem;
+    padding: 2px 8px;
+    border-radius: 999px;
+    margin-left: 2px;
   }
-  .smx-hero-sub {
-    font-size: 0.875rem;
-    color: #475569;
-    max-width: 580px;
-    line-height: 1.5;
-    margin: 0;
+  @media (max-width: 768px) {
+    .smx-banner-img { max-height: 200px; }
+    .smx-banner-overlay { bottom: 12px; right: 12px; }
+    .smx-cart-btn { font-size: 0.8125rem; padding: 8px 14px; gap: 6px; }
   }
   /* Search & Filter Bar */
   .smx-filter-bar {
@@ -270,18 +303,14 @@
 <div class="smx-page">
   <div class="smx-container">
 
-    <!-- Hero Banner -->
-    <div class="smx-hero-card">
-      <div>
-        <h1 class="smx-hero-title">SMEXAMALL Teaching Factory</h1>
-        <p class="smx-hero-sub">
-          Dukung produk kuliner, makanan ringan, dan minuman racikan siswa SMKN 1 Probolinggo. Segar, higienis, dan terjamin mutunya oleh Guru Pembina BLUD.
-        </p>
-      </div>
-      <div>
-        <a href="{{ route('smexamall.cart') }}" class="btn btn-navy-primary" style="display:flex; align-items:center; gap:8px;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-          Keranjang Belanja (<span id="cartCountHeader">{{ $cartCount ?? 0 }}</span>)
+    <!-- SMEXAMALL Banner -->
+    <div class="smx-banner-wrap">
+      <img src="{{ asset('images/background-smexamall.jpeg') }}" alt="SMEXAMALL Teaching Factory Banner" class="smx-banner-img" width="1440" height="720" loading="eager" fetchpriority="high">
+      <div class="smx-banner-overlay">
+        <a href="{{ route('smexamall.cart') }}" class="smx-cart-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span>Keranjang Belanja</span>
+          <span class="smx-cart-badge" id="cartCountHeader">{{ $cartCount ?? 0 }}</span>
         </a>
       </div>
     </div>

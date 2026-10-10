@@ -35,7 +35,7 @@
   }
   
   .berita-hero-title {
-    font-family: var(--font-heading);
+    font-family: 'Inter', sans-serif;
     font-size: 2.75rem;
     font-weight: 800;
     color: #FFFFFF;
@@ -45,8 +45,9 @@
   }
   
   .berita-hero-subtitle {
-    font-family: var(--font-body);
+    font-family: 'Inter', sans-serif;
     font-size: 1.125rem;
+    font-weight: 700;
     color: rgba(255, 255, 255, 0.9);
     margin: 0;
   }
@@ -59,36 +60,36 @@
   
   .berita-search-input {
     width: 100%;
-    padding: 14px 50px 14px 20px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    color: #FFFFFF;
+    padding: 12px 50px 12px 20px;
+    border: 1px solid rgba(203, 213, 225, 0.4);
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #0F172A;
     font-size: 0.9375rem;
     font-family: var(--font-body);
     outline: none;
     transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   }
   
   .berita-search-input::placeholder {
-    color: rgba(255, 255, 255, 0.7);
+    color: #94A3B8;
   }
   
   .berita-search-input:focus {
-    background: rgba(255, 255, 255, 0.25);
-    border-color: rgba(255, 255, 255, 0.5);
+    border-color: #3B82F6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
   }
   
   .berita-search-btn {
     position: absolute;
-    right: 6px;
+    right: 8px;
     top: 50%;
     transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #FFB800;
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    background: #3B82F6;
     border: none;
     display: flex;
     align-items: center;
@@ -98,7 +99,7 @@
   }
   
   .berita-search-btn:hover {
-    background: #E6A600;
+    background: #2563EB;
     transform: translateY(-50%) scale(1.05);
   }
   
@@ -271,7 +272,7 @@
       <div class="berita-search-box">
         <input type="text" class="berita-search-input" placeholder="Cari berita atau artikel...">
         <button class="berita-search-btn" aria-label="Cari">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="11" cy="11" r="8"></circle>
             <path d="m21 21-4.35-4.35"></path>
           </svg>
