@@ -40,6 +40,20 @@ Route::get('/bkk', function () {
     return view('bkk');
 })->name('bkk');
 
+// 3.1. Profil Sekolah (Visi, Misi, Informasi Lengkap)
+Route::get('/profil', function () {
+    return view('profil');
+})->name('profil');
+
+// 3.2. Berita & Artikel Sekolah
+Route::get('/berita', function () {
+    return view('berita.index');
+})->name('berita.index');
+
+Route::get('/berita/{id}', function ($id) {
+    return view('berita.show', ['id' => $id]);
+})->name('berita.show');
+
 // 4. SMEXAMALL - E-Commerce Teaching Factory BLUD (Real Database Products)
 Route::get('/smexamall', [SmexamallController::class, 'index'])->name('smexamall.index');
 

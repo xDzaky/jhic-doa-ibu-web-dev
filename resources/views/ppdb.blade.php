@@ -8,7 +8,7 @@
 @endpush
 
 @push('styles')
-  <link rel="stylesheet" href="{{ asset('css/ppdb.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/ppdb.min.css') }}?v=20261010_v27">
   <style>
     .ppdb-action-section {
       background: #FFFFFF;
@@ -17,16 +17,24 @@
       padding: 32px;
       margin-top: 32px;
       box-shadow: 0 4px 16px rgba(0, 37, 101, 0.04);
+      max-width: 100%;
+      box-sizing: border-box;
+      overflow: hidden;
     }
     .ppdb-form-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20px;
+      width: 100%;
+      box-sizing: border-box;
     }
     .ppdb-input-group {
       display: flex;
       flex-direction: column;
       gap: 6px;
+      min-width: 0;
+      width: 100%;
+      box-sizing: border-box;
     }
     .ppdb-input-group label {
       font-size: 0.8125rem;
@@ -43,69 +51,131 @@
       font-family: inherit;
       outline: none;
       transition: all 0.2s;
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      box-sizing: border-box;
+    }
+    select.ppdb-input {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      box-sizing: border-box;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    select.ppdb-input option {
+      max-width: 100%;
+      white-space: normal;
     }
     .ppdb-input:focus {
       border-color: var(--navy-header);
       box-shadow: 0 0 0 3px rgba(0, 37, 101, 0.1);
     }
-    /* Executive PPDB Quota & Verification Ledger Ribbon */
+    @media (max-width: 768px) {
+      .ppdb-action-section {
+        padding: 20px 16px;
+        border-radius: 12px;
+      }
+      .ppdb-form-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .ppdb-submit-row {
+        justify-content: stretch !important;
+      }
+      .ppdb-submit-btn,
+      .ppdb-action-section button[type="submit"] {
+        width: 100% !important;
+        white-space: normal !important;
+        line-height: 1.35 !important;
+        padding: 12px 16px !important;
+        font-size: 0.875rem !important;
+        justify-content: center !important;
+        text-align: center !important;
+      }
+    }
+    /* Executive PPDB Quota & Verification Ledger Ribbon - Stats Bar Style (Full Width) */
     .ppdb-stat-strip {
-      background: #FFFFFF;
-      border: 1px solid #E2E8F0;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(11, 27, 61, 0.03);
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      margin: 28px 0;
-      overflow: hidden;
+      width: 100%;
+      background: #053382;
+      padding: 18px 0;
+      display: block;
+      position: relative;
+      margin: 32px 0;
+      box-shadow: 0 4px 16px rgba(5, 51, 130, 0.15);
+    }
+    .ppdb-stat-strip-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
     }
     .ppdb-stat-card {
-      background: transparent;
-      border: none;
-      border-right: 1px solid #F1F5F9;
-      border-radius: 0;
-      padding: 20px 24px;
-      box-shadow: none;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      transition: background 0.15s ease;
+      flex: 1;
+      text-align: center;
+      padding: 0 24px;
+      border-right: 1px solid rgba(255, 255, 255, 0.22);
+      transition: transform 0.3s ease;
     }
     .ppdb-stat-card:last-child {
       border-right: none;
     }
     .ppdb-stat-card:hover {
-      background: #FAFBFD;
+      transform: scale(1.05);
     }
     .ppdb-stat-num {
-      font-family: var(--font-heading);
-      font-size: 1.6rem;
-      font-weight: 800;
-      color: var(--navy-header);
-      line-height: 1.15;
-      margin-bottom: 4px;
-      font-variant-numeric: tabular-nums;
-      letter-spacing: -0.02em;
+      display: block;
+      font-family: 'Istok Web', sans-serif;
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+      transition: color 0.3s ease;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     .ppdb-stat-label {
-      font-family: var(--font-heading);
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: #64748B;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
+      display: block;
+      font-family: 'Istok Web', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.88);
+      margin-top: 6px;
+      line-height: 1.3;
     }
     @media (max-width: 900px) {
-      .ppdb-stat-strip { grid-template-columns: repeat(2, 1fr); }
-      .ppdb-stat-card:nth-child(2) { border-right: none; }
-      .ppdb-stat-card:nth-child(-n+2) { border-bottom: 1px solid #F1F5F9; }
-      .ppdb-form-grid { grid-template-columns: 1fr; }
-      .ppdb-action-section { padding: 22px 18px; border-radius: 12px; }
+      .ppdb-stat-strip { 
+        padding: 16px 0;
+        margin: 24px 0;
+      }
+      .ppdb-stat-strip-inner { 
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        padding: 12px 16px;
+      }
+      .ppdb-stat-card { 
+        border-right: none;
+        padding: 12px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 10px;
+      }
+      .ppdb-stat-num { font-size: 1.75rem; }
+      .ppdb-stat-label { font-size: 0.7rem; }
     }
     @media (max-width: 540px) {
-      .ppdb-stat-strip { grid-template-columns: repeat(2, 1fr); }
-      .ppdb-stat-card { border-right: none; padding: 14px 16px; }
-      .ppdb-stat-card:nth-child(odd) { border-right: 1px solid #F1F5F9; }
+      .ppdb-stat-strip-inner { 
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+      .ppdb-stat-card { padding: 10px; }
+      .ppdb-stat-num { font-size: 1.5rem; }
+      .ppdb-stat-label { font-size: 0.65rem; }
     }
   </style>
 @endpush
@@ -223,13 +293,17 @@
         </div>
       </div>
     </div>
+
+    <!-- Wave Transition between Hero & Jadwal Seleksi (Matching Reference Image 1) -->
+    <div class="ppdb-hero-wave-wrap" aria-hidden="true">
+      <img src="{{ asset('images/ppdb/wave-transition.png') }}" alt="" width="1343" height="63" class="ppdb-hero-wave-img" loading="eager" decoding="async">
+    </div>
   </section>
 
-  <!-- 2. JADWAL TAHAPAN SELEKSI PPDB JATIM 2026 (DaisyUI Timeline Component) -->
+  <!-- 2. JADWAL TAHAPAN SELEKSI PPDB JATIM 2026 (Matching Reference Image 2) -->
   <section class="section ppdb-schedule-section" id="jadwal-seleksi">
     <div class="container">
-      <div class="section-header center" style="text-align: center; max-width: 720px; margin: 0 auto 40px;">
-        <span class="ppdb-tag" style="background: #EFF6FF; color: #1D4ED8; border: 1px solid #BFDBFE;">JADWAL RESMI DINAS PENDIDIKAN JAWA TIMUR</span>
+      <div class="section-header center" style="text-align: center; max-width: 720px; margin: 0 auto 36px;">
         <h2 class="section-title" style="font-size: 2rem; font-weight: 800; color: var(--navy-header); margin: 8px 0 10px;">
           Jadwal Tahapan Seleksi PPDB Jatim 2026
         </h2>
@@ -238,95 +312,108 @@
         </p>
       </div>
 
-      <ul class="ppdb-timeline">
-        <!-- TAHAP 1 -->
-        <li class="ppdb-timeline-item ppdb-timeline-left">
-          <div class="ppdb-timeline-icon">1</div>
-          <div class="ppdb-timeline-card">
-            <div class="ppdb-tl-tag">TAHAP 1 &bull; PERSIAPAN &amp; VALIDASI</div>
-            <time class="ppdb-tl-date">20 Mei &ndash; 10 Juni 2026</time>
-            <div class="ppdb-tl-title">Pengambilan PIN &amp; Verifikasi Nilai Rapor</div>
-            <p class="ppdb-tl-desc">
+      <!-- Modern Stepped Timeline (Reference Image 2: Center Line + Alternating Connected Icons) -->
+      <div class="ppdb-timeline-v2">
+        <!-- STEP 1 (LEFT) -->
+        <div class="ppdb-tl-v2-item ppdb-tl-v2-left reveal-item" data-delay="0">
+          <div class="ppdb-tl-v2-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          </div>
+          <div class="ppdb-tl-v2-dash" aria-hidden="true"></div>
+          <div class="ppdb-tl-v2-node" aria-hidden="true"></div>
+          <div class="ppdb-tl-v2-content">
+            <div class="ppdb-tl-v2-step">STEP 1</div>
+            <h3 class="ppdb-tl-v2-title">Pengambilan PIN &amp; Verifikasi Nilai Rapor</h3>
+            <p class="ppdb-tl-v2-desc">
               Calon peserta didik baru melakukan login mandiri pada portal resmi PPDB Jatim, mengunggah kartu keluarga (KK), dan memverifikasi kesesuaian nilai rapor semester 1 s.d 5.
             </p>
-            <div class="ppdb-tl-meta">
-              <span class="ppdb-tl-dot"></span>
-              <span>Mandiri Online &amp; Layanan Posko SMEXA</span>
+            <div class="ppdb-tl-v2-meta">
+              <span class="ppdb-tl-v2-date">20 Mei &ndash; 10 Juni 2026</span>
+              <span class="ppdb-tl-v2-badge">Mandiri Online &amp; Layanan Posko SMEXA</span>
             </div>
           </div>
-        </li>
+        </div>
 
-        <!-- TAHAP 2 -->
-        <li class="ppdb-timeline-item ppdb-timeline-right">
-          <div class="ppdb-timeline-icon">2</div>
-          <div class="ppdb-timeline-card">
-            <div class="ppdb-tl-tag">TAHAP 2 &bull; JALUR KHUSUS</div>
-            <time class="ppdb-tl-date">15 &ndash; 16 Juni 2026</time>
-            <div class="ppdb-tl-title">Pendaftaran Jalur Afirmasi &amp; Prestasi Lomba</div>
-            <p class="ppdb-tl-desc">
+        <!-- STEP 2 (RIGHT) -->
+        <div class="ppdb-tl-v2-item ppdb-tl-v2-right reveal-item" data-delay="80">
+          <div class="ppdb-tl-v2-node" aria-hidden="true"></div>
+          <div class="ppdb-tl-v2-dash" aria-hidden="true"></div>
+          <div class="ppdb-tl-v2-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+          </div>
+          <div class="ppdb-tl-v2-content">
+            <div class="ppdb-tl-v2-step">STEP 2</div>
+            <h3 class="ppdb-tl-v2-title">Pendaftaran Jalur Afirmasi &amp; Prestasi Lomba</h3>
+            <p class="ppdb-tl-v2-desc">
               Pendaftaran khusus jalur afirmasi keluarga pra-sejahtera (kuota 15%), perpindahan tugas orang tua (5%), serta prestasi hasil kejuaraan akademik, olahraga, sains &amp; seni (5%).
             </p>
-            <div class="ppdb-tl-meta">
-              <span class="ppdb-tl-dot"></span>
-              <span>Pengumuman Hasil: 17 Juni 2026 (Pukul 08.00 WIB)</span>
+            <div class="ppdb-tl-v2-meta">
+              <span class="ppdb-tl-v2-date">15 &ndash; 16 Juni 2026</span>
+              <span class="ppdb-tl-v2-badge">Pengumuman Hasil: 17 Juni 2026 (08.00 WIB)</span>
             </div>
           </div>
-        </li>
+        </div>
 
-        <!-- TAHAP 3 -->
-        <li class="ppdb-timeline-item ppdb-timeline-left">
-          <div class="ppdb-timeline-icon">3</div>
-          <div class="ppdb-timeline-card">
-            <div class="ppdb-tl-tag">TAHAP 3 &bull; JALUR UTAMA &mdash; KUOTA 65%</div>
-            <time class="ppdb-tl-date">22 &ndash; 23 Juni 2026</time>
-            <div class="ppdb-tl-title">Pendaftaran Jalur Prestasi Nilai Akademik (Umum)</div>
-            <p class="ppdb-tl-desc">
+        <!-- STEP 3 (LEFT) -->
+        <div class="ppdb-tl-v2-item ppdb-tl-v2-left reveal-item" data-delay="160">
+          <div class="ppdb-tl-v2-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+          </div>
+          <div class="ppdb-tl-v2-dash" aria-hidden="true"></div>
+          <div class="ppdb-tl-v2-node" aria-hidden="true"></div>
+          <div class="ppdb-tl-v2-content">
+            <div class="ppdb-tl-v2-step">STEP 3</div>
+            <h3 class="ppdb-tl-v2-title">Pendaftaran Jalur Prestasi Nilai Akademik (Umum)</h3>
+            <p class="ppdb-tl-v2-desc">
               Seleksi berbasis bobot nilai rapor 70% dan nilai akreditasi SMP/MTs 30% untuk 5 konsentrasi keahlian: RPL, Bisnis Digital, Akuntansi, Manajemen Perkantoran, dan Layanan Perbankan.
             </p>
-            <div class="ppdb-tl-meta">
-              <span class="ppdb-tl-dot"></span>
-              <span>Pengumuman Kelulusan: 24 Juni 2026</span>
+            <div class="ppdb-tl-v2-meta">
+              <span class="ppdb-tl-v2-date">22 &ndash; 23 Juni 2026</span>
+              <span class="ppdb-tl-v2-badge">Pengumuman Kelulusan: 24 Juni 2026</span>
             </div>
           </div>
-        </li>
+        </div>
 
-        <!-- TAHAP 4 -->
-        <li class="ppdb-timeline-item ppdb-timeline-right">
-          <div class="ppdb-timeline-icon">4</div>
-          <div class="ppdb-timeline-card">
-            <div class="ppdb-tl-tag">TAHAP 4 &bull; TAHAP AKHIR</div>
-            <time class="ppdb-tl-date">01 &ndash; 02 Juli 2026</time>
-            <div class="ppdb-tl-title">Daftar Ulang &amp; Verifikasi Berkas Fisik</div>
-            <p class="ppdb-tl-desc">
+        <!-- STEP 4 (RIGHT) -->
+        <div class="ppdb-tl-v2-item ppdb-tl-v2-right reveal-item" data-delay="240">
+          <div class="ppdb-tl-v2-node" aria-hidden="true"></div>
+          <div class="ppdb-tl-v2-dash" aria-hidden="true"></div>
+          <div class="ppdb-tl-v2-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          </div>
+          <div class="ppdb-tl-v2-content">
+            <div class="ppdb-tl-v2-step">STEP 4</div>
+            <h3 class="ppdb-tl-v2-title">Daftar Ulang &amp; Verifikasi Berkas Fisik</h3>
+            <p class="ppdb-tl-v2-desc">
               Siswa yang dinyatakan diterima hadir langsung di Kampus SMKN 1 Probolinggo untuk penyerahan berkas fisik asli, tes kesehatan kejuruan, dan pengukuran seragam praktek/sekolah.
             </p>
-            <div class="ppdb-tl-meta">
-              <span class="ppdb-tl-dot"></span>
-              <span>Kampus SMKN 1 Probolinggo &bull; Jl. Mastrip No. 357</span>
+            <div class="ppdb-tl-v2-meta">
+              <span class="ppdb-tl-v2-date">01 &ndash; 02 Juli 2026</span>
+              <span class="ppdb-tl-v2-badge">Kampus SMKN 1 Probolinggo &bull; Jl. Mastrip No. 357</span>
             </div>
           </div>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- LIVE METRIC STRIP -->
-  <div class="container">
-    <div class="ppdb-stat-strip">
+  <!-- LIVE METRIC STRIP (Matching Stats Bar Style - Full Width) -->
+  <div class="ppdb-stat-strip reveal-item" data-delay="50">
+    <div class="ppdb-stat-strip-inner">
       <div class="ppdb-stat-card">
-        <div class="ppdb-stat-num">{{ $totalQuota ?? 432 }}</div>
+        <div class="ppdb-stat-num count-ticker" data-target="{{ $totalQuota ?? 432 }}">{{ $totalQuota ?? 432 }}</div>
         <div class="ppdb-stat-label">Total Daya Tampung</div>
       </div>
       <div class="ppdb-stat-card">
-        <div class="ppdb-stat-num">{{ $totalRombel ?? 12 }} Kelas</div>
+        <div class="ppdb-stat-num count-ticker" data-target="{{ $totalRombel ?? 12 }}" data-suffix=" Kelas">{{ $totalRombel ?? 12 }} Kelas</div>
         <div class="ppdb-stat-label">Rombongan Belajar</div>
       </div>
       <div class="ppdb-stat-card">
-        <div class="ppdb-stat-num" style="color: #0284C7;">{{ $applicantCount ?? 5 }}</div>
+        <div class="ppdb-stat-num count-ticker" data-target="{{ $applicantCount ?? 5 }}">{{ $applicantCount ?? 5 }}</div>
         <div class="ppdb-stat-label">Pendaftar Terdata</div>
       </div>
       <div class="ppdb-stat-card">
-        <div class="ppdb-stat-num" style="color: #16A34A;">{{ $verifiedCount ?? 3 }}</div>
+        <div class="ppdb-stat-num count-ticker" data-target="{{ $verifiedCount ?? 3 }}">{{ $verifiedCount ?? 3 }}</div>
         <div class="ppdb-stat-label">Berkas Terverifikasi</div>
       </div>
     </div>
@@ -334,7 +421,7 @@
 
   <!-- INTERACTIVE FORMULIR PENDAFTARAN (Real SQLite Database) -->
   <section class="container" id="form-daftar">
-    <div class="ppdb-action-section">
+    <div class="ppdb-action-section reveal-item" data-delay="100">
       <div style="margin-bottom: 24px;">
         <h2 style="font-size: 1.5rem; font-weight: 800; color: var(--navy-header); margin: 8px 0 6px;">
           Formulir Pendaftaran Calon Siswa Baru 2026
@@ -423,8 +510,8 @@
           </div>
         </div>
 
-        <div style="margin-top: 24px; display: flex; justify-content: flex-end;">
-          <button type="submit" class="btn btn-red" style="padding: 12px 28px; font-size: 0.9375rem; font-weight: 800;">
+        <div class="ppdb-submit-row" style="margin-top: 24px; display: flex; justify-content: flex-end;">
+          <button type="submit" class="btn btn-red ppdb-submit-btn" style="padding: 12px 28px; font-size: 0.9375rem; font-weight: 800;">
             Kirim Pendaftaran &amp; Dapatkan Kartu Peserta Resmi
           </button>
         </div>
@@ -577,37 +664,86 @@
     </div>
   </section>
 
-  <!-- 3. KETENTUAN 4 JALUR PENDAFTARAN -->
+  <!-- 3. KETENTUAN 4 JALUR PENDAFTARAN (DaisyUI Breadcrumbs & Flow Style) -->
   <section class="section" id="jalur">
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">4 Jalur Pendaftaran PPDB SMK Negeri</h2>
+        <p style="color: #64748B; font-size: 0.875rem; margin-top: 4px;">Alur pilihan seleksi resmi berjenjang berdasarkan regulasi Dinas Pendidikan Jawa Timur.</p>
       </div>
 
-      <div class="grid-4">
+
+      <!-- Connected Cards with Breadcrumb Arrows -->
+      <div class="jalur-breadcrumb-flow">
+        <!-- Card 1 -->
         <div class="card-jalur">
-          <span class="jalur-quota-pill">Kuota 15%</span>
+          <div class="jalur-card-header">
+            <span class="jalur-quota-pill">Kuota 15%</span>
+            <span class="jalur-step-badge">Tahap 1</span>
+          </div>
           <h3 class="jalur-name">1. Jalur Afirmasi</h3>
           <p class="jalur-desc">
             Diperuntukkan bagi calon peserta didik dari keluarga tidak mampu dan penyandang disabilitas dengan bukti KIP/PKH.
           </p>
         </div>
+
+        <!-- Arrow Divider 1 -> 2 -->
+        <div class="jalur-flow-arrow" aria-hidden="true" title="Lanjut ke Jalur 2">
+          <div class="jalur-arrow-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
         <div class="card-jalur">
-          <span class="jalur-quota-pill">Kuota 5%</span>
+          <div class="jalur-card-header">
+            <span class="jalur-quota-pill">Kuota 5%</span>
+            <span class="jalur-step-badge">Tahap 2</span>
+          </div>
           <h3 class="jalur-name">2. Perpindahan Tugas</h3>
           <p class="jalur-desc">
             Bagi siswa yang mengikuti perpindahan tugas resmi orang tua/wali dari instansi pemerintah, BUMN, atau TNI/Polri.
           </p>
         </div>
+
+        <!-- Arrow Divider 2 -> 3 -->
+        <div class="jalur-flow-arrow" aria-hidden="true" title="Lanjut ke Jalur 3">
+          <div class="jalur-arrow-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
         <div class="card-jalur">
-          <span class="jalur-quota-pill">Kuota 5%</span>
+          <div class="jalur-card-header">
+            <span class="jalur-quota-pill">Kuota 5%</span>
+            <span class="jalur-step-badge">Tahap 3</span>
+          </div>
           <h3 class="jalur-name">3. Prestasi Hasil Lomba</h3>
           <p class="jalur-desc">
             Penghargaan sertifikat kejuaraan akademik, olahraga, seni, atau keagamaan resmi berjenjang.
           </p>
         </div>
-        <div class="card-jalur">
-          <span class="jalur-quota-pill" style="color: var(--red); background-color: var(--red-light);">Kuota 75% (Terbesar)</span>
+
+        <!-- Arrow Divider 3 -> 4 -->
+        <div class="jalur-flow-arrow" aria-hidden="true" title="Lanjut ke Jalur 4">
+          <div class="jalur-arrow-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Card 4 (Dominant / Main Path) -->
+        <div class="card-jalur card-jalur-featured">
+          <div class="jalur-card-header">
+            <span class="jalur-quota-pill jalur-quota-pill-red">Kuota 75% (Terbesar)</span>
+            <span class="jalur-step-badge jalur-step-badge-red">Tahap 4 &bull; Utama</span>
+          </div>
           <h3 class="jalur-name">4. Prestasi Nilai Rapor</h3>
           <p class="jalur-desc">
             Jalur umum berdasarkan rerata nilai rapor semester 1 s.d 5 ditambah nilai akreditasi SMP/MTs asal.
@@ -771,6 +907,85 @@
       window.addEventListener('load', function() {
         setTimeout(initPosterShowcase, 150);
       });
+    }
+
+    // Smooth Scroll Reveal (Hardware-Accelerated Fade-Up)
+    const ppdbRevealElements = document.querySelectorAll('.reveal-item');
+    if (!prefersReducedMotion && 'IntersectionObserver' in window && ppdbRevealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const delay = parseInt(entry.target.getAttribute('data-delay') || '0', 10);
+            setTimeout(() => {
+              entry.target.classList.add('is-revealed');
+            }, delay);
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
+      ppdbRevealElements.forEach(el => revealObserver.observe(el));
+    } else {
+      ppdbRevealElements.forEach(el => el.classList.add('is-revealed'));
+    }
+
+    // Animated Numeric Counter Ticker (Count-Up from 0) - Enhanced with Pulse Effect
+    const ppdbCounters = document.querySelectorAll('.count-ticker');
+    if (!prefersReducedMotion && ppdbCounters.length > 0) {
+      function startCounter(el) {
+        if (el.dataset.counted) return;
+        el.dataset.counted = 'true';
+        const target = parseInt(el.getAttribute('data-target') || '0', 10);
+        const suffix = el.getAttribute('data-suffix') || '';
+        const prefix = el.getAttribute('data-prefix') || '';
+        const duration = 2000; // Increased duration for smoother animation
+        const startTime = performance.now();
+
+        function updateCounter(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const easeProgress = 1 - Math.pow(1 - progress, 3);
+          const currentVal = Math.floor(easeProgress * target);
+          el.textContent = prefix + currentVal.toLocaleString('id-ID') + suffix;
+
+          if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+          } else {
+            el.textContent = prefix + target.toLocaleString('id-ID') + suffix;
+            // Add pulse effect on completion
+            el.style.transform = 'scale(1.1)';
+            setTimeout(() => {
+              el.style.transform = 'scale(1)';
+            }, 200);
+          }
+        }
+        requestAnimationFrame(updateCounter);
+      }
+
+      if ('IntersectionObserver' in window) {
+        const counterObs = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              startCounter(entry.target);
+              obs.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1 });
+
+        ppdbCounters.forEach(el => {
+          const prefix = el.getAttribute('data-prefix') || '';
+          const suffix = el.getAttribute('data-suffix') || '';
+          el.textContent = prefix + '0' + suffix;
+          el.style.transition = 'transform 0.3s ease';
+          counterObs.observe(el);
+
+          const rect = el.getBoundingClientRect();
+          if (rect.top >= 0 && rect.top <= (window.innerHeight || document.documentElement.clientHeight)) {
+            startCounter(el);
+          }
+        });
+      } else {
+        ppdbCounters.forEach(el => startCounter(el));
+      }
     }
   })();
 </script>

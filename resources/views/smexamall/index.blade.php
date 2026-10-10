@@ -250,14 +250,14 @@
     .smx-container { padding: 0 16px; }
     .smx-hero-card { padding: 22px 20px; }
     .smx-hero-title { font-size: 1.35rem; }
-    .smx-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .smx-grid, .smx-products-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 12px !important; }
     .smx-card-img-wrap { height: 135px; }
     .smx-card-body { padding: 12px 10px; }
     .smx-card-title { font-size: 0.8125rem; }
     .smx-card-price { font-size: 0.9375rem; }
   }
   @media (max-width: 480px) {
-    .smx-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .smx-grid, .smx-products-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }
     .smx-card-img-wrap { height: 125px; }
     .smx-card-body { padding: 10px 8px; }
     .smx-card-title { font-size: 0.8125rem; }
@@ -318,8 +318,8 @@
     <!-- Product Grid (Image 2 Template) -->
     <div class="smx-products-grid">
       @if(count($products) > 0)
-        @foreach($products as $p)
-          <article class="smx-card-v2" onclick="window.location.href='{{ route('smexamall.product', $p->id) }}'">
+        @foreach($products as $index => $p)
+          <article class="smx-card-v2 reveal-item" data-delay="{{ ($index % 6) * 60 }}" onclick="window.location.href='{{ route('smexamall.product', $p->id) }}'">
             <div class="smx-card-v2-top">
               <div class="smx-card-v2-photo">
                 <span class="smx-card-v2-badge {{ $p->category_badge_class }}">
@@ -389,5 +389,26 @@
       toast.classList.remove('show');
     }, 3200);
   }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const smxRevealElements = document.querySelectorAll('.reveal-item');
+    if (!prefersReducedMotion && 'IntersectionObserver' in window && smxRevealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const delay = parseInt(entry.target.getAttribute('data-delay') || '0', 10);
+            setTimeout(() => {
+              entry.target.classList.add('is-revealed');
+            }, delay);
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
+      smxRevealElements.forEach(el => revealObserver.observe(el));
+    } else {
+      smxRevealElements.forEach(el => el.classList.add('is-revealed'));
+    }
+  });
 </script>
 @endpush

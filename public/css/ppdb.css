@@ -217,12 +217,15 @@ p, .desc, .lead, .schedule-step, .text-muted, .step-desc {
 }
 
 /* =========================================================
-   PPDB HERO
+   PPDB HERO (HD Background Image + Wave Transition)
    ========================================================= */
 .ppdb-hero {
-  background-color: var(--bg-white);
-  padding: 48px 0;
-  border-bottom: 1px solid var(--border);
+  position: relative;
+  background: linear-gradient(135deg, rgba(11, 27, 61, 0.75) 0%, rgba(15, 42, 74, 0.85) 100%),
+              url('/images/background-ppdb.png') center/cover no-repeat;
+  color: #FFFFFF;
+  padding: 56px 0 0 0;
+  border-bottom: none;
 }
 
 .ppdb-hero-grid {
@@ -247,18 +250,58 @@ p, .desc, .lead, .schedule-step, .text-muted, .step-desc {
 .ppdb-hero-title {
   font-size: 2.25rem;
   font-weight: 800;
-  color: var(--navy-header);
+  color: #FFFFFF;
   line-height: 1.2;
   margin-bottom: 14px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
 }
 
 .official-gov-box {
-  background-color: #F8FAFC;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 10px;
   padding: 14px 18px;
   font-size: 0.8125rem;
-  color: var(--text-muted);
+  color: #E2E8F0;
   margin: 16px 0 24px;
   line-height: 1.6;
+}
+
+.official-gov-box strong {
+  color: #FFFFFF;
+}
+
+.ppdb-hero .btn-outline-navy {
+  border: 1.5px solid rgba(255, 255, 255, 0.45);
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.ppdb-hero .btn-outline-navy:hover {
+  background: #FFFFFF;
+  color: #0F2A4A;
+  border-color: #FFFFFF;
+}
+
+.ppdb-hero-wave-wrap {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  margin-top: 48px;
+}
+
+.ppdb-hero-wave-img {
+  width: 100%;
+  height: auto;
+  min-height: 44px;
+  max-height: 72px;
+  object-fit: fill;
+  display: block;
+  vertical-align: bottom;
 }
 
 /* Table Daya Tampung (Government School Standard) */
@@ -333,6 +376,134 @@ p, .desc, .lead, .schedule-step, .text-muted, .step-desc {
   font-size: 1.75rem;
   font-weight: 800;
   color: var(--navy-dark);
+}
+
+
+
+/* 4 Jalur Connected Arrow Flow */
+.jalur-breadcrumb-flow {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+  width: 100%;
+  position: relative;
+}
+
+.jalur-breadcrumb-flow .card-jalur {
+  flex: 1 1 0;
+  min-width: 0;
+  background-color: var(--bg-white, #FFFFFF);
+  border: 1px solid var(--border, #E2E8F0);
+  border-radius: var(--radius-md, 12px);
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 3px rgba(15, 42, 74, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.jalur-breadcrumb-flow .card-jalur:hover {
+  transform: translateY(-2px);
+  border-color: #CBD5E1;
+  box-shadow: 0 8px 20px rgba(15, 42, 74, 0.08);
+}
+
+.card-jalur-featured {
+  border-color: #FED7AA !important;
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFFDF7 100%);
+}
+
+.jalur-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  gap: 8px;
+}
+
+.jalur-step-badge {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: #64748B;
+  background: #F1F5F9;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid #E2E8F0;
+  white-space: nowrap;
+}
+
+.jalur-step-badge-red {
+  color: #9A3412;
+  background: #FFEDD5;
+  border-color: #FED7AA;
+}
+
+.jalur-quota-pill-red {
+  color: #DC2626 !important;
+  background-color: #FEE2E2 !important;
+}
+
+/* Arrow divider between cards */
+.jalur-flow-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 28px;
+  align-self: center;
+}
+
+.jalur-arrow-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748B;
+  box-shadow: 0 1px 3px rgba(15, 42, 74, 0.05);
+  transition: all 0.2s ease;
+}
+
+.jalur-arrow-circle svg {
+  width: 14px;
+  height: 14px;
+  stroke: #64748B;
+}
+
+.jalur-breadcrumb-flow .card-jalur:hover + .jalur-flow-arrow .jalur-arrow-circle {
+  background: #0F2A4A;
+  border-color: #0F2A4A;
+  color: #FFFFFF;
+}
+
+.jalur-breadcrumb-flow .card-jalur:hover + .jalur-flow-arrow .jalur-arrow-circle svg {
+  stroke: #FFFFFF;
+}
+
+/* Responsive for tablets and mobile */
+@media (max-width: 900px) {
+  .jalur-breadcrumb-flow {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .jalur-breadcrumb-flow .card-jalur {
+    width: 100%;
+  }
+
+  .jalur-flow-arrow {
+    width: 100%;
+    height: 26px;
+    align-self: center;
+    padding: 2px 0;
+  }
+
+  .jalur-arrow-circle svg {
+    transform: rotate(90deg);
+  }
 }
 
 /* 4 Jalur Cards */
@@ -672,13 +843,13 @@ p, .desc, .lead, .schedule-step, .text-muted, .step-desc {
     left: 0;
     right: 0;
     height: 58px;
-    background-color: #082046;
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    background-color: #FFFFFF;
+    border-top: 1px solid #E2E8F0;
     display: flex;
     align-items: center;
     justify-content: space-around;
     z-index: 9998;
-    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.05);
     padding-bottom: env(safe-area-inset-bottom, 0);
   }
   .mobile-tab-item {
@@ -711,10 +882,12 @@ p, .desc, .lead, .schedule-step, .text-muted, .step-desc {
     letter-spacing: 0.02em;
   }
   .mobile-tab-item.active {
-    color: var(--gold);
+    color: #0B1B3D;
+    font-weight: 800;
   }
   .mobile-tab-item.active .mobile-tab-icon svg {
-    stroke: var(--gold);
+    stroke: #0B1B3D;
+    stroke-width: 2.5;
   }
 
   .ppdb-hero-grid { grid-template-columns: 1fr; gap: 24px; }
@@ -1126,7 +1299,7 @@ p, .desc, .lead, .schedule-step, .text-muted, .step-desc {
 }
 
 /* =========================================================
-   DAISYUI TIMELINE COMPONENT (Adapted with full compatibility)
+   PPDB TIMELINE (Matching Reference Image 2: Central Line + Connected Icons)
    ========================================================= */
 .ppdb-schedule-section {
   background-color: #F8FAFC;
@@ -1134,172 +1307,253 @@ p, .desc, .lead, .schedule-step, .text-muted, .step-desc {
   border-bottom: 1px solid #E2E8F0;
 }
 
-/* ─── PPDB Clean Numbered Timeline ─────────────────────────────────── */
-.ppdb-timeline {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 960px;
+.ppdb-timeline-v2 {
   position: relative;
+  max-width: 880px;
+  margin: 40px auto 0;
+  padding: 10px 0;
 }
 
-/* Vertical center line */
-.ppdb-timeline::before {
+/* Central vertical solid navy line */
+.ppdb-timeline-v2::before {
   content: '';
   position: absolute;
-  top: 0;
-  bottom: 0;
+  top: 10px;
+  bottom: 24px;
   left: 50%;
   transform: translateX(-50%);
   width: 2px;
-  background: #E2E8F0;
-  z-index: 0;
+  background: #0F2A4A;
+  z-index: 1;
 }
 
-.ppdb-timeline-item {
+.ppdb-tl-v2-item {
   position: relative;
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 48px;
+  margin-bottom: 52px;
+  min-height: 110px;
+}
+.ppdb-tl-v2-item:last-child {
+  margin-bottom: 0;
 }
 
-/* Numbered circle — always centered on the line */
-.ppdb-timeline-icon {
+/* Central node dot on the vertical line */
+.ppdb-tl-v2-node {
   position: absolute;
+  top: 22px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #0F2A4A;
+  z-index: 3;
+}
+
+/* Icon circle pill */
+.ppdb-tl-v2-icon {
+  position: absolute;
+  top: 0;
   width: 44px;
   height: 44px;
   border-radius: 50%;
   background: #0F2A4A;
   color: #FFFFFF;
-  font-size: 1rem;
-  font-weight: 800;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 0 5px #F8FAFC, 0 4px 12px rgba(15, 42, 74, 0.18);
+  z-index: 4;
+  box-shadow: 0 4px 14px rgba(15, 42, 74, 0.22);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+}
+.ppdb-tl-v2-item:hover .ppdb-tl-v2-icon {
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(15, 42, 74, 0.32);
+}
+
+/* Dashed horizontal connector */
+.ppdb-tl-v2-dash {
+  position: absolute;
+  top: 22px;
+  border-top: 2px dashed #0F2A4A;
   z-index: 2;
-  font-family: var(--font-heading, sans-serif);
-  flex-shrink: 0;
 }
 
-/* Card on the LEFT (odd items) */
-.ppdb-timeline-left .ppdb-timeline-card {
-  width: calc(50% - 44px);
+/* ODD STEPS (LEFT): Icon on far left, dashed line to center */
+.ppdb-tl-v2-left .ppdb-tl-v2-icon {
+  left: 0;
+}
+.ppdb-tl-v2-left .ppdb-tl-v2-dash {
+  left: 44px;
+  right: 50%;
+}
+.ppdb-tl-v2-left .ppdb-tl-v2-content {
+  width: calc(50% - 36px);
   margin-right: auto;
-  padding-right: 32px;
-  text-align: right;
-}
-
-/* Card on the RIGHT (even items) */
-.ppdb-timeline-right .ppdb-timeline-card {
-  width: calc(50% - 44px);
-  margin-left: auto;
-  padding-left: 32px;
+  padding-left: 64px;
+  padding-top: 34px;
   text-align: left;
 }
 
-.ppdb-timeline-card {
-  background: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  border-radius: 14px;
-  padding: 22px 24px;
-  box-shadow: 0 2px 10px rgba(15, 42, 74, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+/* EVEN STEPS (RIGHT): Icon on far right, dashed line from center to right */
+.ppdb-tl-v2-right .ppdb-tl-v2-icon {
+  right: 0;
+}
+.ppdb-tl-v2-right .ppdb-tl-v2-dash {
+  left: 50%;
+  right: 44px;
+}
+.ppdb-tl-v2-right .ppdb-tl-v2-content {
+  width: calc(50% - 36px);
+  margin-left: auto;
+  padding-right: 64px;
+  padding-top: 34px;
+  text-align: left;
 }
 
-.ppdb-timeline-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(15, 42, 74, 0.09);
-}
-
-.ppdb-tl-tag {
-  display: inline-block;
-  font-size: 0.625rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #64748B;
-  background: #F1F5F9;
-  border: 1px solid #E2E8F0;
-  border-radius: 999px;
-  padding: 3px 10px;
-  margin-bottom: 8px;
-}
-
-.ppdb-tl-date {
-  display: block;
-  font-family: monospace;
-  font-style: italic;
+/* Content Typography (Matching Image 2) */
+.ppdb-tl-v2-step {
+  font-family: var(--font-heading, 'Figtree', sans-serif);
   font-size: 0.8125rem;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   color: #0F2A4A;
   margin-bottom: 6px;
 }
 
-.ppdb-tl-title {
-  font-family: var(--font-heading, sans-serif);
-  font-size: 1rem;
+.ppdb-tl-v2-title {
+  font-family: var(--font-heading, 'Figtree', sans-serif);
+  font-size: 1.25rem;
   font-weight: 800;
   color: #0F2A4A;
   line-height: 1.3;
-  margin-bottom: 8px;
+  margin: 0 0 8px;
 }
 
-.ppdb-tl-desc {
-  font-size: 0.8125rem;
-  line-height: 1.6;
+.ppdb-tl-v2-desc {
+  font-size: 0.9375rem;
   color: #475569;
-  margin-bottom: 10px;
+  line-height: 1.6;
+  margin: 0 0 12px;
 }
 
-.ppdb-tl-meta {
-  display: inline-flex;
+.ppdb-tl-v2-meta {
+  display: flex;
   align-items: center;
-  gap: 6px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ppdb-tl-v2-date {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #0F2A4A;
+  background: #E2E8F0;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-family: monospace;
+}
+
+.ppdb-tl-v2-badge {
   font-size: 0.75rem;
   font-weight: 600;
-  color: #475569;
-  background: #F8FAFC;
-  padding: 4px 10px;
+  color: #1E293B;
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  padding: 3px 10px;
   border-radius: 6px;
-  border: 1px solid #E2E8F0;
 }
 
-.ppdb-tl-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #16A34A;
-  flex-shrink: 0;
-}
-
-/* ── Mobile: all cards go to single column ─────────────────── */
-@media (max-width: 700px) {
-  .ppdb-timeline::before {
-    left: 22px;
+/* Responsive Mobile Layout */
+@media (max-width: 768px) {
+  .ppdb-timeline-v2::before {
+    left: 20px;
   }
-
-  .ppdb-timeline-item {
-    flex-direction: column;
-    padding-left: 58px;
-    margin-bottom: 36px;
+  .ppdb-tl-v2-node {
+    left: 20px;
+    top: 20px;
   }
-
-  .ppdb-timeline-icon {
+  .ppdb-tl-v2-left .ppdb-tl-v2-icon,
+  .ppdb-tl-v2-right .ppdb-tl-v2-icon {
     left: 0;
-    transform: none;
-    width: 38px;
-    height: 38px;
-    font-size: 0.875rem;
+    right: auto;
+    top: 0;
+    width: 40px;
+    height: 40px;
   }
-
-  .ppdb-timeline-left .ppdb-timeline-card,
-  .ppdb-timeline-right .ppdb-timeline-card {
+  .ppdb-tl-v2-left .ppdb-tl-v2-dash,
+  .ppdb-tl-v2-right .ppdb-tl-v2-dash {
+    left: 40px;
+    width: 24px;
+    right: auto;
+  }
+  .ppdb-tl-v2-left .ppdb-tl-v2-content,
+  .ppdb-tl-v2-right .ppdb-tl-v2-content {
     width: 100%;
-    padding: 0;
-    text-align: left;
     margin: 0;
+    padding-left: 56px;
+    padding-right: 0;
+    padding-top: 4px;
+    box-sizing: border-box;
+  }
+  .ppdb-tl-v2-item {
+    margin-bottom: 40px;
+  }
+}
+
+/* Form inputs & options overflow containment */
+.ppdb-form-grid {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.ppdb-input-group {
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+.ppdb-input {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
+select.ppdb-input {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+select.ppdb-input option {
+  max-width: 100%;
+}
+@media (max-width: 768px) {
+  .chatbot-launcher,
+  #chatbotLauncher {
+    display: none !important;
+  }
+}
+
+/* Subtle Timeline & Jalur Micro-Interactions (GPU Optimized) */
+.ppdb-timeline-card, .card-jalur {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease !important;
+  will-change: transform;
+}
+.ppdb-timeline-card:hover, .card-jalur:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 10px 24px rgba(15, 42, 74, 0.1) !important;
+}
+.ppdb-timeline-icon {
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease !important;
+}
+.ppdb-timeline-item:hover .ppdb-timeline-icon {
+  transform: translateX(-50%) scale(1.08) !important;
+  box-shadow: 0 0 0 7px #F8FAFC, 0 6px 16px rgba(15, 42, 74, 0.25) !important;
+}
+@media (max-width: 700px) {
+  .ppdb-timeline-item:hover .ppdb-timeline-icon {
+    transform: scale(1.08) !important;
   }
 }

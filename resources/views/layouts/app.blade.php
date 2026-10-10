@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  @php $assetVersion = config('app.asset_version', '20261006_v25'); @endphp
+  @php $assetVersion = config('app.asset_version', '20261010_v28_marquee_fix'); @endphp
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>@yield('title', 'Website Resmi SMKN 1 Probolinggo - Sekolah Pusat Keunggulan & BLUD')</title>
@@ -30,6 +30,13 @@
   {{-- Preload & Load CSS Utama (Minified, Zero-CLS) --}}
   <link rel="preload" href="{{ asset('css/wireframe.min.css') }}?v={{ $assetVersion }}" as="style">
   <link rel="stylesheet" href="{{ asset('css/wireframe.min.css') }}?v={{ $assetVersion }}">
+
+  {{-- Sembunyikan Floating Chat Icon di Mobile karena sudah ada tab Tanya AI di Bottom Bar --}}
+  <style>
+    @media (max-width: 900px) {
+      .chatbot-launcher, #chatbotLauncher { display: none !important; }
+    }
+  </style>
 
   {{-- Preload LCP Hero Image yang sebenarnya --}}
   <link rel="preload" as="image" href="{{ asset('images/hero_bg.webp') }}" type="image/webp" fetchpriority="high">
@@ -81,13 +88,25 @@
         </div>
       </a>
 
-      <!-- Nav Links (Distilled, Anti-Sumpek) -->
+      <!-- Nav Links (Professional with Dropdown) -->
       <ul class="nav-menu">
         <li><a href="{{ route('home') }}" class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}">Beranda</a></li>
+        <li class="nav-dropdown">
+          <button class="nav-link nav-dropdown-toggle {{ request()->routeIs('profil') ? 'active' : '' }}" type="button">
+            Tentang Sekolah
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="nav-dropdown-icon"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="{{ route('profil') }}" class="nav-dropdown-item">Profil Sekolah</a>
+            <a href="{{ route('home') }}#sambutan" class="nav-dropdown-item">Sambutan Kepala Sekolah</a>
+            <a href="{{ route('home') }}#jurusan" class="nav-dropdown-item">Program Keahlian</a>
+            <a href="{{ route('home') }}#dewan-guru" class="nav-dropdown-item">Tenaga Pendidik</a>
+          </div>
+        </li>
         <li><a href="{{ route('ppdb') }}" class="nav-link {{ request()->routeIs('ppdb') ? 'active' : '' }}">PPDB 2026</a></li>
+        <li><a href="{{ route('berita.index') }}" class="nav-link {{ request()->routeIs('berita.*') ? 'active' : '' }}">Berita</a></li>
         <li><a href="{{ route('smexamall.index') }}" class="nav-link {{ request()->routeIs('smexamall.*') ? 'active' : '' }}">SMEXAMALL</a></li>
         <li><a href="{{ route('bkk') }}" class="nav-link {{ request()->routeIs('bkk') ? 'active' : '' }}">BKK &amp; PKL</a></li>
-        <li><a href="{{ route('home') }}#jurusan" class="nav-link">Program Keahlian</a></li>
       </ul>
 
       <!-- Nav Actions (Sleek, Dynamic, Zero AI-Slop) -->
@@ -157,11 +176,13 @@
       <div class="drawer-nav-group">
         <div class="drawer-nav-title">Menu Utama</div>
         <a href="{{ route('home') }}" class="drawer-nav-link {{ request()->routeIs('home') ? 'active' : '' }}">Beranda</a>
+        <a href="{{ route('profil') }}" class="drawer-nav-link {{ request()->routeIs('profil') ? 'active' : '' }}">Profil Sekolah</a>
         <a href="{{ route('ppdb') }}" class="drawer-nav-link {{ request()->routeIs('ppdb') ? 'active' : '' }}">Pusat Informasi PPDB 2026</a>
+        <a href="{{ route('berita.index') }}" class="drawer-nav-link {{ request()->routeIs('berita.*') ? 'active' : '' }}">Berita &amp; Artikel</a>
         <a href="{{ route('smexamall.index') }}" class="drawer-nav-link {{ request()->routeIs('smexamall.*') ? 'active' : '' }}">SMEXAMALL Marketplace</a>
         <a href="{{ route('bkk') }}" class="drawer-nav-link {{ request()->routeIs('bkk') ? 'active' : '' }}">BKK &amp; Portal PKL Industri</a>
         <a href="{{ route('home') }}#jurusan" class="drawer-nav-link">5 Program Keahlian</a>
-        <a href="{{ route('home') }}#prestasi" class="drawer-nav-link">Prestasi &amp; Alumni</a>
+        <a href="{{ route('home') }}#sambutan" class="drawer-nav-link">Sambutan Kepala Sekolah</a>
         <a href="{{ route('home') }}#kontak" class="drawer-nav-link">Kontak &amp; Lokasi</a>
       </div>
 
@@ -395,6 +416,49 @@
   </nav>
 
   <script>
+    // Professional Navbar Dropdown Toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      const navDropdowns = document.querySelectorAll('.nav-dropdown');
+      
+      navDropdowns.forEach(dropdown => {
+        const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+        
+        if (toggle) {
+          // Toggle on click
+          toggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const isActive = dropdown.classList.contains('active');
+            
+            // Close all other dropdowns
+            navDropdowns.forEach(d => d.classList.remove('active'));
+            
+            // Toggle current dropdown
+            if (!isActive) {
+              dropdown.classList.add('active');
+            }
+          });
+          
+          // Hover effect (desktop only)
+          if (window.innerWidth > 900) {
+            dropdown.addEventListener('mouseenter', function() {
+              dropdown.classList.add('active');
+            });
+            
+            dropdown.addEventListener('mouseleave', function() {
+              dropdown.classList.remove('active');
+            });
+          }
+        }
+      });
+      
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.nav-dropdown')) {
+          navDropdowns.forEach(d => d.classList.remove('active'));
+        }
+      });
+    });
+
     // Slide-Over Mobile Drawer
     const mobileToggle = document.querySelector('.mobile-toggle');
     const mobileDrawer = document.getElementById('mobileDrawer');
@@ -698,10 +762,12 @@
         }
 
         mapContainer.addEventListener('click', loadGoogleMap, { once: true });
-        mapContainer.addEventListener('touchstart', loadGoogleMap, { passive: true, once: true });
       }
     });
   </script>
+
+  {{-- Alpine.js for lightweight interactive components (Marquee, etc.) --}}
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
   @stack('scripts')
 </body>
 </html>

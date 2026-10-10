@@ -703,13 +703,13 @@ p, .desc, .lead, .job-desc, .text-muted, .req-item {
     left: 0;
     right: 0;
     height: 58px;
-    background-color: #082046;
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    background-color: #FFFFFF;
+    border-top: 1px solid #E2E8F0;
     display: flex;
     align-items: center;
     justify-content: space-around;
     z-index: 9998;
-    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.05);
     padding-bottom: env(safe-area-inset-bottom, 0);
   }
   .mobile-tab-item {
@@ -742,10 +742,12 @@ p, .desc, .lead, .job-desc, .text-muted, .req-item {
     letter-spacing: 0.02em;
   }
   .mobile-tab-item.active {
-    color: var(--gold);
+    color: #0B1B3D;
+    font-weight: 800;
   }
   .mobile-tab-item.active .mobile-tab-icon svg {
-    stroke: var(--gold);
+    stroke: #0B1B3D;
+    stroke-width: 2.5;
   }
 
   .bkk-hero-grid { grid-template-columns: 1fr; gap: 24px; }
@@ -1028,4 +1030,11 @@ p, .desc, .lead, .job-desc, .text-muted, .req-item {
   .bkk-hero { padding: 44px 0 36px; }
   .filter-toolbar-box { grid-template-columns: 1fr; }
   .job-meta > div { grid-template-columns: 1fr; gap: 0; }
+}
+
+@media (max-width: 768px) {
+  .chatbot-launcher,
+  #chatbotLauncher {
+    display: none !important;
+  }
 }

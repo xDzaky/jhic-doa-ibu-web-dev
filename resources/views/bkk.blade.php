@@ -63,7 +63,7 @@
   <section class="section" style="padding-top: 0;">
     <div class="container">
       <ol class="job-list" id="jobsGrid">
-        <li class="card-job job-row" data-type="bkk" data-major="MPLB" data-loc="Probolinggo">
+        <li class="card-job job-row reveal-item" data-delay="0" data-type="bkk" data-major="MPLB" data-loc="Probolinggo">
           <div class="job-who">
             <span class="job-kind kind-bkk">Lowongan alumni</span>
             <span class="job-company">PT Indomarco Prismatama (Indomaret)</span>
@@ -80,7 +80,7 @@
             <button class="job-apply" onclick="openApplyModal('Admin Logistik - PT Indomarco Prismatama')">Lamar</button>
           </div>
         </li>
-        <li class="card-job job-row" data-type="bkk" data-major="RPL" data-loc="Malang">
+        <li class="card-job job-row reveal-item" data-delay="60" data-type="bkk" data-major="RPL" data-loc="Malang">
           <div class="job-who">
             <span class="job-kind kind-bkk">Lowongan alumni</span>
             <span class="job-company">Jagoan Hosting (PT Beon Intermedia)</span>
@@ -97,7 +97,7 @@
             <button class="job-apply" onclick="openApplyModal('Junior Web Dev - Jagoan Hosting')">Lamar</button>
           </div>
         </li>
-        <li class="card-job job-row" data-type="bkk" data-major="AKL" data-loc="Probolinggo">
+        <li class="card-job job-row reveal-item" data-delay="120" data-type="bkk" data-major="AKL" data-loc="Probolinggo">
           <div class="job-who">
             <span class="job-kind kind-bkk">Lowongan alumni</span>
             <span class="job-company">Bank Jatim Cabang Probolinggo</span>
@@ -114,7 +114,7 @@
             <button class="job-apply" onclick="openApplyModal('Junior Accounting - Bank Jatim')">Lamar</button>
           </div>
         </li>
-        <li class="card-job job-row" data-type="pkl" data-major="MPLB" data-loc="Probolinggo">
+        <li class="card-job job-row reveal-item" data-delay="180" data-type="pkl" data-major="MPLB" data-loc="Probolinggo">
           <div class="job-who">
             <span class="job-kind kind-pkl">Magang siswa</span>
             <span class="job-company">PT Pelabuhan Indonesia (Pelindo Regional Jatim)</span>
@@ -131,7 +131,7 @@
             <button class="job-apply" onclick="openApplyModal('Administrasi Pelabuhan - PT Pelindo')">Ajukan magang</button>
           </div>
         </li>
-        <li class="card-job job-row" data-type="pkl" data-major="BD" data-loc="Probolinggo">
+        <li class="card-job job-row reveal-item" data-delay="240" data-type="pkl" data-major="BD" data-loc="Probolinggo">
           <div class="job-who">
             <span class="job-kind kind-pkl">Magang siswa</span>
             <span class="job-company">PT Sumber Alfaria Trijaya (Alfamart Class)</span>
@@ -148,7 +148,7 @@
             <button class="job-apply" onclick="openApplyModal('Retail Associate - Alfamart')">Ajukan magang</button>
           </div>
         </li>
-        <li class="card-job job-row" data-type="pkl" data-major="RPL" data-loc="Surabaya">
+        <li class="card-job job-row reveal-item" data-delay="300" data-type="pkl" data-major="RPL" data-loc="Surabaya">
           <div class="job-who">
             <span class="job-kind kind-pkl">Magang siswa</span>
             <span class="job-company">Axioo Indonesia (PT Tera Data Indonusa)</span>
@@ -171,7 +171,7 @@
 
   <!-- 4. ALUR PKL -->
   <section class="section section-white" id="alur-pkl">
-    <div class="container pkl-flow">
+    <div class="container pkl-flow reveal-item" data-delay="50">
       <div class="pkl-flow-head">
         <h2 class="section-title">Alur praktik kerja lapangan</h2>
         <p class="section-subtitle">Tiga langkah dari memilih mitra sampai memegang sertifikat kompetensi industri.</p>
@@ -280,5 +280,26 @@
       }
     });
   }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const bkkRevealElements = document.querySelectorAll('.reveal-item');
+    if (!prefersReducedMotion && 'IntersectionObserver' in window && bkkRevealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const delay = parseInt(entry.target.getAttribute('data-delay') || '0', 10);
+            setTimeout(() => {
+              entry.target.classList.add('is-revealed');
+            }, delay);
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
+      bkkRevealElements.forEach(el => revealObserver.observe(el));
+    } else {
+      bkkRevealElements.forEach(el => el.classList.add('is-revealed'));
+    }
+  });
 </script>
 @endpush

@@ -8,8 +8,19 @@
     <img src="{{ asset('images/hero_bg.webp') }}" alt="Pendidikan Vokasi SMKN 1 Probolinggo" class="hero-bg-panorama-img" width="1200" height="675" fetchpriority="high" loading="eager" decoding="async">
     <div class="container hero-container">
       <div class="hero-content-col">
+        <!-- Circular Emblem Badge (Figma Mobile Design) -->
+        <div class="hero-mobile-emblem">
+          <div class="hero-emblem-circle">
+            <img src="{{ asset('images/logo_emblem.webp') }}" alt="Emblem SMKN 1 Probolinggo" width="70" height="70" class="hero-emblem-img">
+          </div>
+        </div>
+
         <h1 class="hero-display-title">
-          Pendidikan Vokasi Berkualitas untuk Generasi Industri &amp; Digital
+          <span class="title-desktop">Pendidikan Vokasi Berkualitas untuk Generasi Industri &amp; Digital</span>
+          <span class="title-mobile">
+            SELAMAT DATANG DI WEBSITE RESMI<br>
+            <strong class="title-mobile-school">SMKN 1 PROBOLINGGO</strong>
+          </span>
         </h1>
         <p class="hero-lead">
           Selamat datang di portal resmi SMK Negeri 1 Probolinggo. Sekolah Pusat Keunggulan terakreditasi A Unggul dengan 5 konsentrasi keahlian modern berstandar industri, kemitraan DUDI nasional, serta Teaching Factory SMEXAMALL.
@@ -40,7 +51,7 @@
         </div>
         <div class="stats-bar-divider"></div>
         <div class="stats-bar-item reveal-item" data-delay="200">
-          <span class="stats-bar-num">99%</span>
+          <span class="stats-bar-num count-ticker" data-target="99" data-suffix="%">99%</span>
           <span class="stats-bar-label">Lulusan Terserap di Dunia<br>Kerja / Perguruan Tinggi</span>
         </div>
       </div>
@@ -52,12 +63,12 @@
     <div class="container">
       <div class="sambutan-figma-grid">
         <!-- Kolom Kiri: Foto Kepala Sekolah dengan Frame Grafis (Figma) -->
-        <div class="sambutan-figma-visual">
+        <div class="sambutan-figma-visual reveal-item" data-delay="0">
           <img src="{{ asset('images/frame_kepala_sekolah.webp') }}" alt="Edi Hananto Eko, M.PD - Kepala SMKN 1 Probolinggo" loading="lazy" class="sambutan-frame-img" width="480" height="520">
         </div>
 
         <!-- Kolom Kanan: Teks Sambutan (Inter + Figtree) -->
-        <div class="sambutan-figma-text">
+        <div class="sambutan-figma-text reveal-item" data-delay="100">
           <div class="sambutan-title-block">
             <span class="sambutan-sub">Sambutan</span>
             <h2 class="sambutan-main">Kepala Sekolah</h2>
@@ -87,7 +98,7 @@
 
   <!-- 3. Dewan Pendidik & Tenaga Kependidikan Fullwidth Banner (Matching Figma) -->
   <section class="section-guru-fullwidth" id="dewan-guru">
-    <div class="guru-photo-card">
+    <div class="guru-photo-card reveal-item" data-delay="50">
       <img src="{{ asset('images/foto_guru_dan_staf.webp') }}" alt="Dewan Guru dan Tenaga Kependidikan SMKN 1 Probolinggo" loading="lazy" width="800" height="480">
     </div>
   </section>
@@ -232,7 +243,7 @@
   <!-- 5. Berita & Kegiatan Terkini (Data Riil dari smkn1probolinggo.sch.id) -->
   <section class="section" id="berita" style="background: #F8FAFC;">
     <div class="container">
-      <div class="section-header" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px;">
+      <div class="section-header reveal-item" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px;">
         <div>
           <h2 class="section-title">Berita &amp; Kegiatan Terkini</h2>
           <p style="color: var(--text-muted); font-size: 0.9375rem; margin-top: 6px;">Informasi kegiatan akademik, prestasi siswa, dan program vokasi terbaru SMKN 1 Probolinggo.</p>
@@ -245,7 +256,7 @@
 
       <div class="news-grid-3">
         <!-- Berita 1 -->
-        <article class="news-card">
+        <article class="news-card reveal-item" data-delay="0">
           <div class="news-card-img-wrap">
             <img src="{{ asset('images/news_bisnis_digital.webp') }}" alt="Siswa Bisnis Digital Belajar Bersama AGMARI" class="news-card-img" loading="lazy" width="400" height="225">
           </div>
@@ -265,7 +276,7 @@
         </article>
 
         <!-- Berita 2 -->
-        <article class="news-card">
+        <article class="news-card reveal-item" data-delay="100">
           <div class="news-card-img-wrap">
             <img src="{{ asset('images/news_perkantoran.webp') }}" alt="Paperwork to Partywork MPLB" class="news-card-img" loading="lazy" width="400" height="225">
           </div>
@@ -285,7 +296,7 @@
         </article>
 
         <!-- Berita 3 -->
-        <article class="news-card">
+        <article class="news-card reveal-item" data-delay="200">
           <div class="news-card-img-wrap">
             <img src="{{ asset('images/news_ai.webp') }}" alt="Kepolisian Probolinggo & AI" class="news-card-img" loading="lazy" width="400" height="225">
           </div>
@@ -310,14 +321,14 @@
   <!-- 6. SMEXAMALL Teaching Factory Preview -->
   <section class="section section-white" id="smexamall">
     <div class="container">
-      <div class="section-header center">
+      <div class="section-header center reveal-item">
         <h2 class="section-title">Produk &amp; Layanan Unggulan SMEXAMALL</h2>
         <p style="color: var(--text-muted); font-size: 0.9375rem; margin-top: 6px;">Dukung karya wirausaha siswa SMKN 1 Probolinggo di unit produksi Teaching Factory resmi.</p>
       </div>
 
       <div class="smx-home-grid">
         <!-- 1: RPL -->
-        <div class="smx-card">
+        <div class="smx-card reveal-item" data-delay="0">
           <div class="smx-card-img-wrap">
             <img src="{{ asset('images/products/tefa_rpl.webp') }}" alt="Website Profil UMKM Probolinggo" class="smx-card-img" loading="lazy" width="300" height="200">
           </div>
@@ -337,7 +348,7 @@
         </div>
 
         <!-- 2: Bisnis Digital -->
-        <div class="smx-card">
+        <div class="smx-card reveal-item" data-delay="80">
           <div class="smx-card-img-wrap">
             <img src="{{ asset('images/products/tefa_bd.webp') }}" alt="Paket Kelola TikTok & IG UMKM" class="smx-card-img" loading="lazy" width="300" height="200">
           </div>
@@ -357,7 +368,7 @@
         </div>
 
         <!-- 3: MPLB -->
-        <div class="smx-card">
+        <div class="smx-card reveal-item" data-delay="160">
           <div class="smx-card-img-wrap">
             <img src="{{ asset('images/products/tefa_mplb.webp') }}" alt="Digitalisasi Arsip & Dokumen" class="smx-card-img" loading="lazy" width="300" height="200">
           </div>
@@ -377,7 +388,7 @@
         </div>
 
         <!-- 4: AKL -->
-        <div class="smx-card">
+        <div class="smx-card reveal-item" data-delay="240">
           <div class="smx-card-img-wrap">
             <img src="{{ asset('images/products/tefa_akl.webp') }}" alt="Laporan Keuangan UMKM Accurate" class="smx-card-img" loading="lazy" width="300" height="200">
           </div>
@@ -397,7 +408,7 @@
         </div>
 
         <!-- 5: LPB -->
-        <div class="smx-card">
+        <div class="smx-card reveal-item" data-delay="320">
           <div class="smx-card-img-wrap">
             <img src="{{ asset('images/products/tefa_bank.webp') }}" alt="Konsultasi Pembukuan Kas Toko" class="smx-card-img" loading="lazy" width="300" height="200">
           </div>
@@ -417,7 +428,7 @@
         </div>
       </div>
 
-      <div style="text-align: center; margin-top: 36px;">
+      <div style="text-align: center; margin-top: 36px;" class="reveal-item" data-delay="100">
         <a href="{{ route('smexamall.index') }}" class="btn btn-navy-primary">Buka Katalog Lengkap SMEXAMALL</a>
       </div>
     </div>
@@ -448,59 +459,57 @@
         <!-- Row 1: Scrolls Smoothly Left -->
         <div class="partner-ref-track">
           <!-- Set A -->
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_daihatsu.svg') }}" alt="Daihatsu" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_lg.svg') }}" alt="LG Electronics" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_bd_trans.svg') }}" alt="B&D Transformer" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_jatimpark.svg') }}" alt="Jawa Timur Park 1" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_jagoanhosting.png') }}" alt="Jagoan Hosting" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_japfa.svg') }}" alt="JAPFA" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_radarmalang.svg') }}" alt="Radar Malang" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_alfamart.png') }}" alt="Alfamart" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_pjb.svg') }}" alt="PJB PLN" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_axioo.png') }}" alt="Axioo Smart Classroom" loading="lazy" width="100" height="40"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_daihatsu.svg') }}" alt="Daihatsu" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_lg.svg') }}" alt="LG Electronics" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_bd_trans.svg') }}" alt="B&D Transformer" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_jatimpark.svg') }}" alt="Jawa Timur Park 1" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_jagoanhosting.png') }}" alt="Jagoan Hosting" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_japfa.svg') }}" alt="JAPFA" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_radarmalang.svg') }}" alt="Radar Malang" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_alfamart.png') }}" alt="Alfamart" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_pjb.svg') }}" alt="PJB PLN" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_axioo.png') }}" alt="Axioo Smart Classroom" loading="lazy"></div>
 
           <!-- Duplicate Set for infinite seamless loop -->
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_daihatsu.svg') }}" alt="Daihatsu" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_lg.svg') }}" alt="LG Electronics" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_bd_trans.svg') }}" alt="B&D Transformer" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_jatimpark.svg') }}" alt="Jawa Timur Park 1" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_jagoanhosting.png') }}" alt="Jagoan Hosting" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_japfa.svg') }}" alt="JAPFA" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_radarmalang.svg') }}" alt="Radar Malang" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_alfamart.png') }}" alt="Alfamart" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_pjb.svg') }}" alt="PJB PLN" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_axioo.png') }}" alt="Axioo Smart Classroom" loading="lazy" width="100" height="40"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_daihatsu.svg') }}" alt="Daihatsu" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_lg.svg') }}" alt="LG Electronics" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_bd_trans.svg') }}" alt="B&D Transformer" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_jatimpark.svg') }}" alt="Jawa Timur Park 1" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_jagoanhosting.png') }}" alt="Jagoan Hosting" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_japfa.svg') }}" alt="JAPFA" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_radarmalang.svg') }}" alt="Radar Malang" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_alfamart.png') }}" alt="Alfamart" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_pjb.svg') }}" alt="PJB PLN" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_axioo.png') }}" alt="Axioo Smart Classroom" loading="lazy"></div>
         </div>
 
         <!-- Row 2: Scrolls Smoothly Left (Offset) -->
         <div class="partner-ref-track track-reverse">
           <!-- Set B -->
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_bank_jatim.svg') }}" alt="Bank Jatim" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_indomaret.svg') }}" alt="Indomaret" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_pelindo.svg') }}" alt="PT Pelindo BUMN" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_intel.png') }}" alt="Intel AI" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_hummasoft.png') }}" alt="Hummasoft" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_agmari.svg') }}" alt="AGMARI AKSESMU" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_yamaha.png') }}" alt="Yamaha Motor" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_maspion.png') }}" alt="Maspion IT" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_ubig.png') }}" alt="UBIG" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_tdi.png') }}" alt="Technopark TDI" loading="lazy" width="100" height="40"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_bank_jatim.svg') }}" alt="Bank Jatim" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_indomaret.svg') }}" alt="Indomaret" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_pelindo.svg') }}" alt="PT Pelindo BUMN" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_intel.png') }}" alt="Intel AI" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_hummasoft.png') }}" alt="Hummasoft" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_agmari.svg') }}" alt="AGMARI AKSESMU" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_yamaha.png') }}" alt="Yamaha Motor" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_maspion.png') }}" alt="Maspion IT" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_ubig.png') }}" alt="UBIG" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_tdi.png') }}" alt="Technopark TDI" loading="lazy"></div>
 
           <!-- Duplicate Set for infinite seamless loop -->
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_bank_jatim.svg') }}" alt="Bank Jatim" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_indomaret.svg') }}" alt="Indomaret" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_pelindo.svg') }}" alt="PT Pelindo BUMN" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_intel.png') }}" alt="Intel AI" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_hummasoft.png') }}" alt="Hummasoft" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_agmari.svg') }}" alt="AGMARI AKSESMU" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_yamaha.png') }}" alt="Yamaha Motor" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_maspion.png') }}" alt="Maspion IT" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_ubig.png') }}" alt="UBIG" loading="lazy" width="100" height="40"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_tdi.png') }}" alt="Technopark TDI" loading="lazy" width="100" height="40"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_bank_jatim.svg') }}" alt="Bank Jatim" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_indomaret.svg') }}" alt="Indomaret" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_pelindo.svg') }}" alt="PT Pelindo BUMN" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_intel.png') }}" alt="Intel AI" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_hummasoft.png') }}" alt="Hummasoft" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_agmari.svg') }}" alt="AGMARI AKSESMU" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_yamaha.png') }}" alt="Yamaha Motor" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_maspion.png') }}" alt="Maspion IT" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_ubig.png') }}" alt="UBIG" loading="lazy"></div>
+          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_tdi.png') }}" alt="Technopark TDI" loading="lazy"></div>
         </div>
       </div>
-    </div>
-  </section>
 
   <!-- 8. FAQ ACCORDION SECTION (MATCHING REFERENCE IMAGE 2) -->
   <section class="section-faq" id="faq">
@@ -703,39 +712,48 @@
       revealElements.forEach(el => el.classList.add('is-revealed'));
     }
 
-    // 4. Animated Numeric Counter Ticker (Count-Up Easing)
+    // 4. Animated Numeric Counter Ticker - Auto Start on Page Load
     const counterElements = document.querySelectorAll('.count-ticker');
-    if (!prefersReducedMotion && 'IntersectionObserver' in window && counterElements.length > 0) {
-      const counterObserver = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const el = entry.target;
-            const target = parseInt(el.getAttribute('data-target') || '0', 10);
-            const suffix = el.getAttribute('data-suffix') || '';
-            const prefix = el.getAttribute('data-prefix') || '';
-            const duration = 1200;
-            const startTime = performance.now();
+    if (!prefersReducedMotion && counterElements.length > 0) {
+      function startCountAnimation(el) {
+        if (el.dataset.counted) return;
+        el.dataset.counted = 'true';
+        const target = parseInt(el.getAttribute('data-target') || '0', 10);
+        const suffix = el.getAttribute('data-suffix') || '';
+        const prefix = el.getAttribute('data-prefix') || '';
+        const duration = 2000;
+        const startTime = performance.now();
 
-            function updateCounter(currentTime) {
-              const elapsed = currentTime - startTime;
-              const progress = Math.min(elapsed / duration, 1);
-              const easeProgress = 1 - Math.pow(1 - progress, 3);
-              const currentVal = Math.floor(easeProgress * target);
-              el.textContent = prefix + currentVal.toLocaleString('id-ID') + suffix;
+        function updateCounter(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          // Ease-out cubic untuk animasi smooth
+          const easeProgress = 1 - Math.pow(1 - progress, 3);
+          const currentVal = Math.floor(easeProgress * target);
+          el.textContent = prefix + currentVal.toLocaleString('id-ID') + suffix;
 
-              if (progress < 1) {
-                requestAnimationFrame(updateCounter);
-              } else {
-                el.textContent = prefix + target.toLocaleString('id-ID') + suffix;
-              }
-            }
+          if (progress < 1) {
             requestAnimationFrame(updateCounter);
-            obs.unobserve(el);
+          } else {
+            el.textContent = prefix + target.toLocaleString('id-ID') + suffix;
           }
-        });
-      }, { threshold: 0.2 });
+        }
+        requestAnimationFrame(updateCounter);
+      }
 
-      counterElements.forEach(el => counterObserver.observe(el));
+      // Set initial value to 0
+      counterElements.forEach(el => {
+        const prefix = el.getAttribute('data-prefix') || '';
+        const suffix = el.getAttribute('data-suffix') || '';
+        el.textContent = prefix + '0' + suffix;
+      });
+
+      // Start animation immediately when page loads
+      setTimeout(() => {
+        counterElements.forEach(el => {
+          startCountAnimation(el);
+        });
+      }, 300); // Small delay untuk smooth page load
     }
   });
 </script>
