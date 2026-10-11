@@ -1521,7 +1521,7 @@ html, body {
 
 
 
-/* Professional Navbar Dropdown with Hover Intent Bridge & Close Delay */
+/* Enhanced Dropdown Menu Styling */
 .nav-dropdown {
   position: relative;
   display: inline-flex;
@@ -1532,16 +1532,16 @@ html, body {
 .nav-dropdown-toggle {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
   background: none;
   border: none;
   cursor: pointer;
   font-family: inherit;
   font-size: 0.875rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(255, 255, 255, 0.85);
   padding: 6px 0;
-  transition: color 0.2s ease;
+  transition: color 0.18s ease;
 }
 
 .nav-dropdown-toggle:hover,
@@ -1564,22 +1564,26 @@ html, body {
   position: absolute;
   top: calc(100% + 8px);
   left: 50%;
-  min-width: 260px;
+  min-width: 290px;
   background: #FFFFFF;
   border: 1px solid #E2E8F0;
-  border-radius: 14px;
-  box-shadow: 0 16px 36px -4px rgba(8, 32, 70, 0.16), 0 4px 12px rgba(0, 0, 0, 0.04);
+  border-radius: 16px;
+  box-shadow: 0 20px 42px -6px rgba(8, 32, 70, 0.18), 0 4px 14px rgba(0, 0, 0, 0.05);
   padding: 8px;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
   transform: translateX(-50%) translateY(-6px) scale(0.98);
-  /* Exit transition: adds graceful 220ms delay before hiding when pointer leaves */
+  /* Graceful 220ms exit delay */
   transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1) 0.22s,
               transform 0.22s cubic-bezier(0.16, 1, 0.3, 1) 0.22s,
               visibility 0s linear 0.44s;
   z-index: 1200;
 }
+
+/* Specific Dropdown widths */
+.dropdown-menu-wide { min-width: 330px; }
+.dropdown-menu-large { min-width: 360px; }
 
 /* Invisible bridge between toggle and menu to prevent accidental mouseout */
 .nav-dropdown-menu::before {
@@ -1593,7 +1597,7 @@ html, body {
   display: block;
 }
 
-/* Little pointer triangle */
+/* Pointer arrow triangle */
 .nav-dropdown-menu::after {
   content: '';
   position: absolute;
@@ -1608,6 +1612,23 @@ html, body {
   border-top-left-radius: 2px;
 }
 
+/* Right alignment for items near right edge (e.g. SMEXAMALL) */
+.nav-dropdown.dropdown-align-right .nav-dropdown-menu {
+  left: auto;
+  right: -20px;
+  transform: translateY(-6px) scale(0.98);
+}
+.nav-dropdown.dropdown-align-right:hover .nav-dropdown-menu,
+.nav-dropdown.dropdown-align-right.is-open .nav-dropdown-menu,
+.nav-dropdown.dropdown-align-right:focus-within .nav-dropdown-menu {
+  transform: translateY(0) scale(1);
+}
+.nav-dropdown.dropdown-align-right .nav-dropdown-menu::after {
+  left: auto;
+  right: 48px;
+  transform: rotate(45deg);
+}
+
 /* Active / Hover State: instant trigger on enter */
 .nav-dropdown:hover .nav-dropdown-menu,
 .nav-dropdown.is-open .nav-dropdown-menu,
@@ -1616,22 +1637,47 @@ html, body {
   visibility: visible;
   pointer-events: auto;
   transform: translateX(-50%) translateY(0) scale(1);
-  /* Instant entrance transition without delay */
   transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1) 0s,
               transform 0.2s cubic-bezier(0.16, 1, 0.3, 1) 0s,
               visibility 0s linear 0s;
 }
 
+.nav-dropdown-header {
+  padding: 4px 10px 8px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #F1F5F9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-dropdown-header-title {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #64748B;
+}
+.nav-dropdown-header-badge {
+  font-size: 0.625rem;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: #EFF6FF;
+  color: #1D4ED8;
+  letter-spacing: 0.03em;
+}
+
 .nav-dropdown-item {
   display: flex;
   align-items: center;
-  padding: 10px 14px;
+  gap: 12px;
+  padding: 8px 10px;
   font-size: 0.875rem;
   font-weight: 600;
   color: #334155;
   text-decoration: none;
-  border-radius: 8px;
-  transition: all 0.15s ease;
+  border-radius: 10px;
+  transition: all 0.16s ease;
   position: relative;
   z-index: 1;
 }
@@ -1639,10 +1685,94 @@ html, body {
 .nav-dropdown-item:hover {
   background: #F8FAFC;
   color: #082046;
-  padding-left: 18px;
+  padding-left: 14px;
 }
 
-@media (max-width: 900px) {
+.nav-item-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-dropdown-item:hover .nav-item-icon {
+  transform: scale(1.08);
+}
+
+.nav-icon-blue { background: #EFF6FF; color: #2563EB; }
+.nav-icon-amber { background: #FEF3C7; color: #D97706; }
+.nav-icon-emerald { background: #ECFDF5; color: #059669; }
+.nav-icon-purple { background: #F3E8FF; color: #7C3AED; }
+.nav-icon-rose { background: #FFE4E6; color: #E11D48; }
+.nav-icon-cyan { background: #ECFEFF; color: #0891B2; }
+.nav-icon-indigo { background: #EEF2FF; color: #4F46E5; }
+
+.nav-item-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+.nav-item-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+.nav-item-title {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #0F2A4A;
+  line-height: 1.25;
+  transition: color 0.15s ease;
+}
+.nav-dropdown-item:hover .nav-item-title {
+  color: #F05A28;
+}
+.nav-item-desc {
+  font-size: 0.71875rem;
+  color: #64748B;
+  font-weight: 500;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nav-item-pill {
+  font-size: 0.625rem;
+  font-weight: 800;
+  padding: 1px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+  line-height: 1.3;
+}
+.pill-gold { background: #FEF3C7; color: #92400E; }
+.pill-blue { background: #DBEAFE; color: #1E40AF; }
+.pill-green { background: #DCFCE7; color: #166534; }
+.pill-purple { background: #F3E8FF; color: #6B21A8; }
+.pill-rose { background: #FFE4E6; color: #9F1239; }
+
+/* Responsive adjustments for navbar */
+@media (max-width: 1260px) {
+  .nav-menu {
+    gap: 16px !important;
+  }
+}
+@media (max-width: 1120px) {
+  .nav-menu {
+    gap: 10px !important;
+  }
+  .nav-link, .nav-dropdown-toggle {
+    font-size: 0.8125rem !important;
+  }
+}
+
+@media (max-width: 960px) {
   .nav-dropdown {
     display: none;
   }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  @php $assetVersion = config('app.asset_version', '20261010_v28_marquee_fix'); @endphp
+  @php $assetVersion = config('app.asset_version', '20261011_v29_nav_dropdown_rich'); @endphp
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>@yield('title', 'Website Resmi SMKN 1 Probolinggo - Sekolah Pusat Keunggulan & BLUD')</title>
@@ -88,23 +88,265 @@
         </div>
       </a>
 
-      <!-- Nav Links (Professional with Dropdown) -->
+      <!-- Nav Links (Professional with Dynamic Feature Dropdowns) -->
       <ul class="nav-menu">
         <li><a href="{{ route('home') }}" class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}">Beranda</a></li>
+
+        <!-- Dropdown: Tentang Sekolah -->
         <li class="nav-dropdown">
-          <button class="nav-link nav-dropdown-toggle {{ request()->routeIs('profil') ? 'active' : '' }}" type="button">
+          <button class="nav-link nav-dropdown-toggle {{ request()->routeIs('profil') || request()->is('alumni*') || request()->is('ekstrakurikuler*') ? 'active' : '' }}" type="button">
             Tentang Sekolah
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="nav-dropdown-icon"><path d="M6 9l6 6 6-6"/></svg>
           </button>
-          <div class="nav-dropdown-menu">
-            <a href="{{ route('profil') }}" class="nav-dropdown-item">Profil Sekolah</a>
-            <a href="{{ route('home') }}#sambutan" class="nav-dropdown-item">Sambutan Kepala Sekolah</a>
-            <a href="{{ route('home') }}#jurusan" class="nav-dropdown-item">Program Keahlian</a>
+          <div class="nav-dropdown-menu dropdown-menu-wide">
+            <div class="nav-dropdown-header">
+              <span class="nav-dropdown-header-title">Profil &amp; Kesiswaan</span>
+              <span class="nav-dropdown-header-badge">SMKN 1</span>
+            </div>
+            <a href="{{ route('profil') }}" class="nav-dropdown-item">
+              <div class="nav-item-icon nav-icon-blue">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 7v14M21 7v14M6 7V3h12v4M9 11h2M13 11h2M9 15h2M13 15h2"/></svg>
+              </div>
+              <div class="nav-item-text">
+                <div class="nav-item-title-row">
+                  <span class="nav-item-title">Profil Sekolah</span>
+                </div>
+                <span class="nav-item-desc">Visi, misi, sejarah &amp; akreditasi A</span>
+              </div>
+            </a>
+            <a href="{{ route('home') }}#sambutan" class="nav-dropdown-item">
+              <div class="nav-item-icon nav-icon-indigo">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <div class="nav-item-text">
+                <div class="nav-item-title-row">
+                  <span class="nav-item-title">Sambutan Kepala Sekolah</span>
+                </div>
+                <span class="nav-item-desc">Arahan &amp; komitmen mutu kepemimpinan</span>
+              </div>
+            </a>
+            <a href="{{ route('ekstra.show', 'volly-ball') }}" class="nav-dropdown-item">
+              <div class="nav-item-icon nav-icon-amber">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+              </div>
+              <div class="nav-item-text">
+                <div class="nav-item-title-row">
+                  <span class="nav-item-title">Ekstrakurikuler</span>
+                  <span class="nav-item-pill pill-gold">11 Cabang</span>
+                </div>
+                <span class="nav-item-desc">Prestasi, jadwal latihan &amp; minat bakat</span>
+              </div>
+            </a>
+            <a href="{{ route('alumni.show', 1) }}" class="nav-dropdown-item">
+              <div class="nav-item-icon nav-icon-purple">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <div class="nav-item-text">
+                <div class="nav-item-title-row">
+                  <span class="nav-item-title">Cerita Alumni</span>
+                  <span class="nav-item-pill pill-purple">Inspirasi</span>
+                </div>
+                <span class="nav-item-desc">Kisah sukses &amp; karir lulusan SMKN 1</span>
+              </div>
+            </a>
+            <a href="{{ route('home') }}#fasilitas" class="nav-dropdown-item">
+              <div class="nav-item-icon nav-icon-emerald">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              </div>
+              <div class="nav-item-text">
+                <div class="nav-item-title-row">
+                  <span class="nav-item-title">Fasilitas Kampus</span>
+                </div>
+                <span class="nav-item-desc">Laboratorium modern, bengkel &amp; sarana</span>
+              </div>
+            </a>
           </div>
         </li>
-        <li><a href="{{ route('ppdb') }}" class="nav-link {{ request()->routeIs('ppdb') ? 'active' : '' }}">PPDB 2026</a></li>
+
+        <!-- Dropdown: Program Keahlian -->
+        <li class="nav-dropdown">
+          <button class="nav-link nav-dropdown-toggle {{ request()->is('jurusan*') ? 'active' : '' }}" type="button">
+            Program Keahlian
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="nav-dropdown-icon"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="nav-dropdown-menu dropdown-menu-large">
+            <div class="nav-dropdown-header">
+              <span class="nav-dropdown-header-title">5 Konsentrasi Keahlian</span>
+              <span class="nav-dropdown-header-badge">TEFA BLUD</span>
+            </div>
+            <a href="{{ route('jurusan.rpl') }}" class="nav-dropdown-item">
+              <div class="nav-item-icon nav-icon-rose">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <div class="nav-item-text">
+                <div class="nav-item-title-row">
+                  <span class="nav-item-title">Rekayasa Perangkat Lunak (RPL)</span>
+                  <span class="nav-item-pill pill-rose">Unggulan</span>
+                </div>
+                <span class="nav-item-desc">Web dev, mobile app &amp; Artificial Intelligence</span>
+              </div>
+            </a>
+            <a href="{{ route('jurusan.bd') }}" class="nav-dropdown-item">
+              <div class="nav-item-icon nav-icon-cyan">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              </div>
+              <div class="nav-item-text">
+                <div class="nav-item-title-row">
+                  <span class="nav-item-title">Bisnis Digital (BD)</span>
+                </div>
+                <span class="nav-item-desc">E-commerce, digital marketing, content creator &amp; SEO</span>
+              </div>
+            </a>
+            <a href="{{ route('jurusan.mp') }}" class="nav-dropdown-item">
+              <div class="nav-item-icon nav-icon-amber">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              </div>
+              <div class="nav-item-text">
+                <div class="nav-item-title-row">
+                  <span class="nav-item-title">Manajemen Perkantoran (MPLB)</span>
+                </div>
+                <span class="nav-item-desc">Tata kelola kantor modern, public relations &amp; arsip</span>
+              </div>
+            </a>
+            <a href="{{ route('jurusan.lp') }}" class="nav-dropdown-item">
+              <div class="nav-item-icon nav-icon-blue">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <div class="nav-item-text">
+                <div class="nav-item-title-row">
+                  <span class="nav-item-title">Layanan Perbankan (LPS)</span>
+                </div>
+                <span class="nav-item-desc">Operasional teller, customer service &amp; bank syariah</span>
+              </div>
+            </a>
+            <a href="{{ route('jurusan.ak') }}" class="nav-dropdown-item">
+              <div class="nav-item-icon nav-icon-emerald">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+              </div>
+              <div class="nav-item-text">
+                <div class="nav-item-title-row">
+                  <span class="nav-item-title">Akuntansi &amp; Keuangan (AKL)</span>
+                </div>
+                <span class="nav-item-desc">Laporan keuangan, pembukuan digital &amp; audit pajak</span>
+              </div>
+            </a>
+          </div>
+        </li>
+
+        <!-- Dropdown: PPDB 2026 -->
+        <li class="nav-dropdown">
+          <button class="nav-link nav-dropdown-toggle {{ request()->routeIs('ppdb*') ? 'active' : '' }}" type="button">
+            PPDB 2026
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="nav-dropdown-icon"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="nav-dropdown-menu dropdown-menu-wide">
+            <div class="nav-dropdown-header">
+              <span class="nav-dropdown-header-title">Penerimaan Siswa Baru</span>
+              <span class="nav-dropdown-header-badge">TA 2026/2027</span>
+            </div>
+            <a href="{{ route('ppdb') }}" class="nav-dropdown-item">
+              <div class="nav-item-icon nav-icon-blue">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              </div>
+              <div class="nav-item-text">
+                <div class="nav-item-title-row">
+                  <span class="nav-item-title">Informasi &amp; Alur PPDB</span>
+                </div>
+                <span class="nav-item-desc">Kuota kuantum, syarat, jadwal &amp; jalur afirmasi</span>
+              </div>
+            </a>
+            <a href="{{ route('ppdb') }}#daftar" class="nav-dropdown-item">
+              <div class="nav-item-icon nav-icon-emerald">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+              </div>
+              <div class="nav-item-text">
+                <div class="nav-item-title-row">
+                  <span class="nav-item-title">Formulir Pendaftaran</span>
+                  <span class="nav-item-pill pill-green">Online</span>
+                </div>
+                <span class="nav-item-desc">Registrasi resmi calon peserta didik baru</span>
+              </div>
+            </a>
+            <a href="{{ route('ppdb.check') }}" class="nav-dropdown-item">
+              <div class="nav-item-icon nav-icon-purple">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <div class="nav-item-text">
+                <div class="nav-item-title-row">
+                  <span class="nav-item-title">Cek Status Seleksi</span>
+                  <span class="nav-item-pill pill-purple">Live Cek</span>
+                </div>
+                <span class="nav-item-desc">Verifikasi berkas &amp; pengumuman kelulusan</span>
+              </div>
+            </a>
+          </div>
+        </li>
+
+        <!-- Link: Berita -->
         <li><a href="{{ route('berita.index') }}" class="nav-link {{ request()->routeIs('berita.*') ? 'active' : '' }}">Berita</a></li>
-        <li><a href="{{ route('smexamall.index') }}" class="nav-link {{ request()->routeIs('smexamall.*') ? 'active' : '' }}">SMEXAMALL</a></li>
+
+        <!-- Dropdown: SMEXAMALL -->
+        <li class="nav-dropdown dropdown-align-right">
+          <button class="nav-link nav-dropdown-toggle {{ request()->is('smexamall*') || request()->routeIs('seller*') || request()->routeIs('teacher*') ? 'active' : '' }}" type="button">
+            SMEXAMALL
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="nav-dropdown-icon"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="nav-dropdown-menu dropdown-menu-wide">
+            <div class="nav-dropdown-header">
+              <span class="nav-dropdown-header-title">Marketplace Siswa BLUD</span>
+              <span class="nav-dropdown-header-badge">Teaching Factory</span>
+            </div>
+            <a href="{{ route('smexamall.index') }}" class="nav-dropdown-item">
+              <div class="nav-item-icon nav-icon-amber">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              </div>
+              <div class="nav-item-text">
+                <div class="nav-item-title-row">
+                  <span class="nav-item-title">Katalog Produk Siswa</span>
+                  <span class="nav-item-pill pill-gold">Belanja</span>
+                </div>
+                <span class="nav-item-desc">Produk kreatif, kriya &amp; kuliner karya siswa</span>
+              </div>
+            </a>
+            <a href="{{ route('smexamall.cart') }}" class="nav-dropdown-item">
+              <div class="nav-item-icon nav-icon-blue">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              </div>
+              <div class="nav-item-text">
+                <div class="nav-item-title-row">
+                  <span class="nav-item-title">Keranjang Belanja</span>
+                </div>
+                <span class="nav-item-desc">Lihat pesanan &amp; proses checkout Midtrans</span>
+              </div>
+            </a>
+            <a href="{{ route('seller.index') }}" class="nav-dropdown-item">
+              <div class="nav-item-icon nav-icon-emerald">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <div class="nav-item-text">
+                <div class="nav-item-title-row">
+                  <span class="nav-item-title">Seller Centre Siswa</span>
+                  <span class="nav-item-pill pill-green">Wirausaha</span>
+                </div>
+                <span class="nav-item-desc">Dashboard upload produk &amp; kelola order siswa</span>
+              </div>
+            </a>
+            <a href="{{ route('teacher.index') }}" class="nav-dropdown-item">
+              <div class="nav-item-icon nav-icon-purple">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div class="nav-item-text">
+                <div class="nav-item-title-row">
+                  <span class="nav-item-title">Panel Kurasi Guru</span>
+                  <span class="nav-item-pill pill-purple">Supervisor</span>
+                </div>
+                <span class="nav-item-desc">Validasi kelayakan produk &amp; kurikulum BLUD</span>
+              </div>
+            </a>
+          </div>
+        </li>
+
+        <!-- Link: BKK & PKL -->
         <li><a href="{{ route('bkk') }}" class="nav-link {{ request()->routeIs('bkk') ? 'active' : '' }}">BKK &amp; PKL</a></li>
       </ul>
 
@@ -175,13 +417,41 @@
       <div class="drawer-nav-group">
         <div class="drawer-nav-title">Menu Utama</div>
         <a href="{{ route('home') }}" class="drawer-nav-link {{ request()->routeIs('home') ? 'active' : '' }}">Beranda</a>
-        <a href="{{ route('profil') }}" class="drawer-nav-link {{ request()->routeIs('profil') ? 'active' : '' }}">Profil Sekolah</a>
-        <a href="{{ route('ppdb') }}" class="drawer-nav-link {{ request()->routeIs('ppdb') ? 'active' : '' }}">Pusat Informasi PPDB 2026</a>
-        <a href="{{ route('berita.index') }}" class="drawer-nav-link {{ request()->routeIs('berita.*') ? 'active' : '' }}">Berita &amp; Artikel</a>
-        <a href="{{ route('smexamall.index') }}" class="drawer-nav-link {{ request()->routeIs('smexamall.*') ? 'active' : '' }}">SMEXAMALL Marketplace</a>
-        <a href="{{ route('bkk') }}" class="drawer-nav-link {{ request()->routeIs('bkk') ? 'active' : '' }}">BKK &amp; Portal PKL Industri</a>
-        <a href="{{ route('home') }}#jurusan" class="drawer-nav-link">5 Program Keahlian</a>
+        <a href="{{ route('berita.index') }}" class="drawer-nav-link {{ request()->routeIs('berita.*') ? 'active' : '' }}">Berita &amp; Artikel Sekolah</a>
+      </div>
+
+      <div class="drawer-nav-group">
+        <div class="drawer-nav-title">Tentang Sekolah</div>
+        <a href="{{ route('profil') }}" class="drawer-nav-link {{ request()->routeIs('profil') ? 'active' : '' }}">Profil Sekolah &amp; Visi Misi</a>
         <a href="{{ route('home') }}#sambutan" class="drawer-nav-link">Sambutan Kepala Sekolah</a>
+        <a href="{{ route('ekstra.show', 'volly-ball') }}" class="drawer-nav-link {{ request()->is('ekstrakurikuler*') ? 'active' : '' }}">Ekstrakurikuler (11 Cabang)</a>
+        <a href="{{ route('alumni.show', 1) }}" class="drawer-nav-link {{ request()->is('alumni*') ? 'active' : '' }}">Cerita &amp; Kiprah Alumni</a>
+        <a href="{{ route('home') }}#fasilitas" class="drawer-nav-link">Fasilitas Kampus &amp; Sarana</a>
+      </div>
+
+      <div class="drawer-nav-group">
+        <div class="drawer-nav-title">5 Program Keahlian</div>
+        <a href="{{ route('jurusan.rpl') }}" class="drawer-nav-link {{ request()->routeIs('jurusan.rpl') ? 'active' : '' }}">Rekayasa Perangkat Lunak (RPL)</a>
+        <a href="{{ route('jurusan.bd') }}" class="drawer-nav-link {{ request()->routeIs('jurusan.bd') ? 'active' : '' }}">Bisnis Digital (BD)</a>
+        <a href="{{ route('jurusan.mp') }}" class="drawer-nav-link {{ request()->routeIs('jurusan.mp') ? 'active' : '' }}">Manajemen Perkantoran (MPLB)</a>
+        <a href="{{ route('jurusan.lp') }}" class="drawer-nav-link {{ request()->routeIs('jurusan.lp') ? 'active' : '' }}">Layanan Perbankan (LPS)</a>
+        <a href="{{ route('jurusan.ak') }}" class="drawer-nav-link {{ request()->routeIs('jurusan.ak') ? 'active' : '' }}">Akuntansi &amp; Keuangan (AKL)</a>
+      </div>
+
+      <div class="drawer-nav-group">
+        <div class="drawer-nav-title">Pusat Informasi PPDB 2026</div>
+        <a href="{{ route('ppdb') }}" class="drawer-nav-link {{ request()->routeIs('ppdb') ? 'active' : '' }}">Alur &amp; Kuota PPDB 2026</a>
+        <a href="{{ route('ppdb') }}#daftar" class="drawer-nav-link">Formulir Pendaftaran Online</a>
+        <a href="{{ route('ppdb.check') }}" class="drawer-nav-link {{ request()->routeIs('ppdb.check') ? 'active' : '' }}">Cek Status Seleksi PPDB</a>
+      </div>
+
+      <div class="drawer-nav-group">
+        <div class="drawer-nav-title">SMEXAMALL &amp; Karir</div>
+        <a href="{{ route('smexamall.index') }}" class="drawer-nav-link {{ request()->routeIs('smexamall.index') ? 'active' : '' }}">SMEXAMALL Marketplace Siswa</a>
+        <a href="{{ route('smexamall.cart') }}" class="drawer-nav-link {{ request()->routeIs('smexamall.cart') ? 'active' : '' }}">Keranjang Belanja</a>
+        <a href="{{ route('seller.index') }}" class="drawer-nav-link {{ request()->routeIs('seller.index') ? 'active' : '' }}">Seller Centre Siswa</a>
+        <a href="{{ route('teacher.index') }}" class="drawer-nav-link {{ request()->routeIs('teacher.index') ? 'active' : '' }}">Panel Kurasi Guru BLUD</a>
+        <a href="{{ route('bkk') }}" class="drawer-nav-link {{ request()->routeIs('bkk') ? 'active' : '' }}">BKK &amp; Portal PKL Industri</a>
         <a href="{{ route('home') }}#kontak" class="drawer-nav-link">Kontak &amp; Lokasi</a>
       </div>
 
