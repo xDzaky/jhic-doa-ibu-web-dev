@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  @php $assetVersion = config('app.asset_version', '20261011_v32_compact_mega_menu'); @endphp
+  @php $assetVersion = config('app.asset_version', '20261011_v33_perfect_mega_menu'); @endphp
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>@yield('title', 'Website Resmi SMKN 1 Probolinggo - Sekolah Pusat Keunggulan & BLUD')</title>
@@ -899,12 +899,13 @@
   </nav>
 
   <script>
-    // Professional Navbar Dropdown Toggle
+    // Professional Navbar Dropdown Toggle with Hover Intent
     document.addEventListener('DOMContentLoaded', function() {
       const navDropdowns = document.querySelectorAll('.nav-dropdown');
       
       navDropdowns.forEach(dropdown => {
         const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+        let closeTimer = null;
         
         if (toggle) {
           // Toggle on click
@@ -921,14 +922,25 @@
             }
           });
           
-          // Hover effect (desktop only)
+          // Hover effect with safety timeout (desktop only)
           if (window.innerWidth > 900) {
             dropdown.addEventListener('mouseenter', function() {
+              if (closeTimer) {
+                clearTimeout(closeTimer);
+                closeTimer = null;
+              }
+              // Close any other open dropdown immediately
+              navDropdowns.forEach(d => {
+                if (d !== dropdown) d.classList.remove('active');
+              });
               dropdown.classList.add('active');
             });
             
             dropdown.addEventListener('mouseleave', function() {
-              dropdown.classList.remove('active');
+              // 180ms grace period so cursor can effortlessly cross into the menu container
+              closeTimer = setTimeout(function() {
+                dropdown.classList.remove('active');
+              }, 180);
             });
           }
         }
