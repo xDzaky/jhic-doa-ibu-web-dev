@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  @php $assetVersion = config('app.asset_version', '20261011_v29_nav_dropdown_rich'); @endphp
+  @php $assetVersion = config('app.asset_version', '20261011_v32_compact_mega_menu'); @endphp
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>@yield('title', 'Website Resmi SMKN 1 Probolinggo - Sekolah Pusat Keunggulan & BLUD')</title>
@@ -92,257 +92,471 @@
       <ul class="nav-menu">
         <li><a href="{{ route('home') }}" class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}">Beranda</a></li>
 
-        <!-- Dropdown: Tentang Sekolah -->
-        <li class="nav-dropdown">
+        <!-- 1. Mega Dropdown: Tentang Sekolah -->
+        <li class="nav-dropdown has-mega-menu">
           <button class="nav-link nav-dropdown-toggle {{ request()->routeIs('profil') || request()->is('alumni*') || request()->is('ekstrakurikuler*') ? 'active' : '' }}" type="button">
             Tentang Sekolah
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="nav-dropdown-icon"><path d="M6 9l6 6 6-6"/></svg>
           </button>
-          <div class="nav-dropdown-menu dropdown-menu-wide">
-            <div class="nav-dropdown-header">
-              <span class="nav-dropdown-header-title">Profil &amp; Kesiswaan</span>
-              <span class="nav-dropdown-header-badge">SMKN 1</span>
+          <div class="mega-menu-container">
+            <!-- Left Pane: Use Cases Style -->
+            <div class="mega-pane-left">
+              <h3 class="mega-pane-title">Jelajahi SMEXA &amp; Kesiswaan</h3>
+              <div class="mega-card-grid">
+                <a href="{{ route('profil') }}" class="mega-card-item">
+                  <div class="mega-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 7v14M21 7v14M6 7V3h12v4M9 11h2M13 11h2M9 15h2M13 15h2"/></svg>
+                  </div>
+                  <div class="mega-card-body">
+                    <div class="mega-card-title">Profil Sekolah</div>
+                    <div class="mega-card-desc">Visi, misi &amp; akreditasi A institusi.</div>
+                  </div>
+                </a>
+
+                <a href="{{ route('home') }}#sambutan" class="mega-card-item">
+                  <div class="mega-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                  </div>
+                  <div class="mega-card-body">
+                    <div class="mega-card-title">Sambutan Kepsek</div>
+                    <div class="mega-card-desc">Komitmen mutu &amp; kepemimpinan.</div>
+                  </div>
+                </a>
+
+                <a href="{{ route('ekstra.show', 'volly-ball') }}" class="mega-card-item">
+                  <div class="mega-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+                  </div>
+                  <div class="mega-card-body">
+                    <div class="mega-card-title">Ekstrakurikuler <span class="mega-badge-pill badge-orange">11 CABANG</span></div>
+                    <div class="mega-card-desc">Bakat kesiswaan, seni &amp; olahraga.</div>
+                  </div>
+                </a>
+
+                <a href="{{ route('alumni.show', 1) }}" class="mega-card-item">
+                  <div class="mega-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  </div>
+                  <div class="mega-card-body">
+                    <div class="mega-card-title">Cerita Alumni</div>
+                    <div class="mega-card-desc">Jejak karir &amp; kiprah wirausaha.</div>
+                  </div>
+                </a>
+
+                <a href="{{ route('home') }}#fasilitas" class="mega-card-item">
+                  <div class="mega-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                  </div>
+                  <div class="mega-card-body">
+                    <div class="mega-card-title">Fasilitas Kampus</div>
+                    <div class="mega-card-desc">Lab modern &amp; bengkel TEFA.</div>
+                  </div>
+                </a>
+
+                <a href="{{ route('home') }}#mitra" class="mega-card-item">
+                  <div class="mega-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                  </div>
+                  <div class="mega-card-body">
+                    <div class="mega-card-title">Mitra Industri</div>
+                    <div class="mega-card-desc">Sinergi magang 15+ korporasi.</div>
+                  </div>
+                </a>
+              </div>
             </div>
-            <a href="{{ route('profil') }}" class="nav-dropdown-item">
-              <div class="nav-item-icon nav-icon-blue">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 7v14M21 7v14M6 7V3h12v4M9 11h2M13 11h2M9 15h2M13 15h2"/></svg>
-              </div>
-              <div class="nav-item-text">
-                <div class="nav-item-title-row">
-                  <span class="nav-item-title">Profil Sekolah</span>
+
+            <!-- Right Pane: AI Features Style -->
+            <div class="mega-pane-right">
+              <div>
+                <h3 class="mega-pane-title">Informasi &amp; Layanan Cepat</h3>
+                <div class="mega-links-columns">
+                  <div>
+                    <div class="mega-link-col-header">Kesiswaan &amp; Ekskul</div>
+                    <ul class="mega-link-list">
+                      <li><a href="{{ route('ekstra.show', 'volly-ball') }}" class="mega-link-item">Volly Ball</a></li>
+                      <li><a href="{{ route('ekstra.show', 'koptuda') }}" class="mega-link-item">Koptuda Pramuka</a></li>
+                      <li><a href="{{ route('ekstra.show', 'mustika-taruna') }}" class="mega-link-item">Mustika Taruna</a></li>
+                      <li><a href="{{ route('ekstra.show', 'futsal') }}" class="mega-link-item">Futsal Club</a></li>
+                      <li><a href="{{ route('ekstra.show', 'smexa-music') }}" class="mega-link-item">SMEXA Music</a></li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <div class="mega-link-col-header">Akademik &amp; Karir</div>
+                    <ul class="mega-link-list">
+                      <li><a href="{{ route('home') }}#jurusan" class="mega-link-item">5 Program Keahlian</a></li>
+                      <li><a href="{{ route('bkk') }}" class="mega-link-item">Bursa Kerja Khusus</a></li>
+                      <li><a href="{{ route('bkk') }}#pkl" class="mega-link-item">Portal PKL Industri</a></li>
+                      <li><a href="{{ route('home') }}#prestasi" class="mega-link-item">Prestasi Sekolah</a></li>
+                      <li><a href="{{ route('berita.index') }}" class="mega-link-item">Kabar Terkini</a></li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <div class="mega-link-col-header">Pusat Layanan</div>
+                    <ul class="mega-link-list">
+                      <li><a href="{{ route('ppdb') }}" class="mega-link-item">Syarat PPDB 2026</a></li>
+                      <li><a href="{{ route('ppdb.check') }}" class="mega-link-item">Cek Status Seleksi <span class="mega-badge-pill badge-green">LIVE</span></a></li>
+                      <li><a href="{{ route('login') }}" class="mega-link-item">Portal SSO Siswa</a></li>
+                      <li><a href="{{ route('home') }}#kontak" class="mega-link-item">Pengaduan &amp; Kontak</a></li>
+                      <li><a href="{{ route('ppdb') }}" class="mega-link-item">Download Brosur</a></li>
+                    </ul>
+                  </div>
                 </div>
-                <span class="nav-item-desc">Visi, misi, sejarah &amp; akreditasi A</span>
               </div>
-            </a>
-            <a href="{{ route('home') }}#sambutan" class="nav-dropdown-item">
-              <div class="nav-item-icon nav-icon-indigo">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-              </div>
-              <div class="nav-item-text">
-                <div class="nav-item-title-row">
-                  <span class="nav-item-title">Sambutan Kepala Sekolah</span>
+
+              <!-- Bottom Promo Card: Meet Underlord Style -->
+              <a href="javascript:void(0)" onclick="if(window.openSmexaChat) window.openSmexaChat();" class="mega-promo-card">
+                <div class="mega-promo-avatar">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM4 12a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-7z"/><circle cx="9" cy="15" r="1"/><circle cx="15" cy="15" r="1"/></svg>
                 </div>
-                <span class="nav-item-desc">Arahan &amp; komitmen mutu kepemimpinan</span>
-              </div>
-            </a>
-            <a href="{{ route('ekstra.show', 'volly-ball') }}" class="nav-dropdown-item">
-              <div class="nav-item-icon nav-icon-amber">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
-              </div>
-              <div class="nav-item-text">
-                <div class="nav-item-title-row">
-                  <span class="nav-item-title">Ekstrakurikuler</span>
-                  <span class="nav-item-pill pill-gold">11 Cabang</span>
+                <div class="mega-promo-body">
+                  <div class="mega-promo-title">
+                    Tanya Asisten AI SMEXA
+                    <span class="mega-badge-pill badge-orange">24/7 ONLINE</span>
+                  </div>
+                  <div class="mega-promo-desc">Dapatkan informasi instan seputar jurusan, alur pendaftaran PPDB, dan fasilitas sekolah.</div>
                 </div>
-                <span class="nav-item-desc">Prestasi, jadwal latihan &amp; minat bakat</span>
-              </div>
-            </a>
-            <a href="{{ route('alumni.show', 1) }}" class="nav-dropdown-item">
-              <div class="nav-item-icon nav-icon-purple">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              </div>
-              <div class="nav-item-text">
-                <div class="nav-item-title-row">
-                  <span class="nav-item-title">Cerita Alumni</span>
-                  <span class="nav-item-pill pill-purple">Inspirasi</span>
-                </div>
-                <span class="nav-item-desc">Kisah sukses &amp; karir lulusan SMKN 1</span>
-              </div>
-            </a>
-            <a href="{{ route('home') }}#fasilitas" class="nav-dropdown-item">
-              <div class="nav-item-icon nav-icon-emerald">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-              </div>
-              <div class="nav-item-text">
-                <div class="nav-item-title-row">
-                  <span class="nav-item-title">Fasilitas Kampus</span>
-                </div>
-                <span class="nav-item-desc">Laboratorium modern, bengkel &amp; sarana</span>
-              </div>
-            </a>
+              </a>
+            </div>
           </div>
         </li>
 
-        <!-- Dropdown: Program Keahlian -->
-        <li class="nav-dropdown">
+        <!-- 2. Mega Dropdown: Program Keahlian -->
+        <li class="nav-dropdown has-mega-menu">
           <button class="nav-link nav-dropdown-toggle {{ request()->is('jurusan*') ? 'active' : '' }}" type="button">
             Program Keahlian
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="nav-dropdown-icon"><path d="M6 9l6 6 6-6"/></svg>
           </button>
-          <div class="nav-dropdown-menu dropdown-menu-large">
-            <div class="nav-dropdown-header">
-              <span class="nav-dropdown-header-title">5 Konsentrasi Keahlian</span>
-              <span class="nav-dropdown-header-badge">TEFA BLUD</span>
+          <div class="mega-menu-container">
+            <!-- Left Pane: 5 Jurusan -->
+            <div class="mega-pane-left">
+              <h3 class="mega-pane-title">5 Konsentrasi Keahlian TEFA</h3>
+              <div class="mega-card-grid">
+                <a href="{{ route('jurusan.rpl') }}" class="mega-card-item">
+                  <div class="mega-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                  </div>
+                  <div class="mega-card-body">
+                    <div class="mega-card-title">Rekayasa Perangkat Lunak <span class="mega-badge-pill badge-orange">UNGGULAN</span></div>
+                    <div class="mega-card-desc">Web, mobile Flutter &amp; terapan AI.</div>
+                  </div>
+                </a>
+
+                <a href="{{ route('jurusan.bd') }}" class="mega-card-item">
+                  <div class="mega-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                  </div>
+                  <div class="mega-card-body">
+                    <div class="mega-card-title">Bisnis Digital (BD)</div>
+                    <div class="mega-card-desc">E-commerce, konten &amp; pemasaran SEO.</div>
+                  </div>
+                </a>
+
+                <a href="{{ route('jurusan.mp') }}" class="mega-card-item">
+                  <div class="mega-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                  </div>
+                  <div class="mega-card-body">
+                    <div class="mega-card-title">Manajemen Perkantoran (MPLB)</div>
+                    <div class="mega-card-desc">Administrasi modern &amp; kearsipan digital.</div>
+                  </div>
+                </a>
+
+                <a href="{{ route('jurusan.lp') }}" class="mega-card-item">
+                  <div class="mega-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                  </div>
+                  <div class="mega-card-body">
+                    <div class="mega-card-title">Layanan Perbankan (LPS)</div>
+                    <div class="mega-card-desc">Frontliner, teller &amp; bank syariah.</div>
+                  </div>
+                </a>
+
+                <a href="{{ route('jurusan.ak') }}" class="mega-card-item">
+                  <div class="mega-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                  </div>
+                  <div class="mega-card-body">
+                    <div class="mega-card-title">Akuntansi &amp; Keuangan (AKL)</div>
+                    <div class="mega-card-desc">Laporan keuangan &amp; audit perpajakan.</div>
+                  </div>
+                </a>
+
+                <a href="{{ route('home') }}#jurusan" class="mega-card-item">
+                  <div class="mega-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                  </div>
+                  <div class="mega-card-body">
+                    <div class="mega-card-title">Teaching Factory (TEFA)</div>
+                    <div class="mega-card-desc">Praktik standar industri riil.</div>
+                  </div>
+                </a>
+              </div>
             </div>
-            <a href="{{ route('jurusan.rpl') }}" class="nav-dropdown-item">
-              <div class="nav-item-icon nav-icon-rose">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              </div>
-              <div class="nav-item-text">
-                <div class="nav-item-title-row">
-                  <span class="nav-item-title">Rekayasa Perangkat Lunak (RPL)</span>
-                  <span class="nav-item-pill pill-rose">Unggulan</span>
+
+            <!-- Right Pane: Kurikulum & Sertifikasi -->
+            <div class="mega-pane-right">
+              <div>
+                <h3 class="mega-pane-title">Kompetensi &amp; Standar Industri</h3>
+                <div class="mega-links-columns">
+                  <div>
+                    <div class="mega-link-col-header">Teknologi &amp; IT</div>
+                    <ul class="mega-link-list">
+                      <li><a href="{{ route('jurusan.rpl') }}" class="mega-link-item">Web Fullstack Laravel</a></li>
+                      <li><a href="{{ route('jurusan.rpl') }}" class="mega-link-item">Mobile Flutter App</a></li>
+                      <li><a href="{{ route('jurusan.rpl') }}" class="mega-link-item">Artificial Intelligence <span class="mega-badge-pill badge-orange">NEW</span></a></li>
+                      <li><a href="{{ route('jurusan.rpl') }}" class="mega-link-item">Cloud &amp; Database</a></li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <div class="mega-link-col-header">Bisnis &amp; Finansial</div>
+                    <ul class="mega-link-list">
+                      <li><a href="{{ route('jurusan.bd') }}" class="mega-link-item">Social Media Marketing</a></li>
+                      <li><a href="{{ route('jurusan.bd') }}" class="mega-link-item">E-Commerce Specialist</a></li>
+                      <li><a href="{{ route('jurusan.mp') }}" class="mega-link-item">Executive Administrative</a></li>
+                      <li><a href="{{ route('jurusan.lp') }}" class="mega-link-item">Core Banking Syariah</a></li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <div class="mega-link-col-header">Sertifikasi &amp; Mitra</div>
+                    <ul class="mega-link-list">
+                      <li><a href="{{ route('home') }}#mitra" class="mega-link-item">LSP-P1 BNSP Nasional</a></li>
+                      <li><a href="{{ route('home') }}#mitra" class="mega-link-item">Kelas Industri Hummasoft</a></li>
+                      <li><a href="{{ route('home') }}#mitra" class="mega-link-item">Kelas Industri Intel AI</a></li>
+                      <li><a href="{{ route('bkk') }}#pkl" class="mega-link-item">Magang DUDI Nasional</a></li>
+                    </ul>
+                  </div>
                 </div>
-                <span class="nav-item-desc">Web dev, mobile app &amp; Artificial Intelligence</span>
               </div>
-            </a>
-            <a href="{{ route('jurusan.bd') }}" class="nav-dropdown-item">
-              <div class="nav-item-icon nav-icon-cyan">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-              </div>
-              <div class="nav-item-text">
-                <div class="nav-item-title-row">
-                  <span class="nav-item-title">Bisnis Digital (BD)</span>
+
+              <!-- Bottom Promo Card -->
+              <a href="{{ route('home') }}#jurusan" class="mega-promo-card">
+                <div class="mega-promo-avatar">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
                 </div>
-                <span class="nav-item-desc">E-commerce, digital marketing, content creator &amp; SEO</span>
-              </div>
-            </a>
-            <a href="{{ route('jurusan.mp') }}" class="nav-dropdown-item">
-              <div class="nav-item-icon nav-icon-amber">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-              </div>
-              <div class="nav-item-text">
-                <div class="nav-item-title-row">
-                  <span class="nav-item-title">Manajemen Perkantoran (MPLB)</span>
+                <div class="mega-promo-body">
+                  <div class="mega-promo-title">Kurikulum Link &amp; Match Industri Nasional</div>
+                  <div class="mega-promo-desc">Siswa dibekali portofolio nyata dan sertifikasi kompetensi berstandar industri sebelum lulus.</div>
                 </div>
-                <span class="nav-item-desc">Tata kelola kantor modern, public relations &amp; arsip</span>
-              </div>
-            </a>
-            <a href="{{ route('jurusan.lp') }}" class="nav-dropdown-item">
-              <div class="nav-item-icon nav-icon-blue">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-              </div>
-              <div class="nav-item-text">
-                <div class="nav-item-title-row">
-                  <span class="nav-item-title">Layanan Perbankan (LPS)</span>
-                </div>
-                <span class="nav-item-desc">Operasional teller, customer service &amp; bank syariah</span>
-              </div>
-            </a>
-            <a href="{{ route('jurusan.ak') }}" class="nav-dropdown-item">
-              <div class="nav-item-icon nav-icon-emerald">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-              </div>
-              <div class="nav-item-text">
-                <div class="nav-item-title-row">
-                  <span class="nav-item-title">Akuntansi &amp; Keuangan (AKL)</span>
-                </div>
-                <span class="nav-item-desc">Laporan keuangan, pembukuan digital &amp; audit pajak</span>
-              </div>
-            </a>
+              </a>
+            </div>
           </div>
         </li>
 
-        <!-- Dropdown: PPDB 2026 -->
-        <li class="nav-dropdown">
+        <!-- 3. Mega Dropdown: PPDB 2026 -->
+        <li class="nav-dropdown has-mega-menu">
           <button class="nav-link nav-dropdown-toggle {{ request()->routeIs('ppdb*') ? 'active' : '' }}" type="button">
             PPDB 2026
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="nav-dropdown-icon"><path d="M6 9l6 6 6-6"/></svg>
           </button>
-          <div class="nav-dropdown-menu dropdown-menu-wide">
-            <div class="nav-dropdown-header">
-              <span class="nav-dropdown-header-title">Penerimaan Siswa Baru</span>
-              <span class="nav-dropdown-header-badge">TA 2026/2027</span>
+          <div class="mega-menu-container">
+            <!-- Left Pane -->
+            <div class="mega-pane-left">
+              <h3 class="mega-pane-title">Penerimaan Siswa Baru 2026/2027</h3>
+              <div class="mega-card-grid">
+                <a href="{{ route('ppdb') }}" class="mega-card-item">
+                  <div class="mega-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                  </div>
+                  <div class="mega-card-body">
+                    <div class="mega-card-title">Syarat &amp; Kuota PPDB</div>
+                    <div class="mega-card-desc">Daya tampung, jadwal &amp; ketentuan.</div>
+                  </div>
+                </a>
+
+                <a href="{{ route('ppdb') }}#daftar" class="mega-card-item">
+                  <div class="mega-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+                  </div>
+                  <div class="mega-card-body">
+                    <div class="mega-card-title">Pendaftaran Online <span class="mega-badge-pill badge-orange">BUKA</span></div>
+                    <div class="mega-card-desc">Registrasi &amp; upload berkas digital.</div>
+                  </div>
+                </a>
+
+                <a href="{{ route('ppdb.check') }}" class="mega-card-item">
+                  <div class="mega-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  </div>
+                  <div class="mega-card-body">
+                    <div class="mega-card-title">Cek Status Seleksi <span class="mega-badge-pill badge-green">LIVE</span></div>
+                    <div class="mega-card-desc">Verifikasi berkas &amp; hasil seleksi.</div>
+                  </div>
+                </a>
+
+                <a href="{{ route('ppdb') }}" class="mega-card-item">
+                  <div class="mega-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                  </div>
+                  <div class="mega-card-body">
+                    <div class="mega-card-title">Petunjuk Teknis PPDB</div>
+                    <div class="mega-card-desc">Panduan jalur masuk &amp; jurusan.</div>
+                  </div>
+                </a>
+              </div>
             </div>
-            <a href="{{ route('ppdb') }}" class="nav-dropdown-item">
-              <div class="nav-item-icon nav-icon-blue">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-              </div>
-              <div class="nav-item-text">
-                <div class="nav-item-title-row">
-                  <span class="nav-item-title">Informasi &amp; Alur PPDB</span>
+
+            <!-- Right Pane -->
+            <div class="mega-pane-right">
+              <div>
+                <h3 class="mega-pane-title">Jalur Seleksi &amp; Daya Tampung</h3>
+                <div class="mega-links-columns">
+                  <div>
+                    <div class="mega-link-col-header">Jalur Pendaftaran</div>
+                    <ul class="mega-link-list">
+                      <li><a href="{{ route('ppdb') }}" class="mega-link-item">Jalur Prestasi Nilai Rapor</a></li>
+                      <li><a href="{{ route('ppdb') }}" class="mega-link-item">Jalur Prestasi Lomba</a></li>
+                      <li><a href="{{ route('ppdb') }}" class="mega-link-item">Jalur Domisili / Zonasi</a></li>
+                      <li><a href="{{ route('ppdb') }}" class="mega-link-item">Jalur Afirmasi KIP</a></li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <div class="mega-link-col-header">Kuota 5 Jurusan</div>
+                    <ul class="mega-link-list">
+                      <li><a href="{{ route('jurusan.rpl') }}" class="mega-link-item">RPL: 108 Siswa (3 Kelas)</a></li>
+                      <li><a href="{{ route('jurusan.bd') }}" class="mega-link-item">BD: 108 Siswa (3 Kelas)</a></li>
+                      <li><a href="{{ route('jurusan.mp') }}" class="mega-link-item">MPLB: 108 Siswa (3 Kelas)</a></li>
+                      <li><a href="{{ route('jurusan.ak') }}" class="mega-link-item">AKL: 108 Siswa / LPS: 72</a></li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <div class="mega-link-col-header">Bantuan &amp; Helpdesk</div>
+                    <ul class="mega-link-list">
+                      <li><a href="{{ route('home') }}#kontak" class="mega-link-item">Call Center Panitia</a></li>
+                      <li><a href="{{ route('ppdb') }}" class="mega-link-item">Verifikasi Berkas Fisik</a></li>
+                      <li><a href="{{ route('ppdb.check') }}" class="mega-link-item">Cetak Bukti Registrasi</a></li>
+                      <li><a href="{{ route('home') }}#kontak" class="mega-link-item">Posko Kampus Mastrip</a></li>
+                    </ul>
+                  </div>
                 </div>
-                <span class="nav-item-desc">Kuota kuantum, syarat, jadwal &amp; jalur afirmasi</span>
               </div>
-            </a>
-            <a href="{{ route('ppdb') }}#daftar" class="nav-dropdown-item">
-              <div class="nav-item-icon nav-icon-emerald">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
-              </div>
-              <div class="nav-item-text">
-                <div class="nav-item-title-row">
-                  <span class="nav-item-title">Formulir Pendaftaran</span>
-                  <span class="nav-item-pill pill-green">Online</span>
+
+              <!-- Bottom Promo Card -->
+              <a href="{{ route('ppdb') }}" class="mega-promo-card">
+                <div class="mega-promo-avatar">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                 </div>
-                <span class="nav-item-desc">Registrasi resmi calon peserta didik baru</span>
-              </div>
-            </a>
-            <a href="{{ route('ppdb.check') }}" class="nav-dropdown-item">
-              <div class="nav-item-icon nav-icon-purple">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              </div>
-              <div class="nav-item-text">
-                <div class="nav-item-title-row">
-                  <span class="nav-item-title">Cek Status Seleksi</span>
-                  <span class="nav-item-pill pill-purple">Live Cek</span>
+                <div class="mega-promo-body">
+                  <div class="mega-promo-title">
+                    Pusat Informasi Resmi PPDB Online 2026/2027
+                    <span class="mega-badge-pill badge-green">GRATIS &amp; TRANSPARAN</span>
+                  </div>
+                  <div class="mega-promo-desc">Proses seleksi transparan, akuntabel, bebas pungutan, dan dipantau langsung oleh dinas pendidikan.</div>
                 </div>
-                <span class="nav-item-desc">Verifikasi berkas &amp; pengumuman kelulusan</span>
-              </div>
-            </a>
+              </a>
+            </div>
           </div>
         </li>
 
         <!-- Link: Berita -->
         <li><a href="{{ route('berita.index') }}" class="nav-link {{ request()->routeIs('berita.*') ? 'active' : '' }}">Berita</a></li>
 
-        <!-- Dropdown: SMEXAMALL -->
-        <li class="nav-dropdown dropdown-align-right">
+        <!-- 4. Mega Dropdown: SMEXAMALL -->
+        <li class="nav-dropdown has-mega-menu">
           <button class="nav-link nav-dropdown-toggle {{ request()->is('smexamall*') || request()->routeIs('seller*') || request()->routeIs('teacher*') ? 'active' : '' }}" type="button">
             SMEXAMALL
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="nav-dropdown-icon"><path d="M6 9l6 6 6-6"/></svg>
           </button>
-          <div class="nav-dropdown-menu dropdown-menu-wide">
-            <div class="nav-dropdown-header">
-              <span class="nav-dropdown-header-title">Marketplace Siswa BLUD</span>
-              <span class="nav-dropdown-header-badge">Teaching Factory</span>
+          <div class="mega-menu-container">
+            <!-- Left Pane -->
+            <div class="mega-pane-left">
+              <h3 class="mega-pane-title">Marketplace Siswa BLUD TEFA</h3>
+              <div class="mega-card-grid">
+                <a href="{{ route('smexamall.index') }}" class="mega-card-item">
+                  <div class="mega-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                  </div>
+                  <div class="mega-card-body">
+                    <div class="mega-card-title">Katalog Produk <span class="mega-badge-pill badge-orange">BELANJA</span></div>
+                    <div class="mega-card-desc">Karya kriya, kuliner, busana &amp; jasa.</div>
+                  </div>
+                </a>
+
+                <a href="{{ route('smexamall.cart') }}" class="mega-card-item">
+                  <div class="mega-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                  </div>
+                  <div class="mega-card-body">
+                    <div class="mega-card-title">Keranjang Belanja</div>
+                    <div class="mega-card-desc">Cek pesanan &amp; bayar QRIS Midtrans.</div>
+                  </div>
+                </a>
+
+                <a href="{{ route('seller.index') }}" class="mega-card-item">
+                  <div class="mega-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                  </div>
+                  <div class="mega-card-body">
+                    <div class="mega-card-title">Seller Centre <span class="mega-badge-pill badge-green">WIRAUSAHA</span></div>
+                    <div class="mega-card-desc">Upload produk, omset &amp; kelola order.</div>
+                  </div>
+                </a>
+
+                <a href="{{ route('teacher.index') }}" class="mega-card-item">
+                  <div class="mega-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  </div>
+                  <div class="mega-card-body">
+                    <div class="mega-card-title">Panel Kurasi Guru</div>
+                    <div class="mega-card-desc">Validasi mutu produk &amp; kurikulum BLUD.</div>
+                  </div>
+                </a>
+              </div>
             </div>
-            <a href="{{ route('smexamall.index') }}" class="nav-dropdown-item">
-              <div class="nav-item-icon nav-icon-amber">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-              </div>
-              <div class="nav-item-text">
-                <div class="nav-item-title-row">
-                  <span class="nav-item-title">Katalog Produk Siswa</span>
-                  <span class="nav-item-pill pill-gold">Belanja</span>
+
+            <!-- Right Pane -->
+            <div class="mega-pane-right">
+              <div>
+                <h3 class="mega-pane-title">Kategori &amp; Transaksi BLUD</h3>
+                <div class="mega-links-columns">
+                  <div>
+                    <div class="mega-link-col-header">Kategori Pilihan</div>
+                    <ul class="mega-link-list">
+                      <li><a href="{{ route('smexamall.index') }}" class="mega-link-item">Kuliner &amp; Bakery</a></li>
+                      <li><a href="{{ route('smexamall.index') }}" class="mega-link-item">Kriya &amp; Handycraft</a></li>
+                      <li><a href="{{ route('smexamall.index') }}" class="mega-link-item">Busana &amp; Tekstil</a></li>
+                      <li><a href="{{ route('smexamall.index') }}" class="mega-link-item">Jasa Digital &amp; Desain</a></li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <div class="mega-link-col-header">Pembayaran Mudah</div>
+                    <ul class="mega-link-list">
+                      <li><a href="{{ route('smexamall.cart') }}" class="mega-link-item">QRIS Dinamis (All Bank)</a></li>
+                      <li><a href="{{ route('smexamall.cart') }}" class="mega-link-item">Transfer Virtual Account</a></li>
+                      <li><a href="{{ route('smexamall.cart') }}" class="mega-link-item">Bayar di Kasir TEFA</a></li>
+                      <li><a href="{{ route('smexamall.cart') }}" class="mega-link-item">Pickup di Kampus</a></li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <div class="mega-link-col-header">Program Kewirausahaan</div>
+                    <ul class="mega-link-list">
+                      <li><a href="{{ route('seller.index') }}" class="mega-link-item">Inkubator Bisnis Siswa</a></li>
+                      <li><a href="{{ route('smexamall.index') }}" class="mega-link-item">Standar Mutu BLUD</a></li>
+                      <li><a href="{{ route('seller.index') }}" class="mega-link-item">Laporan Omset Penjualan</a></li>
+                      <li><a href="{{ route('teacher.index') }}" class="mega-link-item">Kurasi Sertifikasi Produk</a></li>
+                    </ul>
+                  </div>
                 </div>
-                <span class="nav-item-desc">Produk kreatif, kriya &amp; kuliner karya siswa</span>
               </div>
-            </a>
-            <a href="{{ route('smexamall.cart') }}" class="nav-dropdown-item">
-              <div class="nav-item-icon nav-icon-blue">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-              </div>
-              <div class="nav-item-text">
-                <div class="nav-item-title-row">
-                  <span class="nav-item-title">Keranjang Belanja</span>
+
+              <!-- Bottom Promo Card -->
+              <a href="{{ route('smexamall.index') }}" class="mega-promo-card">
+                <div class="mega-promo-avatar">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
                 </div>
-                <span class="nav-item-desc">Lihat pesanan &amp; proses checkout Midtrans</span>
-              </div>
-            </a>
-            <a href="{{ route('seller.index') }}" class="nav-dropdown-item">
-              <div class="nav-item-icon nav-icon-emerald">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-              </div>
-              <div class="nav-item-text">
-                <div class="nav-item-title-row">
-                  <span class="nav-item-title">Seller Centre Siswa</span>
-                  <span class="nav-item-pill pill-green">Wirausaha</span>
+                <div class="mega-promo-body">
+                  <div class="mega-promo-title">Gerakan Bangga Beli Produk Siswa SMEXA</div>
+                  <div class="mega-promo-desc">Setiap pembelian produk memberdayakan kreativitas, skill bisnis, dan kemandirian siswa vokasi.</div>
                 </div>
-                <span class="nav-item-desc">Dashboard upload produk &amp; kelola order siswa</span>
-              </div>
-            </a>
-            <a href="{{ route('teacher.index') }}" class="nav-dropdown-item">
-              <div class="nav-item-icon nav-icon-purple">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              </div>
-              <div class="nav-item-text">
-                <div class="nav-item-title-row">
-                  <span class="nav-item-title">Panel Kurasi Guru</span>
-                  <span class="nav-item-pill pill-purple">Supervisor</span>
-                </div>
-                <span class="nav-item-desc">Validasi kelayakan produk &amp; kurikulum BLUD</span>
-              </div>
-            </a>
+              </a>
+            </div>
           </div>
         </li>
 
