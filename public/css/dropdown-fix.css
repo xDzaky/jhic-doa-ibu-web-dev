@@ -1,0 +1,179 @@
+/* Dropdown Fix - Simple Vertical List Style */
+
+/* Enhanced z-index untuk dropdown */
+.navbar {
+  z-index: 9999 !important;
+  overflow: visible !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.nav-wrapper {
+  overflow: visible !important;
+}
+
+.nav-menu {
+  overflow: visible !important;
+}
+
+.nav-dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  z-index: 1 !important;
+  overflow: visible !important;
+}
+
+.nav-dropdown.has-mega-menu {
+  position: relative !important;
+  overflow: visible !important;
+}
+
+/* Container dropdown sederhana - LANGSUNG DI BAWAH NAVBAR */
+.mega-menu-container {
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  margin-top: 0 !important;
+  transform: translateY(0) scale(0.98) !important;
+  min-width: 220px !important;
+  max-width: 280px !important;
+  width: 240px !important;
+  background: #FFFFFF !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-top: 2px solid #FFB800 !important;
+  border-radius: 0 0 6px 6px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  padding: 0 !important;
+  display: block !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s !important;
+  z-index: 10000 !important;
+  box-sizing: border-box !important;
+}
+
+/* Hover state untuk dropdown */
+.nav-dropdown.has-mega-menu:hover .mega-menu-container,
+.nav-dropdown.has-mega-menu.is-open .mega-menu-container,
+.nav-dropdown.has-mega-menu:focus-within .mega-menu-container {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateY(0) scale(1) !important;
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0s linear 0s !important;
+}
+
+/* CRITICAL: Hide ALL mega panes and their children */
+.mega-menu-container .mega-pane-left,
+.mega-menu-container .mega-pane-right,
+.mega-menu-container .mega-pane-title,
+.mega-menu-container .mega-links-columns,
+.mega-menu-container .mega-link-list,
+.mega-menu-container .mega-link-col-header,
+.mega-menu-container .mega-link-item,
+.mega-menu-container .mega-promo-card {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Show ONLY the card grid */
+.mega-menu-container .mega-card-grid {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
+  width: 100% !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Item styling - cleanify style (Image 2) */
+.mega-menu-container .mega-card-item {
+  display: block !important;
+  text-decoration: none !important;
+  padding: 10px 18px !important;
+  border-bottom: 1px solid #EFEFEF !important;
+  transition: background 0.15s ease, color 0.15s ease !important;
+  font-size: 0.8125rem !important;
+  font-weight: 500 !important;
+  color: #555555 !important;
+  line-height: 1.4 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  height: auto !important;
+  margin: 0 !important;
+  background: #FFFFFF !important;
+}
+
+.mega-menu-container .mega-card-item:first-child {
+  border-top: none !important;
+}
+
+.mega-menu-container .mega-card-item:last-child {
+  border-bottom: none !important;
+  border-radius: 0 0 6px 6px !important;
+}
+
+.mega-menu-container .mega-card-item:hover {
+  background: #E8453C !important;
+  color: #FFFFFF !important;
+  border-bottom-color: #E8453C !important;
+}
+
+
+/* Hide ALL child elements inside card-item EXCEPT card-title */
+.mega-menu-container .mega-card-item > * {
+  display: none !important;
+}
+
+/* Show ONLY card-body */
+.mega-menu-container .mega-card-item .mega-card-body {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Show ONLY card-title inside card-body */
+.mega-menu-container .mega-card-item .mega-card-body > * {
+  display: none !important;
+}
+
+.mega-menu-container .mega-card-item .mega-card-body .mega-card-title {
+  display: block !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  color: inherit !important;
+  line-height: 1.4 !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Ensure no badges or spans are shown */
+.mega-menu-container .mega-card-title span,
+.mega-menu-container .mega-card-title .mega-badge-pill {
+  display: none !important;
+}
+
+/* Responsive - hide on mobile */
+@media (max-width: 960px) {
+  .nav-dropdown.has-mega-menu,
+  .mega-menu-container {
+    display: none !important;
+  }
+}

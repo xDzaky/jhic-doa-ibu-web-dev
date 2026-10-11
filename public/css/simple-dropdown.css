@@ -1,0 +1,82 @@
+/* ========================================
+   SIMPLE NAVBAR DROPDOWN STYLES
+   ======================================== */
+
+/* Simple dropdown menu */
+.simple-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 8px 0;
+  margin: 0;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  z-index: 1000;
+}
+
+/* Show dropdown when parent has is-open class */
+.nav-dropdown.is-open .simple-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Dropdown items */
+.simple-dropdown-item {
+  display: block;
+  padding: 10px 18px;
+  color: #1F2937;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+}
+
+.simple-dropdown-item:hover {
+  background-color: #F3F4F6;
+  color: #0F2A4A;
+}
+
+.simple-dropdown-item:active {
+  background-color: #E5E7EB;
+}
+
+/* Rotate chevron when dropdown is open */
+.nav-dropdown.is-open .nav-dropdown-toggle .nav-dropdown-icon {
+  transform: rotate(180deg);
+}
+
+/* Ensure nav-dropdown has relative positioning */
+.nav-dropdown {
+  position: relative;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 900px) {
+  .simple-dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    border-left: 2px solid #FFB800;
+    background: rgba(255, 184, 0, 0.05);
+    margin-top: 8px;
+    padding: 4px 0;
+  }
+  
+  .simple-dropdown-item {
+    padding: 8px 16px 8px 24px;
+    font-size: 13px;
+  }
+}

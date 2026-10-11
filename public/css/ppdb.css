@@ -86,13 +86,22 @@ p, .desc, .lead, .schedule-step, .text-muted, .step-desc {
    NAVBAR (Flat Deep Navy - Unified)
    ========================================================= */
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 1000;
   background-color: var(--navy-header);
   border-bottom: 2px solid var(--gold);
   height: 72px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
 }
+
+body {
+  padding-top: 72px;
+}
+
 
 .nav-wrapper {
   display: flex;

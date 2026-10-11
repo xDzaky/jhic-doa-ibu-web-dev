@@ -22,7 +22,8 @@
       <h1 class="bkk-hero-title" style="font-size: 2.5rem; line-height: 1.2; margin: 0 auto 24px; max-width: 800px;">
         Lowongan alumni dan magang industri <span style="color: #FFB800;">SMKN 1 Probolinggo</span>
       </h1>
-      <p class="bkk-hero-sub" style="font-size: 1rem; line-height: 1.6; color: #64748B; m/home/dzaky/Pictures/screenshot_20261010_220952.png dan rekrutmen eksklusif dari ratusan partner industri terpercaya yang siap mengantarkan langkah awal karirmu.
+      <p class="bkk-hero-sub" style="font-size: 1rem; line-height: 1.6; color: #64748B; margin: 0 auto 28px;">
+        Temukan peluang karir dan rekrutmen eksklusif dari ratusan partner industri terpercaya yang siap mengantarkan langkah awal karirmu.
       </p>
     </div>
   </section>

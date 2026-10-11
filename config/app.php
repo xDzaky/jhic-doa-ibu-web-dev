@@ -128,6 +128,6 @@ return [
     | Asset Version (Cache Busting)
     |--------------------------------------------------------------------------
     */
-    'asset_version' => env('ASSET_VERSION', '20261004'),
+    'asset_version' => env('ASSET_VERSION', '20261011_v38_portal_dropdown_fix'),
 
 ];
