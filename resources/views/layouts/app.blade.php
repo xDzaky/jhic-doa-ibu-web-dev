@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  @php $assetVersion = config('app.asset_version', '20261011_v33_perfect_mega_menu'); @endphp
+  @php $assetVersion = config('app.asset_version', '20261011_v34_mega_menu_state_fix'); @endphp
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>@yield('title', 'Website Resmi SMKN 1 Probolinggo - Sekolah Pusat Keunggulan & BLUD')</title>
@@ -911,14 +911,14 @@
           // Toggle on click
           toggle.addEventListener('click', function(e) {
             e.stopPropagation();
-            const isActive = dropdown.classList.contains('active');
+            const isOpen = dropdown.classList.contains('is-open');
             
             // Close all other dropdowns
-            navDropdowns.forEach(d => d.classList.remove('active'));
+            navDropdowns.forEach(d => d.classList.remove('is-open'));
             
             // Toggle current dropdown
-            if (!isActive) {
-              dropdown.classList.add('active');
+            if (!isOpen) {
+              dropdown.classList.add('is-open');
             }
           });
           
@@ -931,15 +931,15 @@
               }
               // Close any other open dropdown immediately
               navDropdowns.forEach(d => {
-                if (d !== dropdown) d.classList.remove('active');
+                if (d !== dropdown) d.classList.remove('is-open');
               });
-              dropdown.classList.add('active');
+              dropdown.classList.add('is-open');
             });
             
             dropdown.addEventListener('mouseleave', function() {
               // 180ms grace period so cursor can effortlessly cross into the menu container
               closeTimer = setTimeout(function() {
-                dropdown.classList.remove('active');
+                dropdown.classList.remove('is-open');
               }, 180);
             });
           }
@@ -949,7 +949,7 @@
       // Close dropdown when clicking outside
       document.addEventListener('click', function(e) {
         if (!e.target.closest('.nav-dropdown')) {
-          navDropdowns.forEach(d => d.classList.remove('active'));
+          navDropdowns.forEach(d => d.classList.remove('is-open'));
         }
       });
     });

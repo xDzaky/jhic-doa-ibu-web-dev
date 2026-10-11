@@ -1545,8 +1545,17 @@ html, body {
 }
 
 .nav-dropdown-toggle:hover,
-.nav-dropdown.active .nav-dropdown-toggle {
-  color: #FFFFFF;
+.nav-dropdown.is-open .nav-dropdown-toggle {
+  color: #FFFFFF !important;
+}
+
+.nav-dropdown-toggle.active {
+  color: var(--gold) !important;
+  font-weight: 700;
+}
+
+.nav-dropdown.is-open .nav-dropdown-toggle.active {
+  color: #FFFFFF !important;
 }
 
 .nav-dropdown-icon {
@@ -1826,9 +1835,8 @@ html, body {
   display: block;
 }
 
-/* Hover / Focus / Active Trigger */
+/* Hover / Focus / Open Trigger */
 .nav-dropdown.has-mega-menu:hover .mega-menu-container,
-.nav-dropdown.has-mega-menu.active .mega-menu-container,
 .nav-dropdown.has-mega-menu.is-open .mega-menu-container,
 .nav-dropdown.has-mega-menu:focus-within .mega-menu-container {
   opacity: 1;
