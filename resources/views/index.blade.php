@@ -258,7 +258,7 @@
           <h2 class="section-title">Berita &amp; Kegiatan Terkini</h2>
           <p style="color: var(--text-muted); font-size: 0.9375rem; margin-top: 6px;">Informasi kegiatan akademik, prestasi siswa, dan program vokasi terbaru SMKN 1 Probolinggo.</p>
         </div>
-        <a href="https://smkn1probolinggo.sch.id" target="_blank" rel="noopener noreferrer" class="btn btn-outline-navy btn-sm" style="display: inline-flex; align-items: center; gap: 6px; font-weight: 700;">
+        <a href="https://smkn1probolinggo.sch.id" target="_blank" rel="noopener noreferrer" class="btn  btn-sm" style="display: inline-flex; align-items: center; gap: 6px; font-weight: 700;">
           Lihat Semua Berita
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
         </a>
@@ -328,121 +328,213 @@
     </div>
   </section>
 
-  <!-- 6. SMEXAMALL Teaching Factory Preview -->
-  <section class="section section-white" id="smexamall">
+  <!-- 6.4. Ekstrakurikuler Section -->
+  <section class="section" id="ekstrakurikuler" style="background: #FFFFFF; padding: 80px 0;">
     <div class="container">
-      <div class="section-header center reveal-item">
-        <h2 class="section-title">Produk &amp; Layanan Unggulan SMEXAMALL</h2>
-        <p style="color: var(--text-muted); font-size: 0.9375rem; margin-top: 6px;">Dukung karya wirausaha siswa SMKN 1 Probolinggo di unit produksi Teaching Factory resmi.</p>
+      <!-- Header -->
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px;" class="reveal-item">
+        <div style="text-align: left;">
+          <h2 style="font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: #082046; margin: 0 0 8px; letter-spacing: -0.02em;">
+            Ekstrakurikuler
+          </h2>
+          <p style="font-family: var(--font-heading); font-size: 1.125rem; font-weight: 700; color: #334155; margin: 0;">
+            SMK NEGERI 1 PROBOLINGGO
+          </p>
+        </div>
+        <a href="#ekstrakurikuler" style="font-size: 0.9375rem; font-weight: 700; color: #2563EB; text-decoration: none; display: flex; align-items: center; gap: 6px; transition: gap 0.2s ease;">
+          <span>Lihat Semua Ekstrakurikuler</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </a>
       </div>
 
-      <div class="smx-home-grid">
-        <!-- 1: RPL -->
-        <div class="smx-card reveal-item" data-delay="0">
-          <div class="smx-card-img-wrap">
-            <img src="{{ asset('images/products/tefa_rpl.webp') }}" alt="Website Profil UMKM Probolinggo" class="smx-card-img" loading="lazy" width="300" height="200">
-          </div>
-          <div class="smx-card-body">
-            <span class="smx-card-cat">Software &amp; Web Development</span>
-            <h3 class="smx-card-title">Website Profil UMKM Probolinggo</h3>
-            <div class="smx-card-price-row">
-              <span class="smx-card-price">Rp 350.000</span>
+      <!-- Horizontal Scroll Cards -->
+      <div class="ekstra-scroll-container reveal-item" data-delay="50">
+        <div class="ekstra-scroll-wrapper">
+          
+          <!-- Card 1: Volly Ball -->
+          <a href="{{ route('ekstra.show', 'volly-ball') }}" class="ekstra-card">
+            <div class="ekstra-card-image">
+              <img src="{{ asset('images/ekstra-volly.webp') }}" alt="Volly Ball SMKN 1 Probolinggo" loading="lazy">
             </div>
-            <div class="smx-card-actions">
-              <a href="{{ route('smexamall.product') }}" class="btn-buy-now">
-                <span>Pesan Layanan</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-              </a>
-            </div>
-          </div>
-        </div>
+            <h3 class="ekstra-card-title">Volly Ball</h3>
+          </a>
 
-        <!-- 2: Bisnis Digital -->
-        <div class="smx-card reveal-item" data-delay="80">
-          <div class="smx-card-img-wrap">
-            <img src="{{ asset('images/products/tefa_bd.webp') }}" alt="Paket Kelola TikTok & IG UMKM" class="smx-card-img" loading="lazy" width="300" height="200">
-          </div>
-          <div class="smx-card-body">
-            <span class="smx-card-cat">Live Commerce &amp; Marketing</span>
-            <h3 class="smx-card-title">Paket Kelola TikTok &amp; IG UMKM</h3>
-            <div class="smx-card-price-row">
-              <span class="smx-card-price">Rp 250.000</span>
+          <!-- Card 2: KOPTUDA -->
+          <a href="{{ route('ekstra.show', 'koptuda') }}" class="ekstra-card">
+            <div class="ekstra-card-image">
+              <img src="{{ asset('images/ekstra-koptuda.webp') }}" alt="KOPTUDA SMKN 1 Probolinggo" loading="lazy">
             </div>
-            <div class="smx-card-actions">
-              <a href="{{ route('smexamall.product') }}" class="btn-buy-now">
-                <span>Pesan Layanan</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-              </a>
-            </div>
-          </div>
-        </div>
+            <h3 class="ekstra-card-title">Koperasi Tunas Muda</h3>
+          </a>
 
-        <!-- 3: MPLB -->
-        <div class="smx-card reveal-item" data-delay="160">
-          <div class="smx-card-img-wrap">
-            <img src="{{ asset('images/products/tefa_mplb.webp') }}" alt="Digitalisasi Arsip & Dokumen" class="smx-card-img" loading="lazy" width="300" height="200">
-          </div>
-          <div class="smx-card-body">
-            <span class="smx-card-cat">Manajemen Perkantoran</span>
-            <h3 class="smx-card-title">Digitalisasi Arsip &amp; Dokumen</h3>
-            <div class="smx-card-price-row">
-              <span class="smx-card-price">Rp 50.000</span>
+          <!-- Card 3: PIK-R Srikandi -->
+          <a href="{{ route('ekstra.show', 'pikr-srikandi') }}" class="ekstra-card">
+            <div class="ekstra-card-image">
+              <img src="{{ asset('images/ekstra-pikr.webp') }}" alt="PIK-R Srikandi SMKN 1 Probolinggo" loading="lazy">
             </div>
-            <div class="smx-card-actions">
-              <a href="{{ route('smexamall.product') }}" class="btn-buy-now">
-                <span>Pesan Layanan</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-              </a>
-            </div>
-          </div>
-        </div>
+            <h3 class="ekstra-card-title">PIK-R Srikandi</h3>
+          </a>
 
-        <!-- 4: AKL -->
-        <div class="smx-card reveal-item" data-delay="240">
-          <div class="smx-card-img-wrap">
-            <img src="{{ asset('images/products/tefa_akl.webp') }}" alt="Laporan Keuangan UMKM Accurate" class="smx-card-img" loading="lazy" width="300" height="200">
-          </div>
-          <div class="smx-card-body">
-            <span class="smx-card-cat">Akuntansi &amp; Perpajakan</span>
-            <h3 class="smx-card-title">Laporan Keuangan UMKM Accurate</h3>
-            <div class="smx-card-price-row">
-              <span class="smx-card-price">Rp 175.000</span>
+          <!-- Card 4: Futsal -->
+          <a href="{{ route('ekstra.show', 'futsal') }}" class="ekstra-card">
+            <div class="ekstra-card-image">
+              <img src="{{ asset('images/ekstra-futsal.webp') }}" alt="Futsal SMEXA PRO" loading="lazy">
             </div>
-            <div class="smx-card-actions">
-              <a href="{{ route('smexamall.product') }}" class="btn-buy-now">
-                <span>Pesan Layanan</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-              </a>
-            </div>
-          </div>
-        </div>
+            <h3 class="ekstra-card-title">Futsal SMEXA PRO</h3>
+          </a>
 
-        <!-- 5: LPB -->
-        <div class="smx-card reveal-item" data-delay="320">
-          <div class="smx-card-img-wrap">
-            <img src="{{ asset('images/products/tefa_bank.webp') }}" alt="Konsultasi Pembukuan Kas Toko" class="smx-card-img" loading="lazy" width="300" height="200">
-          </div>
-          <div class="smx-card-body">
-            <span class="smx-card-cat">Layanan Perbankan</span>
-            <h3 class="smx-card-title">Konsultasi Pembukuan Kas Toko</h3>
-            <div class="smx-card-price-row">
-              <span class="smx-card-price">Rp 100.000</span>
+          <!-- Card 5: Remaja Masjid -->
+          <a href="{{ route('ekstra.show', 'remaja-masjid') }}" class="ekstra-card">
+            <div class="ekstra-card-image">
+              <img src="{{ asset('images/ekstra-remaja-masjid.webp') }}" alt="Remaja Masjid SMKN 1 Probolinggo" loading="lazy">
             </div>
-            <div class="smx-card-actions">
-              <a href="{{ route('smexamall.product') }}" class="btn-buy-now">
-                <span>Pesan Layanan</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+            <h3 class="ekstra-card-title">Remaja Masjid</h3>
+          </a>
 
-      <div style="text-align: center; margin-top: 36px;" class="reveal-item" data-delay="100">
-        <a href="{{ route('smexamall.index') }}" class="btn btn-navy-primary">Buka Katalog Lengkap SMEXAMALL</a>
+          <!-- Card 6: Tari (Mustika Taruna) -->
+          <a href="{{ route('ekstra.show', 'mustika-taruna') }}" class="ekstra-card">
+            <div class="ekstra-card-image">
+              <img src="{{ asset('images/ekstra-tari.webp') }}" alt="Mustika Taruna SMKN 1 Probolinggo" loading="lazy">
+            </div>
+            <h3 class="ekstra-card-title">Tari (Mustika Taruna)</h3>
+          </a>
+
+          <!-- Card 7: Smexa Music -->
+          <a href="{{ route('ekstra.show', 'smexa-music') }}" class="ekstra-card">
+            <div class="ekstra-card-image">
+              <img src="{{ asset('images/ekstra-music.webp') }}" alt="Smexa Music" loading="lazy">
+            </div>
+            <h3 class="ekstra-card-title">Smexa Music</h3>
+          </a>
+
+          <!-- Card 8: Paduan Suara -->
+          <a href="{{ route('ekstra.show', 'paduan-suara') }}" class="ekstra-card">
+            <div class="ekstra-card-image">
+              <img src="{{ asset('images/ekstra-paduan-suara.webp') }}" alt="Paduan Suara Gita Bahana" loading="lazy">
+            </div>
+            <h3 class="ekstra-card-title">Paduan Suara Gita Bahana</h3>
+          </a>
+
+          <!-- Card 9: Basket -->
+          <a href="{{ route('ekstra.show', 'comrade-basketball') }}" class="ekstra-card">
+            <div class="ekstra-card-image">
+              <img src="{{ asset('images/ekstra-basket.webp') }}" alt="Comrade Basketball" loading="lazy">
+            </div>
+            <h3 class="ekstra-card-title">Comrade Basketball</h3>
+          </a>
+
+          <!-- Card 10: Pencak Silat -->
+          <a href="{{ route('ekstra.show', 'pencak-silat') }}" class="ekstra-card">
+            <div class="ekstra-card-image">
+              <img src="{{ asset('images/ekstra-pencak-silat.webp') }}" alt="Pencak Silat SMKN 1 Probolinggo" loading="lazy">
+            </div>
+            <h3 class="ekstra-card-title">Pencak Silat</h3>
+          </a>
+
+          <!-- Card 11: Pramuka -->
+          <a href="{{ route('ekstra.show', 'pramuka') }}" class="ekstra-card">
+            <div class="ekstra-card-image">
+              <img src="{{ asset('images/ekstra-pramuka.webp') }}" alt="Pramuka SMKN 1 Probolinggo" loading="lazy">
+            </div>
+            <h3 class="ekstra-card-title">Pramuka</h3>
+          </a>
+
+        </div>
       </div>
     </div>
   </section>
+
+  <style>
+    .ekstra-scroll-container {
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+      scrollbar-color: #CBD5E1 #F1F5F9;
+    }
+    
+    .ekstra-scroll-container::-webkit-scrollbar {
+      height: 8px;
+    }
+    
+    .ekstra-scroll-container::-webkit-scrollbar-track {
+      background: #F1F5F9;
+      border-radius: 4px;
+    }
+    
+    .ekstra-scroll-container::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 4px;
+    }
+    
+    .ekstra-scroll-container::-webkit-scrollbar-thumb:hover {
+      background: #94A3B8;
+    }
+    
+    .ekstra-scroll-wrapper {
+      display: flex;
+      gap: 20px;
+      padding-bottom: 12px;
+    }
+    
+    .ekstra-card {
+      flex: 0 0 280px;
+      background: #FFFFFF;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 1px solid #E2E8F0;
+    }
+    
+    .ekstra-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      border-color: #CBD5E1;
+    }
+    
+    .ekstra-card-image {
+      width: 100%;
+      height: 180px;
+      overflow: hidden;
+      background: #F1F5F9;
+    }
+    
+    .ekstra-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    
+    .ekstra-card:hover .ekstra-card-image img {
+      transform: scale(1.05);
+    }
+    
+    .ekstra-card-title {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 700;
+      color: #082046;
+      padding: 16px 18px;
+      margin: 0;
+      line-height: 1.4;
+    }
+    
+    @media (max-width: 768px) {
+      #ekstrakurikuler {
+        padding: 60px 0 !important;
+      }
+      
+      .ekstra-card {
+        flex: 0 0 240px;
+      }
+    }
+  </style>
 
   <!-- 6.5. Cerita Alumni Section (Matching Figma Design) -->
   <section class="section-cerita-alumni" id="cerita-alumni">
@@ -578,20 +670,11 @@
   <!-- 7. Kerja Sama Industri Mitra DUDI (MATCHING REFERENCE IMAGE 3) -->
   <section class="partner-ref-section" id="mitra">
     <div class="container">
-      <div class="partner-ref-header reveal-item">
+      <div class="partner-ref-header reveal-item" style="text-align: center; justify-content: center;">
         <div>
-          <h2 class="partner-ref-title">
-            Partner Industri &amp; Jaringan Karir
+          <h2 class="partner-ref-title" style="font-size: 1.75rem; margin: 0 auto;">
+            Mitra Dunia Industri
           </h2>
-        </div>
-        <div class="partner-ref-right">
-          <p class="partner-ref-desc">
-            SMKN 1 Probolinggo bekerja sama secara strategis dengan 50+ jaringan industri terkemuka nasional &amp; internasional untuk sinkronisasi kurikulum, program magang, dan penyerapan kerja alumni.
-          </p>
-          <a href="{{ route('bkk') }}" class="btn-partner-header">
-            <span>Lihat Semua Partner Industri</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-          </a>
         </div>
       </div>
 
@@ -659,9 +742,6 @@
         <h2 class="faq-title">
           Pertanyaan Seputar Agenda &amp; Kegiatan Sekolah
         </h2>
-        <p class="faq-subtitle">
-          Temukan jawaban lengkap dan transparan seputar layanan, program, dan informasi penting lainnya.
-        </p>
       </div>
 
       <div class="faq-accordion-list reveal-item">

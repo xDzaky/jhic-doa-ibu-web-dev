@@ -80,6 +80,16 @@ Route::get('/alumni/{id}', function ($id) {
     return view('alumni.show', ['alumni' => ['name' => 'Mohammad Rizal', 'year' => '2015']]);
 })->name('alumni.show');
 
+// 3.5. Halaman Detail Ekstrakurikuler
+Route::get('/ekstrakurikuler/{slug}', function ($slug) {
+    $ekstraData = \App\Services\EkstraData::all();
+    $ekstra = $ekstraData[$slug] ?? abort(404);
+    return view('ekstra.show', [
+        'ekstra' => $ekstra,
+        'allEkstra' => $ekstraData
+    ]);
+})->name('ekstra.show');
+
 // 4. SMEXAMALL - E-Commerce Teaching Factory BLUD (Real Database Products)
 Route::get('/smexamall', [SmexamallController::class, 'index'])->name('smexamall.index');
 
