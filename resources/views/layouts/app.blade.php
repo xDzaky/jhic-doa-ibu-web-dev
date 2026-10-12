@@ -19,10 +19,7 @@
   <meta name="theme-color" content="#0F2A4A">
   <link rel="icon" href="{{ asset('images/logo_emblem.png') }}?v={{ $assetVersion }}">
   
-  {{-- Preconnect & Typography: Plus Jakarta Sans (Modern Institutional) & SF Pro Fallback --}}
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  {{-- Typography: SF Pro Display (Apple Standard Aesthetic) --}}
   <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin>
   <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
 

@@ -69,14 +69,14 @@
     <div class="container">
       <div class="why-header-row reveal-item" data-delay="0">
         <div>
-          <h2 class="dual-heading" style="font-size: 2.25rem; margin: 0 0 8px;">
+          <h2 class="dual-heading" style="margin: 0 0 6px;">
             Mengapa memilih <span class="text-accent">SMKN 1 Probolinggo?</span>
           </h2>
-          <p style="color: #64748B; font-size: 0.9375rem; margin: 0;">
+          <p style="color: #64748B; font-size: 0.84rem; margin: 0;">
             Ekosistem vokasi terakreditasi A dengan sarana industri dan jejaring kerja terpercaya.
           </p>
         </div>
-        <a href="{{ route('ppdb') }}" class="btn btn-navy-primary" style="border-radius: 9999px; padding: 10px 24px; font-weight: 700;">
+        <a href="{{ route('ppdb') }}" class="btn btn-navy-primary" style="border-radius: 9999px; padding: 8px 20px; font-size: 0.8125rem; font-weight: 700;">
           Daftar Sekarang &rarr;
         </a>
       </div>
@@ -85,7 +85,7 @@
         <!-- Card 1 -->
         <div class="why-card reveal-item" data-delay="50">
           <div class="why-card-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           </div>
           <h3 class="why-card-title">Vokasi Era Digital</h3>
           <p class="why-card-desc">Kurikulum adaptif dengan fokus pada rekayasa software modern, live commerce ritel, dan digitalisasi pembukuan.</p>
@@ -94,7 +94,7 @@
         <!-- Card 2 (Featured Card - BLUD SMEXAMALL) -->
         <div class="why-card featured reveal-item" data-delay="100">
           <div class="why-card-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
           </div>
           <h3 class="why-card-title">BLUD Teaching Factory</h3>
           <p class="why-card-desc">Unit bisnis resmi beromzet nyata (SMEXAMALL) melatih kemandirian wirausaha dan transaksi bisnis riil siswa.</p>
@@ -103,7 +103,7 @@
         <!-- Card 3 -->
         <div class="why-card reveal-item" data-delay="150">
           <div class="why-card-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
           </div>
           <h3 class="why-card-title">Akreditasi A - Unggul</h3>
           <p class="why-card-desc">Diakui secara nasional dengan standar kualitas tertinggi BAN-S/M dan predikat SMK Pusat Keunggulan.</p>
@@ -112,7 +112,7 @@
         <!-- Card 4 -->
         <div class="why-card reveal-item" data-delay="200">
           <div class="why-card-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
           </div>
           <h3 class="why-card-title">LSP-P1 BNSP Resmi</h3>
           <p class="why-card-desc">Seluruh siswa diuji dan disertifikasi langsung oleh asesor berlisensi Badan Nasional Sertifikasi Profesi.</p>
@@ -121,7 +121,7 @@
         <!-- Card 5 -->
         <div class="why-card reveal-item" data-delay="250">
           <div class="why-card-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
           </div>
           <h3 class="why-card-title">Kelas Industri Axioo &amp; Alfamart</h3>
           <p class="why-card-desc">Sinkronisasi kurikulum, magang kerja bersertifikat, dan rekrutmen prioritas bersama mitra industri nasional.</p>
@@ -130,7 +130,7 @@
         <!-- Card 6 -->
         <div class="why-card reveal-item" data-delay="300">
           <div class="why-card-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
           </div>
           <h3 class="why-card-title">Bursa Kerja Khusus (BKK)</h3>
           <p class="why-card-desc">Layanan terintegrasi penyaluran karir langsung ke DUDI dengan tingkat serapan kerja lulusan mencapai 98%.</p>
@@ -142,8 +142,8 @@
   <!-- 5. Mitra Industri DUDI (Dashed Border Card Grid Gaya Telkom) -->
   <section class="section-mitra-dudi" id="mitra">
     <div class="container text-center">
-      <span style="font-size: 0.775rem; font-weight: 700; color: #2563EB; background: #EFF6FF; padding: 4px 14px; border-radius: 9999px; display: inline-block; margin-bottom: 10px;">Kemitraan Industri Nasional</span>
-      <h2 class="dual-heading" style="font-size: 1.85rem; margin: 0;">Mitra DUDI &amp; Lembaga Sertifikasi</h2>
+      <span style="font-size: 0.7rem; font-weight: 700; color: #2563EB; background: #EFF6FF; padding: 3px 12px; border-radius: 9999px; display: inline-block; margin-bottom: 8px;">Kemitraan Industri Nasional</span>
+      <h2 class="dual-heading" style="margin: 0;">Mitra DUDI &amp; Lembaga Sertifikasi</h2>
       <div class="partner-dashed-grid reveal-item" data-delay="100">
         <div class="partner-dashed-card">
           <img src="{{ asset('images/partners/partner_axioo.png') }}" alt="Axioo Class" loading="lazy">
@@ -171,10 +171,10 @@
   <section class="section-program-keahlian" id="jurusan">
     <div class="container">
       <div class="text-center reveal-item" data-delay="0">
-        <h2 class="dual-heading" style="font-size: 2.25rem; margin: 0 0 10px;">
+        <h2 class="dual-heading" style="margin: 0 0 6px;">
           Program Keahlian <span class="text-accent">di SMKN 1 Probolinggo</span>
         </h2>
-        <p style="color: #64748B; font-size: 0.9375rem; margin: 0 auto; max-width: 600px;">
+        <p style="color: #64748B; font-size: 0.84rem; margin: 0 auto; max-width: 540px;">
           Pilih konsentrasi keahlian berstandar industri untuk melihat fasilitas lab, kurikulum unggulan, dan proyeksi karier masa depan.
         </p>
       </div>
@@ -309,21 +309,21 @@
   </section>
 
   <!-- 6.4. Ekstrakurikuler Section -->
-  <section class="section" id="ekstrakurikuler" style="background: #FFFFFF; padding: 80px 0;">
+  <section class="section" id="ekstrakurikuler" style="background: #FFFFFF; padding: 52px 0;">
     <div class="container">
       <!-- Header -->
-      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px;" class="reveal-item">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 24px;" class="reveal-item">
         <div style="text-align: left;">
-          <h2 style="font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: #082046; margin: 0 0 8px; letter-spacing: -0.02em;">
+          <h2 style="font-family: var(--font-heading); font-size: 1.65rem; font-weight: 800; color: #082046; margin: 0 0 4px; letter-spacing: -0.02em;">
             Ekstrakurikuler
           </h2>
-          <p style="font-family: var(--font-heading); font-size: 1.125rem; font-weight: 700; color: #334155; margin: 0;">
+          <p style="font-family: var(--font-heading); font-size: 0.875rem; font-weight: 700; color: #64748B; margin: 0;">
             SMK NEGERI 1 PROBOLINGGO
           </p>
         </div>
-        <a href="#ekstrakurikuler" style="font-size: 0.9375rem; font-weight: 700; color: #2563EB; text-decoration: none; display: flex; align-items: center; gap: 6px; transition: gap 0.2s ease;">
+        <a href="#ekstrakurikuler" style="font-size: 0.8125rem; font-weight: 700; color: #2563EB; text-decoration: none; display: flex; align-items: center; gap: 6px; transition: gap 0.2s ease;">
           <span>Lihat Semua Ekstrakurikuler</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M5 12h14"></path>
             <path d="m12 5 7 7-7 7"></path>
           </svg>
@@ -580,7 +580,7 @@
   <style>
     .section-cerita-alumni {
       background: #F8FAFC;
-      padding: 80px 0;
+      padding: 52px 0;
       position: relative;
       overflow: hidden;
       border-top: 1px solid #E2E8F0;
@@ -590,24 +590,24 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 40px;
+      gap: 36px;
     }
     .alumni-text-col {
-      flex: 0 0 340px;
-      max-width: 360px;
+      flex: 0 0 300px;
+      max-width: 320px;
     }
     .alumni-heading {
-      font-family: var(--font-heading, 'Inter', sans-serif);
-      font-size: 2.75rem;
+      font-family: var(--font-heading);
+      font-size: 1.85rem;
       font-weight: 800;
       color: #082046;
-      line-height: 1.15;
-      margin: 0 0 18px 0;
+      line-height: 1.18;
+      margin: 0 0 10px 0;
       letter-spacing: -0.02em;
     }
     .alumni-desc {
-      font-size: 0.875rem;
-      line-height: 1.65;
+      font-size: 0.8125rem;
+      line-height: 1.6;
       color: #64748B;
       margin: 0;
       font-weight: 500;
@@ -615,18 +615,18 @@
     .alumni-cards-col {
       display: flex;
       align-items: stretch;
-      gap: 20px;
+      gap: 16px;
       flex: 1;
       justify-content: flex-end;
     }
     .alumni-card-item {
       flex: 1;
-      max-width: 270px;
-      min-width: 230px;
+      max-width: 250px;
+      min-width: 210px;
       background: #FFFFFF;
       border: 1px solid #E2E8F0;
-      border-radius: 8px;
-      padding: 22px;
+      border-radius: 10px;
+      padding: 16px 16px;
       display: flex;
       flex-direction: column;
       text-decoration: none;
@@ -635,20 +635,20 @@
       transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     }
     .alumni-card-item:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 20px rgba(0, 37, 101, 0.08);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 18px rgba(0, 37, 101, 0.07);
       border-color: #3B82F6;
     }
     .alumni-card-header {
       display: flex;
       align-items: center;
-      gap: 12px;
-      margin-bottom: 14px;
+      gap: 10px;
+      margin-bottom: 10px;
     }
     .alumni-card-avatar {
-      width: 48px;
-      height: 48px;
-      border-radius: 8px;
+      width: 40px;
+      height: 40px;
+      border-radius: 6px;
       object-fit: cover;
       background: #E2E8F0;
       flex-shrink: 0;
@@ -659,7 +659,7 @@
       overflow: hidden;
     }
     .alumni-card-name {
-      font-size: 0.9375rem;
+      font-size: 0.85rem;
       font-weight: 700;
       color: #082046;
       line-height: 1.3;
@@ -668,31 +668,31 @@
       text-overflow: ellipsis;
     }
     .alumni-card-role {
-      font-size: 0.75rem;
+      font-size: 0.725rem;
       color: #64748B;
       line-height: 1.3;
-      margin-top: 2px;
+      margin-top: 1px;
     }
     .alumni-card-badge {
       display: inline-block;
       align-self: flex-start;
-      font-size: 0.7rem;
+      font-size: 0.675rem;
       font-weight: 700;
       color: #1D4ED8;
       background: #EFF6FF;
-      padding: 3px 8px;
+      padding: 2px 7px;
       border-radius: 4px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
     .alumni-card-quote {
-      font-size: 0.8125rem;
-      line-height: 1.6;
+      font-size: 0.75rem;
+      line-height: 1.55;
       color: #334155;
-      margin: 0 0 16px 0;
+      margin: 0 0 12px 0;
       flex-grow: 1;
     }
     .alumni-card-cta {
-      font-size: 0.775rem;
+      font-size: 0.725rem;
       font-weight: 700;
       color: #2563EB;
       display: inline-flex;
