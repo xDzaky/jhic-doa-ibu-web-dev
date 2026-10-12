@@ -3,7 +3,7 @@
 @section('title', 'Website Resmi SMKN 1 Probolinggo - Sekolah Pusat Keunggulan & BLUD')
 
 @section('content')
-  <!-- 1. Hero Section (Modern Telkom-Inspired Arch Portal & Dual-Color Title) -->
+  <!-- 1. Hero Section (Exact 1-Screen Viewport Matching Telkom) -->
   <section class="telkom-hero-section">
     <div class="container text-center">
       <div class="hero-top-badge reveal-item" data-delay="0">
@@ -13,44 +13,28 @@
         Sekolah Tangguh, Berkarakter,<br>
         <span class="text-accent">&amp; Berwawasan Vokasi Digital</span>
       </h1>
-      <p class="hero-sub-title reveal-item" data-delay="100">
-        SMK Pusat Keunggulan &amp; Badan Layanan Umum Daerah (BLUD) di Kota Probolinggo dengan 5 Konsentrasi Keahlian berstandar industri, uji sertifikasi BNSP, dan ekosistem Teaching Factory SMEXAMALL.
-      </p>
-      
-      <!-- CTA Action Buttons -->
-      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 32px;" class="reveal-item" data-delay="150">
-        <a href="{{ route('ppdb') }}" class="btn btn-navy-primary" style="border-radius: 9999px; padding: 12px 28px; font-weight: 700;">
-          Daftar PPDB 2026 &rarr;
-        </a>
-        <a href="#jurusan" class="btn btn-outline-navy" style="border-radius: 9999px; padding: 12px 24px; font-weight: 700;">
-          Eksplorasi 5 Jurusan
-        </a>
-        <a href="{{ route('smexamall.index') }}" class="btn btn-outline-navy" style="border-radius: 9999px; padding: 12px 24px; font-weight: 700;">
-          Etalase SMEXAMALL
-        </a>
-      </div>
 
       <!-- Hero Model Arch Frame -->
-      <div class="hero-model-wrapper reveal-item" data-delay="200">
+      <div class="hero-model-wrapper reveal-item" data-delay="100">
         <div class="hero-arch-frame">
-          <img src="{{ asset('images/school_gate.webp') }}" alt="Gerbang dan Kampus Digital SMKN 1 Probolinggo" class="hero-student-img" width="820" height="420" fetchpriority="high" loading="eager">
+          <img src="{{ asset('images/school_gate.webp') }}" alt="Gerbang dan Kampus Digital SMKN 1 Probolinggo" class="hero-student-img" width="760" height="320" fetchpriority="high" loading="eager">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 2. Big Metric Strip (Social Proof) -->
-  <div class="metric-strip-container reveal-item" data-delay="250">
+  <!-- 2. Big Metric Strip (Overlapping Arch Bottom Perfectly Like Telkom) -->
+  <div class="metric-strip-container reveal-item" data-delay="150">
     <div class="metric-item">
-      <div class="metric-num">5</div>
+      <div class="metric-num count-ticker" data-target="5">5</div>
       <div class="metric-label">Konsentrasi Keahlian</div>
     </div>
     <div class="metric-item" style="border-left: 1px solid rgba(255,255,255,0.15); border-right: 1px solid rgba(255,255,255,0.15);">
-      <div class="metric-num">1.800+</div>
+      <div class="metric-num count-ticker" data-target="1800" data-suffix="+">1.800+</div>
       <div class="metric-label">Peserta Didik Aktif</div>
     </div>
     <div class="metric-item">
-      <div class="metric-num">98%</div>
+      <div class="metric-num count-ticker" data-target="98" data-suffix="%">98%</div>
       <div class="metric-label">Serapan Kerja BKK Mandiri</div>
     </div>
   </div>
