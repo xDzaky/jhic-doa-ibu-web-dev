@@ -5,7 +5,7 @@
 @section('content')
   <!-- 1. Hero Section (Exact 1-Screen Viewport Matching Telkom) -->
   <section class="telkom-hero-section">
-    <div class="container text-center">
+    <div class="container hero-container text-center">
       <div class="hero-top-badge reveal-item" data-delay="0">
         <span class="badge-pill">Selamat Datang di Portal Resmi SMKN 1 Probolinggo</span>
       </div>
@@ -20,24 +20,24 @@
           <img src="{{ asset('images/school_gate.webp') }}" alt="Gerbang dan Kampus Digital SMKN 1 Probolinggo" class="hero-student-img" width="760" height="320" fetchpriority="high" loading="eager">
         </div>
       </div>
+
+      <!-- 2. Big Metric Strip (Overlapping Arch Bottom Perfectly Like Telkom) -->
+      <div class="metric-strip-container reveal-item" data-delay="150">
+        <div class="metric-item">
+          <div class="metric-num count-ticker" data-target="5">5</div>
+          <div class="metric-label">Konsentrasi Keahlian</div>
+        </div>
+        <div class="metric-item" style="border-left: 1px solid rgba(255,255,255,0.15); border-right: 1px solid rgba(255,255,255,0.15);">
+          <div class="metric-num count-ticker" data-target="1800" data-suffix="+">1.800+</div>
+          <div class="metric-label">Peserta Didik Aktif</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-num count-ticker" data-target="98" data-suffix="%">98%</div>
+          <div class="metric-label">Serapan Kerja BKK Mandiri</div>
+        </div>
+      </div>
     </div>
   </section>
-
-  <!-- 2. Big Metric Strip (Overlapping Arch Bottom Perfectly Like Telkom) -->
-  <div class="metric-strip-container reveal-item" data-delay="150">
-    <div class="metric-item">
-      <div class="metric-num count-ticker" data-target="5">5</div>
-      <div class="metric-label">Konsentrasi Keahlian</div>
-    </div>
-    <div class="metric-item" style="border-left: 1px solid rgba(255,255,255,0.15); border-right: 1px solid rgba(255,255,255,0.15);">
-      <div class="metric-num count-ticker" data-target="1800" data-suffix="+">1.800+</div>
-      <div class="metric-label">Peserta Didik Aktif</div>
-    </div>
-    <div class="metric-item">
-      <div class="metric-num count-ticker" data-target="98" data-suffix="%">98%</div>
-      <div class="metric-label">Serapan Kerja BKK Mandiri</div>
-    </div>
-  </div>
 
   <!-- 3. Sambutan Kepala Sekolah (2-Kolom Horisontal Gaya Telkom) -->
   <section class="section-sambutan" id="sambutan">
@@ -64,76 +64,78 @@
     </div>
   </section>
 
-  <!-- 4. Mengapa Memilih SMKN 1 Probolinggo (6 Grid Cards) -->
+  <!-- 4. Mengapa Memilih SMKN 1 Probolinggo (100% Layout Telkom Sidoarjo) -->
   <section class="section-why-us" id="keunggulan">
     <div class="container">
       <div class="why-header-row reveal-item" data-delay="0">
-        <div>
-          <h2 class="dual-heading" style="margin: 0 0 6px;">
-            Mengapa memilih <span class="text-accent">SMKN 1 Probolinggo?</span>
-          </h2>
-          <p style="color: #64748B; font-size: 0.84rem; margin: 0;">
-            Ekosistem vokasi terakreditasi A dengan sarana industri dan jejaring kerja terpercaya.
-          </p>
+        <div class="why-header-titles">
+          <h2 class="why-title-black">Mengapa memilih</h2>
+          <h2 class="why-title-brand">SMKN 1 Probolinggo?</h2>
         </div>
-        <a href="{{ route('ppdb') }}" class="btn btn-navy-primary" style="border-radius: 9999px; padding: 8px 20px; font-size: 0.8125rem; font-weight: 700;">
-          Daftar Sekarang &rarr;
+        <a href="{{ route('ppdb') }}" class="why-cta-pill">
+          <span>Daftar Sekarang</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </a>
       </div>
 
       <div class="why-card-grid">
-        <!-- Card 1 -->
+        <!-- Card 1: School of Digital Era -->
         <div class="why-card reveal-item" data-delay="50">
           <div class="why-card-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#334155" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           </div>
-          <h3 class="why-card-title">Vokasi Era Digital</h3>
-          <p class="why-card-desc">Kurikulum adaptif dengan fokus pada rekayasa software modern, live commerce ritel, dan digitalisasi pembukuan.</p>
+          <h3 class="why-card-title">School of Digital Era</h3>
+          <p class="why-card-desc">Fokus pada kurikulum digital dan keterampilan teknologi masa depan.</p>
         </div>
 
-        <!-- Card 2 (Featured Card - BLUD SMEXAMALL) -->
+        <!-- Card 2 (Featured Card): Program Digital Talent -->
         <div class="why-card featured reveal-item" data-delay="100">
-          <div class="why-card-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <div class="why-card-featured-top">
+            <div class="why-card-icon featured-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#082046" stroke-width="1.8"><rect x="3" y="4" width="18" height="12" rx="2"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+            </div>
+            <div class="why-featured-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
           </div>
-          <h3 class="why-card-title">BLUD Teaching Factory</h3>
-          <p class="why-card-desc">Unit bisnis resmi beromzet nyata (SMEXAMALL) melatih kemandirian wirausaha dan transaksi bisnis riil siswa.</p>
+          <h3 class="why-card-title">Program Digital Talent</h3>
+          <p class="why-card-desc">Pembekalan skill digital yang sesuai kebutuhan industri dan startup.</p>
         </div>
 
-        <!-- Card 3 -->
+        <!-- Card 3: Akreditasi A - Unggul -->
         <div class="why-card reveal-item" data-delay="150">
           <div class="why-card-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#334155" stroke-width="1.8"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H8v2h8v-2h-1c-.55 0-1-.45-1-1v-2.34"/><path d="M6 4h12a2 2 0 0 1 2 2v3a6 6 0 0 1-6 6h0a6 6 0 0 1-6-6V6a2 2 0 0 1 2-2Z"/></svg>
           </div>
-          <h3 class="why-card-title">Akreditasi A - Unggul</h3>
-          <p class="why-card-desc">Diakui secara nasional dengan standar kualitas tertinggi BAN-S/M dan predikat SMK Pusat Keunggulan.</p>
+          <h3 class="why-card-title">Akreditasi A – Unggul</h3>
+          <p class="why-card-desc">Diakui secara nasional dengan standar kualitas terbaik oleh BAN-S/M.</p>
         </div>
 
-        <!-- Card 4 -->
+        <!-- Card 4: ISO 21001:2018 & BNSP -->
         <div class="why-card reveal-item" data-delay="200">
           <div class="why-card-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#334155" stroke-width="1.8"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><line x1="9" y1="12" x2="11" y2="12"/><line x1="9" y1="16" x2="15" y2="16"/></svg>
           </div>
-          <h3 class="why-card-title">LSP-P1 BNSP Resmi</h3>
-          <p class="why-card-desc">Seluruh siswa diuji dan disertifikasi langsung oleh asesor berlisensi Badan Nasional Sertifikasi Profesi.</p>
+          <h3 class="why-card-title">ISO 21001:2018 &amp; BNSP</h3>
+          <p class="why-card-desc">Telah menerapkan standar manajemen pendidikan internasional dan sertifikasi profesi.</p>
         </div>
 
-        <!-- Card 5 -->
+        <!-- Card 5: Program Kelas Industri -->
         <div class="why-card reveal-item" data-delay="250">
           <div class="why-card-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#334155" stroke-width="1.8"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </div>
-          <h3 class="why-card-title">Kelas Industri Axioo &amp; Alfamart</h3>
-          <p class="why-card-desc">Sinkronisasi kurikulum, magang kerja bersertifikat, dan rekrutmen prioritas bersama mitra industri nasional.</p>
+          <h3 class="why-card-title">Program Kelas Industri</h3>
+          <p class="why-card-desc">Jalur pendidikan berkelanjutan dari SMK hingga dunia kerja dan industri terkemuka.</p>
         </div>
 
-        <!-- Card 6 -->
+        <!-- Card 6: Pusat Keunggulan & BLUD -->
         <div class="why-card reveal-item" data-delay="300">
           <div class="why-card-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#334155" stroke-width="1.8"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
           </div>
-          <h3 class="why-card-title">Bursa Kerja Khusus (BKK)</h3>
-          <p class="why-card-desc">Layanan terintegrasi penyaluran karir langsung ke DUDI dengan tingkat serapan kerja lulusan mencapai 98%.</p>
+          <h3 class="why-card-title">Pusat Keunggulan &amp; BLUD</h3>
+          <p class="why-card-desc">Bagian dari ekosistem vokasi terpercaya dengan serapan kerja dan tracer study teruji.</p>
         </div>
       </div>
     </div>

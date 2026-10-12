@@ -19,9 +19,10 @@
   <meta name="theme-color" content="#0F2A4A">
   <link rel="icon" href="{{ asset('images/logo_emblem.png') }}?v={{ $assetVersion }}">
   
-  {{-- Typography: SF Pro Display (Apple Standard Aesthetic) --}}
-  <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin>
-  <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+  {{-- Typography: Poppins (Identik 100% SMK Telkom) --}}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
 
   {{-- Preload & Load CSS Utama (Minified, Zero-CLS) --}}
   <link rel="preload" href="{{ asset('css/wireframe.min.css') }}?v={{ $assetVersion }}" as="style">
