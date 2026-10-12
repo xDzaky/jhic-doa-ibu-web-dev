@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  @php $assetVersion = config('app.asset_version', '20261011_v38_portal_dropdown_fix'); @endphp
+  @php $assetVersion = '20261012_v50_sfpro_' . (file_exists(public_path('css/wireframe.min.css')) ? filemtime(public_path('css/wireframe.min.css')) : time()); @endphp
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>@yield('title', 'Website Resmi SMKN 1 Probolinggo - Sekolah Pusat Keunggulan & BLUD')</title>
@@ -19,13 +19,12 @@
   <meta name="theme-color" content="#0F2A4A">
   <link rel="icon" href="{{ asset('images/logo_emblem.png') }}?v={{ $assetVersion }}">
   
-  {{-- Buka koneksi ke CDN font sedini mungkin --}}
+  {{-- Preconnect & Typography: Plus Jakarta Sans (Modern Institutional) & SF Pro Fallback --}}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- Typography: Inter, Figtree & Istok Web (Google Fonts HTTP/2 Edge) -->
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400..700;1,400..700&family=Inter:wght@400..900&family=Istok+Web:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400..700;1,400..700&family=Inter:wght@400..900&family=Istok+Web:wght@400;700&display=swap" rel="stylesheet"></noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin>
+  <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
 
   {{-- Preload & Load CSS Utama (Minified, Zero-CLS) --}}
   <link rel="preload" href="{{ asset('css/wireframe.min.css') }}?v={{ $assetVersion }}" as="style">
@@ -37,8 +36,29 @@
   {{-- Simple Dropdown CSS --}}
   <link rel="stylesheet" href="{{ asset('css/simple-dropdown.css') }}?v={{ $assetVersion }}">
 
-  {{-- Sembunyikan Floating Chat Icon di Mobile karena sudah ada tab Tanya AI di Bottom Bar --}}
+  {{-- Critical Accessibility & Mobile Drawer Guards (Anti-FOUC) --}}
   <style>
+    .skip-nav-link {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+      z-index: 99999;
+      padding: 8px 16px;
+      background: #082046;
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 4px;
+    }
+    .skip-nav-link:focus {
+      top: 10px;
+      left: 10px;
+    }
+    @media (min-width: 901px) {
+      .mobile-drawer, .mobile-drawer-backdrop, .mobile-bottom-bar, .mobile-toggle {
+        display: none !important;
+      }
+    }
     @media (max-width: 900px) {
       .chatbot-launcher, #chatbotLauncher { display: none !important; }
     }
