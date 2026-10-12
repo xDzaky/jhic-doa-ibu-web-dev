@@ -1,6 +1,6 @@
 # SMK Telkom Style Transformation Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [x]`) syntax for tracking.
 
 **Goal:** Transform the homepage and global styling of SMKN 1 Probolinggo adopting the modern, institutional-corporate design architecture of SMK Telkom Sidoarjo while preserving authentic school identity, 80% container width, and high performance.
 
@@ -26,10 +26,10 @@
 - Consumes: Google Fonts API (`https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap`)
 - Produces: Global CSS variable `--font-base: 'Plus Jakarta Sans', -apple-system, sans-serif;`
 
-- [ ] **Step 1: Check existing font references in `app.blade.php`**
+- [x] **Step 1: Check existing font references in `app.blade.php`**
 Verify the font links in `resources/views/layouts/app.blade.php`.
 
-- [ ] **Step 2: Add Plus Jakarta Sans preconnect and stylesheet link**
+- [x] **Step 2: Add Plus Jakarta Sans preconnect and stylesheet link**
 In `resources/views/layouts/app.blade.php`, ensure `Plus Jakarta Sans` is loaded in the `<head>`:
 ```html
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,11 +42,11 @@ And update CSS font variable:
 --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 ```
 
-- [ ] **Step 3: Clear view cache and verify rendering**
+- [x] **Step 3: Clear view cache and verify rendering**
 Run: `php artisan view:clear`
 Expected: `Compiled views cleared successfully.`
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 ```bash
 git add resources/views/layouts/app.blade.php
 git commit -m "style: load Plus Jakarta Sans typography stack"
@@ -62,7 +62,7 @@ git commit -m "style: load Plus Jakarta Sans typography stack"
 **Interfaces:**
 - Produces: CSS classes `.telkom-hero-wrapper`, `.hero-arch-mask`, `.metric-strip-container`, `.metric-item`, `.dual-heading`, `.why-card-grid`, `.why-card`, `.why-card.featured`, `.partner-dashed-card`, `.major-tabs-nav`, `.major-tab-pill`, `.major-content-card`.
 
-- [ ] **Step 1: Add dual-color heading and arch portal tokens**
+- [x] **Step 1: Add dual-color heading and arch portal tokens**
 In `public/css/wireframe.css`:
 ```css
 /* Dual Color Headings */
@@ -121,7 +121,7 @@ In `public/css/wireframe.css`:
 }
 ```
 
-- [ ] **Step 2: Add 6-card "Mengapa Memilih" and Dashed Partner styling**
+- [x] **Step 2: Add 6-card "Mengapa Memilih" and Dashed Partner styling**
 ```css
 /* 6 Cards Why Choose Us Grid */
 .why-card-grid {
@@ -174,11 +174,11 @@ In `public/css/wireframe.css`:
 }
 ```
 
-- [ ] **Step 3: Build minified CSS**
+- [x] **Step 3: Build minified CSS**
 Run: `node scratch/build_min_css.cjs`
 Expected: `[ESBUILD SUCCESS] wireframe: ... bytes`
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 ```bash
 git add public/css/wireframe.css public/css/wireframe.min.css
 git commit -m "style: add Telkom-inspired UI tokens, metric strip, and card grids"
@@ -194,7 +194,7 @@ git commit -m "style: add Telkom-inspired UI tokens, metric strip, and card grid
 **Interfaces:**
 - Produces: Modern hero layout matching SMK Telkom reference with tag pill, dual-color headline, arch-portal student composition, and 3-stat metric strip.
 
-- [ ] **Step 1: Write Hero Section & Metric Strip HTML**
+- [x] **Step 1: Write Hero Section & Metric Strip HTML**
 In `resources/views/index.blade.php`:
 ```html
 <section class="telkom-hero-section">
@@ -231,11 +231,11 @@ In `resources/views/index.blade.php`:
 </div>
 ```
 
-- [ ] **Step 2: Clear view cache & verify route**
+- [x] **Step 2: Clear view cache & verify route**
 Run: `php artisan view:clear; node scratch/test_routes.cjs`
 Expected: `/ -> HTTP 200`
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 ```bash
 git add resources/views/index.blade.php
 git commit -m "feat: implement Telkom-inspired hero section and metric strip"
@@ -251,7 +251,7 @@ git commit -m "feat: implement Telkom-inspired hero section and metric strip"
 **Interfaces:**
 - Produces: 2-column Kepala Sekolah greeting with photo frame + "Mengapa Memilih SMKN 1 Probolinggo" 6-card grid.
 
-- [ ] **Step 1: Implement Sambutan Kepala Sekolah Section**
+- [x] **Step 1: Implement Sambutan Kepala Sekolah Section**
 ```html
 <section class="section-sambutan">
   <div class="container sambutan-container">
@@ -275,7 +275,7 @@ git commit -m "feat: implement Telkom-inspired hero section and metric strip"
 </section>
 ```
 
-- [ ] **Step 2: Implement "Mengapa Memilih SMKN 1 Probolinggo" Section**
+- [x] **Step 2: Implement "Mengapa Memilih SMKN 1 Probolinggo" Section**
 Add the 6 feature cards:
 1. Sekolah Digital & Vokasi Modern
 2. Teaching Factory BLUD SMEXAMALL (Featured Card)
@@ -285,11 +285,11 @@ Add the 6 feature cards:
 6. Bursa Kerja Khusus (BKK) Terintegrasi
 With CTA header button *"Daftar PPDB 2026 &rarr;"*.
 
-- [ ] **Step 3: Clear view cache & verify route**
+- [x] **Step 3: Clear view cache & verify route**
 Run: `php artisan view:clear; node scratch/test_routes.cjs`
 Expected: `/ -> HTTP 200`
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 ```bash
 git add resources/views/index.blade.php
 git commit -m "feat: add two-column principal greeting and 6-feature card grid"
@@ -305,7 +305,7 @@ git commit -m "feat: add two-column principal greeting and 6-feature card grid"
 **Interfaces:**
 - Produces: Tab switcher for 5 majors (RPL, BD, MPLB, AKL, LPB) displaying lab photo, key competencies, job prospects, and CTA button; dashed partner logo grid.
 
-- [ ] **Step 1: Write 5-Major Interactive Tabs Component & Vanilla JS Switcher**
+- [x] **Step 1: Write 5-Major Interactive Tabs Component & Vanilla JS Switcher**
 Create interactive tab buttons:
 ```html
 <div class="major-tabs-nav">
@@ -319,14 +319,14 @@ Create interactive tab buttons:
 With responsive 2-column content panel (Left: Lab Image, Right: Competencies, Career Prospects, and CTA Button).
 Add clean vanilla JS switcher logic in `@push('scripts')`.
 
-- [ ] **Step 2: Implement Dashed Partner Card Grid**
+- [x] **Step 2: Implement Dashed Partner Card Grid**
 Create the partner logos (Axioo, Alfamart, Bank Jatim, Jagoan Hosting, AGMARI, Indomarco) with `.partner-dashed-card`.
 
-- [ ] **Step 3: Clear view cache & verify route**
+- [x] **Step 3: Clear view cache & verify route**
 Run: `php artisan view:clear; node scratch/test_routes.cjs`
 Expected: `/ -> HTTP 200`
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 ```bash
 git add resources/views/index.blade.php public/css/wireframe.css
 git commit -m "feat: add interactive 5-major department tabs and dashed partner cards"
@@ -339,18 +339,18 @@ git commit -m "feat: add interactive 5-major department tabs and dashed partner 
 **Files:**
 - Test & Verify: All 13 HTTP routes
 
-- [ ] **Step 1: Run esbuild CSS build**
+- [x] **Step 1: Run esbuild CSS build**
 Run: `node scratch/build_min_css.cjs`
 Expected: All CSS files minified with 0 errors.
 
-- [ ] **Step 2: Clear view cache and run test suite**
+- [x] **Step 2: Clear view cache and run test suite**
 Run: `php artisan view:clear; node scratch/test_routes.cjs`
 Expected: All 13 routes respond with HTTP 200 OK.
 
-- [ ] **Step 3: Capture full-page screenshot of the updated homepage**
+- [x] **Step 3: Capture full-page screenshot of the updated homepage**
 Run headless Chrome to capture `updated_home.png` and verify visual aesthetics.
 
-- [ ] **Step 4: Final Git Commit**
+- [x] **Step 4: Final Git Commit**
 ```bash
 git commit --allow-empty -m "chore: complete SMK Telkom style transformation and verify all routes"
 ```
