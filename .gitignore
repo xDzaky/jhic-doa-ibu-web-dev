@@ -23,3 +23,6 @@ yarn-error.log
 /.zed
 .env.production.bak
 .env.production*
+/scratch
+scratch/
+.system_generated/
