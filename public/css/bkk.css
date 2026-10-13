@@ -30,17 +30,17 @@
   --box-wf: #F1F5F9;
   --box-wf-border: #64748B;
 
-  /* Typography Pairing: SF Pro Display (Utama / Judul) & Satoshi (Penjelasan / Body) */
-  --font-heading: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-primary: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-body: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-satoshi: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  /* Typography: SF Pro Display */
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-primary: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-satoshi: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   
   --radius-xs: 4px;
-  --radius-sm: 6px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-pill: 9999px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-pill: 8px;
 }
 
 *, *::before, *::after {
@@ -77,9 +77,9 @@ p, .desc, .lead, .job-desc, .text-muted, .req-item {
 }
 
 .container {
-  width: 80%;
-  max-width: 1400px;
-  margin: 0 auto;
+    width: 80%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 /* =========================================================
@@ -805,7 +805,7 @@ body {
     max-width: 100% !important;
     height: 75vh !important;
     max-height: 520px !important;
-    border-radius: 20px 20px 0 0 !important;
+    border-radius: 10px 10px 0 0 !important;
     border: none !important;
     border-top: 3px solid var(--gold) !important;
     box-shadow: 0 -12px 35px rgba(0, 0, 0, 0.45) !important;

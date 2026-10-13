@@ -8,7 +8,7 @@
 @endpush
 
 @push('styles')
-  <link rel="stylesheet" href="{{ asset('css/ppdb.min.css') }}?v=20261010_v27">
+  <link rel="stylesheet" href="{{ asset('css/ppdb.min.css') }}?v={{ $assetVersion }}">
   <style>
     .ppdb-action-section {
       background: #FFFFFF;
@@ -130,7 +130,7 @@
     }
     .ppdb-stat-num {
       display: block;
-      font-family: 'Istok Web', sans-serif;
+      font-family: var(--font-heading);
       font-size: 2.25rem;
       font-weight: 700;
       color: #FFFFFF;
@@ -141,7 +141,7 @@
     }
     .ppdb-stat-label {
       display: block;
-      font-family: 'Istok Web', sans-serif;
+      font-family: var(--font-body);
       font-size: 0.8rem;
       font-weight: 400;
       color: rgba(255, 255, 255, 0.88);
@@ -778,7 +778,7 @@
                 <strong style="font-size:1.125rem; color:#FFF;">${d.name}</strong>
                 <div style="font-size:0.8125rem; color:rgba(255,255,255,0.7);">${d.registration_no} • Asal: ${d.school_origin}</div>
               </div>
-              <span style="background:${statusBg}; color:#FFF; font-weight:800; font-size:0.75rem; padding:4px 12px; border-radius:20px;">
+              <span style="background:${statusBg}; color:#FFF; font-weight:800; font-size:0.75rem; padding:4px 12px; border-radius: 8px;">
                 ${d.status}
               </span>
             </div>

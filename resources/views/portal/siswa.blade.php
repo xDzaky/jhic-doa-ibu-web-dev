@@ -9,7 +9,7 @@
     background-color: #F8FAFC;
     min-height: calc(100vh - 68px);
     padding: 36px 0 64px;
-    font-family: 'Satoshi', sans-serif;
+    font-family: var(--font-body);
   }
 
   .portal-container {
@@ -43,7 +43,7 @@
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--navy-header), #0A3A8A);
+    background: var(--navy-header);
     color: #FFFFFF;
     font-size: 1.125rem;
     font-weight: 800;
@@ -117,7 +117,7 @@
     font-size: 0.75rem;
     font-weight: 700;
     padding: 4px 10px;
-    border-radius: 9999px;
+    border-radius: 6px;
     background: #DCFCE7;
     color: #15803D;
   }
@@ -129,7 +129,7 @@
     font-size: 0.75rem;
     font-weight: 700;
     padding: 4px 10px;
-    border-radius: 9999px;
+    border-radius: 6px;
     background: #FEF3C7;
     color: #B45309;
   }

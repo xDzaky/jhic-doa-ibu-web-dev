@@ -3,7 +3,7 @@
 @section('title', 'Login Sistem Informasi Terpadu - SMKN 1 Probolinggo')
 
 @section('content')
-<div class="auth-wrapper" style="min-height: calc(100vh - 72px); background: linear-gradient(135deg, #F8FAFC 0%, #EFF6FF 100%); padding: 48px 0; display: flex; align-items: center;">
+<div class="auth-wrapper" style="min-height: calc(100vh - 72px); background: #F8FAFC; padding: 48px 0; display: flex; align-items: center;">
   <div class="container" style="max-width: 1040px; margin: 0 auto; padding: 0 16px;">
     
     @if(session('error'))
@@ -21,7 +21,7 @@
     <div style="max-width: 520px; margin: 0 auto;">
       
       <!-- FORM LOGIN RESMI -->
-      <div style="background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 16px; padding: 36px; box-shadow: 0 10px 30px rgba(0, 37, 101, 0.06);">
+      <div style="background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 10px; padding: 36px; box-shadow: 0 4px 20px rgba(0, 37, 101, 0.05);">
         <div style="text-align: center; margin-bottom: 24px;">
           <img src="{{ asset('images/logo_smkn1.webp') }}" alt="Logo SMKN 1 Probolinggo" style="height: 56px; width: auto; object-fit: contain; margin-bottom: 12px;">
           <h2 style="font-size: 1.375rem; font-weight: 900; color: #0F2A4A; margin: 0; line-height: 1.2;">Portal SSO Terpadu</h2>

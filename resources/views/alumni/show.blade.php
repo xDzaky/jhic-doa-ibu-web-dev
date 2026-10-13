@@ -28,7 +28,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(8, 32, 70, 0.88) 0%, rgba(29, 78, 216, 0.75) 100%);
+    background: rgba(8, 32, 70, 0.92);
   }
   
   .alumni-hero-content {
@@ -55,13 +55,14 @@
   }
   
   .alumni-story-container {
-    max-width: 1000px;
+    width: 80%;
+    max-width: 1400px;
     margin: 0 auto;
   }
   
   .alumni-story-card {
     background: #F8FAFC;
-    border-radius: 16px;
+    border-radius: 10px;
     border: none;
     overflow: hidden;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 6px 16px rgba(0, 0, 0, 0.02);
@@ -185,49 +186,61 @@
   <section class="alumni-content-section">
     <div class="container alumni-story-container">
       
-      <!-- Story 1 -->
+      <!-- Story 1: Rekayasa Perangkat Lunak -->
       <div class="alumni-story-card reveal-item" data-delay="0">
         <div class="alumni-card-layout">
           <div class="alumni-photo-frame">
-            <img src="{{ asset('images/mohammad-rizal-foto.png') }}" alt="Mohammad Rizal" loading="lazy">
+            <img src="{{ asset('images/mohammad-rizal-foto.png') }}" alt="Mohammad Rizal - Alumni RPL SMKN 1 Probolinggo" loading="lazy">
           </div>
           <div class="alumni-story-content">
-            <h2 class="alumni-name">Mohammad Rizal</h2>
-            <span class="alumni-year">Alumni 2015</span>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px;">
+              <span style="display: inline-block; padding: 4px 10px; background: #EFF6FF; color: #1D4ED8; font-size: 0.75rem; font-weight: 700; border-radius: 6px;">Rekayasa Perangkat Lunak</span>
+              <span style="display: inline-block; padding: 4px 10px; background: #ECFDF5; color: #047857; font-size: 0.75rem; font-weight: 700; border-radius: 6px;">Senior Software Engineer</span>
+            </div>
+            <h2 class="alumni-name">Mohammad Rizal, S.Kom.</h2>
+            <span class="alumni-year">Alumni Angkatan 2017 &bull; Tech Lead di Ekosistem Digital Nasional</span>
             <p class="alumni-story-text">
-              Ada yang bilang sekolah menengah itu gak bisa jadi apa-apa? Kata siapa? Kesuksesanmu adalah cerminan usahamu sewakiltu sekolah loh sobat. Tidak sedikit lulusan SMK yang sukses, diluar sana orang-orang sukses lulusan SMK banyak loh. Bahkan mental anak SMK itu sudah teruj. Siapapun kalam, apapun latar belakang pendidikan kalam kalian punya kemauan yang kuat, kalian pasti bisa menggapai cita-cita kalian. Jangan menyerah, jangan putus asa. Tetap jadi diri kalam masing-masing, asah kemampuan, uju teruskan suapya kalian bisa menjadi CHANGE AGENT, pemuda berkualitas - generasi yang menginsirasi. SMK Bisal Semua Luar Biasa!
+              "Ada yang mengira lulusan SMK punya batasan dalam meniti karir teknologi tingkat lanjut? Nyatanya tidak. Fondasi logika pemrograman, arsitektur basis data, serta kedisiplinan kerja industri yang saya dapatkan selama di SMKN 1 Probolinggo menjadi modal akselerasi terbesar saya. Mental siswa SMK itu teruji lewat praktikum intensif dan uji sertifikasi BNSP LSP-P1 sejak dini. Kunci utamanya adalah kemauan belajar mandiri dan rasa ingin tahu yang tak pernah padam. SMK Bisa, SMK Hebat, SMEXA Luar Biasa!"
             </p>
           </div>
         </div>
       </div>
 
-      <!-- Story 2 (Image Right) -->
+      <!-- Story 2: Bisnis Digital (Image Right) -->
       <div class="alumni-story-card reveal-item" data-delay="100">
         <div class="alumni-card-layout image-right">
-          <div class="alumni-photo-frame">
-            <img src="{{ asset('images/mohammad-rizal-foto.png') }}" alt="Mohammad Rizal" loading="lazy">
+          <div class="alumni-photo-frame" style="background: #0F172A; display: flex; align-items: center; justify-content: center; position: relative;">
+            <img src="{{ asset('images/news_bisnis_digital.webp') }}" alt="Amanda Putri Pratama - Alumni Bisnis Digital" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
           </div>
           <div class="alumni-story-content">
-            <h2 class="alumni-name">Mohammad Rizal</h2>
-            <span class="alumni-year">Alumni 2015</span>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px;">
+              <span style="display: inline-block; padding: 4px 10px; background: #FEF3C7; color: #B45309; font-size: 0.75rem; font-weight: 700; border-radius: 6px;">Bisnis Digital & Marketing</span>
+              <span style="display: inline-block; padding: 4px 10px; background: #F3E8FF; color: #7E22CE; font-size: 0.75rem; font-weight: 700; border-radius: 6px;">Digital Strategist & Founder</span>
+            </div>
+            <h2 class="alumni-name">Amanda Putri Pratama</h2>
+            <span class="alumni-year">Alumni Angkatan 2020 &bull; Founder Agensi Kreatif & Live Commerce Partner</span>
             <p class="alumni-story-text">
-              Ada yang bilang sekolah menengah itu gak bisa jadi apa-apa? Kata siapa? Kesuksesanmu adalah cerminan usahamu sewakiltu sekolah loh sobat. Tidak sedikit lulusan SMK yang sukses, diluar sana orang-orang sukses lulusan SMK banyak loh. Bahkan mental anak SMK itu sudah teruj. Siapapun kalam, apapun latar belakang pendidikan kalam kalian punya kemauan yang kuat, kalian pasti bisa menggapai cita-cita kalian. Jangan menyerah, jangan putus asa. Tetap jadi diri kalam masing-masing, asah kemampuan, uju teruskan suapya kalian bisa menjadi CHANGE AGENT, pemuda berkualitas - generasi yang menginsirasi. SMK Bisal Semua Luar Biasa!
+              "Pengalaman langsung mengelola etalase Teaching Factory SMEXAMALL dan kurikulum kemitraan Alfamart Class melatih saya memahami siklus live commerce, optimasi konversi, serta operasional retail modern. Saat terjun ke dunia industri dan merintis bisnis agensi digital, saya tidak kaget dengan dinamika pasar. SMKN 1 Probolinggo membekali kami bukan sekadar teori kelas, melainkan keberanian mengeksekusi strategi bisnis riil."
             </p>
           </div>
         </div>
       </div>
 
-      <!-- Story 3 -->
+      <!-- Story 3: Layanan Perbankan & Syariah -->
       <div class="alumni-story-card reveal-item" data-delay="200">
         <div class="alumni-card-layout">
-          <div class="alumni-photo-frame">
-            <img src="{{ asset('images/mohammad-rizal-foto.png') }}" alt="Mohammad Rizal" loading="lazy">
+          <div class="alumni-photo-frame" style="background: #042F2E; display: flex; align-items: center; justify-content: center; position: relative;">
+            <img src="{{ asset('images/jurusan/lab_lpb.webp') }}" alt="Dimas Wahyu Prasetyo - Alumni Perbankan SMKN 1 Probolinggo" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
           </div>
           <div class="alumni-story-content">
-            <h2 class="alumni-name">Mohammad Rizal</h2>
-            <span class="alumni-year">Alumni 2015</span>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px;">
+              <span style="display: inline-block; padding: 4px 10px; background: #CCFBF1; color: #0F766E; font-size: 0.75rem; font-weight: 700; border-radius: 6px;">Layanan Perbankan Syariah</span>
+              <span style="display: inline-block; padding: 4px 10px; background: #EFF6FF; color: #1E40AF; font-size: 0.75rem; font-weight: 700; border-radius: 6px;">Relationship Officer</span>
+            </div>
+            <h2 class="alumni-name">Dimas Wahyu Prasetyo, A.Md.</h2>
+            <span class="alumni-year">Alumni Angkatan 2019 &bull; Customer Relationship Officer Bank Jatim Cabang Probolinggo</span>
             <p class="alumni-story-text">
-              Ada yang bilang sekolah menengah itu gak bisa jadi apa-apa? Kata siapa? Kesuksesanmu adalah cerminan usahamu sewakiltu sekolah loh sobat. Tidak sedikit lulusan SMK yang sukses, diluar sana orang-orang sukses lulusan SMK banyak loh. Bahkan mental anak SMK itu sudah teruj. Siapapun kalam, apapun latar belakang pendidikan kalam kalian punya kemauan yang kuat, kalian pasti bisa menggapai cita-cita kalian. Jangan menyerah, jangan putus asa. Tetap jadi diri kalam masing-masing, asah kemampuan, uju teruskan suapya kalian bisa menjadi CHANGE AGENT, pemuda berkualitas - generasi yang menginsirasi. SMK Bisal Semua Luar Biasa!
+              "Praktik operasional di Mini Bank SMEXA sejak bangku kelas XI membuat saya sangat akrab dengan SOP frontliner perbankan, administrasi tabungan, dan kepatuhan transaksi keuangan. Melalui jejaring Bursa Kerja Khusus (BKK) SMKN 1 Probolinggo yang terintegrasi dengan perbankan regional, saya mendapat rekomendasi karir bahkan sebelum proses wisuda selesai. Sekolah vokasi adalah pintu akselerasi tercepat menuju kemandirian finansial."
             </p>
           </div>
         </div>

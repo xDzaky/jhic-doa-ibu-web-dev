@@ -1,100 +1,180 @@
 @extends('layouts.app')
 
-@section('title', 'Akuntansi - SMKN 1 Probolinggo')
+@section('title', 'Akuntansi dan Keuangan Lembaga (AKL) - SMKN 1 Probolinggo')
+@section('meta_description', 'Konsentrasi Keahlian Akuntansi dan Keuangan Lembaga SMKN 1 Probolinggo. Komputer akuntansi Accurate & MYOB, Brevet Pajak A/B, laporan keuangan SAK ETAP, dan sertifikasi BNSP.')
 
 @section('content')
-<div class="container" style="padding: 60px 0; max-width: 800px;">
-  
-  <!-- Logo Jurusan -->
-  <div style="text-align: center; margin-bottom: 32px;">
-    <img src="{{ asset('images/jurusan/logo_ak_new.png') }}" alt="Logo Akuntansi" style="height: 140px; width: auto;">
-  </div>
+<!-- Department Header Banner -->
+<section style="background: #082046; border-bottom: 2px solid #B91C1C; padding: 60px 0 50px; color: #FFFFFF; position: relative; overflow: hidden;">
+  <div class="container reveal-item" data-delay="0">
+    <div style="display: flex; align-items: center; gap: 8px; font-size: 0.8125rem; color: #FECACA; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em;">
+      <a href="{{ route('home') }}" style="color: #FECACA; text-decoration: none;">Beranda</a>
+      <span>/</span>
+      <a href="{{ route('home') }}#jurusan" style="color: #FECACA; text-decoration: none;">Program Keahlian</a>
+      <span>/</span>
+      <span style="color: #FFFFFF;">Akuntansi</span>
+    </div>
 
-  <!-- Judul Jurusan -->
-  <h1 style="font-size: 1.75rem; font-weight: 700; color: #0F172A; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #E2E8F0;">
-    Akuntansi
-  </h1>
-
-  <!-- Deskripsi -->
-  <div style="margin-bottom: 40px;">
-    <p style="color: #334155; line-height: 1.8; font-size: 0.9375rem; text-align: justify;">
-      Jurusan Akuntansi adalah salah satu pilihan jurusan yang mempersiapkan siswa untuk memiliki pengetahuan dan keterampilan dalam bidang akuntansi. Dalam jurusan ini, siswa akan mempelajari konsep dasar akuntansi, prosedur pencatatan keuangan, analisis laporan keuangan, perpajakan, serta pengelolaan keuangan perusahaan atau organisasi.
-    </p>
-  </div>
-
-  <!-- Program Pendidikan -->
-  <div style="margin-bottom: 40px;">
-    <p style="color: #334155; line-height: 1.8; font-size: 0.9375rem; margin-bottom: 16px;">
-      Program pendidikan dalam jurusan Akuntansi mencakup mata pelajaran seperti:
-    </p>
-    
-    <ol style="color: #334155; line-height: 1.8; font-size: 0.9375rem; padding-left: 24px; margin: 0;">
-      <li style="margin-bottom: 12px;"><strong>Akuntansi Dasar</strong>: Konsep dasar akuntansi, prinsip-prinsip akuntansi, dan teknik-teknik pencatatan transaksi keuangan.</li>
-      <li style="margin-bottom: 12px;"><strong>Analisis Laporan Keuangan</strong>: Memahami laporan keuangan seperti neraca, laporan laba rugi, dan laporan arus kas, serta kemampuan untuk menganalisisnya.</li>
-      <li style="margin-bottom: 12px;"><strong>Perpajakan</strong>: Pembelajaran tentang peraturan dan prosedur perpajakan, termasuk cara menghitung pajak dan kewajiban perpajakan.</li>
-      <li style="margin-bottom: 12px;"><strong>Manajemen Keuangan</strong>: Studi tentang pengelolaan keuangan perusahaan, termasuk perencanaan anggaran, pengendalian biaya, dan manajemen kas.</li>
-      <li style="margin-bottom: 12px;"><strong>Komputerisasi Akuntansi</strong>: Penggunaan perangkat lunak akuntansi dan perangkat lunak keuangan untuk mengotomatiskan proses pencatatan dan pelaporan keuangan.</li>
-    </ol>
-  </div>
-
-  <!-- Prospek Lulusan -->
-  <div style="margin-bottom: 40px;">
-    <p style="color: #334155; line-height: 1.8; font-size: 0.9375rem; text-align: justify;">
-      Lulusan dari jurusan Akuntansi memiliki dasar pengetahuan dan keterampilan yang dapat membantu mereka memulai karier di berbagai bidang, termasuk sebagai asisten akuntan, staf keuangan, atau dalam peran terkait akuntansi dan keuangan lainnya. Selain itu, mereka juga dapat melanjutkan pendidikan ke jenjang yang lebih tinggi, seperti diploma atau sarjana dalam bidang akuntansi atau keuangan.
-    </p>
-  </div>
-
-  <!-- Foto Jurusan -->
-  <div style="margin-bottom: 40px;">
-    <h2 style="font-size: 1.375rem; font-weight: 700; color: #0F172A; margin-bottom: 20px;">
-      Foto Jurusan
-    </h2>
-    
-    <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 400px;">
-      <img src="{{ asset('images/jurusan/lab_akl.webp') }}" alt="Foto Jurusan Akuntansi" style="width: 100%; height: auto; display: block;">
+    <div style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap;">
+      <div style="width: 80px; height: 80px; border-radius: 8px; background: rgba(255, 255, 255, 0.1); border: 1.5px solid rgba(255, 255, 255, 0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; backdrop-filter: blur(8px);">
+        <img src="{{ asset('images/jurusan/logo_ak_new.png') }}" alt="Logo Akuntansi" width="60" height="60" style="object-fit: contain;">
+      </div>
+      <div>
+        <div style="display: inline-block; background: #B91C1C; color: #FFF; font-size: 0.71875rem; font-weight: 800; padding: 4px 12px; border-radius: 6px; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px;">
+          Standar Komputer Akuntansi &amp; Pajak Terapan
+        </div>
+        <h1 style="font-family: var(--font-heading); font-size: 2.5rem; font-weight: 900; line-height: 1.15; letter-spacing: -0.025em; margin: 0 0 8px; color: #FFFFFF;">
+          Akuntansi dan Keuangan Lembaga (AKL)
+        </h1>
+        <p style="font-size: 1rem; color: #CBD5E1; margin: 0; max-width: 720px; line-height: 1.5;">
+          Mencetak teknisi akuntansi profesional yang mahir menyusun laporan keuangan terstandar, mengoperasikan software Accurate &amp; MYOB, serta menguasai kepatuhan pajak fiskal.
+        </p>
+      </div>
     </div>
   </div>
+</section>
 
-  <!-- Lihat Jurusan Lainnya -->
-  <div style="margin-top: 48px; padding-top: 32px; border-top: 2px solid #E2E8F0;">
-    <h3 style="font-size: 1.125rem; font-weight: 700; color: #0F172A; margin-bottom: 20px;">
-      Lihat Jurusan Lainnya
-    </h3>
-    
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-top: 24px;">
-      <!-- RPL -->
-      <a href="{{ route('jurusan.rpl') }}" style="text-decoration: none; background: #F0FDF4; border: 2px solid #BBF7D0; border-radius: 12px; padding: 20px; text-align: center; transition: all 0.2s ease; display: block;">
-        <img src="{{ asset('images/jurusan/logo_rpl_new.png') }}" alt="RPL" style="height: 60px; width: auto; margin: 0 auto 12px; display: block;">
-        <div style="font-size: 0.875rem; font-weight: 700; color: #15803D;">Rekayasa Perangkat Lunak</div>
-      </a>
+<!-- Main Department Grid -->
+<section style="background: #FFFFFF; padding: 50px 0 80px;">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 40px; align-items: start;">
+      
+      <!-- Left Column -->
+      <div>
+        <!-- Profil & Deskripsi -->
+        <div style="margin-bottom: 40px;">
+          <h2 style="font-family: var(--font-heading); font-size: 1.375rem; font-weight: 800; color: #082046; margin: 0 0 16px; padding-bottom: 10px; border-bottom: 2px solid #E2E8F0;">
+            Profil &amp; Keunggulan Konsentrasi Keahlian
+          </h2>
+          <p style="color: #334155; line-height: 1.8; font-size: 0.9375rem; text-align: justify; margin: 0 0 14px;">
+            Konsentrasi Keahlian <strong>Akuntansi dan Keuangan Lembaga (AKL)</strong> di SMKN 1 Probolinggo membekali siswa dengan pemahaman komprehensif mengenai siklus akuntansi perusahaan jasa, dagang, dan manufaktur, serta akuntansi instansi pemerintah.
+          </p>
+          <p style="color: #334155; line-height: 1.8; font-size: 0.9375rem; text-align: justify; margin: 0;">
+            Didukung laboratorium komputer akuntansi berlisensi resmi <strong>Accurate Accounting</strong> dan <strong>MYOB</strong>, siswa dilatih melakukan penginputan transaksi secara otomatis, rekonsiliasi bank, penyusunan laporan keuangan berdasarkan <strong>Standar Akuntansi Keuangan (SAK)</strong>, serta simulasi penghitungan dan pelaporan perpajakan terapan (e-Faktur &amp; e-SPT).
+          </p>
+        </div>
 
-      <!-- Bisnis Digital -->
-      <a href="{{ route('jurusan.bd') }}" style="text-decoration: none; background: #EFF6FF; border: 2px solid #BFDBFE; border-radius: 12px; padding: 20px; text-align: center; transition: all 0.2s ease; display: block;">
-        <img src="{{ asset('images/jurusan/logo_bd_new.png') }}" alt="Bisnis Digital" style="height: 60px; width: auto; margin: 0 auto 12px; display: block;">
-        <div style="font-size: 0.875rem; font-weight: 700; color: #1E40AF;">Bisnis Digital</div>
-      </a>
+        <!-- 5 Kompetensi Utama -->
+        <div style="margin-bottom: 40px;">
+          <h2 style="font-family: var(--font-heading); font-size: 1.375rem; font-weight: 800; color: #082046; margin: 0 0 16px; padding-bottom: 10px; border-bottom: 2px solid #E2E8F0;">
+            Standar Kompetensi Lulusan (Accounting &amp; Tax Compliance)
+          </h2>
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <div style="background: #F8FAFC; border: 1.5px solid #E2E8F0; border-left: 4px solid #B91C1C; border-radius: 10px; padding: 14px 18px;">
+              <strong style="color: #082046; font-size: 0.9375rem; display: block; margin-bottom: 4px;">1. Komputerisasi Akuntansi (Accurate, MYOB &amp; Excel Makro)</strong>
+              <p style="font-size: 0.84375rem; color: #475569; margin: 0; line-height: 1.5;">Otomasi siklus akuntansi dari jurnal umum, buku besar pembantu, neraca lajur, hingga laporan laba rugi menggunakan software standar industri.</p>
+            </div>
+            <div style="background: #F8FAFC; border: 1.5px solid #E2E8F0; border-left: 4px solid #B91C1C; border-radius: 10px; padding: 14px 18px;">
+              <strong style="color: #082046; font-size: 0.9375rem; display: block; margin-bottom: 4px;">2. Perpajakan Terapan (Brevet Pajak A &amp; B)</strong>
+              <p style="font-size: 0.84375rem; color: #475569; margin: 0; line-height: 1.5;">Penghitungan dan pelaporan PPh Pasal 21, Pasal 23, PPh Final UMKM, PPh Badan, serta mekanisme administrasi Pajak Pertambahan Nilai (PPN).</p>
+            </div>
+            <div style="background: #F8FAFC; border: 1.5px solid #E2E8F0; border-left: 4px solid #B91C1C; border-radius: 10px; padding: 14px 18px;">
+              <strong style="color: #082046; font-size: 0.9375rem; display: block; margin-bottom: 4px;">3. Penyusunan Laporan Keuangan SAK ETAP</strong>
+              <p style="font-size: 0.84375rem; color: #475569; margin: 0; line-height: 1.5;">Penyusunan neraca saldo, laporan perubahan ekuitas, laporan arus kas metode langsung/tidak langsung, dan catatan atas laporan keuangan (CALK).</p>
+            </div>
+            <div style="background: #F8FAFC; border: 1.5px solid #E2E8F0; border-left: 4px solid #B91C1C; border-radius: 10px; padding: 14px 18px;">
+              <strong style="color: #082046; font-size: 0.9375rem; display: block; margin-bottom: 4px;">4. Akuntansi Sektor Publik &amp; Pemerintahan Daerah</strong>
+              <p style="font-size: 0.84375rem; color: #475569; margin: 0; line-height: 1.5;">Pencatatan anggaran pendapatan dan belanja daerah (APBD), akuntansi kas BLUD, dan sistem informasi keuangan daerah.</p>
+            </div>
+            <div style="background: #F8FAFC; border: 1.5px solid #E2E8F0; border-left: 4px solid #B91C1C; border-radius: 10px; padding: 14px 18px;">
+              <strong style="color: #082046; font-size: 0.9375rem; display: block; margin-bottom: 4px;">5. Teaching Factory: Jasa Pembukuan UMKM di SMEXAMALL</strong>
+              <p style="font-size: 0.84375rem; color: #475569; margin: 0; line-height: 1.5;">Praktik riil membantu pelaku usaha mikro mitra sekolah menyusun laporan keuangan berkala dan kepatuhan administrasi keuangan.</p>
+            </div>
+          </div>
+        </div>
 
-      <!-- Manajemen Perkantoran -->
-      <a href="{{ route('jurusan.mp') }}" style="text-decoration: none; background: #FDF2F8; border: 2px solid #FBCFE8; border-radius: 12px; padding: 20px; text-align: center; transition: all 0.2s ease; display: block;">
-        <img src="{{ asset('images/jurusan/logo_mp_new.png') }}" alt="Manajemen Perkantoran" style="height: 60px; width: auto; margin: 0 auto 12px; display: block;">
-        <div style="font-size: 0.875rem; font-weight: 700; color: #BE185D;">Manajemen Perkantoran</div>
-      </a>
+        <!-- Peluang Karir Lulusan -->
+        <div>
+          <h2 style="font-family: var(--font-heading); font-size: 1.375rem; font-weight: 800; color: #082046; margin: 0 0 16px; padding-bottom: 10px; border-bottom: 2px solid #E2E8F0;">
+            Prospek Karir &amp; Sertifikasi Profesi BNSP
+          </h2>
+          <p style="color: #334155; line-height: 1.8; font-size: 0.9375rem; margin-bottom: 14px;">
+            Lulusan AKL memperoleh sertifikat kompetensi <strong>BNSP skema Teknisi Akuntansi Yunior</strong> dari LSP-P1 SMKN 1 Probolinggo untuk mengisi formasi:
+          </p>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+            <div style="background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 8px; padding: 10px 14px; font-size: 0.84375rem; color: #0F172A; font-weight: 700; display: flex; align-items: center; gap: 8px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#B91C1C" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Teknisi Akuntansi Yunior</div>
+            <div style="background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 8px; padding: 10px 14px; font-size: 0.84375rem; color: #0F172A; font-weight: 700; display: flex; align-items: center; gap: 8px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#B91C1C" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Staf Pajak &amp; Tax Compliance</div>
+            <div style="background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 8px; padding: 10px 14px; font-size: 0.84375rem; color: #0F172A; font-weight: 700; display: flex; align-items: center; gap: 8px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#B91C1C" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Asisten Auditor KAP</div>
+            <div style="background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 8px; padding: 10px 14px; font-size: 0.84375rem; color: #0F172A; font-weight: 700; display: flex; align-items: center; gap: 8px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#B91C1C" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Pengelola Keuangan Kasir &amp; Piutang</div>
+            <div style="background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 8px; padding: 10px 14px; font-size: 0.84375rem; color: #0F172A; font-weight: 700; display: flex; align-items: center; gap: 8px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#B91C1C" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Staf Anggaran Instansi Pemerintah</div>
+            <div style="background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 8px; padding: 10px 14px; font-size: 0.84375rem; color: #0F172A; font-weight: 700; display: flex; align-items: center; gap: 8px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#B91C1C" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Konsultan Pembukuan UMKM Mandiri</div>
+          </div>
+        </div>
+      </div>
 
-      <!-- Layanan Perbankan -->
-      <a href="{{ route('jurusan.lp') }}" style="text-decoration: none; background: #FFFBEB; border: 2px solid #FDE68A; border-radius: 12px; padding: 20px; text-align: center; transition: all 0.2s ease; display: block;">
-        <img src="{{ asset('images/jurusan/logo_lp_new.png') }}" alt="Layanan Perbankan" style="height: 60px; width: auto; margin: 0 auto 12px; display: block;">
-        <div style="font-size: 0.875rem; font-weight: 700; color: #A16207;">Layanan Perbankan</div>
-      </a>
+      <!-- Right Column: Quick Facts & CTA -->
+      <div>
+        <div style="background: #F8FAFC; border: 1.5px solid #CBD5E1; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 20px rgba(8, 32, 70, 0.05); position: sticky; top: 90px;">
+          <!-- Foto Lab -->
+          <div style="width: 100%; height: 210px; overflow: hidden; position: relative;">
+            <img src="{{ asset('images/jurusan/lab_akl.webp') }}" alt="Laboratorium Akuntansi Komputer" style="width: 100%; height: 100%; object-fit: cover;" width="400" height="210">
+            <span style="position: absolute; bottom: 12px; left: 12px; background: rgba(8, 32, 70, 0.85); color: #FFF; font-size: 0.71875rem; font-weight: 800; padding: 4px 10px; border-radius: 6px; backdrop-filter: blur(4px);">
+              Lab Komputer Akuntansi Accurate
+            </span>
+          </div>
+
+          <!-- Quick Data Body -->
+          <div style="padding: 24px;">
+            <h3 style="font-size: 1.125rem; font-weight: 800; color: #082046; margin: 0 0 16px;">
+              Informasi Pendaftaran PPDB 2026
+            </h3>
+
+            <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; font-size: 0.875rem;">
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #E2E8F0; padding-bottom: 8px;">
+                <span style="color: #64748B;">Daya Tampung:</span>
+                <strong style="color: #0F172A;">108 Siswa (3 Rombel)</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #E2E8F0; padding-bottom: 8px;">
+                <span style="color: #64748B;">Akreditasi:</span>
+                <strong style="color: #B91C1C;">A Unggul (BAN-SM)</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #E2E8F0; padding-bottom: 8px;">
+                <span style="color: #64748B;">Sertifikasi:</span>
+                <strong style="color: #0F172A;">BNSP LSP-P1 Resmi</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #E2E8F0; padding-bottom: 8px;">
+                <span style="color: #64748B;">Mitra Industri:</span>
+                <strong style="color: #0F172A; text-align: right;">Kantor Akuntan Publik, Bank Jatim</strong>
+              </div>
+            </div>
+
+            <!-- CTA Actions -->
+            <a href="{{ route('ppdb') }}#daftar" class="btn btn-navy-primary" style="width: 100%; display: block; text-align: center; padding: 12px; font-size: 0.90625rem; font-weight: 800; border-radius: 8px; text-decoration: none; margin-bottom: 10px;">
+              Daftar Konsentrasi Akuntansi 2026
+            </a>
+            <a href="{{ route('ppdb.check') }}" class="btn btn-outline-navy" style="width: 100%; display: block; text-align: center; padding: 10px; font-size: 0.84375rem; font-weight: 700; border-radius: 8px; text-decoration: none;">
+              Cek Alur Seleksi &amp; Syarat Berkas
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Navigasi Jurusan Lainnya -->
+    <div style="margin-top: 60px; padding-top: 36px; border-top: 2px solid #E2E8F0;">
+      <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: #082046; margin: 0 0 20px;">
+        Jelajahi 4 Konsentrasi Keahlian Lainnya di SMKN 1 Probolinggo
+      </h3>
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
+        <a href="{{ route('jurusan.rpl') }}" style="text-decoration: none; background: #ECFDF5; border: 1.5px solid #A7F3D0; border-radius: 12px; padding: 18px; text-align: center; transition: all 0.2s ease;">
+          <img src="{{ asset('images/jurusan/logo_rpl_new.png') }}" alt="Rekayasa Perangkat Lunak" style="height: 50px; width: auto; margin: 0 auto 10px; display: block;" width="50" height="50">
+          <div style="font-size: 0.875rem; font-weight: 800; color: #047857;">Rekayasa Perangkat Lunak</div>
+        </a>
+        <a href="{{ route('jurusan.bd') }}" style="text-decoration: none; background: #EFF6FF; border: 1.5px solid #BFDBFE; border-radius: 12px; padding: 18px; text-align: center; transition: all 0.2s ease;">
+          <img src="{{ asset('images/jurusan/logo_bd_new.png') }}" alt="Bisnis Digital" style="height: 50px; width: auto; margin: 0 auto 10px; display: block;" width="50" height="50">
+          <div style="font-size: 0.875rem; font-weight: 800; color: #1E40AF;">Bisnis Digital</div>
+        </a>
+        <a href="{{ route('jurusan.mp') }}" style="text-decoration: none; background: #FDF2F8; border: 1.5px solid #FBCFE8; border-radius: 12px; padding: 18px; text-align: center; transition: all 0.2s ease;">
+          <img src="{{ asset('images/jurusan/logo_mp_new.png') }}" alt="Manajemen Perkantoran" style="height: 50px; width: auto; margin: 0 auto 10px; display: block;" width="50" height="50">
+          <div style="font-size: 0.875rem; font-weight: 800; color: #BE185D;">Manajemen Perkantoran</div>
+        </a>
+        <a href="{{ route('jurusan.lp') }}" style="text-decoration: none; background: #FFFBEB; border: 1.5px solid #FDE68A; border-radius: 12px; padding: 18px; text-align: center; transition: all 0.2s ease;">
+          <img src="{{ asset('images/jurusan/logo_lp_new.png') }}" alt="Layanan Perbankan" style="height: 50px; width: auto; margin: 0 auto 10px; display: block;" width="50" height="50">
+          <div style="font-size: 0.875rem; font-weight: 800; color: #A16207;">Layanan Perbankan</div>
+        </a>
+      </div>
     </div>
   </div>
-
-</div>
-
-<style>
-a[href*="jurusan"]:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-}
-</style>
-
+</section>
 @endsection

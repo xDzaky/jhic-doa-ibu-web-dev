@@ -19,6 +19,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        \Illuminate\Support\Facades\View::share('assetVersion', '20261012_v50_sfpro');
+
         if (config('database.default') === 'sqlite') {
             try {
                 \Illuminate\Support\Facades\DB::statement('PRAGMA journal_mode = WAL;');

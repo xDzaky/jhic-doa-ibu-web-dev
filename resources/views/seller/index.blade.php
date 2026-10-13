@@ -9,7 +9,7 @@
     background-color: #F8FAFC;
     min-height: calc(100vh - 68px);
     padding: 32px 0 64px;
-    font-family: 'Satoshi', sans-serif;
+    font-family: var(--font-body);
   }
 
   .seller-container {
@@ -42,8 +42,9 @@
   .seller-avatar-badge {
     width: 60px;
     height: 60px;
-    border-radius: 14px;
-    background: linear-gradient(135deg, #002565 0%, #0040A8 100%);
+    border-radius: 8px;
+    background: #082046;
+    border: 1px solid #1E3A8A;
     color: #FFFFFF;
     font-size: 1.375rem;
     font-weight: 800;
@@ -71,7 +72,7 @@
     font-size: 0.6875rem;
     font-weight: 800;
     padding: 4px 10px;
-    border-radius: 20px;
+    border-radius: 8px;
     letter-spacing: 0.03em;
     display: inline-flex;
     align-items: center;
@@ -297,7 +298,7 @@
 
   .filter-pill {
     padding: 6px 14px;
-    border-radius: 20px;
+    border-radius: 8px;
     font-size: 0.75rem;
     font-weight: 700;
     border: 1px solid #E2E8F0;
@@ -828,7 +829,7 @@
           <h3 style="margin: 0; font-size: 1.125rem; font-weight: 800; color: #166534;">
             Kelayakan Portofolio Kewirausahaan (PKWU / BLUD)
           </h3>
-          <span style="background: #16A34A; color: #FFFFFF; font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 20px;">
+          <span style="background: #16A34A; color: #FFFFFF; font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 8px;">
             TERVERIFIKASI: LULUS
           </span>
         </div>

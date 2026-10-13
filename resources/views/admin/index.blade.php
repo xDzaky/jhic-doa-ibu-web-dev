@@ -9,7 +9,7 @@
     background-color: #F8FAFC;
     min-height: calc(100vh - 68px);
     padding: 32px 0 64px;
-    font-family: 'Satoshi', sans-serif;
+    font-family: var(--font-body);
   }
 
   .admin-container {
@@ -204,7 +204,7 @@
     font-size: 0.6875rem;
     font-weight: 800;
     padding: 2px 7px;
-    border-radius: 9999px;
+    border-radius: 6px;
   }
 
   .nav-tab-btn.active .tab-counter {
@@ -351,7 +351,7 @@
     font-size: 0.75rem;
     font-weight: 700;
     padding: 4px 10px;
-    border-radius: 9999px;
+    border-radius: 6px;
     white-space: nowrap;
   }
 

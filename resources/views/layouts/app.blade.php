@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  @php $assetVersion = '20261012_v50_sfpro_' . (file_exists(public_path('css/wireframe.min.css')) ? filemtime(public_path('css/wireframe.min.css')) : time()); @endphp
+  @php $assetVersion = '20261013_v52_' . (file_exists(public_path('css/navbar-clean.css')) ? filemtime(public_path('css/navbar-clean.css')) : time()); @endphp
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>@yield('title', 'Website Resmi SMKN 1 Probolinggo - Sekolah Pusat Keunggulan & BLUD')</title>
@@ -19,20 +19,17 @@
   <meta name="theme-color" content="#0F2A4A">
   <link rel="icon" href="{{ asset('images/logo_emblem.png') }}?v={{ $assetVersion }}">
   
-  {{-- Typography: Poppins (Identik 100% SMK Telkom) --}}
+  {{-- Typography: 100% Persis SMK Telkom Sidoarjo (Plus Jakarta Sans) --}}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet">
 
   {{-- Preload & Load CSS Utama (Minified, Zero-CLS) --}}
   <link rel="preload" href="{{ asset('css/wireframe.min.css') }}?v={{ $assetVersion }}" as="style">
   <link rel="stylesheet" href="{{ asset('css/wireframe.min.css') }}?v={{ $assetVersion }}">
   
-  {{-- Navbar Clean CSS --}}
+  {{-- Navbar Clean CSS (SMK Telkom Floating Pill & Mega Menus) --}}
   <link rel="stylesheet" href="{{ asset('css/navbar-clean.css') }}?v={{ $assetVersion }}">
-  
-  {{-- Simple Dropdown CSS --}}
-  <link rel="stylesheet" href="{{ asset('css/simple-dropdown.css') }}?v={{ $assetVersion }}">
 
   {{-- Critical Accessibility & Mobile Drawer Guards (Anti-FOUC) --}}
   <style>
@@ -100,84 +97,157 @@
   {{-- Skip to main content (Accessibility — required for 100 score) --}}
   <a href="#main-content" class="skip-nav-link">Lewati ke konten utama</a>
 
-  <!-- MAIN NAVBAR (Flat Deep Navy) -->
-  <header class="navbar">
-    <div class="container nav-wrapper">
-      <a href="{{ route('home') }}" class="nav-brand">
-        <img src="{{ asset('images/logo_smkn1.webp') }}" alt="Logo SMKN 1 Probolinggo" class="school-logo-img" width="36" height="36" fetchpriority="high">
-        
+  <!-- MAIN NAVBAR (SMK Telkom Floating Pill Capsule Style) -->
+  <header class="navbar" id="mainNavbar">
+    <div class="nav-wrapper">
+      <!-- 1. Brand Identity (Logo + SMKN 1 Probolinggo) -->
+      <a href="{{ route('home') }}" class="nav-brand" title="Beranda SMKN 1 Probolinggo">
+        <img src="{{ asset('images/logo_smkn1.webp') }}" alt="Logo SMKN 1 Probolinggo" class="school-logo-img" width="34" height="34" fetchpriority="high">
         <div class="brand-text">
           <span class="school-main">SMK NEGERI 1</span>
           <span class="school-sub">PROBOLINGGO</span>
         </div>
       </a>
 
-      <!-- Nav Links (Professional with Dropdown) -->
+      <!-- 2. Nav Menu (Center Links with Mega Menus) -->
       <ul class="nav-menu">
         <li><a href="{{ route('home') }}" class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}">Beranda</a></li>
         
+        <!-- Dropdown 1: Tentang Sekolah -->
         <li class="nav-dropdown">
           <button class="nav-link nav-dropdown-toggle {{ request()->routeIs('profil') || request()->is('alumni*') || request()->is('ekstrakurikuler*') ? 'active' : '' }}" type="button">
             Tentang Sekolah
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="nav-dropdown-icon"><path d="M6 9l6 6 6-6"/></svg>
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="nav-dropdown-icon"><path d="M6 9l6 6 6-6"/></svg>
           </button>
-          <ul class="simple-dropdown-menu">
-            <li><a href="{{ route('profil') }}" class="simple-dropdown-item">Profil Sekolah</a></li>
-            <li><a href="{{ route('home') }}#sambutan" class="simple-dropdown-item">Sambutan Kepala Sekolah</a></li>
-            <li><a href="{{ route('ekstra.show', 'volly-ball') }}" class="simple-dropdown-item">Ekstrakurikuler</a></li>
-            <li><a href="{{ route('alumni.show', 1) }}" class="simple-dropdown-item">Cerita Alumni</a></li>
-            <li><a href="{{ route('home') }}#fasilitas" class="simple-dropdown-item">Fasilitas Kampus</a></li>
-            <li><a href="{{ route('home') }}#mitra" class="simple-dropdown-item">Mitra Industri</a></li>
-          </ul>
+          <div class="nav-dropdown-menu">
+            <a href="{{ route('profil') }}" class="nav-dropdown-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg>
+              <span>Profil Sekolah</span>
+            </a>
+            <a href="{{ route('home') }}#sambutan" class="nav-dropdown-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <span>Sambutan Kepala Sekolah</span>
+            </a>
+            <a href="{{ route('ekstra.show', 'volly-ball') }}" class="nav-dropdown-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+              <span>Ekstrakurikuler</span>
+            </a>
+            <a href="{{ route('alumni.show', 1) }}" class="nav-dropdown-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <span>Cerita Alumni</span>
+            </a>
+            <a href="{{ route('home') }}#fasilitas" class="nav-dropdown-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              <span>Fasilitas Kampus</span>
+            </a>
+            <a href="{{ route('home') }}#mitra" class="nav-dropdown-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              <span>Mitra Industri</span>
+            </a>
+          </div>
         </li>
 
+        <!-- Dropdown 2: Program Keahlian -->
         <li class="nav-dropdown">
           <button class="nav-link nav-dropdown-toggle {{ request()->is('jurusan*') ? 'active' : '' }}" type="button">
             Program Keahlian
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="nav-dropdown-icon"><path d="M6 9l6 6 6-6"/></svg>
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="nav-dropdown-icon"><path d="M6 9l6 6 6-6"/></svg>
           </button>
-          <ul class="simple-dropdown-menu">
-            <li><a href="{{ route('jurusan.rpl') }}" class="simple-dropdown-item">Rekayasa Perangkat Lunak</a></li>
-            <li><a href="{{ route('jurusan.bd') }}" class="simple-dropdown-item">Bisnis Digital</a></li>
-            <li><a href="{{ route('jurusan.mp') }}" class="simple-dropdown-item">Manajemen Perkantoran</a></li>
-            <li><a href="{{ route('jurusan.lp') }}" class="simple-dropdown-item">Layanan Perbankan</a></li>
-            <li><a href="{{ route('jurusan.ak') }}" class="simple-dropdown-item">Akuntansi &amp; Keuangan</a></li>
-          </ul>
+          <div class="nav-dropdown-menu">
+            <a href="{{ route('jurusan.rpl') }}" class="nav-dropdown-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              <span>Rekayasa Perangkat Lunak (RPL)</span>
+            </a>
+            <a href="{{ route('jurusan.bd') }}" class="nav-dropdown-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              <span>Bisnis Digital (BD)</span>
+            </a>
+            <a href="{{ route('jurusan.mp') }}" class="nav-dropdown-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              <span>Manajemen Perkantoran (MPLB)</span>
+            </a>
+            <a href="{{ route('jurusan.lp') }}" class="nav-dropdown-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              <span>Layanan Perbankan (LPS)</span>
+            </a>
+            <a href="{{ route('jurusan.ak') }}" class="nav-dropdown-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+              <span>Akuntansi &amp; Keuangan (AKL)</span>
+            </a>
+          </div>
         </li>
 
+        <!-- Dropdown 3: PPDB 2026 -->
         <li class="nav-dropdown">
           <button class="nav-link nav-dropdown-toggle {{ request()->routeIs('ppdb*') ? 'active' : '' }}" type="button">
             PPDB 2026
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="nav-dropdown-icon"><path d="M6 9l6 6 6-6"/></svg>
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="nav-dropdown-icon"><path d="M6 9l6 6 6-6"/></svg>
           </button>
-          <ul class="simple-dropdown-menu">
-            <li><a href="{{ route('ppdb') }}" class="simple-dropdown-item">Syarat &amp; Kuota PPDB</a></li>
-            <li><a href="{{ route('ppdb') }}#daftar" class="simple-dropdown-item">Pendaftaran Online</a></li>
-            <li><a href="{{ route('ppdb.check') }}" class="simple-dropdown-item">Cek Status Seleksi</a></li>
-            <li><a href="{{ route('ppdb') }}" class="simple-dropdown-item">Petunjuk Teknis</a></li>
-          </ul>
+          <div class="nav-dropdown-menu">
+            <a href="{{ route('ppdb') }}" class="nav-dropdown-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              <span>Informasi &amp; Syarat PPDB</span>
+            </a>
+            <a href="{{ route('ppdb') }}#daftar" class="nav-dropdown-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+              <span>Pendaftaran Online</span>
+            </a>
+            <a href="{{ route('ppdb.check') }}" class="nav-dropdown-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span>Cek Status Seleksi</span>
+            </a>
+            <a href="{{ route('ppdb') }}" class="nav-dropdown-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              <span>Petunjuk Teknis PPDB</span>
+            </a>
+          </div>
         </li>
 
         <li><a href="{{ route('berita.index') }}" class="nav-link {{ request()->routeIs('berita.*') ? 'active' : '' }}">Berita</a></li>
         
+        <!-- Dropdown 4: SMEXAMALL -->
         <li class="nav-dropdown">
           <button class="nav-link nav-dropdown-toggle {{ request()->is('smexamall*') || request()->routeIs('seller*') || request()->routeIs('teacher*') ? 'active' : '' }}" type="button">
             SMEXAMALL
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="nav-dropdown-icon"><path d="M6 9l6 6 6-6"/></svg>
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="nav-dropdown-icon"><path d="M6 9l6 6 6-6"/></svg>
           </button>
-          <ul class="simple-dropdown-menu">
-            <li><a href="{{ route('smexamall.index') }}" class="simple-dropdown-item">Katalog Produk</a></li>
-            <li><a href="{{ route('smexamall.cart') }}" class="simple-dropdown-item">Keranjang Belanja</a></li>
-            <li><a href="{{ route('seller.index') }}" class="simple-dropdown-item">Seller Centre</a></li>
-            <li><a href="{{ route('teacher.index') }}" class="simple-dropdown-item">Panel Kurasi Guru</a></li>
-          </ul>
+          <div class="nav-dropdown-menu">
+            <a href="{{ route('smexamall.index') }}" class="nav-dropdown-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              <span>Katalog Produk</span>
+            </a>
+            <a href="{{ route('smexamall.cart') }}" class="nav-dropdown-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              <span>Keranjang Belanja</span>
+            </a>
+            <a href="{{ route('seller.index') }}" class="nav-dropdown-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              <span>Seller Centre</span>
+            </a>
+            <a href="{{ route('teacher.index') }}" class="nav-dropdown-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>Panel Kurasi Guru</span>
+            </a>
+          </div>
         </li>
 
         <li><a href="{{ route('bkk') }}" class="nav-link {{ request()->routeIs('bkk') ? 'active' : '' }}">BKK &amp; PKL</a></li>
       </ul>
 
-      <!-- Nav Actions (Sleek, Dynamic, Zero AI-Slop) -->
+      <!-- 3. Nav Actions (Language Capsule + Download Info Pill + User/Login) -->
       <div class="nav-actions">
+        <!-- Language Switcher Capsule (Exact Telkom Signature) -->
+        <div class="lang-switch-capsule" role="group" aria-label="Pilih Bahasa">
+          <button type="button" class="lang-pill" id="langIdBtn" onclick="switchLang('id')">ID</button>
+          <button type="button" class="lang-pill active" id="langEnBtn" onclick="switchLang('en')">EN</button>
+        </div>
+
+        <!-- Download Info Pill CTA (Exact Telkom Style) -->
+        <a href="{{ route('ppdb') }}" class="btn-telkom-cta" title="Download Informasi &amp; Brosur PPDB">
+          <span>Download Info</span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </a>
+
         @if(session()->has('auth_user'))
           @php 
             $authUser = session('auth_user'); 
@@ -189,9 +259,8 @@
               <span class="user-avatar-badge">{{ $initials }}</span>
               <span class="user-chip-details">
                 <span class="user-chip-name">{{ $firstName }}</span>
-                <span class="user-chip-role">{{ $authUser['role_label'] }}</span>
               </span>
-              <svg class="chevron-svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+              <svg class="chevron-svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
             </button>
 
             <!-- Dropdown Menu Popover -->
@@ -206,7 +275,6 @@
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
                   Dashboard Saya
                 </a>
-                <div class="popover-divider"></div>
                 <a href="{{ route('logout') }}" class="popover-menu-item text-danger">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
                   Keluar Sesi
@@ -215,12 +283,14 @@
             </div>
           </div>
         @else
-          <a href="{{ route('login') }}" class="btn-nav-login">
-            Masuk Portal
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          <a href="{{ route('login') }}" class="btn-telkom-portal" title="Masuk Portal">
+            <span>Portal</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
           </a>
         @endif
-        <button class="mobile-toggle" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="mobile-toggle" aria-label="Buka Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
       </div>
     </div>
   </header>
@@ -882,6 +952,44 @@
 
         mapContainer.addEventListener('click', loadGoogleMap, { once: true });
       }
+    // Telkom Floating Navbar Interactions (Scroll, Language Toggle, Dropdowns)
+    window.switchLang = function(lang) {
+      const idBtn = document.getElementById('langIdBtn');
+      const enBtn = document.getElementById('langEnBtn');
+      if (idBtn && enBtn) {
+        idBtn.classList.toggle('active', lang === 'id');
+        enBtn.classList.toggle('active', lang === 'en');
+      }
+    };
+
+    window.addEventListener('scroll', function() {
+      const nav = document.getElementById('mainNavbar');
+      if (nav) {
+        nav.classList.toggle('is-scrolled', window.scrollY > 15);
+      }
+    }, { passive: true });
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const megaDropdowns = document.querySelectorAll('.nav-dropdown.has-mega-menu');
+      megaDropdowns.forEach(function(dropdown) {
+        const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+        if (toggle) {
+          toggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const isOpen = dropdown.classList.contains('is-open');
+            megaDropdowns.forEach(d => d.classList.remove('is-open'));
+            if (!isOpen) {
+              dropdown.classList.add('is-open');
+            }
+          });
+        }
+      });
+
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.nav-dropdown')) {
+          megaDropdowns.forEach(d => d.classList.remove('is-open'));
+        }
+      });
     });
   </script>
 

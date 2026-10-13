@@ -9,7 +9,7 @@
   .ekstra-detail-page {
     background-color: #FFFFFF;
     min-height: calc(100vh - 68px);
-    font-family: 'Satoshi', sans-serif;
+    font-family: var(--font-body);
     color: #0F172A;
     padding-bottom: 72px;
   }
@@ -363,12 +363,12 @@
 
   .ekstra-horizontal-scroll::-webkit-scrollbar-track {
     background: #F1F5F9;
-    border-radius: 999px;
+    border-radius: 6px;
   }
 
   .ekstra-horizontal-scroll::-webkit-scrollbar-thumb {
     background: #CBD5E1;
-    border-radius: 999px;
+    border-radius: 6px;
   }
 
   .ekstra-horizontal-scroll::-webkit-scrollbar-thumb:hover {

@@ -343,54 +343,30 @@
           </header>
 
           <div class="reveal-item" data-delay="100">
-            <div style="background: #F1F5F9; width: 100%; aspect-ratio: 16/9; border-radius: 12px; margin-bottom: 32px; display: flex; align-items: center; justify-content: center; color: #64748B;">
-              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                <circle cx="8.5" cy="8.5" r="1.5"/>
-                <path d="M21 15l-5-5L5 21"/>
-              </svg>
+            <div style="width: 100%; border-radius: 12px; margin-bottom: 28px; overflow: hidden; box-shadow: 0 4px 16px rgba(8, 32, 70, 0.08);">
+              <img src="{{ asset('images/news_perkantoran.webp') }}" alt="Prestasi Tim LKR SMKN 1 Probolinggo" style="width: 100%; height: auto; display: block;" width="800" height="450" loading="eager" fetchpriority="high">
             </div>
           </div>
 
-          <div class="article-content reveal-item" data-delay="150">
+          <div class="article-content reveal-item" data-delay="150" style="line-height: 1.8; color: #334155; font-size: 0.96875rem;">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur nisi in magna mollis, in ut ornare, tristique accumsan nunc. Pellentesque maximus vulputate nisi, id lacinia libero. Aenean venenatis nisl sed libero condimentum, ut mauris arcu sollicitudin lectus ut congue. Aenean ac lacus magna. Mauris ullamcorper tincidunt ipsum non consequat. Quisque tellus nibh porta sollicitudin luctus ut congue sed dapibus.
+              <strong>PROBOLINGGO</strong> — Prestasi membanggakan kembali ditorehkan oleh peserta didik SMK Negeri 1 Probolinggo di tingkat regional Jawa Timur. Tim Lomba Ketangkasan Baris-Berbaris (LKR) SMKN 1 Probolinggo sukses menyabet predikat <strong>Juara 2 Potensial</strong> dalam ajang bergengsi <em>STEP OF HONOR Jawa Timur 2025</em> yang diselenggarakan di GOR Ki Mageti, Magetan.
             </p>
             
             <p>
-              Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut volutpat, amet mollis feugiat elit, amet molestie mauris, cursus scelerisque diam eut libero. Quisque eu finibus lorem. Maecenas id tincidunt ipsum. Nam in lacinia elit, luctum porta sollicitudin luctus et congue. Aenean ac lacus magna. Mauris ullamcorper mauris a arcu porttitor tincidunt lectus ut congue dolor in congue.
+              Kompetisi yang diikuti oleh puluhan kontingen perwakilan SMA/SMK/MA se-Jawa Timur ini menguji ketahanan fisik, kekompakan formasi variasi, kedisiplinan aba-aba, serta kepemimpinan komandan peleton. Tim SMKN 1 Probolinggo yang beranggotakan gabungan siswa konsentrasi keahlian MPLB, RPL, Bisnis Digital, dan Akuntansi tampil memukau dengan menyajikan formasi formil berpadu variasi kreasi bertema "Semangat Vokasi Indonesia Maju".
             </p>
 
-            <div style="background: #F1F5F9; width: 100%; aspect-ratio: 16/9; border-radius: 12px; margin: 24px 0; display: flex; align-items: center; justify-content: center; color: #64748B;">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                <circle cx="8.5" cy="8.5" r="1.5"/>
-                <path d="M21 15l-5-5L5 21"/>
-              </svg>
-            </div>
+            <blockquote style="background: #F8FAFC; border-left: 4px solid #1D4ED8; border-radius: 0 10px 10px 0; padding: 18px 24px; margin: 28px 0; font-style: italic; color: #082046; font-weight: 600;">
+              &ldquo;Alhamdulillah, kerja keras latihan intensif selama dua bulan berbuah manis. Prestasi ini membuktikan bahwa siswa kejuruan tidak hanya unggul dalam keahlian teknis industri, tetapi juga memiliki kedisiplinan mental dan jiwa kepemimpinan yang tangguh,&rdquo; ungkap Pembina Ekstrakurikuler Paskibra SMKN 1 Probolinggo.
+            </blockquote>
 
             <p>
-              Sed at elit elit. Quisque cursus dictum metus posuere lobortis. Nam fringilla mauris mauris, ullamcorper ac volutpat, tristique luctus sapien. Sed congue ultrices metus aliquam justo mauris arcu, tincidunt massa iaculis sit amet non, gravida mauris ullamcorper leo. Maecenas id interdum mollis fermentum nec a molestie mauris, cursus scelerisque diam eut libero. Quisque eu finibus augue. Nullam porta sollicitudin lectus et congue. Aenean ac lacus magna. Mauris ullamcorper mauris a arcu porttitor tincidunt lectus ut congue faucibus in velit ornare nisi sed tellus augue quis justo. Aenean ut magna ut magna ullamcorper at eu. Maecenas lacinia sollicitudin congue.
+              Kepala SMKN 1 Probolinggo, Edi Hananto Eko, M.Pd., menyampaikan apresiasi setinggi-tingginya kepada seluruh anggota tim dan pelatih. Beliau menegaskan bahwa pencapaian ini selaras dengan pilar pendidikan karakter sekolah sebagai <strong>SMK Pusat Keunggulan (SMK PK)</strong> yang mengedepankan pembentukan karakter Profil Pelajar Pancasila dan budaya kerja industri 5R.
             </p>
 
             <p>
-              Quisque dictum vestibulum sapien et elementum. Sed congue dictum aliquam non aliquat aliquam euismod. Sed sollicitudin, netus et malesuada ullamcorper leo. Aenean vitae pellentesque lacus arcu porttitor tincidunt facilisis in neque. Vivamus mauris faucibus in ultricies quam ut nunc. Pellentesque magna molestie id in cursus in et justo. Maecenas nulla ullamcorper et et sed ullamcorper vulputate risus. Vivamus luctus magna molestie cursus scelerisque diam eut libero. Quisque eu finibus lorem. Maecenas id tincidunt dictum. Nullam sodales, metus ut finibus lorem. Morbi accumsan vitae in adipiscing in.
-            </p>
-
-            <div style="background: #F1F5F9; width: 100%; aspect-ratio: 16/9; border-radius: 12px; margin: 24px 0; display: flex; align-items: center; justify-content: center; color: #64748B;">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                <circle cx="8.5" cy="8.5" r="1.5"/>
-                <path d="M21 15l-5-5L5 21"/>
-              </svg>
-            </div>
-
-            <p>
-              Sed at elit elit. Quisque cursus dictum metus posuere lobortis. Nam fringilla mauris mauris, ullamcorper ac volutpat, tristique luctus sapien. Sed congue ultrices metus aliquam justo mauris arcu, tincidunt massa iaculis sit amet non, gravida mauris ullamcorper leo. Maecenas id interdum mollis fermentum nec a molestie mauris, cursus scelerisque diam eut libero. Quisque eu finibus augue. Nullam porta sollicitudin lectus et congue. Aenean ac lacus magna. Mauris ullamcorper mauris a arcu porttitor tincidunt lectus ut congue faucibus in velit ornare nisi sed tellus augue quis justo. Aenean ut magna ut magna ullamcorper at eu. Maecenas lacinia sollicitudin congue.
-            </p>
-
-            <p>
-              Quisque dictum vestibulum sapien et elementum. Sed congue dictum aliquam non aliquat aliquam euismod. Sed sollicitudin, netus et malesuada ullamcorper leo. Aenean vitae pellentesque lacus arcu porttitor tincidunt facilisis in neque. Vivamus mauris faucibus in ultricies quam ut nunc. Pellentesque magna molestie id in cursus in et justo. Maecenas nulla ullamcorper et et sed ullamcorper vulputate risus. Vivamus luctus magna molestie id. Morbi volutpat in. Morbi accumsan maximus mauris imperdiet scelerisque. Nam mauris massa finibus vehicula sit amet et nisi, finibus eu lacus in dapibus magna at cursus in et justo. Maecenas posuere. Ut magna augue vero eros varius imperdiet ut.
+              Dengan torehan piala ini, SMKN 1 Probolinggo semakin mempertegas komitmennya dalam memfasilitasi minat dan bakat peserta didik melalui 11 cabang ekstrakurikuler resmi, sekaligus mengharumkan nama Kota Probolinggo di kancah perlombaan tingkat provinsi maupun nasional.
             </p>
           </div>
         </article>
@@ -416,33 +392,33 @@
             <h3 class="sidebar-title">Kategori Berita</h3>
             <ul class="sidebar-kategori-list">
               <li class="sidebar-kategori-item">
-                <a href="#" class="sidebar-kategori-link">
-                  <span>Kategori 1</span>
+                <a href="{{ route('berita.index') }}" class="sidebar-kategori-link">
+                  <span>Prestasi Siswa &amp; LKS</span>
+                  <span class="sidebar-kategori-count">(28)</span>
+                </a>
+              </li>
+              <li class="sidebar-kategori-item">
+                <a href="{{ route('berita.index') }}" class="sidebar-kategori-link">
+                  <span>Kemitraan DUDI &amp; Industri</span>
+                  <span class="sidebar-kategori-count">(35)</span>
+                </a>
+              </li>
+              <li class="sidebar-kategori-item">
+                <a href="{{ route('berita.index') }}" class="sidebar-kategori-link">
+                  <span>Teaching Factory &amp; BLUD</span>
+                  <span class="sidebar-kategori-count">(19)</span>
+                </a>
+              </li>
+              <li class="sidebar-kategori-item">
+                <a href="{{ route('berita.index') }}" class="sidebar-kategori-link">
+                  <span>Kegiatan Ekstrakurikuler</span>
+                  <span class="sidebar-kategori-count">(16)</span>
+                </a>
+              </li>
+              <li class="sidebar-kategori-item">
+                <a href="{{ route('berita.index') }}" class="sidebar-kategori-link">
+                  <span>Informasi Karir BKK &amp; PPDB</span>
                   <span class="sidebar-kategori-count">(24)</span>
-                </a>
-              </li>
-              <li class="sidebar-kategori-item">
-                <a href="#" class="sidebar-kategori-link">
-                  <span>Kategori 2</span>
-                  <span class="sidebar-kategori-count">(12)</span>
-                </a>
-              </li>
-              <li class="sidebar-kategori-item">
-                <a href="#" class="sidebar-kategori-link">
-                  <span>Kategori 3</span>
-                  <span class="sidebar-kategori-count">(32)</span>
-                </a>
-              </li>
-              <li class="sidebar-kategori-item">
-                <a href="#" class="sidebar-kategori-link">
-                  <span>Kategori 4</span>
-                  <span class="sidebar-kategori-count">(18)</span>
-                </a>
-              </li>
-              <li class="sidebar-kategori-item">
-                <a href="#" class="sidebar-kategori-link">
-                  <span>Kategori 5</span>
-                  <span class="sidebar-kategori-count">(21)</span>
                 </a>
               </li>
             </ul>
@@ -450,17 +426,31 @@
 
           <!-- Berita Lainnya -->
           <div class="sidebar-card reveal-item" data-delay="200">
-            <h3 class="sidebar-title">Berita Lainnya</h3>
+            <h3 class="sidebar-title">Berita Terkait &amp; Populer</h3>
             
-            @for ($i = 1; $i <= 3; $i++)
-            <a href="{{ route('berita.show', $i + 100) }}" class="berita-lainnya-card">
-              <img src="{{ asset('images/news_bisnis_digital.webp') }}" alt="Berita {{ $i }}" class="berita-lainnya-image">
+            <a href="{{ route('berita.show', 1) }}" class="berita-lainnya-card">
+              <img src="{{ asset('images/school_gate.webp') }}" alt="SMK Pusat Keunggulan" class="berita-lainnya-image" loading="lazy">
               <div class="berita-lainnya-content">
-                <div class="berita-lainnya-date">30 Oktober 2025</div>
-                <h4 class="berita-lainnya-title">Tim LKR SMKN 1 Probolinggo Raih Juara 2 Potensial di Ajang STEP OF HONOR Jawa Timur 2025</h4>
+                <div class="berita-lainnya-date">10 Oktober 2026</div>
+                <h4 class="berita-lainnya-title">SMKN 1 Probolinggo Perkuat Status SMK Pusat Keunggulan (SMK PK)</h4>
               </div>
             </a>
-            @endfor
+
+            <a href="{{ route('berita.show', 10) }}" class="berita-lainnya-card">
+              <img src="{{ asset('images/lab_rpl_resmi.webp') }}" alt="Axioo Class Lab RPL" class="berita-lainnya-image" loading="lazy">
+              <div class="berita-lainnya-content">
+                <div class="berita-lainnya-date">29 September 2026</div>
+                <h4 class="berita-lainnya-title">Peresmian Axioo Class Program &amp; Jagoan Hosting di Lab RPL</h4>
+              </div>
+            </a>
+
+            <a href="{{ route('berita.show', 13) }}" class="berita-lainnya-card">
+              <img src="{{ asset('images/news_bisnis_digital.webp') }}" alt="Teaching Factory SMEXAMALL" class="berita-lainnya-image" loading="lazy">
+              <div class="berita-lainnya-content">
+                <div class="berita-lainnya-date">27 September 2026</div>
+                <h4 class="berita-lainnya-title">Katalog SMEXAMALL Tembus Ratusan Transaksi Siswa Vokasi</h4>
+              </div>
+            </a>
           </div>
         </aside>
       </div>

@@ -3,31 +3,30 @@
 @section('title', 'Website Resmi SMKN 1 Probolinggo - Sekolah Pusat Keunggulan & BLUD')
 
 @section('content')
-  <!-- 1. Hero Section (Exact 1-Screen Viewport Matching Telkom) -->
+  <!-- 1. Hero Section (Exact 1-Screen Viewport Matching Telkom dengan Foto Cutout hero sec.webp) -->
   <section class="telkom-hero-section">
     <div class="container hero-container text-center">
-      <div class="hero-top-badge reveal-item" data-delay="0">
-        <span class="badge-pill">Selamat Datang di Portal Resmi SMKN 1 Probolinggo</span>
+      <div class="hero-eyebrow reveal-item" data-delay="0">
+        Selamat Datang di <span class="text-accent">SMKN 1 Probolinggo!</span>
       </div>
       <h1 class="hero-main-title reveal-item" data-delay="50">
         Sekolah Tangguh, Berkarakter,<br>
         <span class="text-accent">&amp; Berwawasan Vokasi Digital</span>
       </h1>
 
-      <!-- Hero Model Arch Frame -->
-      <div class="hero-model-wrapper reveal-item" data-delay="100">
-        <div class="hero-arch-frame">
-          <img src="{{ asset('images/school_gate.webp') }}" alt="Gerbang dan Kampus Digital SMKN 1 Probolinggo" class="hero-student-img" width="760" height="320" fetchpriority="high" loading="eager">
-        </div>
+      <!-- Hero Model Stage dengan Lingkaran Dashed Telkom di Belakang Foto Cutout -->
+      <div class="hero-stage-wrapper reveal-item" data-delay="100">
+        <div class="hero-dashed-arc-circle"></div>
+        <img src="{{ asset('images/rial.webp') }}" alt="Gedung Technopark SMKN 1 Probolinggo" class="hero-student-img" width="520" height="340" fetchpriority="high" loading="eager">
       </div>
 
-      <!-- 2. Big Metric Strip (Overlapping Arch Bottom Perfectly Like Telkom) -->
+      <!-- 2. Big Metric Strip Counter Bar (Overlapping Bottom Foto Persis Telkom) -->
       <div class="metric-strip-container reveal-item" data-delay="150">
         <div class="metric-item">
           <div class="metric-num count-ticker" data-target="5">5</div>
           <div class="metric-label">Konsentrasi Keahlian</div>
         </div>
-        <div class="metric-item" style="border-left: 1px solid rgba(255,255,255,0.15); border-right: 1px solid rgba(255,255,255,0.15);">
+        <div class="metric-item">
           <div class="metric-num count-ticker" data-target="1800" data-suffix="+">1.800+</div>
           <div class="metric-label">Peserta Didik Aktif</div>
         </div>
@@ -39,26 +38,30 @@
     </div>
   </section>
 
-  <!-- 3. Sambutan Kepala Sekolah (2-Kolom Horisontal Gaya Telkom) -->
+  <!-- 3. Sambutan Kepala Sekolah (Persis 100% Layout Telkom Sidoarjo) -->
   <section class="section-sambutan" id="sambutan">
     <div class="container sambutan-container">
       <div class="sambutan-photo-col reveal-item" data-delay="0">
-        <div class="sambutan-arch-box">
-          <img src="{{ asset('images/kepala_sekolah.webp') }}" alt="Edi Hananto Eko, M.Pd. - Kepala SMKN 1 Probolinggo" class="sambutan-img" width="320" height="400" loading="lazy">
+        <div class="sambutan-visual-frame">
+          <div class="sambutan-deco-pill"></div>
+          <div class="sambutan-deco-arch"></div>
+          <img src="{{ asset('images/kepala_sekolah.webp') }}" alt="Edi Hananto Eko, M.Pd. - Kepala SMKN 1 Probolinggo" class="sambutan-model-img" width="340" height="420" loading="lazy">
         </div>
       </div>
       <div class="sambutan-text-col reveal-item" data-delay="100">
-        <span class="sambutan-tag">Sambutan Pimpinan</span>
-        <h2 class="sambutan-title">
-          Kepala Sekolah<br>
-          <span class="text-accent">SMKN 1 Probolinggo</span>
-        </h2>
+        <div class="sambutan-eyebrow">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span>Sambutan</span>
+        </div>
+        <div class="sambutan-heading-group">
+          <h2 class="sambutan-title">Kepala Sekolah</h2>
+          <h3 class="sambutan-school-name">SMKN 1 Probolinggo</h3>
+        </div>
         <p class="sambutan-desc">
-          Selamat datang di portal resmi SMKN 1 Probolinggo. Sebagai institusi vokasi unggulan rujukan Jawa Timur dan SMK Pusat Keunggulan berstatus BLUD, kami berkomitmen mencetak lulusan tangguh yang tidak hanya menguasai keahlian teknis era digital, melainkan juga berakhlak mulia dan siap kerja, melanjutkan studi, maupun berwirausaha mandiri (BMW).
+          Selamat datang di website resmi SMKN 1 Probolinggo. Sebagai institusi pendidikan vokasi yang berfokus pada keahlian teknologi dan vokasi digital unggulan di Jawa Timur, kami berkomitmen mencetak generasi yang tidak hanya unggul dalam kompetensi, tetapi juga berkarakter dan siap menghadapi tantangan era digital. Semoga kehadiran website ini menjadi jendela informasi yang bermanfaat bagi seluruh masyarakat.
         </p>
-        <div class="sambutan-author">
-          <strong>Edi Hananto Eko, M.Pd.</strong>
-          <span>Kepala SMK Negeri 1 Probolinggo</span>
+        <div class="sambutan-signature">
+          — Edi Hananto Eko, M.Pd.
         </div>
       </div>
     </div>
@@ -141,171 +144,385 @@
     </div>
   </section>
 
-  <!-- 5. Mitra Industri DUDI (Dashed Border Card Grid Gaya Telkom) -->
-  <section class="section-mitra-dudi" id="mitra">
-    <div class="container text-center">
-      <span style="font-size: 0.7rem; font-weight: 700; color: #2563EB; background: #EFF6FF; padding: 3px 12px; border-radius: 9999px; display: inline-block; margin-bottom: 8px;">Kemitraan Industri Nasional</span>
-      <h2 class="dual-heading" style="margin: 0;">Mitra DUDI &amp; Lembaga Sertifikasi</h2>
-      <div class="partner-dashed-grid reveal-item" data-delay="100">
-        <div class="partner-dashed-card">
+  <!-- 5. Mitra Industri DUDI (Infinite Marquee Running Animated Gaya Telkom Tanpa Judul) -->
+  <section class="section-mitra-marquee" id="mitra">
+    <div class="marquee-track-container">
+      <div class="marquee-track">
+        <!-- Set 1 -->
+        <div class="partner-marquee-card">
           <img src="{{ asset('images/partners/partner_axioo.png') }}" alt="Axioo Class" loading="lazy">
         </div>
-        <div class="partner-dashed-card">
+        <div class="partner-marquee-card">
           <img src="{{ asset('images/partners/partner_alfamart.png') }}" alt="Alfamart Class" loading="lazy">
         </div>
-        <div class="partner-dashed-card">
+        <div class="partner-marquee-card">
           <img src="{{ asset('images/partners/partner_bank_jatim.svg') }}" alt="Bank Jatim" loading="lazy">
         </div>
-        <div class="partner-dashed-card">
+        <div class="partner-marquee-card">
           <img src="{{ asset('images/partners/partner_jagoanhosting.png') }}" alt="Jagoan Hosting" loading="lazy">
         </div>
-        <div class="partner-dashed-card">
+        <div class="partner-marquee-card">
           <img src="{{ asset('images/partners/partner_agmari.svg') }}" alt="AGMARI AKSESMU" loading="lazy">
         </div>
-        <div class="partner-dashed-card">
-          <img src="{{ asset('images/partners/partner_hummasoft.png') }}" alt="Hummasoft Technology" loading="lazy">
+        <div class="partner-marquee-card">
+          <img src="{{ asset('images/partners/partner_hummasoft.png') }}" alt="Hummasoft" loading="lazy">
+        </div>
+        <div class="partner-marquee-card">
+          <img src="{{ asset('images/partners/partner_intel.png') }}" alt="Intel" loading="lazy">
+        </div>
+        <div class="partner-marquee-card">
+          <img src="{{ asset('images/partners/partner_indomaret.svg') }}" alt="Indomaret" loading="lazy">
+        </div>
+        <div class="partner-marquee-card">
+          <img src="{{ asset('images/partners/partner_maspion.png') }}" alt="Maspion" loading="lazy">
+        </div>
+        <div class="partner-marquee-card">
+          <img src="{{ asset('images/partners/partner_ubig.png') }}" alt="UBIG" loading="lazy">
+        </div>
+
+        <!-- Set 2 (Duplikasi untuk Seamless Infinite Loop) -->
+        <div class="partner-marquee-card">
+          <img src="{{ asset('images/partners/partner_axioo.png') }}" alt="Axioo Class" loading="lazy">
+        </div>
+        <div class="partner-marquee-card">
+          <img src="{{ asset('images/partners/partner_alfamart.png') }}" alt="Alfamart Class" loading="lazy">
+        </div>
+        <div class="partner-marquee-card">
+          <img src="{{ asset('images/partners/partner_bank_jatim.svg') }}" alt="Bank Jatim" loading="lazy">
+        </div>
+        <div class="partner-marquee-card">
+          <img src="{{ asset('images/partners/partner_jagoanhosting.png') }}" alt="Jagoan Hosting" loading="lazy">
+        </div>
+        <div class="partner-marquee-card">
+          <img src="{{ asset('images/partners/partner_agmari.svg') }}" alt="AGMARI AKSESMU" loading="lazy">
+        </div>
+        <div class="partner-marquee-card">
+          <img src="{{ asset('images/partners/partner_hummasoft.png') }}" alt="Hummasoft" loading="lazy">
+        </div>
+        <div class="partner-marquee-card">
+          <img src="{{ asset('images/partners/partner_intel.png') }}" alt="Intel" loading="lazy">
+        </div>
+        <div class="partner-marquee-card">
+          <img src="{{ asset('images/partners/partner_indomaret.svg') }}" alt="Indomaret" loading="lazy">
+        </div>
+        <div class="partner-marquee-card">
+          <img src="{{ asset('images/partners/partner_maspion.png') }}" alt="Maspion" loading="lazy">
+        </div>
+        <div class="partner-marquee-card">
+          <img src="{{ asset('images/partners/partner_ubig.png') }}" alt="UBIG" loading="lazy">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 6. Program Keahlian (Interactive 5-Major Department Tabs Matching Telkom) -->
+  <!-- 6. Program Keahlian (100% Persis Telkom Sidoarjo dengan Model Siswa) -->
   <section class="section-program-keahlian" id="jurusan">
     <div class="container">
       <div class="text-center reveal-item" data-delay="0">
-        <h2 class="dual-heading" style="margin: 0 0 6px;">
-          Program Keahlian <span class="text-accent">di SMKN 1 Probolinggo</span>
+        <h2 class="program-main-title">
+          Program Keahlian<br>
+          <span>di SMKN 1 Probolinggo</span>
         </h2>
-        <p style="color: #64748B; font-size: 0.84rem; margin: 0 auto; max-width: 540px;">
-          Pilih konsentrasi keahlian berstandar industri untuk melihat fasilitas lab, kurikulum unggulan, dan proyeksi karier masa depan.
-        </p>
       </div>
 
-      <!-- Tab Buttons Navigation -->
-      <div class="major-tabs-nav reveal-item" data-delay="50">
-        <button type="button" class="major-tab-pill active" data-major="rpl" onclick="selectMajor('rpl')">Rekayasa Perangkat Lunak</button>
-        <button type="button" class="major-tab-pill" data-major="bd" onclick="selectMajor('bd')">Bisnis Digital</button>
-        <button type="button" class="major-tab-pill" data-major="mplb" onclick="selectMajor('mplb')">Manajemen Perkantoran</button>
-        <button type="button" class="major-tab-pill" data-major="akl" onclick="selectMajor('akl')">Akuntansi</button>
-        <button type="button" class="major-tab-pill" data-major="lpb" onclick="selectMajor('lpb')">Layanan Perbankan</button>
-      </div>
-
-      <!-- Interactive Display Box -->
-      <div class="major-display-box reveal-item" data-delay="100" id="majorDisplayCard">
-        <div class="major-display-left">
-          <img src="{{ asset('images/jurusan/lab_rpl.webp') }}" alt="Laboratorium RPL" class="major-display-img" id="majorImg" loading="lazy">
+      <!-- Tab Buttons Navigation Capsule -->
+      <div class="program-tab-wrapper reveal-item" data-delay="50">
+        <div class="program-tabs-capsule">
+          <button type="button" class="program-tab-btn active" data-major="rpl" onclick="selectMajor('rpl')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span>RPL</span>
+          </button>
+          <button type="button" class="program-tab-btn" data-major="bd" onclick="selectMajor('bd')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            <span>BD</span>
+          </button>
+          <button type="button" class="program-tab-btn" data-major="mplb" onclick="selectMajor('mplb')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            <span>MPLB</span>
+          </button>
+          <button type="button" class="program-tab-btn" data-major="akl" onclick="selectMajor('akl')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            <span>AKL</span>
+          </button>
+          <button type="button" class="program-tab-btn" data-major="lpb" onclick="selectMajor('lpb')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+            <span>LPB</span>
+          </button>
         </div>
-        <div class="major-display-right">
-          <span style="font-size: 0.75rem; font-weight: 700; color: #2563EB; background: #EFF6FF; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 8px;" id="majorBadge">
-            Kelas Industri Axioo &amp; Jagoan Hosting
-          </span>
-          <h3 class="major-display-title" id="majorTitle">Rekayasa Perangkat Lunak</h3>
-          <p class="major-display-desc" id="majorDesc">
-            Fokus pada rekayasa aplikasi web modern (Laravel &amp; React), mobile Flutter, database cloud, dan integrasi AI terapan binaan Axioo Smart Classroom.
+      </div>
+
+      <!-- Interactive Display Box (2-Column Telkom Layout) -->
+      <div class="program-display-card reveal-item" data-delay="100" id="majorDisplayCard">
+        <!-- Visual Model Siswa dengan Arch Telkom -->
+        <div class="program-visual-col">
+          <div class="program-arch-wrapper">
+            <div class="program-deco-shape"></div>
+            <div class="program-deco-dashed"></div>
+            <img src="{{ asset('images/jurusan/bg_bd.webp') }}" alt="Model Siswa Kejuruan" class="program-model-img" id="majorImg" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Detail Konten Jurusan -->
+        <div class="program-content-col">
+          <h3 class="program-title" id="majorTitle">
+            <span class="text-accent" id="majorTitleAccent">Rekayasa</span> <span id="majorTitleRest">Perangkat Lunak</span>
+          </h3>
+          <p class="program-desc" id="majorDesc">
+            Program 3 tahun yang mempelajari rekayasa web modern (Laravel &amp; React), mobile Flutter, database cloud, dan integrasi AI terapan berstandar Axioo Smart Classroom.
           </p>
 
-          <div class="major-feature-list" id="majorFeatures">
-            <div class="major-feature-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Full-Stack Web (Laravel, React) &amp; Mobile Flutter Development</span>
+          <!-- 3 Fitur Poin dengan Icon Bulat -->
+          <div class="program-points-list" id="majorFeatures">
+            <div class="program-point-item">
+              <div class="program-point-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <div class="program-point-text">
+                <strong>Software Development</strong>
+                <p>Belajar membuat aplikasi web modern, mobile Flutter, dan sistem cloud yang fungsional.</p>
+              </div>
             </div>
-            <div class="major-feature-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Uji Sertifikasi Profesi BNSP Junior Web Developer &amp; LSP-P1</span>
+            <div class="program-point-item">
+              <div class="program-point-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              </div>
+              <div class="program-point-text">
+                <strong>Database &amp; Cloud Computing</strong>
+                <p>Arsitektur database relasional, RESTful API backend, dan server cloud hosting mandiri.</p>
+              </div>
             </div>
-            <div class="major-feature-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Unit Produksi Software House &amp; TEFA di Marketplace SMEXAMALL</span>
+            <div class="program-point-item">
+              <div class="program-point-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+              </div>
+              <div class="program-point-text">
+                <strong>Networking &amp; Cybersecurity</strong>
+                <p>Sertifikasi BNSP Junior Web Developer, keamanan aplikasi, dan unit produksi SMEXAMALL.</p>
+              </div>
             </div>
           </div>
 
-          <div class="major-prospect-box" id="majorProspect">
-            <strong>Prospek Karier:</strong> Software Engineer, Full-Stack Web Developer, Mobile App Developer, Database Administrator, IT Consultant.
+          <!-- Prospek Kerja -->
+          <div class="program-prospect-row" id="majorProspectBox">
+            <strong class="prospect-label">Prospek Kerja:</strong>
+            <p class="prospect-names" id="majorProspect">Software Engineer, Web Developer, Mobile App Developer, Database Administrator, IT Consultant.</p>
           </div>
 
-          <a href="{{ route('jurusan.rpl') }}" class="major-cta-btn" id="majorCtaLink">
-            <span>Pelajari Lebih Lanjut</span>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <!-- Tombol CTA -->
+          <a href="{{ route('jurusan.rpl') }}" class="program-cta-btn" id="majorCtaLink">
+            <span>Pelajari lebih lanjut</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 5. Berita & Kegiatan Terkini (Data Riil dari smkn1probolinggo.sch.id) -->
-  <section class="section" id="berita" style="background: #F8FAFC;">
+  <!-- 5. Berita & Informasi Terkini (Matching Telkom 2-Kolom + Hybrid Kreatif UI/UX Pro Max) -->
+  <section class="section-berita-telkom" id="berita">
     <div class="container">
-      <div class="section-header reveal-item" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px;">
-        <div>
-          <h2 class="section-title">Berita &amp; Kegiatan Terkini</h2>
-          <p style="color: var(--text-muted); font-size: 0.9375rem; margin-top: 6px;">Informasi kegiatan akademik, prestasi siswa, dan program vokasi terbaru SMKN 1 Probolinggo.</p>
-        </div>
-        <a href="{{ route('berita.index') }}" class="btn btn-outline-navy btn-sm" style="display: inline-flex; align-items: center; gap: 6px; font-weight: 700;">
-          Lihat Semua Berita
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-        </a>
+      <!-- Section Header -->
+      <div class="berita-telkom-header reveal-item" data-delay="0">
+        <h2 class="berita-telkom-title">
+          Berita &amp; Informasi Terkini<br>
+          <span class="text-accent">SMKN 1 Probolinggo</span>
+        </h2>
       </div>
 
-      <div class="news-grid-3">
-        <!-- Berita 1 -->
-        <article class="news-card reveal-item" data-delay="0">
-          <div class="news-card-img-wrap">
-            <img src="{{ asset('images/news_bisnis_digital.webp') }}" alt="Siswa Bisnis Digital Belajar Bersama AGMARI" class="news-card-img" loading="lazy" width="400" height="225">
+      <!-- 2-Column Layout: Sidebar Kategori di Kiri + Grid 6 Kartu di Kanan -->
+      <div class="berita-telkom-layout">
+        <!-- Sidebar Kategori Interaktif -->
+        <aside class="berita-category-sidebar reveal-item" data-delay="50">
+          <div class="berita-category-heading">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.2"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/></svg>
+            <span>Kategori Berita</span>
           </div>
-          <div class="news-card-body">
-            <div class="news-editorial-meta">30 SEPTEMBER 2026 • BISNIS DIGITAL</div>
-            <h3 class="news-card-title">
-              Perkuat Wawasan Bisnis Digital, Siswa Kelas X Belajar Bersama AGMARI AKSESMU
-            </h3>
-            <p class="news-card-desc">
-              Siswa konsentrasi keahlian Bisnis Digital mendapatkan pembekalan langsung dari praktisi industri mengenai tren ritel dan live shopping e-commerce.
-            </p>
-            <a href="{{ route('berita.show', 1) }}" class="news-card-link">
-              <span>Baca Selengkapnya</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </a>
-          </div>
-        </article>
+          <ul class="berita-category-list">
+            <li>
+              <button type="button" class="berita-cat-btn active" data-cat="all" onclick="filterNewsCategory('all', this)">
+                <span>Semua Berita</span>
+                <span class="cat-count">6</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="berita-cat-btn" data-cat="kegiatan" onclick="filterNewsCategory('kegiatan', this)">
+                <span>Kegiatan Sekolah</span>
+                <span class="cat-count">2</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="berita-cat-btn" data-cat="prestasi" onclick="filterNewsCategory('prestasi', this)">
+                <span>Prestasi Siswa</span>
+                <span class="cat-count">2</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="berita-cat-btn" data-cat="kemitraan" onclick="filterNewsCategory('kemitraan', this)">
+                <span>Kemitraan DUDI</span>
+                <span class="cat-count">1</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="berita-cat-btn" data-cat="karya" onclick="filterNewsCategory('karya', this)">
+                <span>Karya &amp; Inovasi</span>
+                <span class="cat-count">1</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="berita-cat-btn" data-cat="karir" onclick="filterNewsCategory('karir', this)">
+                <span>BKK &amp; Karir</span>
+                <span class="cat-count">1</span>
+              </button>
+            </li>
+          </ul>
+        </aside>
 
-        <!-- Berita 2 -->
-        <article class="news-card reveal-item" data-delay="100">
-          <div class="news-card-img-wrap">
-            <img src="{{ asset('images/news_perkantoran.webp') }}" alt="Paperwork to Partywork MPLB" class="news-card-img" loading="lazy" width="400" height="225">
-          </div>
-          <div class="news-card-body">
-            <div class="news-editorial-meta">28 SEPTEMBER 2026 • MANAJEMEN PERKANTORAN</div>
-            <h3 class="news-card-title">
-              Dari Paperwork to Partywork, Siswa MPLB Belajar Mengelola Event Profesional
-            </h3>
-            <p class="news-card-desc">
-              Praktik nyata kepanitiaan dan public relations dalam mengorganisir kegiatan resmi sekolah berstandar MICE perkantoran modern.
-            </p>
-            <a href="{{ route('berita.show', 2) }}" class="news-card-link">
-              <span>Baca Selengkapnya</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </a>
-          </div>
-        </article>
+        <!-- Grid 6 Kartu Berita (3 Kolom x 2 Baris) -->
+        <div class="berita-grid-container reveal-item" data-delay="100">
+          <div class="berita-cards-grid" id="beritaCardsGrid">
+            <!-- Card 1 -->
+            <article class="telkom-news-card" data-category="kegiatan">
+              <a href="{{ route('berita.show', 1) }}" class="telkom-news-link" aria-label="Lihat detail berita">
+                <div class="news-thumb-box">
+                  <img src="{{ asset('images/school_gate.webp') }}" alt="SMKN 1 Probolinggo Pusat Keunggulan" class="news-thumb-img" loading="lazy" width="400" height="225">
+                  <span class="news-glass-chip">KEGIATAN</span>
+                  <span class="news-watermark-tag">SMEXAPRO</span>
+                </div>
+                <div class="news-card-content">
+                  <h3 class="news-title-text">
+                    SMKN 1 Probolinggo Perkuat Status SMK Pusat Keunggulan (SMK PK) Skema Lanjutan
+                  </h3>
+                  <div class="news-meta-row">
+                    <span class="news-category-name">Kegiatan Sekolah</span>
+                    <span class="news-date-meta">2026-10-10</span>
+                  </div>
+                </div>
+              </a>
+            </article>
 
-        <!-- Berita 3 -->
-        <article class="news-card reveal-item" data-delay="200">
-          <div class="news-card-img-wrap">
-            <img src="{{ asset('images/news_ai.webp') }}" alt="Kepolisian Probolinggo & AI" class="news-card-img" loading="lazy" width="400" height="225">
+            <!-- Card 2 -->
+            <article class="telkom-news-card" data-category="prestasi">
+              <a href="{{ route('berita.show', 2) }}" class="telkom-news-link" aria-label="Lihat detail berita">
+                <div class="news-thumb-box">
+                  <img src="{{ asset('images/lab_rpl_resmi.webp') }}" alt="Siswa RPL Juara LKS Web Technologies" class="news-thumb-img" loading="lazy" width="400" height="225">
+                  <span class="news-glass-chip">PRESTASI</span>
+                  <span class="news-watermark-tag">RPL</span>
+                </div>
+                <div class="news-card-content">
+                  <h3 class="news-title-text">
+                    Siswa RPL Raih Medali Emas LKS Wilayah Kerja Bidang Web Technologies
+                  </h3>
+                  <div class="news-meta-row">
+                    <span class="news-category-name">Prestasi Siswa</span>
+                    <span class="news-date-meta">2026-10-02</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="telkom-news-card" data-category="kemitraan">
+              <a href="{{ route('berita.show', 3) }}" class="telkom-news-link" aria-label="Lihat detail berita">
+                <div class="news-thumb-box">
+                  <img src="{{ asset('images/news_bisnis_digital.webp') }}" alt="Bisnis Digital Bersama AGMARI" class="news-thumb-img" loading="lazy" width="400" height="225">
+                  <span class="news-glass-chip">KEMITRAAN</span>
+                  <span class="news-watermark-tag">BD</span>
+                </div>
+                <div class="news-card-content">
+                  <h3 class="news-title-text">
+                    Perkuat Wawasan Bisnis Digital, Siswa Belajar Bersama AGMARI AKSESMU
+                  </h3>
+                  <div class="news-meta-row">
+                    <span class="news-category-name">Kemitraan DUDI</span>
+                    <span class="news-date-meta">2026-09-30</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="telkom-news-card" data-category="karya">
+              <a href="{{ route('berita.show', 1) }}" class="telkom-news-link" aria-label="Lihat detail berita">
+                <div class="news-thumb-box">
+                  <img src="{{ asset('images/news_perkantoran.webp') }}" alt="Siswa MPLB Kelola Event Profesional" class="news-thumb-img" loading="lazy" width="400" height="225">
+                  <span class="news-glass-chip">INOVASI</span>
+                  <span class="news-watermark-tag">MPLB</span>
+                </div>
+                <div class="news-card-content">
+                  <h3 class="news-title-text">
+                    Dari Paperwork to Partywork, Siswa MPLB Belajar Mengelola Event Profesional
+                  </h3>
+                  <div class="news-meta-row">
+                    <span class="news-category-name">Karya &amp; Inovasi</span>
+                    <span class="news-date-meta">2026-09-28</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Card 5 -->
+            <article class="telkom-news-card" data-category="karir">
+              <a href="{{ route('berita.show', 2) }}" class="telkom-news-link" aria-label="Lihat detail berita">
+                <div class="news-thumb-box">
+                  <img src="{{ asset('images/bkk_indomarco.webp') }}" alt="BKK Walk-in Interview Rekrutmen" class="news-thumb-img" loading="lazy" width="400" height="225">
+                  <span class="news-glass-chip">BKK KARIR</span>
+                  <span class="news-watermark-tag">BKK</span>
+                </div>
+                <div class="news-card-content">
+                  <h3 class="news-title-text">
+                    Bursa Kerja Khusus (BKK) Gelar Walk-In Interview Bersama Retail &amp; Bank
+                  </h3>
+                  <div class="news-meta-row">
+                    <span class="news-category-name">BKK &amp; Karir</span>
+                    <span class="news-date-meta">2026-09-22</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Card 6 -->
+            <article class="telkom-news-card" data-category="prestasi">
+              <a href="{{ route('berita.show', 3) }}" class="telkom-news-link" aria-label="Lihat detail berita">
+                <div class="news-thumb-box">
+                  <img src="{{ asset('images/news_ai.webp') }}" alt="Workshop Artificial Intelligence" class="news-thumb-img" loading="lazy" width="400" height="225">
+                  <span class="news-glass-chip">TEKNOLOGI</span>
+                  <span class="news-watermark-tag">AI/IT</span>
+                </div>
+                <div class="news-card-content">
+                  <h3 class="news-title-text">
+                    Kepolisian Probolinggo &amp; SMKN 1 Paparkan Edukasi Artificial Intelligence
+                  </h3>
+                  <div class="news-meta-row">
+                    <span class="news-category-name">Prestasi Siswa</span>
+                    <span class="news-date-meta">2026-09-16</span>
+                  </div>
+                </div>
+              </a>
+            </article>
           </div>
-          <div class="news-card-body">
-            <div class="news-editorial-meta">16 SEPTEMBER 2026 • TEKNOLOGI &amp; RPL</div>
-            <h3 class="news-card-title">
-              Kepolisian Probolinggo Berikan Paparan tentang Pemanfaatan Artificial Intelligence
-            </h3>
-            <p class="news-card-desc">
-              Edukasi literasi digital, keamanan data siber, dan etika pemanfaatan AI bagi generasi muda vokasi di lingkungan SMKN 1 Probolinggo.
-            </p>
-            <a href="{{ route('berita.show', 3) }}" class="news-card-link">
-              <span>Baca Selengkapnya</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+
+          <!-- Footer Controls: Slider Arrows + Pagination Dots + View All Pill -->
+          <div class="berita-footer-controls">
+            <div class="berita-nav-arrows">
+              <button type="button" class="berita-arrow-btn" aria-label="Berita Sebelumnya" onclick="navigateNews(-1)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              <div class="berita-pagination-dots" id="beritaPaginationDots">
+                <button type="button" class="berita-dot active" aria-label="Halaman 1" onclick="goToNewsPage(0)"></button>
+                <button type="button" class="berita-dot" aria-label="Halaman 2" onclick="goToNewsPage(1)"></button>
+                <button type="button" class="berita-dot" aria-label="Halaman 3" onclick="goToNewsPage(2)"></button>
+              </div>
+              <button type="button" class="berita-arrow-btn" aria-label="Berita Selanjutnya" onclick="navigateNews(1)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+
+            <a href="{{ route('berita.index') }}" class="berita-view-all-pill">
+              <span>Lihat Semua Berita</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
           </div>
-        </article>
+        </div>
       </div>
     </div>
   </section>
@@ -727,75 +944,7 @@
     }
   </style>
 
-  <!-- 7. Kerja Sama Industri Mitra DUDI (MATCHING REFERENCE IMAGE 3) -->
-  <section class="partner-ref-section" id="mitra">
-    <div class="container">
-      <div class="partner-ref-header reveal-item" style="text-align: center; justify-content: center;">
-        <div>
-          <h2 class="partner-ref-title" style="font-size: 1.75rem; margin: 0 auto;">
-            Mitra Dunia Industri
-          </h2>
-        </div>
-      </div>
-
-      <!-- Bordered Tile Grid with Lightweight 60fps CSS Marquee -->
-      <div class="partner-ref-marquee-container" aria-label="Daftar Partner Industri SMKN 1 Probolinggo">
-        <!-- Row 1: Scrolls Smoothly Left -->
-        <div class="partner-ref-track">
-          <!-- Set A -->
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_daihatsu.svg') }}" alt="Daihatsu" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_lg.svg') }}" alt="LG Electronics" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_bd_trans.svg') }}" alt="B&D Transformer" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_jatimpark.svg') }}" alt="Jawa Timur Park 1" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_jagoanhosting.png') }}" alt="Jagoan Hosting" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_japfa.svg') }}" alt="JAPFA" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_radarmalang.svg') }}" alt="Radar Malang" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_alfamart.png') }}" alt="Alfamart" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_pjb.svg') }}" alt="PJB PLN" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_axioo.png') }}" alt="Axioo Smart Classroom" loading="lazy"></div>
-
-          <!-- Duplicate Set for infinite seamless loop -->
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_daihatsu.svg') }}" alt="Daihatsu" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_lg.svg') }}" alt="LG Electronics" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_bd_trans.svg') }}" alt="B&D Transformer" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_jatimpark.svg') }}" alt="Jawa Timur Park 1" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_jagoanhosting.png') }}" alt="Jagoan Hosting" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_japfa.svg') }}" alt="JAPFA" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_radarmalang.svg') }}" alt="Radar Malang" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_alfamart.png') }}" alt="Alfamart" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_pjb.svg') }}" alt="PJB PLN" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_axioo.png') }}" alt="Axioo Smart Classroom" loading="lazy"></div>
-        </div>
-
-        <!-- Row 2: Scrolls Smoothly Left (Offset) -->
-        <div class="partner-ref-track track-reverse">
-          <!-- Set B -->
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_bank_jatim.svg') }}" alt="Bank Jatim" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_indomaret.svg') }}" alt="Indomaret" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_pelindo.svg') }}" alt="PT Pelindo BUMN" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_intel.png') }}" alt="Intel AI" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_hummasoft.png') }}" alt="Hummasoft" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_agmari.svg') }}" alt="AGMARI AKSESMU" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_yamaha.png') }}" alt="Yamaha Motor" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_maspion.png') }}" alt="Maspion IT" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_ubig.png') }}" alt="UBIG" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_tdi.png') }}" alt="Technopark TDI" loading="lazy"></div>
-
-          <!-- Duplicate Set for infinite seamless loop -->
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_bank_jatim.svg') }}" alt="Bank Jatim" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_indomaret.svg') }}" alt="Indomaret" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_pelindo.svg') }}" alt="PT Pelindo BUMN" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_intel.png') }}" alt="Intel AI" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_hummasoft.png') }}" alt="Hummasoft" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_agmari.svg') }}" alt="AGMARI AKSESMU" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_yamaha.png') }}" alt="Yamaha Motor" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_maspion.png') }}" alt="Maspion IT" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_ubig.png') }}" alt="UBIG" loading="lazy"></div>
-          <div class="partner-box-cell"><img src="{{ asset('images/partners/partner_tdi.png') }}" alt="Technopark TDI" loading="lazy"></div>
-        </div>
-      </div>
-
-  <!-- 8. FAQ ACCORDION SECTION (MATCHING REFERENCE IMAGE 2) -->
+  <!-- 7. FAQ ACCORDION SECTION (MATCHING REFERENCE IMAGE 2) -->
   <section class="section-faq" id="faq">
     <div class="container">
       <div class="faq-header reveal-item">
@@ -909,72 +1058,72 @@
   // 1. Department Tabs Interactive Switcher (SMK Telkom Architecture)
   const majorData = {
     rpl: {
-      title: 'Rekayasa Perangkat Lunak',
-      badge: 'Kelas Industri Axioo & Jagoan Hosting',
-      desc: 'Fokus pada rekayasa aplikasi web modern (Laravel & React), mobile Flutter, database cloud, dan integrasi AI terapan binaan Axioo Smart Classroom.',
-      img: '{{ asset("images/jurusan/lab_rpl.webp") }}',
-      alt: 'Laboratorium Rekayasa Perangkat Lunak',
+      accent: 'Rekayasa',
+      rest: 'Perangkat Lunak',
+      desc: 'Program 3 tahun yang mempelajari rekayasa web modern (Laravel & React), mobile Flutter, database cloud, dan integrasi AI terapan berstandar Axioo Smart Classroom.',
+      img: '{{ asset("images/jurusan/bg_bd.webp") }}',
+      alt: 'Model Siswa Rekayasa Perangkat Lunak',
       url: '{{ route("jurusan.rpl") }}',
-      features: [
-        'Full-Stack Web (Laravel, React) & Mobile Flutter Development',
-        'Uji Sertifikasi Profesi BNSP Junior Web Developer & LSP-P1',
-        'Unit Produksi Software House & TEFA di Marketplace SMEXAMALL'
+      points: [
+        { h: 'Software Development', p: 'Belajar membuat aplikasi web modern, mobile Flutter, dan sistem cloud yang fungsional.' },
+        { h: 'Database & Cloud Computing', p: 'Arsitektur database relasional, RESTful API backend, dan server cloud hosting mandiri.' },
+        { h: 'Networking & Cybersecurity', p: 'Sertifikasi BNSP Junior Web Developer, keamanan aplikasi, dan unit produksi SMEXAMALL.' }
       ],
       prospect: 'Software Engineer, Full-Stack Web Developer, Mobile App Developer, Database Administrator, IT Consultant.'
     },
     bd: {
-      title: 'Bisnis Digital',
-      badge: 'Kemitraan Industri Alfamart Class & AGMARI',
+      accent: 'Bisnis',
+      rest: 'Digital',
       desc: 'Mencetak wirausahawan digital, spesialis e-commerce, digital marketing, live commerce streaming, dan pengelolaan ritel modern omnichannel.',
-      img: '{{ asset("images/jurusan/lab_bd.webp") }}',
-      alt: 'Laboratorium Bisnis Digital',
+      img: '{{ asset("images/jurusan/bg_bd.webp") }}',
+      alt: 'Model Siswa Bisnis Digital',
       url: '{{ route("jurusan.bd") }}',
-      features: [
-        'Praktik Live Streaming Sales & Marketplace Store Management',
-        'Digital Ads Optimization (Meta Ads, Google Ads, TikTok Ads)',
-        'Inkubator Bisnis Siswa & Pengelolaan Minimarket Sekolah (SMEXAMART)'
+      points: [
+        { h: 'E-Commerce & Live Sales', p: 'Praktik live streaming sales & marketplace store management omnichannel.' },
+        { h: 'Digital Marketing & Ads', p: 'Optimasi Meta Ads, Google Ads, TikTok Ads, dan social media strategy.' },
+        { h: 'Retail Business Management', p: 'Inkubator bisnis siswa dan operasional ritel minimarket sekolah SMEXAMART.' }
       ],
       prospect: 'Digital Marketer, E-Commerce Specialist, Social Media Strategist, Content Creator, Entrepreneur / Founder Startup.'
     },
     mplb: {
-      title: 'Manajemen Perkantoran & Layanan Bisnis',
-      badge: 'Standar Otomasi Perkantoran Modern',
+      accent: 'Manajemen',
+      rest: 'Perkantoran & Layanan Bisnis',
       desc: 'Keahlian tata kelola administrasi modern, korespondensi digital, digital archiving, public relations, dan etika komunikasi eksekutif.',
-      img: '{{ asset("images/jurusan/lab_mplb.webp") }}',
-      alt: 'Laboratorium Manajemen Perkantoran',
+      img: '{{ asset("images/jurusan/bg_mp.webp") }}',
+      alt: 'Model Siswa Manajemen Perkantoran',
       url: '{{ route("jurusan.mp") }}',
-      features: [
-        'Penguasaan Paperless Office Management & Cloud Collaboration Suites',
-        'Simulasi Manajemen Rapat, Event Organizing & Keprotokolan',
-        'Sertifikasi Kompetensi Otomasi Tata Kelola Perkantoran LSP-P1'
+      points: [
+        { h: 'Paperless Office System', p: 'Penguasaan paperless office management dan cloud collaboration enterprise.' },
+        { h: 'Event & Protocol Organizing', p: 'Simulasi tata kelola keprotokolan resmi, executive meeting, dan humas lembaga.' },
+        { h: 'Sertifikasi Profesi BNSP', p: 'Uji kompetensi otomasi administrasi perkantoran berlisensi BNSP LSP-P1.' }
       ],
       prospect: 'Executive Administrative Assistant, Office Manager, Public Relations Officer, Customer Care Specialist, Records Manager.'
     },
     akl: {
-      title: 'Akuntansi & Keuangan Lembaga',
-      badge: 'Komputerisasi Akuntansi & FinTech',
+      accent: 'Akuntansi',
+      rest: '& Keuangan Lembaga',
       desc: 'Mendalami akuntansi keuangan terkomputerisasi (MYOB & Accurate), pelaporan pajak digital, audit keuangan lembaga, dan analisis laporan bisnis.',
-      img: '{{ asset("images/jurusan/lab_akl.webp") }}',
-      alt: 'Laboratorium Akuntansi & Keuangan',
+      img: '{{ asset("images/jurusan/bg_ak.webp") }}',
+      alt: 'Model Siswa Akuntansi & Keuangan',
       url: '{{ route("jurusan.ak") }}',
-      features: [
-        'Laboratorium Komputer Akuntansi Terintegrasi Software Industri',
-        'Praktik Perpajakan Terapan (e-Faktur, e-SPT) & Akuntansi Sektor Publik',
-        'Unit Layanan Jasa Akuntansi Sekolah & Koperasi Siswa'
+      points: [
+        { h: 'Computerized Accounting', p: 'Laboratorium komputer akuntansi terintegrasi software MYOB dan Accurate industri.' },
+        { h: 'Applied Taxation & FinTech', p: 'Praktik perpajakan terapan e-Faktur, e-SPT, dan perbankan digital modern.' },
+        { h: 'Financial Audit & Reports', p: 'Penyusunan laporan keuangan lembaga, audit internal, dan tata kelola kas.' }
       ],
       prospect: 'Staff Akuntansi & Keuangan, Junior Auditor, Tax Consultant Assistant, Payroll Specialist, Budget Analyst.'
     },
     lpb: {
-      title: 'Layanan Perbankan',
-      badge: 'Binaan Bank Jatim & Lembaga Keuangan Formal',
+      accent: 'Layanan',
+      rest: 'Perbankan',
       desc: 'Mempersiapkan tenaga perbankan profesional, customer service prima, teller operasional bank, manajemen kredit mikro, dan transaksi digital banking.',
-      img: '{{ asset("images/jurusan/lab_lpb.webp") }}',
-      alt: 'Laboratorium Layanan Perbankan (Mini Bank)',
+      img: '{{ asset("images/jurusan/bg_lp.webp") }}',
+      alt: 'Model Siswa Layanan Perbankan',
       url: '{{ route("jurusan.lp") }}',
-      features: [
-        'Mini Bank Laboratorium dengan SOP Pelayanan Standar Perbankan Nasional',
-        'Simulasi Front Office (Customer Service & Teller) & Back Office',
-        'Praktik Penanganan Uang Tunai, Validasi Keaslian Uang & Digital Banking'
+      points: [
+        { h: 'Mini Bank Laboratory', p: 'Simulasi operasional mini bank dengan standar pelayanan perbankan nasional.' },
+        { h: 'Front & Back Office Ops', p: 'Pelatihan customer service prima, teller, kliring transaksi, dan administrasi kredit.' },
+        { h: 'Cash Handling & Security', p: 'Praktik validasi keaslian uang tunai, sistem brankas, dan digital banking ops.' }
       ],
       prospect: 'Bank Teller, Customer Service Representative, Credit Officer, Staff Operasional Lembaga Keuangan / BPR, Cashier Executive.'
     }
@@ -985,7 +1134,7 @@
     if (!data) return;
 
     // Update active tab buttons
-    document.querySelectorAll('.major-tab-pill').forEach(btn => {
+    document.querySelectorAll('.program-tab-btn').forEach(btn => {
       if (btn.dataset.major === key) {
         btn.classList.add('active');
       } else {
@@ -996,38 +1145,48 @@
     // Animate display card slightly and update content
     const card = document.getElementById('majorDisplayCard');
     if (card) {
-      card.style.opacity = '0.6';
+      card.style.opacity = '0.5';
       card.style.transition = 'opacity 0.2s ease';
       setTimeout(() => {
         const img = document.getElementById('majorImg');
-        const badge = document.getElementById('majorBadge');
-        const title = document.getElementById('majorTitle');
+        const accent = document.getElementById('majorTitleAccent');
+        const rest = document.getElementById('majorTitleRest');
         const desc = document.getElementById('majorDesc');
         const features = document.getElementById('majorFeatures');
         const prospect = document.getElementById('majorProspect');
         const cta = document.getElementById('majorCtaLink');
 
         if (img) { img.src = data.img; img.alt = data.alt; }
-        if (badge) badge.textContent = data.badge;
-        if (title) title.textContent = data.title;
+        if (accent) accent.textContent = data.accent;
+        if (rest) rest.textContent = data.rest;
         if (desc) desc.textContent = data.desc;
         if (cta) cta.href = data.url;
 
         if (features) {
-          features.innerHTML = data.features.map(f => `
-            <div class="major-feature-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>${f}</span>
+          const icons = [
+            '<rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>',
+            '<ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>',
+            '<circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/>'
+          ];
+          features.innerHTML = data.points.map((pt, idx) => `
+            <div class="program-point-item">
+              <div class="program-point-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2">${icons[idx % 3]}</svg>
+              </div>
+              <div class="program-point-text">
+                <strong>${pt.h}</strong>
+                <p>${pt.p}</p>
+              </div>
             </div>
           `).join('');
         }
 
         if (prospect) {
-          prospect.innerHTML = `<strong>Prospek Karier:</strong> ${data.prospect}`;
+          prospect.textContent = data.prospect;
         }
 
         card.style.opacity = '1';
-      }, 120);
+      }, 140);
     }
   }
 
@@ -1047,6 +1206,58 @@
 
     item.classList.toggle('active', !isActive);
     button.setAttribute('aria-expanded', !isActive);
+  }
+
+  // 3. News Category Filter & Slider Pagination (Telkom Architecture + Hybrid UI/UX)
+  let currentNewsPage = 0;
+  const totalNewsPages = 3;
+
+  function filterNewsCategory(cat, btn) {
+    // Update active button
+    document.querySelectorAll('.berita-cat-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+
+    const cards = document.querySelectorAll('.telkom-news-card');
+    cards.forEach(card => {
+      const cardCat = card.getAttribute('data-category');
+      if (cat === 'all' || cardCat === cat) {
+        card.style.display = 'flex';
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(10px)';
+        setTimeout(() => {
+          card.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, 30);
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  function goToNewsPage(pageIndex) {
+    currentNewsPage = Math.max(0, Math.min(pageIndex, totalNewsPages - 1));
+    const dots = document.querySelectorAll('.berita-pagination-dots .berita-dot');
+    dots.forEach((dot, idx) => {
+      dot.classList.toggle('active', idx === currentNewsPage);
+    });
+    
+    // Smooth micro-animation on cards
+    const grid = document.getElementById('beritaCardsGrid');
+    if (grid) {
+      grid.style.opacity = '0.4';
+      grid.style.transition = 'opacity 0.2s ease';
+      setTimeout(() => {
+        grid.style.opacity = '1';
+      }, 150);
+    }
+  }
+
+  function navigateNews(direction) {
+    let next = currentNewsPage + direction;
+    if (next < 0) next = totalNewsPages - 1;
+    if (next >= totalNewsPages) next = 0;
+    goToNewsPage(next);
   }
 
   document.addEventListener('DOMContentLoaded', function() {

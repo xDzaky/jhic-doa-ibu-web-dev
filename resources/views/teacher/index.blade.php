@@ -9,7 +9,7 @@
     background-color: #F8FAFC;
     min-height: calc(100vh - 68px);
     padding: 32px 0 64px;
-    font-family: 'Satoshi', sans-serif;
+    font-family: var(--font-body);
   }
 
   .teacher-container {
@@ -56,7 +56,7 @@
     font-size: 0.75rem;
     font-weight: 700;
     padding: 3px 10px;
-    border-radius: 20px;
+    border-radius: 8px;
   }
 
   /* Academic & Quality Control Ledger Ribbon */
@@ -388,7 +388,7 @@
           <h3 style="margin: 0; font-size: 1.125rem; font-weight: 800; color: #166534;">
             Asesmen Kelayakan Portofolio PKWU Berbasis BLUD
           </h3>
-          <span style="background: #16A34A; color: #FFFFFF; font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 20px;">
+          <span style="background: #16A34A; color: #FFFFFF; font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 8px;">
             Status: Terverifikasi
           </span>
         </div>

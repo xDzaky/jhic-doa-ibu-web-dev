@@ -21,13 +21,13 @@
     --box-wf: #f1f5f9;
     --box-wf-border: #94a3b8;
     --font-heading:
-        "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --font-primary:
-        "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --font-body:
-        "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --font-satoshi:
-        "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --radius-sm: 4px;
     --radius-md: 6px;
     --radius-lg: 8px;
@@ -5863,359 +5863,7 @@ body {
     letter-spacing: 0.04em !important;
 }
 
-.nav-dropdown.has-mega-menu {
-    position: static;
-}
-
-.mega-menu-container {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    transform: translateY(-6px) scale(0.985);
-    min-width: 220px;
-    max-width: 280px;
-    background: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    padding: 8px 0;
-    display: block;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    /* Graceful exit delay so cursor can move between trigger and menu */
-    transition:
-        opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1) 0.15s,
-        transform 0.25s cubic-bezier(0.16, 1, 0.3, 1) 0.15s,
-        visibility 0s linear 0.4s;
-    z-index: 9999;
-    box-sizing: border-box;
-}
-
-/* Invisible hover bridge: covers the gap above the dropdown completely */
-.mega-menu-container::before {
-    content: "";
-    position: absolute;
-    top: -20px;
-    left: 0;
-    right: 0;
-    height: 20px;
-    background: transparent;
-    display: block;
-}
-
-/* Hover / Focus / Open Trigger */
-.nav-dropdown.has-mega-menu:hover .mega-menu-container,
-.nav-dropdown.has-mega-menu.is-open .mega-menu-container,
-.nav-dropdown.has-mega-menu:focus-within .mega-menu-container {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transform: translateY(0) scale(1);
-    transition:
-        opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1) 0s,
-        transform 0.2s cubic-bezier(0.16, 1, 0.3, 1) 0s,
-        visibility 0s linear 0s;
-}
-
-/* Left Pane - Simple List Style */
-.mega-pane-left {
-    display: none !important;
-}
-
-.mega-pane-title {
-    font-size: 0.8125rem;
-    font-weight: 700;
-    color: #111827;
-    margin: 0 0 10px 0;
-    letter-spacing: -0.01em;
-}
-
-.mega-card-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-}
-
-.mega-card-item {
-    display: block;
-    text-decoration: none;
-    padding: 12px 20px;
-    border-bottom: 1px solid #e5e7eb;
-    transition:
-        background 0.15s ease,
-        color 0.15s ease;
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: #6b7280;
-    line-height: 1.4;
-}
-
-.mega-card-item:first-child {
-    border-top: 1px solid #e5e7eb;
-}
-
-.mega-card-item:hover {
-    background: #ef4444;
-    color: #ffffff;
-    border-bottom-color: #ef4444;
-}
-
-.mega-card-icon {
-    display: none !important;
-}
-
-.mega-card-body {
-    display: block;
-}
-
-.mega-card-title {
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: inherit;
-    line-height: 1.4;
-    display: block;
-}
-
-.mega-card-desc {
-    display: none !important;
-}
-
-.mega-badge-pill {
-    display: none !important;
-}
-
-/* Right Pane (White with 3 columns & bottom promo card) */
-.mega-pane-right {
-    display: none !important;
-}
-
-.mega-links-columns {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 12px 14px;
-}
-
-.mega-links-columns > div {
-    min-width: 0;
-    overflow: hidden;
-}
-
-.mega-link-col-header {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: #9ca3af;
-    margin: 0 0 6px 0;
-    letter-spacing: 0.01em;
-    white-space: nowrap;
-}
-
-.mega-link-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.mega-link-item {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 0.78125rem;
-    font-weight: 600;
-    color: #374151;
-    text-decoration: none;
-    padding: 2px 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    transition:
-        color 0.15s ease,
-        transform 0.15s ease;
-}
-
-.mega-link-item:hover {
-    color: #0f2a4a;
-    transform: translateX(2px);
-}
-
-.mega-badge-pill {
-    font-size: 0.5625rem;
-    font-weight: 800;
-    background: #111827;
-    color: #ffffff;
-    padding: 1px 5px;
-    border-radius: 6px;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    line-height: 1.3;
-    white-space: nowrap;
-    flex-shrink: 0;
-}
-
-.mega-badge-pill.badge-orange {
-    background: #f05a28;
-}
-
-.mega-badge-pill.badge-green {
-    background: #10b981;
-}
-
-/* Bottom Promo Card (slim bar) */
-.mega-promo-card {
-    margin-top: 10px;
-    background: #f8f9fa;
-    border: 1px solid #e5e7eb;
-    border-radius: 10px;
-    padding: 8px 12px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    transition:
-        border-color 0.2s ease,
-        box-shadow 0.2s ease,
-        transform 0.2s ease;
-}
-
-.mega-promo-card:hover {
-    border-color: #cbd5e1;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transform: translateY(-1px);
-}
-
-.mega-promo-avatar {
-    width: 32px;
-    height: 32px;
-    border-radius: 8px;
-    background: #ffffff;
-    border: 1px solid #e5e7eb;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    color: #0f2a4a;
-}
-
-.mega-promo-avatar svg {
-    width: 16px;
-    height: 16px;
-}
-
-.mega-promo-body {
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-    flex: 1;
-    min-width: 0;
-}
-
-.mega-promo-title {
-    font-size: 0.8125rem;
-    font-weight: 700;
-    color: #111827;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    flex-wrap: wrap;
-}
-
-.mega-promo-desc {
-    font-size: 0.71875rem;
-    color: #6b7280;
-    line-height: 1.3;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-/* ============================================================
-   NAVBAR COLLISION FIX — slim user chip + comfortable nav-menu
-   ============================================================ */
-
-/* Hide role label on navbar to save horizontal space */
-.user-chip-role {
-    display: none !important;
-}
-
-/* Sleeker user chip button */
-.user-chip-btn {
-    padding: 4px 10px 4px 5px !important;
-    gap: 6px !important;
-    height: 36px !important;
-    flex-shrink: 0 !important;
-}
-
-.user-chip-details {
-    gap: 0 !important;
-}
-
-.user-chip-name {
-    font-size: 0.8125rem !important;
-}
-
-.user-menu-wrapper {
-    margin-left: 4px;
-}
-
-/* Balanced nav-menu spacing */
-.nav-menu {
-    gap: 14px !important;
-}
-
-.nav-link,
-.nav-dropdown-toggle {
-    font-size: 0.84375rem !important;
-    white-space: nowrap !important;
-}
-
-/* Responsive adjustments for navbar */
-@media (max-width: 1350px) {
-    .nav-menu {
-        gap: 11px !important;
-    }
-    .nav-link,
-    .nav-dropdown-toggle {
-        font-size: 0.8125rem !important;
-    }
-    .mega-menu-container {
-        width: 920px;
-        gap: 14px;
-        padding: 12px 14px;
-    }
-    .mega-pane-left {
-        flex: 0 0 380px;
-        max-width: 380px;
-    }
-}
-
-@media (max-width: 1200px) {
-    .nav-menu {
-        gap: 8px !important;
-    }
-    .nav-link,
-    .nav-dropdown-toggle {
-        font-size: 0.78125rem !important;
-    }
-    .mega-menu-container {
-        width: 860px;
-        gap: 12px;
-        padding: 11px 12px;
-    }
-    .mega-pane-left {
-        flex: 0 0 350px;
-        max-width: 350px;
-    }
-}
-
-@media (max-width: 960px) {
-    .nav-dropdown,
-    .mega-menu-container {
-        display: none !important;
-    }
-}
+/* (Navbar & Mega Menus are cleanly handled in navbar-clean.css) */
 
 /* ==========================================================================
    SMK TELKOM ARCHITECTURE & STYLING SYSTEM (MODERN INSTITUTIONAL TECH)
@@ -6234,247 +5882,314 @@ body {
     color: #2563EB;
 }
 
-/* 2. Hero Section & Arch Portal Mask (Exact 1-Screen Viewport Matching Telkom) */
+/* 2. Hero Section (Exact 1-Screen Viewport Matching Telkom dengan Foto Cutout hero sec.webp) */
 .telkom-hero-section {
     background: #FFFFFF;
-    padding: 20px 0 0 0;
     position: relative;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
-.hero-top-badge {
-    margin-bottom: 8px;
+
+.telkom-hero-section .hero-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
-.hero-top-badge .badge-pill {
-    display: inline-block;
-    padding: 4px 14px;
-    background: #EFF6FF;
-    border: 1px solid #DBEAFE;
-    color: #1D4ED8;
-    font-size: 0.725rem;
+
+.hero-eyebrow {
+    font-family: var(--font-heading);
+    font-size: clamp(0.85rem, 1.1vw, 0.95rem);
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+}
+
+.hero-eyebrow .text-accent {
+    color: #2563EB;
     font-weight: 700;
-    border-radius: 9999px;
-    letter-spacing: 0.01em;
 }
+
 .hero-main-title {
     font-family: var(--font-heading);
-    font-size: 2rem;
-    font-weight: 800;
-    color: #082046;
-    line-height: 1.2;
+    font-size: clamp(1.75rem, 2.7vw, 2.45rem);
+    font-weight: 700;
+    color: #0F172A;
+    line-height: 1.18;
     letter-spacing: -0.025em;
-    margin: 0 0 12px 0;
+    margin: 0 0 10px 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
 .hero-main-title .text-accent {
     color: #2563EB;
 }
-.hero-model-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 0;
-}
-.hero-arch-frame {
+
+/* Stage & Dashed Arc Circle */
+.hero-stage-wrapper {
     position: relative;
-    display: inline-block;
-    border-radius: 9999px 9999px 12px 12px;
-    background: #082046;
-    padding: 8px 8px 0 8px;
-    max-width: 520px;
     width: 100%;
-    box-shadow: 0 12px 30px rgba(8, 32, 70, 0.1);
-    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: visible;
 }
+
+.hero-dashed-arc-circle {
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    border: 2px dashed #CBD5E1;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.9;
+}
+
 .hero-student-img {
-    width: 100%;
-    height: auto;
+    position: relative;
+    z-index: 2;
+    max-height: min(340px, calc(100vh - 360px));
+    width: auto;
+    max-width: min(520px, 85vw);
+    object-fit: contain;
+    object-position: bottom center;
     display: block;
-    border-radius: 9999px 9999px 0 0;
-    object-fit: cover;
-    max-height: 240px;
+    margin: 0 auto;
+    filter: drop-shadow(0 14px 28px rgba(8, 32, 70, 0.08));
+}
+
+/* 3. Big Metric Strip Counter Bar (Overlapping Bottom Foto Persis Telkom) */
+.metric-strip-container {
+    width: 82% !important;
+    max-width: 760px;
+    margin: -32px auto 8px auto !important;
+    position: relative;
+    z-index: 10;
+    background: #082046;
+    border-radius: 16px;
+    padding: 14px 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    box-shadow: 0 14px 32px rgba(8, 32, 70, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.metric-item {
+    text-align: center;
+    color: #FFFFFF;
+    padding: 0 12px;
+}
+
+.metric-item:not(:last-child) {
+    border-right: 1.5px dashed rgba(255, 255, 255, 0.3);
+}
+
+.metric-item .metric-num {
+    font-size: clamp(1.5rem, 2.2vw, 2.05rem);
+    font-weight: 700;
+    line-height: 1.05;
+    color: #FFFFFF;
+    margin-bottom: 3px;
+    font-family: var(--font-heading);
+    -webkit-font-smoothing: antialiased;
+}
+
+.metric-item .metric-label {
+    font-size: clamp(0.72rem, 0.9vw, 0.8rem);
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
+    letter-spacing: 0.01em;
 }
 
 @media (min-width: 992px) {
     .telkom-hero-section {
         height: calc(100vh - 72px);
-        min-height: 600px;
+        min-height: 580px;
         max-height: calc(100vh - 72px);
-        padding: 24px 0 0 0;
         box-sizing: border-box;
         overflow: hidden;
+        padding: 16px 0 12px 0;
     }
     .telkom-hero-section .hero-container {
         height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: center;
         padding-bottom: 0;
     }
-    .hero-top-badge {
-        margin-bottom: 12px;
-    }
-    .hero-main-title {
-        font-size: clamp(1.85rem, 2.7vw, 2.45rem);
-        margin: 0 0 18px 0;
-        line-height: 1.2;
-    }
-    .hero-model-wrapper {
-        flex: 1 1 auto;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        width: 100%;
-        min-height: 0;
-    }
-    .hero-arch-frame {
-        max-width: 640px;
-        width: 100%;
-        height: 100%;
-        max-height: calc(100vh - 280px);
-        display: flex;
-        align-items: flex-end;
-        border-radius: 9999px 9999px 16px 16px;
-        background: #082046;
-        padding: 10px 10px 0 10px;
-    }
-    .hero-student-img {
-        width: 100%;
-        height: 100%;
-        max-height: calc(100vh - 290px);
-        object-fit: cover;
-        border-radius: 9999px 9999px 0 0;
-    }
-    .metric-strip-container {
-        margin: -36px auto 16px auto !important;
-        position: relative;
-        z-index: 10;
-        width: 80% !important;
-        max-width: 780px;
-    }
 }
+
 @media (max-width: 991px) {
     .telkom-hero-section {
         height: auto;
-        padding: 24px 0 0 0;
+        padding: 32px 0 20px 0;
+        overflow: hidden;
+    }
+    .hero-stage-wrapper {
+        max-width: 100%;
+        overflow: hidden;
+    }
+    .hero-dashed-arc-circle {
+        width: 320px;
+        height: 320px;
+        top: 0;
+    }
+    .hero-student-img {
+        max-height: 300px;
+        max-width: min(100%, 92vw);
+        width: auto;
     }
     .metric-strip-container {
-        margin: -24px auto 36px auto !important;
+        margin: -20px auto 24px auto !important;
         width: 92% !important;
+        padding: 12px 14px;
     }
 }
 
-/* 3. Big Metric Strip (Overlapping Arch Bottom Snug & Balanced) */
-.metric-strip-container {
-    width: 80% !important;
-    max-width: 760px;
-    margin: -30px auto 48px auto;
-    position: relative;
-    z-index: 10;
-    background: #082046;
-    border-radius: 10px;
-    padding: 14px 24px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    box-shadow: 0 12px 30px rgba(8, 32, 70, 0.18);
-}
-.metric-item {
-    text-align: center;
-    color: #FFFFFF;
-}
-.metric-item .metric-num {
-    font-size: 1.65rem;
-    font-weight: 800;
-    line-height: 1;
-    color: #FFFFFF;
-    margin-bottom: 2px;
-    font-family: var(--font-heading);
-}
-.metric-item .metric-label {
-    font-size: 0.725rem;
-    font-weight: 600;
-    color: #93C5FD;
-    letter-spacing: 0.01em;
+@media (max-width: 640px) {
+    .metric-strip-container {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        border-radius: 14px;
+        padding: 16px;
+    }
+    .metric-item:not(:last-child) {
+        border-right: none;
+        border-bottom: 1.5px dashed rgba(255, 255, 255, 0.25);
+        padding-bottom: 12px;
+    }
 }
 
-/* 4. Sambutan Kepala Sekolah */
+/* 4. Sambutan Kepala Sekolah (Persis 100% Layout Telkom Sidoarjo) */
 .section-sambutan {
-    padding: 48px 0;
+    padding: 60px 0 54px 0;
     background: #FFFFFF;
 }
 .sambutan-container {
     display: grid;
-    grid-template-columns: 260px 1fr;
-    gap: 36px;
+    grid-template-columns: 340px 1fr;
+    gap: 48px;
     align-items: center;
 }
 .sambutan-photo-col {
     display: flex;
     justify-content: center;
+    position: relative;
 }
-.sambutan-arch-box {
-    border-radius: 9999px 9999px 12px 12px;
+.sambutan-visual-frame {
+    position: relative;
+    width: 100%;
+    max-width: 340px;
+    height: 380px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.sambutan-deco-pill {
+    position: absolute;
+    bottom: 35px;
+    right: 0;
+    left: auto;
+    width: 210px;
+    height: 180px;
     background: #082046;
-    padding: 10px 10px 0 10px;
-    box-shadow: 0 10px 24px rgba(8, 32, 70, 0.08);
-    display: inline-block;
-    width: 100%;
-    max-width: 250px;
+    border-radius: 0 9999px 9999px 0;
+    z-index: 1;
 }
-.sambutan-img {
-    width: 100%;
-    height: auto;
+.sambutan-deco-arch {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    width: 240px;
+    height: 260px;
+    border: 2px dashed #CBD5E1;
     border-radius: 9999px 9999px 0 0;
+    border-bottom: none;
+    z-index: 1;
+}
+.sambutan-model-img {
+    position: relative;
+    z-index: 2;
+    width: 250px;
+    height: 330px;
     object-fit: cover;
+    object-position: top center;
+    border-radius: 9999px 9999px 18px 18px;
     display: block;
+    box-shadow: 0 16px 36px rgba(8, 32, 70, 0.14);
 }
-.sambutan-tag {
-    display: inline-block;
-    font-size: 0.7rem;
-    font-weight: 700;
-    color: #2563EB;
-    background: #EFF6FF;
-    padding: 3px 10px;
-    border-radius: 9999px;
-    margin-bottom: 10px;
-}
-.sambutan-title {
-    font-size: 1.65rem;
-    font-weight: 800;
-    color: #082046;
-    line-height: 1.25;
-    margin-bottom: 12px;
-    letter-spacing: -0.02em;
-}
-.sambutan-desc {
+.sambutan-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #64748B;
     font-size: 0.84rem;
-    line-height: 1.65;
-    color: #475569;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+.sambutan-heading-group {
     margin-bottom: 16px;
 }
-.sambutan-author {
-    border-left: 3px solid #2563EB;
-    padding-left: 12px;
+.sambutan-title {
+    font-family: var(--font-heading);
+    font-size: 2.15rem;
+    font-weight: 700;
+    color: #0F172A;
+    line-height: 1.2;
+    margin: 0 0 4px 0;
+    letter-spacing: -0.02em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
-.sambutan-author strong {
-    display: block;
-    font-size: 0.875rem;
-    color: #082046;
-    font-weight: 800;
+.sambutan-school-name {
+    font-family: var(--font-heading);
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: #2563EB;
+    line-height: 1.22;
+    margin: 0;
+    letter-spacing: -0.02em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
-.sambutan-author span {
-    font-size: 0.75rem;
-    color: #64748B;
+.sambutan-title .text-accent {
+    color: #2563EB;
+}
+.sambutan-desc {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: #475569;
+    margin-bottom: 24px;
+}
+.sambutan-signature {
+    font-family: var(--font-heading);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: #0F172A;
 }
 
 /* 5. Mengapa Memilih (100% Layout SMK Telkom Sidoarjo) */
 .section-why-us {
     background: #FFFFFF;
-    padding: 56px 0 64px 0;
+    padding: 56px 0 32px 0;
     border-top: 1px solid #E2E8F0;
-    border-bottom: 1px solid #E2E8F0;
 }
 .why-header-row {
     display: flex;
@@ -6631,175 +6346,686 @@ body {
     }
 }
 
-/* 6. Mitra DUDI Dashed Cards */
-.section-mitra-dudi {
-    padding: 40px 0;
+/* 6. Mitra Industri DUDI (Infinite Running Marquee Gaya Telkom Tanpa Judul) */
+.section-mitra-marquee {
     background: #FFFFFF;
+    padding: 18px 0 54px 0;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid #E2E8F0;
 }
-.partner-dashed-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 12px;
-    margin-top: 18px;
+.marquee-track-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
 }
-.partner-dashed-card {
+.marquee-track {
+    display: flex;
+    gap: 16px;
+    width: max-content;
+    animation: dudiMarquee 28s linear infinite;
+    padding: 6px 0;
+}
+.marquee-track:hover {
+    animation-play-state: paused;
+}
+@keyframes dudiMarquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+.partner-marquee-card {
     background: #FFFFFF;
-    border: 1px dashed #CBD5E1;
-    border-radius: 8px;
-    padding: 8px 14px;
+    border: 1.5px dashed #CBD5E1;
+    border-radius: 14px;
+    height: 72px;
+    width: 160px;
+    min-width: 160px;
+    padding: 10px 18px;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 56px;
-    transition: transform 0.2s ease, border-color 0.2s ease;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
-.partner-dashed-card:hover {
+.partner-marquee-card:hover {
     border-color: #2563EB;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(8, 32, 70, 0.05);
+    box-shadow: 0 6px 18px rgba(8, 32, 70, 0.08);
 }
-.partner-dashed-card img {
-    max-height: 28px;
+.partner-marquee-card img {
+    max-height: 34px;
     width: auto;
     max-width: 100%;
     object-fit: contain;
+    filter: grayscale(15%);
+    transition: filter 0.2s ease;
+}
+.partner-marquee-card:hover img {
+    filter: grayscale(0%);
 }
 
-/* 7. Interactive 5-Major Department Tabs */
+/* 7. Program Keahlian (100% Persis Telkom Sidoarjo) */
 .section-program-keahlian {
-    padding: 48px 0;
+    padding: 56px 0 68px 0;
     background: #F8FAFC;
+    border-bottom: 1px solid #E2E8F0;
 }
-.major-tabs-nav {
-    display: flex;
-    gap: 8px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 18px 0 24px 0;
-}
-.major-tab-pill {
-    padding: 7px 16px;
-    border-radius: 9999px;
-    border: 1px solid #E2E8F0;
-    background: #FFFFFF;
-    color: #082046;
+.program-main-title {
+    font-family: var(--font-heading);
+    font-size: 2.15rem;
     font-weight: 700;
-    font-size: 0.8rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
+    color: #0F172A;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin: 0 0 20px 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
-.major-tab-pill.active,
-.major-tab-pill:hover {
-    background: #082046;
-    color: #FFFFFF;
-    border-color: #082046;
-    box-shadow: 0 3px 10px rgba(8, 32, 70, 0.12);
+.program-main-title span {
+    color: #0F172A;
 }
-.major-display-box {
+.program-tab-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 36px;
+}
+.program-tabs-capsule {
+    display: inline-flex;
     background: #FFFFFF;
     border: 1px solid #E2E8F0;
-    border-radius: 12px;
-    padding: 22px 26px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
-    display: grid;
-    grid-template-columns: 320px 1fr;
-    gap: 28px;
-    align-items: center;
+    border-radius: 9999px;
+    padding: 4px;
+    gap: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
 }
-.major-display-img {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-    border-radius: 8px;
-    display: block;
-}
-.major-display-title {
-    font-size: 1.35rem;
-    font-weight: 800;
-    color: #082046;
-    margin-bottom: 8px;
-}
-.major-display-desc {
-    font-size: 0.84rem;
-    color: #475569;
-    line-height: 1.6;
-    margin-bottom: 14px;
-}
-.major-feature-list {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-bottom: 18px;
-}
-.major-feature-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    font-size: 0.8rem;
-    color: #1E293B;
-    line-height: 1.5;
-}
-.major-prospect-box {
-    background: #EFF6FF;
-    border-left: 3px solid #2563EB;
-    padding: 8px 12px;
-    border-radius: 6px;
-    margin-bottom: 18px;
-    font-size: 0.75rem;
-    color: #1E40AF;
-    line-height: 1.5;
-}
-.major-cta-btn {
+.program-tab-btn {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 8px 18px;
+    padding: 8px 22px;
     border-radius: 9999px;
-    background: #2563EB;
-    color: #FFFFFF;
+    border: none;
+    background: transparent;
+    color: #475569;
+    font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 0.8rem;
-    text-decoration: none;
-    transition: background 0.2s ease, transform 0.2s ease;
+    font-size: 0.8125rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
-.major-cta-btn:hover {
-    background: #1D4ED8;
+.program-tab-btn svg {
+    stroke: currentColor;
+    transition: stroke 0.2s ease;
+}
+.program-tab-btn.active,
+.program-tab-btn:hover {
+    background: #082046;
+    color: #FFFFFF;
+    box-shadow: 0 4px 12px rgba(8, 32, 70, 0.18);
+}
+.program-display-card {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 48px;
+    align-items: center;
+    background: transparent;
+}
+.program-visual-col {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.program-arch-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.program-deco-shape {
+    position: absolute;
+    bottom: 25px;
+    right: 15px;
+    width: 200px;
+    height: 260px;
+    background: #082046;
+    border-radius: 0 9999px 9999px 0;
+    z-index: 1;
+}
+.program-deco-dashed {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 240px;
+    height: 280px;
+    border: 2px dashed #CBD5E1;
+    border-radius: 9999px 9999px 0 0;
+    border-bottom: none;
+    z-index: 1;
+}
+.program-model-img {
+    position: relative;
+    z-index: 2;
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0 14px 28px rgba(8, 32, 70, 0.14));
+}
+.program-content-col {
+    display: flex;
+    flex-direction: column;
+}
+.program-title {
+    font-family: var(--font-heading);
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: #0F172A;
+    line-height: 1.25;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.program-title .text-accent {
+    color: #2563EB;
+}
+.program-desc {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: #475569;
+    margin-bottom: 24px;
+}
+.program-points-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 22px;
+}
+.program-point-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+.program-point-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1.5px solid #DBEAFE;
+    background: #EFF6FF;
+    color: #2563EB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+.program-point-text strong {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: #0F172A;
+    margin-bottom: 2px;
+}
+.program-point-text p {
+    font-size: 0.8125rem;
+    color: #64748B;
+    line-height: 1.5;
+    margin: 0;
+}
+.program-prospect-row {
+    margin-bottom: 24px;
+    font-size: 0.8125rem;
+    line-height: 1.6;
+}
+.prospect-label {
+    color: #2563EB;
+    font-weight: 700;
+    margin-right: 4px;
+}
+.prospect-names {
+    color: #475569;
+    display: inline;
+}
+.program-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #082046;
+    color: #FFFFFF;
+    padding: 10px 24px;
+    border-radius: 9999px;
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(8, 32, 70, 0.16);
+    transition: all 0.25s ease;
+    width: fit-content;
+}
+.program-cta-btn:hover {
+    background: #0D2C54;
     transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(8, 32, 70, 0.24);
+    color: #FFFFFF;
 }
 
-/* Responsiveness */
-@media (max-width: 1024px) {
-    .why-card-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .partner-dashed-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .major-display-box {
-        grid-template-columns: 1fr;
-    }
+@media (max-width: 900px) {
     .sambutan-container {
         grid-template-columns: 1fr;
+        gap: 28px;
+        text-align: center;
     }
-    .metric-strip-container {
+    .sambutan-eyebrow {
+        justify-content: center;
+    }
+    .program-display-card {
         grid-template-columns: 1fr;
-        gap: 24px;
-        margin-top: 20px;
+        gap: 32px;
     }
-}
-@media (max-width: 640px) {
-    .hero-main-title {
-        font-size: 1.65rem;
+    .program-tabs-capsule {
+        flex-wrap: wrap;
+        border-radius: 12px;
     }
-    .why-card-grid {
-        grid-template-columns: 1fr;
-    }
-    .partner-dashed-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .program-tab-btn {
+        padding: 6px 14px;
     }
 }
 
-/* 8. Global Airy Refinements (Compact Components & Spacious Breathing Room) */
+/* ==========================================================================
+   5. BERITA & INFORMASI TERKINI (SMK TELKOM ARCHITECTURE + HYBRID UI/UX PRO MAX)
+   ========================================================================== */
+.section-berita-telkom {
+    background: #FFFFFF;
+    padding: 60px 0 68px 0;
+    position: relative;
+    border-top: 1px solid #E2E8F0;
+}
+
+.berita-telkom-header {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.berita-telkom-title {
+    font-family: var(--font-heading);
+    font-size: 2.15rem;
+    font-weight: 700;
+    color: #0F172A;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.berita-telkom-title .text-accent {
+    color: #2563EB;
+}
+
+/* 2-Column Grid Layout */
+.berita-telkom-layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 36px;
+    align-items: flex-start;
+}
+
+/* Sidebar Kategori */
+.berita-category-sidebar {
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 20px 16px;
+    position: sticky;
+    top: 90px;
+}
+
+.berita-category-heading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0F172A;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.berita-category-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.berita-cat-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 9px 12px;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-family: var(--font-heading);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #475569;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.berita-cat-btn:hover {
+    background: #EFF6FF;
+    color: #1D4ED8;
+}
+
+.berita-cat-btn.active {
+    background: #082046;
+    color: #FFFFFF;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(8, 32, 70, 0.16);
+}
+
+.berita-cat-btn .cat-count {
+    padding: 2px 7px;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    border-radius: 9999px;
+    background: #E2E8F0;
+    color: #64748B;
+    transition: all 0.2s ease;
+}
+
+.berita-cat-btn.active .cat-count {
+    background: rgba(255, 255, 255, 0.22);
+    color: #FFFFFF;
+}
+
+/* 6-Card Grid (3 Kolom x 2 Baris) */
+.berita-grid-container {
+    width: 100%;
+}
+
+.berita-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Kartu Berita (Hybrid Dashed + Modern Interactive) */
+.telkom-news-card {
+    background: #FFFFFF;
+    border: 1.5px dashed #CBD5E1;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.28s ease;
+    position: relative;
+}
+
+.telkom-news-card:hover {
+    transform: translateY(-5px);
+    border-color: #2563EB;
+    box-shadow: 0 16px 32px -8px rgba(37, 99, 235, 0.14), 0 4px 14px rgba(8, 32, 70, 0.05);
+}
+
+.telkom-news-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 10px;
+}
+
+.news-thumb-box {
+    position: relative;
+    width: 100%;
+    height: 154px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #F1F5F9;
+}
+
+.news-thumb-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.telkom-news-card:hover .news-thumb-img {
+    transform: scale(1.06);
+}
+
+/* Glassmorphism Chip */
+.news-glass-chip {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 3px 9px;
+    font-size: 0.625rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: 6px;
+    background: rgba(8, 32, 70, 0.72);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Watermark Tag Telkom Style (SIJA / TJAT / SMEXAPRO) */
+.news-watermark-tag {
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.88);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    pointer-events: none;
+}
+
+.news-card-content {
+    padding: 12px 6px 6px 6px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.news-title-text {
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #0F172A;
+    line-height: 1.4;
+    margin: 0 0 12px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: color 0.2s ease;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.telkom-news-card:hover .news-title-text {
+    color: #2563EB;
+}
+
+.news-meta-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 0.75rem;
+    border-top: 1px dashed #E2E8F0;
+    padding-top: 8px;
+    margin-top: auto;
+}
+
+.news-category-name {
+    color: #2563EB;
+    font-weight: 700;
+    font-size: 0.75rem;
+}
+
+.news-date-meta {
+    color: #94A3B8;
+    font-weight: 500;
+    font-size: 0.72rem;
+}
+
+/* Footer Controls (Slider + Pagination Dots + View All - Centered Persis Telkom) */
+.berita-footer-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid #E2E8F0;
+}
+
+.berita-nav-arrows {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 0 auto;
+}
+
+.berita-arrow-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: #082046;
+    color: #FFFFFF;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 2px 8px rgba(8, 32, 70, 0.15);
+}
+
+.berita-arrow-btn:hover {
+    background: #2563EB;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.berita-pagination-dots {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.berita-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #CBD5E1;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    padding: 0;
+}
+
+.berita-dot.active {
+    width: 26px;
+    border-radius: 9999px;
+    background: #082046;
+}
+
+.berita-view-all-pill {
+    position: absolute;
+    right: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    border-radius: 9999px;
+    background: #EFF6FF;
+    color: #1D4ED8;
+    font-family: var(--font-heading);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid #DBEAFE;
+}
+
+.berita-view-all-pill:hover {
+    background: #1D4ED8;
+    color: #FFFFFF;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(29, 78, 216, 0.2);
+}
+
+/* Responsiveness for Berita */
+@media (max-width: 1024px) {
+    .berita-telkom-layout {
+        grid-template-columns: 200px 1fr;
+        gap: 24px;
+    }
+    .berita-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .berita-telkom-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    .berita-category-sidebar {
+        position: static;
+    }
+    .berita-category-list {
+        flex-direction: row;
+        overflow-x: auto;
+        padding-bottom: 6px;
+    }
+    .berita-cat-btn {
+        white-space: nowrap;
+        width: auto;
+    }
+    .berita-cards-grid {
+        grid-template-columns: 1fr;
+    }
+    .berita-footer-controls {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+}
+
+/* Global Airy Refinements */
 .section-title {
     font-size: 1.65rem !important;
     line-height: 1.25 !important;

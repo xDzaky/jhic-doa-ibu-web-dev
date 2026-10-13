@@ -1,0 +1,135 @@
+[
+  {
+    "slug": "01_beranda",
+    "name": "Beranda (Homepage)",
+    "url": "https://smktelkom-sda.sch.id/",
+    "fileName": "01_beranda.png",
+    "sizeKB": 1821.2
+  },
+  {
+    "slug": "02_profil_sekolah",
+    "name": "Profil Sekolah",
+    "url": "https://smktelkom-sda.sch.id/profil-sekolah",
+    "fileName": "02_profil_sekolah.png",
+    "sizeKB": 1109.8
+  },
+  {
+    "slug": "03_profil_jurusan",
+    "name": "Profil Jurusan",
+    "url": "https://smktelkom-sda.sch.id/profil-jurusan",
+    "fileName": "03_profil_jurusan.png",
+    "sizeKB": 684.4
+  },
+  {
+    "slug": "04_hubungan_industri",
+    "name": "Hubungan Industri & Mitra",
+    "url": "https://smktelkom-sda.sch.id/hubungan-industri",
+    "fileName": "04_hubungan_industri.png",
+    "sizeKB": 823.6
+  },
+  {
+    "slug": "05_fasilitas",
+    "name": "Fasilitas Kampus",
+    "url": "https://smktelkom-sda.sch.id/fasilitas",
+    "fileName": "05_fasilitas.png",
+    "sizeKB": 409
+  },
+  {
+    "slug": "06_lab_tour",
+    "name": "Laboratorium & Workshop",
+    "url": "https://smktelkom-sda.sch.id/lab",
+    "fileName": "06_lab_tour.png",
+    "sizeKB": 1427.2
+  },
+  {
+    "slug": "07_profil_guru",
+    "name": "Profil Guru & Staf",
+    "url": "https://smktelkom-sda.sch.id/profil-guru",
+    "fileName": "07_profil_guru.png",
+    "sizeKB": 1726.8
+  },
+  {
+    "slug": "08_prestasi",
+    "name": "Prestasi Siswa",
+    "url": "https://smktelkom-sda.sch.id/prestasi",
+    "fileName": "08_prestasi.png",
+    "sizeKB": 727.3
+  },
+  {
+    "slug": "09_ekstrakurikuler",
+    "name": "Ekstrakurikuler",
+    "url": "https://smktelkom-sda.sch.id/ekstrakurikuler",
+    "fileName": "09_ekstrakurikuler.png",
+    "sizeKB": 709.2
+  },
+  {
+    "slug": "10_berita",
+    "name": "Portal Berita & Artikel",
+    "url": "https://smktelkom-sda.sch.id/berita",
+    "fileName": "10_berita.png",
+    "sizeKB": 955.1
+  },
+  {
+    "slug": "11_ppdb",
+    "name": "Informasi PPDB",
+    "url": "https://smktelkom-sda.sch.id/ppdb",
+    "fileName": "11_ppdb.png",
+    "sizeKB": 599.6
+  },
+  {
+    "slug": "12_trial_class",
+    "name": "Trial Class",
+    "url": "https://smktelkom-sda.sch.id/trial-class",
+    "fileName": "12_trial_class.png",
+    "sizeKB": 384.7
+  },
+  {
+    "slug": "13_digital_talent",
+    "name": "Digital Talent Program",
+    "url": "https://smktelkom-sda.sch.id/digital-talent-program",
+    "fileName": "13_digital_talent.png",
+    "sizeKB": 996.1
+  },
+  {
+    "slug": "14_program_ccp",
+    "name": "Program Pendidikan CCP",
+    "url": "https://smktelkom-sda.sch.id/program-pendidikan-ccp",
+    "fileName": "14_program_ccp.png",
+    "sizeKB": 390.8
+  },
+  {
+    "slug": "15_program_ts21",
+    "name": "Program TS21",
+    "url": "https://smktelkom-sda.sch.id/program-ts21",
+    "fileName": "15_program_ts21.png",
+    "sizeKB": 629.4
+  },
+  {
+    "slug": "16_akomodasi",
+    "name": "Akomodasi & Asrama",
+    "url": "https://smktelkom-sda.sch.id/akomodasi",
+    "fileName": "16_akomodasi.png",
+    "sizeKB": 385.1
+  },
+  {
+    "slug": "17_penerapan_k3",
+    "name": "Penerapan K3 Lingkungan",
+    "url": "https://smktelkom-sda.sch.id/penerapan-k3",
+    "fileName": "17_penerapan_k3.png",
+    "sizeKB": 634.3
+  },
+  {
+    "slug": "18_pengumuman_kelulusan",
+    "name": "Pengumuman Kelulusan",
+    "url": "https://smktelkom-sda.sch.id/pengumuman-kelulusan",
+    "fileName": "18_pengumuman_kelulusan.png",
+    "sizeKB": 295.4
+  },
+  {
+    "slug": "19_unduh_informasi",
+    "name": "Pusat Unduhan & Brosur",
+    "url": "https://smktelkom-sda.sch.id/unduh",
+    "fileName": "19_unduh_informasi.png",
+    "sizeKB": 212
+  }
+]

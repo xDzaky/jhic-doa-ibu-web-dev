@@ -56,6 +56,8 @@ class DatabaseSeeder extends Seeder
 
         $this->command->info('✅ 4 user accounts seeded successfully.');
         $this->call([
+            MajorSeeder::class,
+            ProductSeeder::class,
             PpdbSeeder::class,
             OrderSeeder::class,
         ]);

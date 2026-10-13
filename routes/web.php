@@ -50,6 +50,10 @@ Route::get('/berita', function () {
     return view('berita.index');
 })->name('berita.index');
 
+Route::get('/berita-all', function () {
+    return redirect()->route('berita.index');
+})->name('berita');
+
 Route::get('/berita/{id}', function ($id) {
     return view('berita.show', ['id' => $id]);
 })->name('berita.show');

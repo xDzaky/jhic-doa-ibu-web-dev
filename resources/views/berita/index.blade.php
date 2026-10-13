@@ -24,7 +24,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(8, 32, 70, 0.85) 0%, rgba(15, 42, 74, 0.75) 100%);
+    background: rgba(8, 32, 70, 0.88);
   }
   
   .berita-hero-content {
@@ -35,7 +35,7 @@
   }
   
   .berita-hero-title {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-heading);
     font-size: 2.75rem;
     font-weight: 800;
     color: #FFFFFF;
@@ -45,7 +45,7 @@
   }
   
   .berita-hero-subtitle {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-heading);
     font-size: 1.125rem;
     font-weight: 700;
     color: rgba(255, 255, 255, 0.9);
@@ -284,84 +284,209 @@
   <!-- Berita Content Section -->
   <section class="berita-content-section">
     <div class="container">
+      @php
+        $beritaTerbaru = [
+          [
+            'id' => 1,
+            'title' => 'SMKN 1 Probolinggo Perkuat Status SMK Pusat Keunggulan (SMK PK) Skema Lanjutan',
+            'excerpt' => 'Sebagai SMK rujukan vokasi di Jawa Timur, SMKN 1 Probolinggo memperluas penyelarasan kurikulum bersama 35+ mitra DUDI dan modernisasi laboratorium berstandar industri.',
+            'date' => '10 Oktober 2026',
+            'badge' => 'SMK PK',
+            'image' => asset('images/school_gate.webp')
+          ],
+          [
+            'id' => 2,
+            'title' => 'Kunjungan Verifikasi BLUD & Evaluasi Teaching Factory SMEXAMALL Jawa Timur',
+            'excerpt' => 'Dinas Pendidikan Jawa Timur mengapresiasi tata kelola Badan Layanan Umum Daerah (BLUD) dan unit Teaching Factory SMEXAMALL yang mencetak omzet wirausaha siswa.',
+            'date' => '05 Oktober 2026',
+            'badge' => 'BLUD TEFA',
+            'image' => asset('images/news_bisnis_digital.webp')
+          ],
+          [
+            'id' => 3,
+            'title' => 'Uji Sertifikasi Kompetensi BNSP LSP-P1 Diikuti 450+ Siswa Tingkat Akhir',
+            'excerpt' => 'Seluruh peserta didik diuji langsung oleh asesor Badan Nasional Sertifikasi Profesi pada skema Junior Web Developer, Teknisi Akuntansi, dan Frontliner Perbankan.',
+            'date' => '28 September 2026',
+            'badge' => 'Sertifikasi BNSP',
+            'image' => asset('images/lab_rpl_resmi.webp')
+          ],
+          [
+            'id' => 4,
+            'title' => 'Bursa Kerja Khusus (BKK) Gelar Walk-in Interview Bersama Retail & Mitra Perbankan',
+            'excerpt' => 'Kerja sama rekrutmen cepat bersama PT Indomarco Prismatama, Bank Jatim, dan mitra regional berhasil menyerap puluhan lulusan siap kerja secara langsung.',
+            'date' => '22 September 2026',
+            'badge' => 'BKK Karir',
+            'image' => asset('images/bkk_indomarco.webp')
+          ],
+          [
+            'id' => 5,
+            'title' => 'Workshop Artificial Intelligence & Cloud Computing Bersama Praktisi Industri IT',
+            'excerpt' => 'Peserta didik konsentrasi keahlian RPL dibekali pemahaman implementasi Large Language Model dan cloud deployment untuk menjawab kebutuhan tech stack modern.',
+            'date' => '15 September 2026',
+            'badge' => 'Inovasi IT',
+            'image' => asset('images/news_ai.webp')
+          ],
+          [
+            'id' => 6,
+            'title' => 'Pelantikan Dewan Ambalan Pramuka & Penguatan Profil Pelajar Pancasila',
+            'excerpt' => 'Membangun karakter kepemimpinan, integritas, dan kedisiplinan kerja industri melalui kegiatan kepramukaan dan apel pembinaan siswa SMEXA Probolinggo.',
+            'date' => '08 September 2026',
+            'badge' => 'Karakter Vokasi',
+            'image' => asset('images/berita_ambalan.webp')
+          ],
+        ];
+
+        $kategoriPrestasi = [
+          [
+            'id' => 7,
+            'title' => 'Siswa RPL Raih Medali Emas LKS Wilayah Kerja 3 Bidang Web Technologies',
+            'excerpt' => 'Prestasi membanggakan ditorehkan perwakilan SMKN 1 Probolinggo dengan membangun aplikasi enterprise fullstack dalam kurun waktu 12 jam kompetisi.',
+            'date' => '02 Oktober 2026',
+            'image' => asset('images/lab_rpl_resmi.webp')
+          ],
+          [
+            'id' => 8,
+            'title' => 'Tim Bisnis Digital Juara 1 Nasional Marketing Plan & Live Selling Challenge',
+            'excerpt' => 'Mengusung produk unggulan Teaching Factory Probolinggo, tim pemasaran digital mencetak rekor interaksi dan GMV tertinggi di ajang kompetisi antar SMK.',
+            'date' => '25 September 2026',
+            'image' => asset('images/news_bisnis_digital.webp')
+          ],
+          [
+            'id' => 9,
+            'title' => 'Inovasi Otomasi Arsip Digital MPLB Lolos Pendanaan Kreasi Inovasi Daerah',
+            'excerpt' => 'Sistem e-filling berbasis web karya siswa Manajemen Perkantoran berhasil diadopsi sebagai modul percontohan administrasi digital sekolah.',
+            'date' => '18 September 2026',
+            'image' => asset('images/news_perkantoran.webp')
+          ],
+        ];
+
+        $kategoriKemitraan = [
+          [
+            'id' => 10,
+            'title' => 'Peresmian Axioo Class Program & Jagoan Hosting Corner di Laboratorium RPL',
+            'excerpt' => 'Kerjasama strategis standarisasi infrastruktur hardware dan cloud hosting industri untuk memperkuat portofolio siswa sebelum terjun magang industri.',
+            'date' => '29 September 2026',
+            'image' => asset('images/lab_rpl_resmi.webp')
+          ],
+          [
+            'id' => 11,
+            'title' => 'Sinkronisasi Kurikulum Retail Modern Bersama PT Sumber Alfaria Trijaya (Alfamart)',
+            'excerpt' => 'Kelas industri Alfamart Class menjamin ketersediaan kurikulum berbasis sistem kasir POS, merchandising, dan penyerapan magang kerja terstruktur.',
+            'date' => '21 September 2026',
+            'image' => asset('images/logo_alfamart_class.webp')
+          ],
+          [
+            'id' => 12,
+            'title' => 'MoU Bank Jatim Cabang Probolinggo untuk Pembinaan Mini Bank SMEXA',
+            'excerpt' => 'Bank Jatim memberikan pendampingan SOP perbankan konvensional dan syariah serta penyediaan platform digital perbankan bagi siswa jurusan Perbankan.',
+            'date' => '14 September 2026',
+            'image' => asset('images/jurusan/lab_lpb.webp')
+          ],
+        ];
+
+        $kategoriTefa = [
+          [
+            'id' => 13,
+            'title' => 'Katalog SMEXAMALL Tembus Ratusan Transaksi: Siswa Mengelola Supply Chain Riil',
+            'excerpt' => 'Platform e-commerce buatan mandiri SMKN 1 Probolinggo menjadi inkubator bisnis nyata bagi peserta didik lintas keahlian kewirausahaan.',
+            'date' => '27 September 2026',
+            'image' => asset('images/news_bisnis_digital.webp')
+          ],
+          [
+            'id' => 14,
+            'title' => 'Layanan Jasa Pembukuan & Perpajakan TEFA Akuntansi untuk UMKM Probolinggo',
+            'excerpt' => 'Unit bisnis jurusan Akuntansi membuka klinik konsultasi laporan keuangan dan pelaporan SPT tahunan yang dikelola siswa bersertifikasi Brevet Pajak.',
+            'date' => '19 September 2026',
+            'image' => asset('images/jurusan/lab_akl.webp')
+          ],
+          [
+            'id' => 15,
+            'title' => 'Studio Live Commerce SMEXA Siarkan Produk Unggulan Setiap Hari Kerja',
+            'excerpt' => 'Siswa Bisnis Digital mempraktikkan keterampilan broadcast selling dan digital marketing live streaming langsung dari studio sekolah.',
+            'date' => '12 September 2026',
+            'image' => asset('images/news_perkantoran.webp')
+          ],
+        ];
+      @endphp
+
       <!-- Berita Terbaru -->
       <h2 class="berita-section-title reveal-item">Berita Terbaru</h2>
       
       <div class="berita-grid">
-        @for ($i = 1; $i <= 6; $i++)
-        <a href="{{ route('berita.show', $i) }}" class="berita-card reveal-item" data-delay="{{ $i * 50 }}">
+        @foreach ($beritaTerbaru as $index => $item)
+        <a href="{{ route('berita.show', $item['id']) }}" class="berita-card reveal-item" data-delay="{{ ($index + 1) * 50 }}">
           <div style="position: relative;">
-            <img src="{{ asset('images/news_bisnis_digital.webp') }}" alt="Berita {{ $i }}" class="berita-card-image" loading="lazy">
-            <div class="berita-card-badge">Terbaru</div>
+            <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}" class="berita-card-image" loading="lazy">
+            <div class="berita-card-badge">{{ $item['badge'] }}</div>
           </div>
           <div class="berita-card-body">
-            <div class="berita-card-meta">30 September 2026</div>
-            <h3 class="berita-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur nisi in magna mollis</h3>
-            <p class="berita-card-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur nisi in magna mollis. Pellentesque maximus vulputate nisi, id lacinia tellus blandit in.</p>
+            <div class="berita-card-meta">{{ $item['date'] }}</div>
+            <h3 class="berita-card-title">{{ $item['title'] }}</h3>
+            <p class="berita-card-excerpt">{{ $item['excerpt'] }}</p>
             <span class="berita-card-link">
               Baca Selengkapnya
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </span>
           </div>
         </a>
-        @endfor
+        @endforeach
       </div>
 
-      <!-- Kategori 1 -->
-      <h3 class="berita-kategori-title reveal-item">Kategori 1</h3>
+      <!-- Kategori 1: Prestasi & LKS Siswa -->
+      <h3 class="berita-kategori-title reveal-item">Prestasi &amp; Lomba Kompetensi Siswa (LKS)</h3>
       <div class="berita-grid">
-        @for ($i = 1; $i <= 3; $i++)
-        <a href="{{ route('berita.show', $i + 10) }}" class="berita-card reveal-item" data-delay="{{ $i * 50 }}">
-          <img src="{{ asset('images/news_perkantoran.webp') }}" alt="Kategori 1 Berita {{ $i }}" class="berita-card-image" loading="lazy">
+        @foreach ($kategoriPrestasi as $index => $item)
+        <a href="{{ route('berita.show', $item['id']) }}" class="berita-card reveal-item" data-delay="{{ ($index + 1) * 50 }}">
+          <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}" class="berita-card-image" loading="lazy">
           <div class="berita-card-body">
-            <div class="berita-card-meta">28 September 2026</div>
-            <h3 class="berita-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur nisi</h3>
-            <p class="berita-card-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur nisi in magna mollis.</p>
+            <div class="berita-card-meta">{{ $item['date'] }}</div>
+            <h3 class="berita-card-title">{{ $item['title'] }}</h3>
+            <p class="berita-card-excerpt">{{ $item['excerpt'] }}</p>
             <span class="berita-card-link">
               Baca Selengkapnya
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </span>
           </div>
         </a>
-        @endfor
+        @endforeach
       </div>
 
-      <!-- Kategori 2 -->
-      <h3 class="berita-kategori-title reveal-item">Kategori 2</h3>
+      <!-- Kategori 2: Kemitraan Industri & DUDI Nasional -->
+      <h3 class="berita-kategori-title reveal-item">Kemitraan Industri &amp; DUDI Nasional</h3>
       <div class="berita-grid">
-        @for ($i = 1; $i <= 3; $i++)
-        <a href="{{ route('berita.show', $i + 20) }}" class="berita-card reveal-item" data-delay="{{ $i * 50 }}">
-          <img src="{{ asset('images/news_ai.webp') }}" alt="Kategori 2 Berita {{ $i }}" class="berita-card-image" loading="lazy">
+        @foreach ($kategoriKemitraan as $index => $item)
+        <a href="{{ route('berita.show', $item['id']) }}" class="berita-card reveal-item" data-delay="{{ ($index + 1) * 50 }}">
+          <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}" class="berita-card-image" loading="lazy">
           <div class="berita-card-body">
-            <div class="berita-card-meta">25 September 2026</div>
-            <h3 class="berita-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur nisi</h3>
-            <p class="berita-card-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur nisi in magna mollis.</p>
+            <div class="berita-card-meta">{{ $item['date'] }}</div>
+            <h3 class="berita-card-title">{{ $item['title'] }}</h3>
+            <p class="berita-card-excerpt">{{ $item['excerpt'] }}</p>
             <span class="berita-card-link">
               Baca Selengkapnya
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </span>
           </div>
         </a>
-        @endfor
+        @endforeach
       </div>
 
-      <!-- Kategori 3 -->
-      <h3 class="berita-kategori-title reveal-item">Kategori 3</h3>
+      <!-- Kategori 3: Teaching Factory & BLUD SMEXA -->
+      <h3 class="berita-kategori-title reveal-item">Teaching Factory &amp; Ekosistem BLUD</h3>
       <div class="berita-grid">
-        @for ($i = 1; $i <= 3; $i++)
-        <a href="{{ route('berita.show', $i + 30) }}" class="berita-card reveal-item" data-delay="{{ $i * 50 }}">
-          <img src="{{ asset('images/news_bisnis_digital.webp') }}" alt="Kategori 3 Berita {{ $i }}" class="berita-card-image" loading="lazy">
+        @foreach ($kategoriTefa as $index => $item)
+        <a href="{{ route('berita.show', $item['id']) }}" class="berita-card reveal-item" data-delay="{{ ($index + 1) * 50 }}">
+          <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}" class="berita-card-image" loading="lazy">
           <div class="berita-card-body">
-            <div class="berita-card-meta">20 September 2026</div>
-            <h3 class="berita-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur nisi</h3>
-            <p class="berita-card-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur nisi in magna mollis.</p>
+            <div class="berita-card-meta">{{ $item['date'] }}</div>
+            <h3 class="berita-card-title">{{ $item['title'] }}</h3>
+            <p class="berita-card-excerpt">{{ $item['excerpt'] }}</p>
             <span class="berita-card-link">
               Baca Selengkapnya
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </span>
           </div>
         </a>
-        @endfor
+        @endforeach
       </div>
     </div>
   </section>

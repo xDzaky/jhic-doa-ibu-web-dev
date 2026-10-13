@@ -1,366 +1,497 @@
-/* ========================================
-   CLEAN NAVBAR DESIGN
-   Based on reference image and backup
-   ======================================== */
+/* ==========================================================================
+   SMK TELKOM FLOATING PILL NAVBAR SYSTEM (HYBRID UI/UX PRO MAX)
+   ========================================================================== */
 
-/* Remove navbar-clean.css - use original wireframe.css instead */
-
-/* Main Navbar - Fixed positioning */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: #082046; /* navy-header */
-  border-bottom: 2px solid #FFB800; /* gold */
-  height: 68px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+/* 1. Body Offset for Floating Island */
+body {
+  padding-top: 88px !important;
 }
 
-/* Body padding untuk navbar fixed */
-body {
-  padding-top: 68px;
+/* 2. Floating Navbar Pill Container */
+.navbar {
+  position: fixed !important;
+  top: 14px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: calc(100% - 40px) !important;
+  max-width: 1280px !important;
+  height: 58px !important;
+  background: #FFFFFF !important;
+  border-radius: 9999px !important;
+  border: 1px solid rgba(226, 232, 240, 0.85) !important;
+  box-shadow: 0 8px 30px -4px rgba(8, 32, 70, 0.08), 0 2px 8px -2px rgba(8, 32, 70, 0.04) !important;
+  z-index: 1000 !important;
+  padding: 0 12px 0 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  box-sizing: border-box !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Scrolled state (slightly tighter shadow & backdrop blur) */
+.navbar.is-scrolled {
+  top: 10px !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  box-shadow: 0 12px 36px -4px rgba(8, 32, 70, 0.12), 0 2px 10px rgba(0, 0, 0, 0.04) !important;
+  border-color: rgba(203, 213, 225, 0.9) !important;
 }
 
 .nav-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-  max-width: 1320px;
-  margin: 0 auto;
-  padding: 0 24px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  height: 100% !important;
+  position: relative !important;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
-/* Logo & Brand */
+/* 3. Brand Identity */
 .nav-brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-  flex-shrink: 0;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  text-decoration: none !important;
+  flex-shrink: 0 !important;
 }
 
 .school-logo-img {
-  height: 38px;
-  width: 38px;
-  object-fit: contain;
+  width: 34px !important;
+  height: 34px !important;
+  object-fit: contain !important;
 }
 
 .brand-text {
-  display: flex;
-  flex-direction: column;
-  white-space: nowrap;
+  display: flex !important;
+  flex-direction: column !important;
+  line-height: 1.15 !important;
 }
 
 .school-main {
-  font-size: 0.9375rem;
-  font-weight: 800;
-  color: #FFFFFF;
-  letter-spacing: 0.03em;
-  line-height: 1.15;
+  font-family: var(--font-heading) !important;
+  font-size: 0.8125rem !important;
+  font-weight: 800 !important;
+  color: #082046 !important;
+  letter-spacing: 0.01em !important;
 }
 
 .school-sub {
-  font-size: 0.8125rem;
-  font-weight: 800;
-  color: #FFB800;
-  letter-spacing: 0.06em;
-  line-height: 1.15;
+  font-family: var(--font-heading) !important;
+  font-size: 0.71875rem !important;
+  font-weight: 700 !important;
+  color: #2563EB !important;
+  letter-spacing: 0.03em !important;
 }
 
-/* Nav Menu */
+/* 4. Nav Menu Links (Center) */
 .nav-menu {
-  display: flex;
-  list-style: none;
-  gap: 28px;
-  align-items: center;
-  margin: 0;
-  padding: 0;
+  display: flex !important;
+  align-items: center !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  gap: 18px !important;
 }
 
 .nav-link,
 .nav-dropdown-toggle {
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.82);
-  white-space: nowrap;
-  padding: 6px 0;
-  position: relative;
-  transition: color 0.15s ease;
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  background: transparent !important;
+  border: none !important;
+  font-family: var(--font-heading) !important;
+  font-size: 0.8125rem !important;
+  font-weight: 600 !important;
+  color: #334155 !important;
+  text-decoration: none !important;
+  padding: 6px 2px !important;
+  cursor: pointer !important;
+  position: relative !important;
+  transition: color 0.2s ease !important;
+  white-space: nowrap !important;
+  -webkit-font-smoothing: antialiased !important;
 }
 
 .nav-link:hover,
 .nav-dropdown-toggle:hover {
-  color: #FFFFFF;
+  color: #2563EB !important;
 }
 
-/* Active state dengan underline */
 .nav-link.active,
 .nav-dropdown-toggle.active {
-  color: #FFB800;
-  font-weight: 700;
+  color: #082046 !important;
+  font-weight: 700 !important;
 }
 
 .nav-link.active::after,
 .nav-dropdown-toggle.active::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #FFB800;
-  border-radius: 2px;
+  display: none !important;
 }
 
 .nav-dropdown-icon {
-  transition: transform 0.2s ease;
+  width: 11px !important;
+  height: 11px !important;
+  stroke: currentColor !important;
+  transition: transform 0.2s ease !important;
+  flex-shrink: 0 !important;
 }
 
-/* User Menu dari backup */
+.nav-dropdown.is-open .nav-dropdown-icon {
+  transform: rotate(180deg) !important;
+}
+
+/* 5. Right Actions Group */
+.nav-actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  flex-shrink: 0 !important;
+}
+
+/* Language Switcher Capsule (Exact Telkom Signature) */
+.lang-switch-capsule {
+  display: inline-flex !important;
+  align-items: center !important;
+  background: #F1F5F9 !important;
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 9999px !important;
+  padding: 2px !important;
+  gap: 2px !important;
+}
+
+.lang-pill {
+  font-family: var(--font-heading) !important;
+  font-size: 0.6875rem !important;
+  font-weight: 700 !important;
+  color: #64748B !important;
+  padding: 3px 8px !important;
+  border-radius: 9999px !important;
+  cursor: pointer !important;
+  line-height: 1 !important;
+  transition: all 0.2s ease !important;
+  text-decoration: none !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+.lang-pill.active {
+  background: #DC2626 !important; /* Telkom signature red */
+  color: #FFFFFF !important;
+  box-shadow: 0 1px 4px rgba(220, 38, 38, 0.25) !important;
+}
+
+/* CTA Pill Button (Telkom Signature Red with Download Icon) */
+.btn-telkom-cta {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  background: #DC2626 !important; /* Telkom red signature */
+  color: #FFFFFF !important;
+  font-family: var(--font-heading) !important;
+  font-size: 0.78125rem !important;
+  font-weight: 700 !important;
+  padding: 8px 16px !important;
+  border-radius: 9999px !important;
+  text-decoration: none !important;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.25) !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  white-space: nowrap !important;
+}
+
+.btn-telkom-cta:hover {
+  background: #B91C1C !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 16px rgba(220, 38, 38, 0.32) !important;
+  color: #FFFFFF !important;
+}
+
+/* Portal Login Button (Subtle Navy Pill) */
+.btn-telkom-portal {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  background: #082046 !important;
+  color: #FFFFFF !important;
+  font-family: var(--font-heading) !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  padding: 7px 12px !important;
+  border-radius: 9999px !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+  white-space: nowrap !important;
+}
+
+.btn-telkom-portal:hover {
+  background: #0D2C54 !important;
+  transform: translateY(-1px) !important;
+  color: #FFFFFF !important;
+}
+
+/* User Menu & Avatar */
 .user-menu-wrapper {
-  position: relative;
+  position: relative !important;
 }
 
 .user-chip-btn {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 9999px;
-  padding: 4px 12px 4px 5px;
-  color: #FFFFFF;
-  cursor: pointer;
-  transition: all 0.2s ease;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: #F1F5F9 !important;
+  border: 1px solid #CBD5E1 !important;
+  border-radius: 9999px !important;
+  padding: 3px 10px 3px 4px !important;
+  color: #082046 !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  height: 34px !important;
 }
 
 .user-chip-btn:hover,
 .user-chip-btn[aria-expanded="true"] {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.35);
+  background: #E2E8F0 !important;
+  border-color: #94A3B8 !important;
 }
 
 .user-avatar-badge {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #FF9800, #EA580C);
-  color: #FFFFFF;
-  font-weight: 800;
-  font-size: 0.75rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
+  width: 26px !important;
+  height: 26px !important;
+  border-radius: 50% !important;
+  background: #082046 !important;
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+  font-size: 0.72rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-transform: uppercase !important;
 }
 
 .user-chip-details {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  line-height: 1.15;
+  display: flex !important;
+  flex-direction: column !important;
+  text-align: left !important;
+  line-height: 1.1 !important;
 }
 
 .user-chip-name {
-  font-size: 0.8125rem;
-  font-weight: 700;
-  color: #FFFFFF;
+  font-size: 0.78125rem !important;
+  font-weight: 700 !important;
+  color: #0F172A !important;
 }
 
-.user-chip-role {
-  font-size: 0.6875rem;
-  color: #FFB800;
-  font-weight: 600;
-}
-
-.chevron-svg {
-  color: rgba(255, 255, 255, 0.6);
-  transition: transform 0.2s ease;
-}
-
-.user-chip-btn[aria-expanded="true"] .chevron-svg {
-  transform: rotate(180deg);
-}
-
-/* User Dropdown */
 .user-dropdown-popover {
-  position: absolute;
-  top: calc(100% + 8px);
-  right: 0;
-  width: 260px;
-  background: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-  padding: 12px;
-  z-index: 1100;
-  display: none;
-  animation: dropdownPop 0.15s ease-out forwards;
+  position: absolute !important;
+  top: calc(100% + 8px) !important;
+  right: 0 !important;
+  width: 250px !important;
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15) !important;
+  padding: 12px !important;
+  z-index: 1300 !important;
+  display: none !important;
 }
 
 .user-dropdown-popover.show {
-  display: block;
-}
-
-@keyframes dropdownPop {
-  from {
-    opacity: 0;
-    transform: translateY(-6px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  display: block !important;
 }
 
 .user-popover-header {
-  padding: 6px 8px 10px;
-  border-bottom: 1px solid #F1F5F9;
+  padding-bottom: 8px !important;
+  border-bottom: 1px solid #F1F5F9 !important;
+  margin-bottom: 8px !important;
 }
 
 .popover-name {
-  font-size: 0.875rem;
-  font-weight: 800;
-  color: #0F172A;
-  margin-bottom: 2px;
+  font-size: 0.85rem !important;
+  font-weight: 800 !important;
+  color: #0F172A !important;
 }
 
 .popover-email {
-  font-size: 0.75rem;
-  color: #64748B;
-  margin-bottom: 6px;
-  word-break: break-all;
+  font-size: 0.72rem !important;
+  color: #64748B !important;
 }
 
 .popover-role-tag {
-  display: inline-block;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  padding: 2px 8px;
-  border-radius: 4px;
-  background: #E0E7FF;
-  color: #1E3A8A;
-}
-
-.popover-menu-list {
-  padding-top: 8px;
+  display: inline-block !important;
+  font-size: 0.65rem !important;
+  font-weight: 700 !important;
+  padding: 2px 7px !important;
+  background: #EFF6FF !important;
+  color: #1D4ED8 !important;
+  border-radius: 9999px !important;
+  margin-top: 4px !important;
 }
 
 .popover-menu-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 8px 10px;
-  border-radius: 6px;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: #334155;
-  text-decoration: none;
-  transition: all 0.15s ease;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 7px 8px !important;
+  font-size: 0.78125rem !important;
+  font-weight: 600 !important;
+  color: #334155 !important;
+  text-decoration: none !important;
+  border-radius: 8px !important;
+  transition: all 0.15s ease !important;
 }
 
 .popover-menu-item:hover {
-  background: #F8FAFC;
-  color: #082046;
+  background: #F8FAFC !important;
+  color: #082046 !important;
+}
+
+.popover-menu-item.text-danger {
+  color: #DC2626 !important;
 }
 
 .popover-menu-item.text-danger:hover {
-  background: #FEF2F2;
-  color: #DC2626;
+  background: #FEF2F2 !important;
+  color: #B91C1C !important;
 }
 
-.popover-divider {
-  height: 1px;
-  background: #F1F5F9;
-  margin: 6px 0;
-}
-
-/* Login button */
-.btn-nav-login {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background-color: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  color: #FFFFFF;
-  padding: 7px 16px;
-  border-radius: 8px;
-  font-size: 0.8125rem;
-  font-weight: 700;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-.btn-nav-login:hover {
-  background-color: #FF9800;
-  border-color: #FF9800;
-  color: #FFFFFF;
-}
-
-/* Mobile Toggle */
+/* Mobile Toggle Hamburger */
 .mobile-toggle {
-  display: none;
-  background: none;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: #FFFFFF;
-  padding: 6px 12px;
-  border-radius: 6px;
-  cursor: pointer;
+  background: transparent !important;
+  border: none !important;
+  color: #082046 !important;
+  cursor: pointer !important;
+  padding: 4px !important;
+  display: none !important;
 }
 
-/* Mobile Responsiveness */
+@media (max-width: 1080px) {
+  .nav-menu {
+    gap: 12px !important;
+  }
+  .btn-telkom-portal {
+    display: none !important;
+  }
+}
+
 @media (max-width: 900px) {
-  body {
-    padding-top: 62px;
-  }
-  
   .navbar {
-    height: 62px;
+    top: 10px !important;
+    width: calc(100% - 24px) !important;
+    height: 52px !important;
+    padding: 0 12px 0 16px !important;
   }
-  
+  body {
+    padding-top: 76px !important;
+  }
   .nav-menu {
     display: none !important;
   }
-  
-  .mobile-toggle {
-    display: block;
-  }
-  
-  .brand-text {
-    display: none;
-  }
-  
-  .btn-nav-login,
-  .user-menu-wrapper {
+  .lang-switch-capsule {
     display: none !important;
   }
+  .mobile-toggle {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
 }
 
-/* Remove gap putih */
-html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  max-width: 100%;
+/* ==========================================================================
+   STANDARD CLEAN DROPDOWN SYSTEM (SIMPLE, NEAT & ELEGANT)
+   ========================================================================== */
+.nav-dropdown {
+  position: relative !important;
 }
 
-body {
-  padding-top: 68px !important;
+.nav-dropdown-menu {
+  position: absolute !important;
+  top: calc(100% + 12px) !important;
+  left: 50% !important;
+  transform: translateX(-50%) translateY(-6px) scale(0.97) !important;
+  min-width: 250px !important;
+  background: #FFFFFF !important;
+  border: 1px solid rgba(226, 232, 240, 0.95) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 16px 36px -6px rgba(8, 32, 70, 0.14), 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+  padding: 6px !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transition: opacity 0.18s cubic-bezier(0.16, 1, 0.3, 1) 0.1s,
+              transform 0.18s cubic-bezier(0.16, 1, 0.3, 1) 0.1s,
+              visibility 0s linear 0.28s !important;
+  z-index: 9999 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2px !important;
+  box-sizing: border-box !important;
 }
 
-@media (max-width: 900px) {
-  body {
-    padding-top: 62px !important;
+/* Invisible hover bridge */
+.nav-dropdown-menu::before {
+  content: '' !important;
+  position: absolute !important;
+  top: -16px !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 16px !important;
+  background: transparent !important;
+  display: block !important;
+}
+
+/* Open state on hover / focus / class */
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown.is-open .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateX(-50%) translateY(0) scale(1) !important;
+  transition: opacity 0.18s cubic-bezier(0.16, 1, 0.3, 1) 0s,
+              transform 0.18s cubic-bezier(0.16, 1, 0.3, 1) 0s,
+              visibility 0s linear 0s !important;
+}
+
+.nav-dropdown-link {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 8px 12px !important;
+  border-radius: 9px !important;
+  font-family: var(--font-heading) !important;
+  font-size: 0.8125rem !important;
+  font-weight: 600 !important;
+  color: #334155 !important;
+  text-decoration: none !important;
+  transition: all 0.15s ease !important;
+  white-space: nowrap !important;
+}
+
+.nav-dropdown-link:hover {
+  background: #F1F5F9 !important;
+  color: #2563EB !important;
+  transform: translateX(3px) !important;
+}
+
+.nav-dropdown-link svg {
+  width: 16px !important;
+  height: 16px !important;
+  stroke: #64748B !important;
+  flex-shrink: 0 !important;
+  transition: stroke 0.15s ease !important;
+}
+
+.nav-dropdown-link:hover svg {
+  stroke: #2563EB !important;
+}
+
+@media (max-width: 991px) {
+  .nav-dropdown-menu {
+    display: none !important;
   }
 }

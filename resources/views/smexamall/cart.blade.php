@@ -8,7 +8,7 @@
     background-color: #F8FAFC;
     min-height: calc(100vh - 68px);
     padding: 36px 0 64px;
-    font-family: 'Satoshi', sans-serif;
+    font-family: var(--font-body);
   }
   .cart-container {
     max-width: 1040px;

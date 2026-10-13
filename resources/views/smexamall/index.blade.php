@@ -9,7 +9,7 @@
     background-color: #F8FAFC;
     min-height: calc(100vh - 68px);
     padding: 32px 0 64px;
-    font-family: 'Satoshi', sans-serif;
+    font-family: var(--font-body);
   }
   .smx-container {
     max-width: 1140px;
@@ -44,21 +44,20 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: linear-gradient(135deg, #EA6C0A 0%, #C05621 100%);
+    background: #C05621;
     color: #FFFFFF;
     font-weight: 700;
     font-size: 0.95rem;
     padding: 12px 22px;
-    border-radius: 50px;
+    border-radius: 6px;
     text-decoration: none;
-    box-shadow: 0 4px 16px rgba(192, 86, 33, 0.35);
+    box-shadow: 0 4px 16px rgba(192, 86, 33, 0.25);
     transition: all 0.25s ease;
-    border: 2px solid #FFF8F0;
-    backdrop-filter: blur(4px);
+    border: 1px solid #D97706;
   }
   .smx-cart-btn:hover {
-    background: linear-gradient(135deg, #D95D02 0%, #9C3D10 100%);
-    box-shadow: 0 6px 20px rgba(124, 60, 33, 0.45);
+    background: #9C3D10;
+    box-shadow: 0 6px 20px rgba(124, 60, 33, 0.35);
     transform: translateY(-2px);
     color: #FFFDF9;
   }
@@ -71,7 +70,7 @@
     font-weight: 800;
     font-size: 0.8rem;
     padding: 2px 8px;
-    border-radius: 999px;
+    border-radius: 4px;
     margin-left: 2px;
   }
   @media (max-width: 768px) {
@@ -136,7 +135,7 @@
   }
   .smx-cat-pill {
     padding: 7px 16px;
-    border-radius: 20px;
+    border-radius: 6px;
     font-size: 0.8125rem;
     font-weight: 700;
     text-decoration: none;
@@ -244,7 +243,7 @@
   }
   .btn-buy-now {
     flex: 1;
-    background: linear-gradient(135deg, #1E40AF 0%, #2563EB 100%);
+    background: #1D4ED8;
     color: #FFFFFF;
     border: none;
     padding: 8px 12px;
@@ -258,7 +257,7 @@
     transition: all 0.2s ease;
   }
   .btn-buy-now:hover {
-    background: linear-gradient(135deg, #1E3A8A 0%, #1D4ED8 100%);
+    background: #1E40AF;
     box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
     transform: translateY(-1px);
   }

@@ -1,0 +1,703 @@
+/* ==========================================================================
+   SMK TELKOM FLOATING PILL NAVBAR SYSTEM (HYBRID UI/UX PRO MAX)
+   ========================================================================== */
+
+/* 1. Body Offset for Floating Island */
+body {
+  padding-top: 88px !important;
+}
+
+/* 2. Floating Navbar Pill Container */
+.navbar {
+  position: fixed !important;
+  top: 14px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: calc(100% - 40px) !important;
+  max-width: 1280px !important;
+  height: 58px !important;
+  background: #FFFFFF !important;
+  border-radius: 9999px !important;
+  border: 1px solid rgba(226, 232, 240, 0.85) !important;
+  box-shadow: 0 8px 30px -4px rgba(8, 32, 70, 0.08), 0 2px 8px -2px rgba(8, 32, 70, 0.04) !important;
+  z-index: 1000 !important;
+  padding: 0 12px 0 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  box-sizing: border-box !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Scrolled state (slightly tighter shadow & backdrop blur) */
+.navbar.is-scrolled {
+  top: 10px !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  box-shadow: 0 12px 36px -4px rgba(8, 32, 70, 0.12), 0 2px 10px rgba(0, 0, 0, 0.04) !important;
+  border-color: rgba(203, 213, 225, 0.9) !important;
+}
+
+.nav-wrapper {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  height: 100% !important;
+  position: relative !important;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* 3. Brand Identity */
+.nav-brand {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  text-decoration: none !important;
+  flex-shrink: 0 !important;
+}
+
+.school-logo-img {
+  width: 34px !important;
+  height: 34px !important;
+  object-fit: contain !important;
+}
+
+.brand-text {
+  display: flex !important;
+  flex-direction: column !important;
+  line-height: 1.15 !important;
+}
+
+.school-main {
+  font-family: var(--font-heading) !important;
+  font-size: 0.8125rem !important;
+  font-weight: 800 !important;
+  color: #082046 !important;
+  letter-spacing: 0.01em !important;
+}
+
+.school-sub {
+  font-family: var(--font-heading) !important;
+  font-size: 0.71875rem !important;
+  font-weight: 700 !important;
+  color: #2563EB !important;
+  letter-spacing: 0.03em !important;
+}
+
+/* 4. Nav Menu Links (Center) */
+.nav-menu {
+  display: flex !important;
+  align-items: center !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  gap: 18px !important;
+}
+
+.nav-link,
+.nav-dropdown-toggle {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  background: transparent !important;
+  border: none !important;
+  font-family: var(--font-heading) !important;
+  font-size: 0.8125rem !important;
+  font-weight: 600 !important;
+  color: #334155 !important;
+  text-decoration: none !important;
+  padding: 6px 2px !important;
+  cursor: pointer !important;
+  position: relative !important;
+  transition: color 0.2s ease !important;
+  white-space: nowrap !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+.nav-link:hover,
+.nav-dropdown-toggle:hover {
+  color: #2563EB !important;
+}
+
+.nav-link.active,
+.nav-dropdown-toggle.active {
+  color: #082046 !important;
+  font-weight: 700 !important;
+}
+
+.nav-dropdown-icon {
+  width: 11px !important;
+  height: 11px !important;
+  stroke: currentColor !important;
+  transition: transform 0.2s ease !important;
+  flex-shrink: 0 !important;
+}
+
+.nav-dropdown.is-open .nav-dropdown-icon {
+  transform: rotate(180deg) !important;
+}
+
+/* 5. Right Actions Group */
+.nav-actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  flex-shrink: 0 !important;
+}
+
+/* Language Switcher Capsule (Exact Telkom Signature) */
+.lang-switch-capsule {
+  display: inline-flex !important;
+  align-items: center !important;
+  background: #F1F5F9 !important;
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 9999px !important;
+  padding: 2px !important;
+  gap: 2px !important;
+}
+
+.lang-pill {
+  font-family: var(--font-heading) !important;
+  font-size: 0.6875rem !important;
+  font-weight: 700 !important;
+  color: #64748B !important;
+  padding: 3px 8px !important;
+  border-radius: 9999px !important;
+  cursor: pointer !important;
+  line-height: 1 !important;
+  transition: all 0.2s ease !important;
+  text-decoration: none !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+.lang-pill.active {
+  background: #DC2626 !important; /* Telkom signature red */
+  color: #FFFFFF !important;
+  box-shadow: 0 1px 4px rgba(220, 38, 38, 0.25) !important;
+}
+
+/* CTA Pill Button (Telkom Signature Red with Download Icon) */
+.btn-telkom-cta {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  background: #DC2626 !important; /* Telkom red signature */
+  color: #FFFFFF !important;
+  font-family: var(--font-heading) !important;
+  font-size: 0.78125rem !important;
+  font-weight: 700 !important;
+  padding: 8px 16px !important;
+  border-radius: 9999px !important;
+  text-decoration: none !important;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.25) !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  white-space: nowrap !important;
+}
+
+.btn-telkom-cta:hover {
+  background: #B91C1C !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 16px rgba(220, 38, 38, 0.32) !important;
+  color: #FFFFFF !important;
+}
+
+/* Portal Login Button (Subtle Navy Pill) */
+.btn-telkom-portal {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  background: #082046 !important;
+  color: #FFFFFF !important;
+  font-family: var(--font-heading) !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  padding: 7px 12px !important;
+  border-radius: 9999px !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+  white-space: nowrap !important;
+}
+
+.btn-telkom-portal:hover {
+  background: #0D2C54 !important;
+  transform: translateY(-1px) !important;
+  color: #FFFFFF !important;
+}
+
+/* User Menu & Avatar */
+.user-menu-wrapper {
+  position: relative !important;
+}
+
+.user-chip-btn {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: #F1F5F9 !important;
+  border: 1px solid #CBD5E1 !important;
+  border-radius: 9999px !important;
+  padding: 3px 10px 3px 4px !important;
+  color: #082046 !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  height: 34px !important;
+}
+
+.user-chip-btn:hover,
+.user-chip-btn[aria-expanded="true"] {
+  background: #E2E8F0 !important;
+  border-color: #94A3B8 !important;
+}
+
+.user-avatar-badge {
+  width: 26px !important;
+  height: 26px !important;
+  border-radius: 50% !important;
+  background: #082046 !important;
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+  font-size: 0.72rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-transform: uppercase !important;
+}
+
+.user-chip-details {
+  display: flex !important;
+  flex-direction: column !important;
+  text-align: left !important;
+  line-height: 1.1 !important;
+}
+
+.user-chip-name {
+  font-size: 0.78125rem !important;
+  font-weight: 700 !important;
+  color: #0F172A !important;
+}
+
+.user-dropdown-popover {
+  position: absolute !important;
+  top: calc(100% + 8px) !important;
+  right: 0 !important;
+  width: 250px !important;
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15) !important;
+  padding: 12px !important;
+  z-index: 1300 !important;
+  display: none !important;
+}
+
+.user-dropdown-popover.show {
+  display: block !important;
+}
+
+.user-popover-header {
+  padding-bottom: 8px !important;
+  border-bottom: 1px solid #F1F5F9 !important;
+  margin-bottom: 8px !important;
+}
+
+.popover-name {
+  font-size: 0.85rem !important;
+  font-weight: 800 !important;
+  color: #0F172A !important;
+}
+
+.popover-email {
+  font-size: 0.72rem !important;
+  color: #64748B !important;
+}
+
+.popover-role-tag {
+  display: inline-block !important;
+  font-size: 0.65rem !important;
+  font-weight: 700 !important;
+  padding: 2px 7px !important;
+  background: #EFF6FF !important;
+  color: #1D4ED8 !important;
+  border-radius: 9999px !important;
+  margin-top: 4px !important;
+}
+
+.popover-menu-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 7px 8px !important;
+  font-size: 0.78125rem !important;
+  font-weight: 600 !important;
+  color: #334155 !important;
+  text-decoration: none !important;
+  border-radius: 8px !important;
+  transition: all 0.15s ease !important;
+}
+
+.popover-menu-item:hover {
+  background: #F8FAFC !important;
+  color: #082046 !important;
+}
+
+.popover-menu-item.text-danger {
+  color: #DC2626 !important;
+}
+
+.popover-menu-item.text-danger:hover {
+  background: #FEF2F2 !important;
+  color: #B91C1C !important;
+}
+
+/* Mobile Toggle Hamburger */
+.mobile-toggle {
+  background: transparent !important;
+  border: none !important;
+  color: #082046 !important;
+  cursor: pointer !important;
+  padding: 4px !important;
+  display: none !important;
+}
+
+@media (max-width: 1080px) {
+  .nav-menu {
+    gap: 12px !important;
+  }
+  .btn-telkom-portal {
+    display: none !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    top: 10px !important;
+    width: calc(100% - 24px) !important;
+    height: 52px !important;
+    padding: 0 12px 0 16px !important;
+  }
+  body {
+    padding-top: 76px !important;
+  }
+  .nav-menu {
+    display: none !important;
+  }
+  .lang-switch-capsule {
+    display: none !important;
+  }
+  .mobile-toggle {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+
+/* ==========================================================================
+   MEGA MENU DROPDOWN SYSTEM (MATCHING USER SCREENSHOTS 2, 3, 4, 5)
+   ========================================================================== */
+.nav-dropdown.has-mega-menu {
+  position: static !important;
+}
+
+.mega-menu-container {
+  position: absolute !important;
+  top: calc(100% + 10px) !important;
+  left: 50% !important;
+  transform: translateX(-50%) translateY(-8px) scale(0.985) !important;
+  width: 920px !important;
+  max-width: calc(100vw - 32px) !important;
+  background: #FFFFFF !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 24px 55px -12px rgba(8, 32, 70, 0.20), 0 8px 20px -4px rgba(0, 0, 0, 0.05) !important;
+  padding: 14px 16px !important;
+  display: flex !important;
+  gap: 18px !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1) 0.15s,
+              transform 0.22s cubic-bezier(0.16, 1, 0.3, 1) 0.15s,
+              visibility 0s linear 0.35s !important;
+  z-index: 1200 !important;
+  box-sizing: border-box !important;
+}
+
+/* Invisible hover bridge */
+.mega-menu-container::before {
+  content: '' !important;
+  position: absolute !important;
+  top: -16px !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 16px !important;
+  background: transparent !important;
+  display: block !important;
+}
+
+/* Open state on hover / focus / class */
+.nav-dropdown.has-mega-menu:hover .mega-menu-container,
+.nav-dropdown.has-mega-menu.is-open .mega-menu-container,
+.nav-dropdown.has-mega-menu:focus-within .mega-menu-container {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateX(-50%) translateY(0) scale(1) !important;
+  transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1) 0s,
+              transform 0.2s cubic-bezier(0.16, 1, 0.3, 1) 0s,
+              visibility 0s linear 0s !important;
+}
+
+/* Left Pane (Tinted #F8F9FA) */
+.mega-pane-left {
+  flex: 1.15 !important;
+  background: #F8F9FA !important;
+  border-radius: 14px !important;
+  padding: 13px 14px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.mega-pane-title {
+  font-family: var(--font-heading) !important;
+  font-size: 0.8125rem !important;
+  font-weight: 700 !important;
+  color: #111827 !important;
+  margin: 0 0 10px 0 !important;
+  letter-spacing: -0.01em !important;
+}
+
+.mega-card-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 8px 12px !important;
+}
+
+.mega-card-item {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 9px !important;
+  text-decoration: none !important;
+  padding: 5px 6px !important;
+  border-radius: 9px !important;
+  transition: background 0.18s ease, transform 0.18s ease !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+.mega-card-item:hover {
+  background: #FFFFFF !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05) !important;
+  transform: translateY(-1px) !important;
+}
+
+.mega-card-icon {
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 8px !important;
+  background: #111827 !important;
+  color: #FFFFFF !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  box-shadow: 0 2px 5px rgba(17, 24, 39, 0.16) !important;
+  transition: transform 0.2s ease, background 0.2s ease !important;
+}
+
+.mega-card-item:hover .mega-card-icon {
+  transform: scale(1.05) !important;
+  background: #082046 !important;
+}
+
+.mega-card-icon svg {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.mega-card-body {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2px !important;
+  min-width: 0 !important;
+}
+
+.mega-card-title {
+  font-family: var(--font-heading) !important;
+  font-size: 0.8125rem !important;
+  font-weight: 700 !important;
+  color: #111827 !important;
+  line-height: 1.25 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  flex-wrap: wrap !important;
+  transition: color 0.15s ease !important;
+}
+
+.mega-card-item:hover .mega-card-title {
+  color: #2563EB !important;
+}
+
+.mega-card-desc {
+  font-size: 0.71875rem !important;
+  color: #64748B !important;
+  font-weight: 500 !important;
+  line-height: 1.25 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  display: block !important;
+}
+
+.mega-badge-pill {
+  font-size: 0.5625rem !important;
+  font-weight: 800 !important;
+  background: #111827 !important;
+  color: #FFFFFF !important;
+  padding: 1px 5px !important;
+  border-radius: 6px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+  line-height: 1.3 !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  display: inline-block !important;
+}
+
+.mega-badge-pill.badge-orange {
+  background: #F05A28 !important;
+}
+
+.mega-badge-pill.badge-green {
+  background: #10B981 !important;
+}
+
+/* Right Pane (White with 3 columns & bottom promo card) */
+.mega-pane-right {
+  flex: 1.35 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  padding: 4px 6px 0 0 !important;
+}
+
+.mega-links-columns {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 12px 14px !important;
+}
+
+.mega-links-columns > div {
+  min-width: 0 !important;
+  overflow: hidden !important;
+}
+
+.mega-link-col-header {
+  font-family: var(--font-heading) !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  color: #9CA3AF !important;
+  margin: 0 0 6px 0 !important;
+  letter-spacing: 0.01em !important;
+  white-space: nowrap !important;
+}
+
+.mega-link-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+}
+
+.mega-link-item {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  font-size: 0.78125rem !important;
+  font-weight: 600 !important;
+  color: #374151 !important;
+  text-decoration: none !important;
+  padding: 2px 0 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  transition: color 0.15s ease, transform 0.15s ease !important;
+}
+
+.mega-link-item:hover {
+  color: #082046 !important;
+  transform: translateX(2px) !important;
+}
+
+/* Bottom Promo Card */
+.mega-promo-card {
+  margin-top: 10px !important;
+  background: #F8F9FA !important;
+  border: 1px solid #E5E7EB !important;
+  border-radius: 10px !important;
+  padding: 8px 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  text-decoration: none !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease !important;
+}
+
+.mega-promo-card:hover {
+  border-color: #CBD5E1 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+  transform: translateY(-1px) !important;
+}
+
+.mega-promo-avatar {
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 8px !important;
+  background: #FFFFFF !important;
+  border: 1px solid #E5E7EB !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  color: #082046 !important;
+}
+
+.mega-promo-avatar svg {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.mega-promo-body {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1px !important;
+  flex: 1 !important;
+  min-width: 0 !important;
+}
+
+.mega-promo-title {
+  font-family: var(--font-heading) !important;
+  font-size: 0.8125rem !important;
+  font-weight: 700 !important;
+  color: #111827 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  flex-wrap: wrap !important;
+}
+
+.mega-promo-desc {
+  font-size: 0.71875rem !important;
+  color: #6B7280 !important;
+  line-height: 1.3 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}

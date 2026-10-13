@@ -3,8 +3,8 @@
 @section('title', ($product->name ?? 'Detail Produk') . ' - SMEXAMALL SMKN 1 Probolinggo')
 
 @section('content')
-<div class="smx-page" style="background-color: #F8FAFC; min-height: calc(100vh - 68px); padding: 32px 0 64px; font-family: 'Satoshi', sans-serif;">
-  <div class="smx-container" style="max-width: 1140px; margin: 0 auto; padding: 0 32px;">
+<div class="smx-page" style="background-color: #F8FAFC; min-height: calc(100vh - 68px); padding: 32px 0 64px; font-family: var(--font-body);">
+  <div class="ecom-container">
 
     <!-- Breadcrumb -->
     <div style="margin-bottom: 20px; font-size: 0.875rem; color: #64748B;">
